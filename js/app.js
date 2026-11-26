@@ -3,9 +3,10 @@ import { MODELS, DEFAULT_MODEL, byKey } from './models.js';
 import { renderMarkdown, esc } from './markdown.js';
 import { webSearch, shouldAutoSearch, resultsToPrompt } from './search.js';
 import { parseRemember, parseForget, extractMemories } from './memory.js';
+import { SeasonFX, SEASONS, seasonForDate } from './seasons.js';
 import { getStorage, modelSizes, chatsSizeMB, ramInfo, fitCheck, fmt } from './device.js';
 
-const APP_VERSION = '1.3.0';
+const APP_VERSION = '1.4.0';
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const CTX_TOKENS = 4096;
 
@@ -52,6 +53,7 @@ const DEFAULT_WIDGETS = [
 ];
 const ACCENTS = ['#7c5cff', '#3b82f6', '#06b6d4', '#14b8a6', '#22c55e', '#eab308', '#f97316', '#ef4444', '#ec4899', '#a855f7'];
 const WALLS = {
+  seasonal: { name: 'Seasonal', css: '' },
   none: { name: 'None', css: '' },
   aurora: { name: 'Aurora', css: 'radial-gradient(at 20% 15%, #7c5cff 0, transparent 50%), radial-gradient(at 80% 10%, #22d3ee 0, transparent 45%), radial-gradient(at 50% 90%, #10b981 0, transparent 55%), #0b1020' },
   sunset: { name: 'Sunset', css: 'linear-gradient(160deg, #ff7e5f 0%, #feb47b 35%, #6a3093 100%)' },
@@ -82,11 +84,14 @@ const defaults = {
   personaId: 'assistant', personas: [], sidebarCollapsed: false,
   userName: '', aboutMe: '', assistantName: 'Pocket AI', assistantEmoji: '✨',
   autoMemory: true, memories: [], searchMode: 'auto', tavilyKey: '',
-  accent: '#7c5cff', wallpaper: 'none', wallDim: 0.45, chatWidth: 'normal',
+  season: 'auto', seasonColors: true, seasonV1: true,
+  accent: '#7c5cff', wallpaper: 'seasonal', wallDim: 0.45, chatWidth: 'normal',
   homeOnLaunch: true, homeLayout: 'centered', widgets: DEFAULT_WIDGETS, quickPrompts: DEFAULT_PROMPTS,
 };
 let settings = { ...defaults };
 try { settings = { ...defaults, ...JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}') }; } catch {}
+// seasonal theme is on by default, also for people who used an older version
+if (!settings.seasonV1) { if (settings.wallpaper === 'none') settings.wallpaper = 'seasonal'; settings.season = settings.season || 'auto'; settings.seasonColors = true; settings.seasonV1 = true; try { localStorage.setItem('pocketai.settings', JSON.stringify(settings)); } catch {} }
 // make sure newly added widgets appear for older saved settings
 settings.widgets = [...settings.widgets.filter(w => WIDGETS[w.id]), ...DEFAULT_WIDGETS.filter(d => !settings.widgets.find(w => w.id === d.id))];
 const saveSettings = () => { try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch { toast('Couldn\'t save settings (storage full?)'); } };
@@ -175,13 +180,19 @@ function applyTheme() {
   $$('#themeSeg button').forEach(b => b.classList.toggle('on', b.dataset.v === settings.theme));
   applyLook();
 }
+let seasonFx = null;
+const activeSeason = () => settings.season === 'off' ? null : settings.season === 'auto' || !SEASONS[settings.season] ? seasonForDate() : settings.season;
 function applyLook() {
   const root = document.documentElement.style;
-  root.setProperty('--accent', settings.accent || '#7c5cff');
+  const light = document.documentElement.dataset.theme === 'light';
+  const season = activeSeason();
+  root.setProperty('--accent', season && settings.seasonColors ? SEASONS[season].accent : (settings.accent || '#7c5cff'));
   let wall = '';
-  if (settings.wallpaper === 'custom') { const d = localStorage.getItem('pocketai.wallpaper'); if (d) wall = `url("${d}")`; }
+  if (settings.wallpaper === 'seasonal') wall = season ? SEASONS[season].wall[light ? 'light' : 'dark'] : '';
+  else if (settings.wallpaper === 'custom') { const d = localStorage.getItem('pocketai.wallpaper'); if (d) wall = `url("${d}")`; }
   else if (WALLS[settings.wallpaper]) wall = WALLS[settings.wallpaper].css;
-  document.body.classList.toggle('has-wall', !!wall);
+  try { if (!seasonFx) seasonFx = new SeasonFX($('#main')); seasonFx.set(season, light); } catch {}
+  document.body.classList.toggle('has-wall', !!wall || !!season);
   const main = $('#main');
   if (wall) {
     main.style.background = settings.wallpaper === 'custom' ? `${wall} center / cover no-repeat` : wall;
@@ -1037,6 +1048,8 @@ function fillSettings() {
   segOn('#searchSeg', settings.searchMode); $('#tavilyKey').value = settings.tavilyKey;
   // look
   renderAccents(); renderWalls(); segOn('#widthSeg', settings.chatWidth);
+  segOn('#seasonSeg', settings.season); $('#seasonColors').checked = settings.seasonColors;
+  const sn = activeSeason(); $('#seasonNow').textContent = sn ? `Now showing: ${SEASONS[sn].emoji} ${SEASONS[sn].name}${settings.season === 'auto' ? ' (from today\'s date)' : ''}` : 'Seasonal effects are off';
   $('#wallDimVal').textContent = settings.wallDim <= 0.2 ? 'Low' : settings.wallDim >= 0.65 ? 'High' : 'Medium';
   // home
   $('#homeOnLaunch').checked = settings.homeOnLaunch; segOn('#layoutSeg', settings.homeLayout);
@@ -1060,12 +1073,14 @@ function renderMemories() {
     : '<div class="mem-empty">No memories yet.</div>';
 }
 function renderAccents() {
-  $('#accentSw').innerHTML = ACCENTS.map(c => `<button type="button" data-accent="${c}" style="background:${c}" class="${c === settings.accent ? 'on' : ''}" aria-label="Accent ${c}"></button>`).join('') +
+  $('#accentSw').innerHTML = ACCENTS.map(c => `<button type="button" data-accent="${c}" style="background:${c}" class="${c === settings.accent && !(activeSeason() && settings.seasonColors) ? 'on' : ''}" aria-label="Accent ${c}"></button>`).join('') +
     `<input type="color" id="accentCustom" value="${esc(settings.accent)}" title="Custom color" aria-label="Custom accent color">`;
 }
 function renderWalls() {
   const custom = localStorage.getItem('pocketai.wallpaper');
-  $('#wallPick').innerHTML = Object.entries(WALLS).map(([k, w]) => `<button type="button" data-wall="${k}" class="${k === 'none' ? 'none ' : ''}${settings.wallpaper === k ? 'on' : ''}" style="${w.css ? `background:${w.css}` : ''}">${esc(w.name)}</button>`).join('') +
+  const sn = activeSeason();
+  const seasonalCss = sn ? SEASONS[sn].wall[document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'] : '';
+  $('#wallPick').innerHTML = Object.entries(WALLS).map(([k, w]) => k === 'seasonal' ? { ...w, css: seasonalCss, name: sn ? `${SEASONS[sn].emoji} Seasonal` : 'Seasonal' } : w).map((w, i) => [Object.keys(WALLS)[i], w]).map(([k, w]) => `<button type="button" data-wall="${k}" class="${k === 'none' ? 'none ' : ''}${settings.wallpaper === k ? 'on' : ''}" style="${w.css ? `background:${w.css}` : ''}">${esc(w.name)}</button>`).join('') +
     (custom ? `<button type="button" data-wall="custom" class="${settings.wallpaper === 'custom' ? 'on' : ''}" style="background-image:url('${custom}')">Yours</button>` : '');
 }
 function renderWidgetList() {
@@ -1158,8 +1173,10 @@ function bind() {
     out.textContent = r.offline ? 'You are offline.' : r.results.length ? `✅ ${r.results.length} results via ${r.provider}` : '⚠️ No results (network blocked?)';
   };
   // look
-  $('#accentSw').addEventListener('click', (e) => { const b = e.target.closest('[data-accent]'); if (!b) return; settings.accent = b.dataset.accent; saveSettings(); applyLook(); renderAccents(); });
-  $('#accentSw').addEventListener('input', (e) => { if (e.target.id !== 'accentCustom') return; settings.accent = e.target.value; saveSettings(); applyLook(); $$('#accentSw button').forEach(b => b.classList.remove('on')); });
+  $('#seasonSeg').addEventListener('click', (e) => { const b = e.target.closest('[data-v]'); if (!b) return; settings.season = b.dataset.v; saveSettings(); applyLook(); fillSettings(); });
+  $('#seasonColors').addEventListener('change', (e) => { settings.seasonColors = e.target.checked; saveSettings(); applyLook(); renderAccents(); });
+  $('#accentSw').addEventListener('click', (e) => { const b = e.target.closest('[data-accent]'); if (!b) return; settings.accent = b.dataset.accent; settings.seasonColors = false; $('#seasonColors').checked = false; saveSettings(); applyLook(); renderAccents(); });
+  $('#accentSw').addEventListener('input', (e) => { if (e.target.id !== 'accentCustom') return; settings.accent = e.target.value; settings.seasonColors = false; $('#seasonColors').checked = false; saveSettings(); applyLook(); $$('#accentSw button').forEach(b => b.classList.remove('on')); });
   $('#wallPick').addEventListener('click', (e) => { const b = e.target.closest('[data-wall]'); if (!b) return; settings.wallpaper = b.dataset.wall; saveSettings(); applyLook(); renderWalls(); });
   $('#wallUpload').onclick = () => $('#wallFile').click();
   $('#wallFile').addEventListener('change', (e) => { const f = e.target.files[0]; if (f) loadWallpaperFile(f); e.target.value = ''; });

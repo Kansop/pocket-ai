@@ -390,3 +390,7 @@ body.chat-wide .msg-row,body.chat-wide #composer{max-width:1040px}
 .save-chip.saved{border-color:var(--border);color:var(--ok);font-weight:500}
 .save-chip .short{display:none}
 @media (max-width: 480px){ .save-chip .long{display:none} .save-chip .short{display:inline} #modelChip{max-width:30vw} }
+
+/* Seasonal canvas: behind all content, never blocks taps */
+#main>#seasonCanvas{position:absolute;inset:0;z-index:0;pointer-events:none}
+.seg.wrap{display:flex;flex-wrap:wrap}

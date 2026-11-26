@@ -1,9 +1,9 @@
 // Pocket AI service worker: caches the app shell + WebLLM library for offline use.
 // Model weights are cached by WebLLM itself (Cache API), so we never touch those requests.
-const VERSION = 'pocketai-v1.3.0';
+const VERSION = 'pocketai-v1.4.0';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './css/app.css',
-  './js/app.js', './js/db.js', './js/models.js', './js/markdown.js', './js/worker.js', './js/search.js', './js/memory.js', './js/device.js',
+  './js/app.js', './js/db.js', './js/models.js', './js/markdown.js', './js/worker.js', './js/search.js', './js/memory.js', './js/device.js', './js/seasons.js',
   './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png', './icons/favicon.png',
 ];
 const LIB = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
