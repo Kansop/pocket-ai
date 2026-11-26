@@ -256,21 +256,16 @@ def render_details(topics: list[dict]) -> str:
 
 def write_page(topics: list[dict], version: str) -> None:
     prefix = (ROOT / "prefix.html").read_text()
-    runtime = (ROOT / "runtime.js").read_text()
-    # Safe: version is a short [0-9.]+ string we control, inserted as its own JS string literal.
     if not re.fullmatch(r"[0-9.]+", version):
         raise SystemExit(f"Bad version {version!r}")
-    boot = f"const MODEL_URL='model.json?v={version}';\n"
+    # Do not splice JS through re.sub or string-escape replacement.
     page = (
         prefix
         + render_details(topics)
         + "</section><form id=\"chat\" hidden><input id=\"q\" maxlength=\"600\" enterkeyhint=\"send\" "
         "aria-label=\"Your question\" placeholder=\"Message Pocket Assistant…\">"
         "<button type=\"submit\">Send</button></form></main>\n"
-        "<script>\n"
-        + boot
-        + runtime
-        + "\n</script></html>\n"
+        f'<script type="module" src="app.js?v={version}"></script></html>\n'
     )
     dest = WINTER / "index.html"
     dest.write_text(page)
