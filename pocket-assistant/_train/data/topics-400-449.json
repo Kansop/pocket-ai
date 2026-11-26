@@ -1,0 +1,802 @@
+[
+  {
+    "title": "Solving for x",
+    "desc": "Use inverse operations to isolate x. What you do to one side of the equation, do to the other. For 2x + 3 = 11, subtract 3 from both sides, then divide both sides by 2 to get x = 4.",
+    "prompts": [
+      "how do i solve for x",
+      "how do i isolate x in an equation",
+      "undo operations to find x",
+      "solve 2x plus 3 equals 11",
+      "what are inverse operations",
+      "i need to get x by itself",
+      "solve for the variable",
+      "how do i find x in an equation"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Slope of a line",
+    "desc": "Slope is the steepness of a line: rise over run, or the change in y divided by the change in x. A slope of 2/3 means the line goes up 2 units when it goes right 3 units. A negative slope goes down as it goes right.",
+    "prompts": [
+      "what is the slope of a line",
+      "how do i find slope",
+      "what does rise over run mean",
+      "how do i calculate slope from two points",
+      "what is a negative slope",
+      "slope formula",
+      "m equals y2 minus y1",
+      "how steep is a line"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Linear equations",
+    "desc": "A linear equation graphs as a straight line. A common form is y = mx + b, where m is the slope and b is the y-intercept, the point where the line crosses the y-axis.",
+    "prompts": [
+      "what is a linear equation",
+      "what does y = mx + b mean",
+      "what is the y intercept",
+      "equation of a straight line",
+      "how do linear equations work",
+      "what is slope intercept form",
+      "mx plus b",
+      "graph of a linear equation"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Inequalities",
+    "desc": "An inequality compares values with symbols such as <, >, ≤ or ≥. Solving one is like solving an equation, except that multiplying or dividing both sides by a negative number reverses the inequality sign.",
+    "prompts": [
+      "what is an inequality in math",
+      "how do i solve an inequality",
+      "when do i flip the inequality sign",
+      "what does less than or equal to mean",
+      "how do inequalities work",
+      "why reverse the inequality",
+      "solving inequalities with negatives",
+      "what do inequality symbols mean"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Systems of equations",
+    "desc": "A system is two or more equations considered together. A solution is a set of values that makes every equation true. You can solve by graphing, substitution, or elimination, which adds or subtracts equations to cancel a variable.",
+    "prompts": [
+      "what is a system of equations",
+      "how do i solve two equations",
+      "what is substitution method",
+      "what is elimination method",
+      "solve a system by graphing",
+      "when two lines intersect",
+      "how do systems of equations work",
+      "find x and y that work in both equations"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Pythagorean theorem",
+    "desc": "In a right triangle, a² + b² = c², where c is the hypotenuse, the side opposite the right angle, and a and b are the other two sides. If the legs are 3 and 4, the hypotenuse is 5.",
+    "prompts": [
+      "what is the pythagorean theorem",
+      "how do i find the hypotenuse",
+      "a squared plus b squared",
+      "pythagoras theorem",
+      "right triangle side lengths",
+      "how do i use pythagorean theorem",
+      "if legs are 3 and 4",
+      "what is the hypotenuse"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Similar triangles",
+    "desc": "Similar triangles have the same shape but may differ in size. Their corresponding angles are equal, and corresponding sides are in the same ratio. You can use that ratio to find a missing side.",
+    "prompts": [
+      "what are similar triangles",
+      "how do similar triangles work",
+      "corresponding sides in proportion",
+      "same shape different size triangles",
+      "how do i find a missing side in similar triangles",
+      "are similar triangles congruent",
+      "angle angle similarity",
+      "scale factor between triangles"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Volume of a cylinder",
+    "desc": "The volume of a cylinder is πr²h, the area of the circular base times the height. Use the same units for the radius and the height, and the result is in cubic units.",
+    "prompts": [
+      "how do i find the volume of a cylinder",
+      "what is the cylinder volume formula",
+      "pi r squared h",
+      "volume of a can or tube",
+      "how much a cylinder holds",
+      "area of the base times height",
+      "cylinder volume",
+      "calculate volume of a cylinder"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Volume of a sphere",
+    "desc": "The volume of a sphere is (4/3)πr³, where r is the radius, the distance from the center to any point on the surface. If you know the diameter, divide it by 2 first to get the radius.",
+    "prompts": [
+      "how do i find the volume of a sphere",
+      "what is the sphere volume formula",
+      "four thirds pi r cubed",
+      "volume of a ball",
+      "how much a sphere holds",
+      "sphere volume from diameter",
+      "calculate volume of a sphere",
+      "volume of a globe"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Percent change",
+    "desc": "Percent change is the difference divided by the original amount, then multiplied by 100. A price that goes from $40 to $50 rises by 10/40, which is a 25 percent increase. A decrease uses the same formula and comes out negative or is called a decrease.",
+    "prompts": [
+      "how do i calculate percent change",
+      "how do i find percent increase",
+      "how do i find percent decrease",
+      "what is percent change",
+      "price went from 40 to 50",
+      "percent difference from original",
+      "how much did it increase by percent",
+      "formula for percent change"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Proportions",
+    "desc": "A proportion says two ratios are equal, such as 2/3 = 4/6. To solve for a missing value, you can cross-multiply: if a/b = c/d, then a times d equals b times c.",
+    "prompts": [
+      "what is a proportion in math",
+      "how do i solve a proportion",
+      "what does cross multiply mean",
+      "two ratios are equal",
+      "how do proportions work",
+      "if a over b equals c over d",
+      "finding a missing number in a proportion",
+      "set up a proportion"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Speed, distance and time",
+    "desc": "Speed equals distance divided by time. Distance equals speed times time, and time equals distance divided by speed. Use matching units, such as miles and hours if the speed is in miles per hour.",
+    "prompts": [
+      "how do i calculate speed",
+      "distance equals rate times time",
+      "how do i find time from speed and distance",
+      "how do i find distance from speed and time",
+      "speed distance time formula",
+      "how long will it take to travel",
+      "what is the formula for speed",
+      "convert hours and miles for speed"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Graphing a line",
+    "desc": "Pick x-values, compute the matching y-values from the equation, and plot those points. For y = mx + b, start at the y-intercept, then use the slope to find another point: rise the numerator and run the denominator.",
+    "prompts": [
+      "how do i graph a line",
+      "how do i plot y equals mx plus b",
+      "graph a linear equation",
+      "use slope to find the next point",
+      "start at the y intercept then rise over run",
+      "how do i draw a straight line from an equation",
+      "plot points on a coordinate plane",
+      "graphing lines on a graph"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The distributive property",
+    "desc": "The distributive property says a(b + c) = ab + ac. Multiply the factor outside the parentheses by each term inside, and keep each term's sign. For example, 3(x + 4) = 3x + 12.",
+    "prompts": [
+      "what is the distributive property",
+      "how do i distribute in math",
+      "a times b plus c",
+      "multiply outside the parentheses",
+      "3 times x plus 4",
+      "how does the distributive property work",
+      "expanding parentheses in algebra",
+      "distribute a negative sign"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Combining like terms",
+    "desc": "Like terms have the same variable raised to the same power, such as 3x and 5x. Add or subtract their coefficients and keep the variable part: 3x + 5x = 8x. Constants combine with constants, and 3x and 3x² are not like terms.",
+    "prompts": [
+      "how do i combine like terms",
+      "what are like terms in algebra",
+      "add 3x and 5x",
+      "can i add x and x squared",
+      "simplify an expression by combining terms",
+      "what terms can be combined",
+      "like terms same variable same power",
+      "combining constants and variables"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Scientific notation",
+    "desc": "Scientific notation writes a number as a value between 1 and 10 multiplied by a power of 10. 5,400 is 5.4 × 10³, and 0.0032 is 3.2 × 10⁻³. A positive exponent means a larger number; a negative exponent means a fraction less than 1.",
+    "prompts": [
+      "what is scientific notation",
+      "how do i write a number in scientific notation",
+      "how do powers of ten work",
+      "write 5400 in scientific notation",
+      "what does a negative exponent mean in scientific notation",
+      "convert scientific notation to a regular number",
+      "why use scientific notation",
+      "standard form and scientific notation"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Independent events",
+    "desc": "Two events are independent if one outcome does not change the probability of the other, such as two flips of a fair coin. For independent events, multiply their probabilities: the chance of heads then heads is 1/2 × 1/2 = 1/4.",
+    "prompts": [
+      "what are independent events in probability",
+      "when do i multiply probabilities",
+      "two coin flips probability",
+      "does one event affect the other",
+      "independent versus dependent events",
+      "how do independent events work",
+      "probability of two things both happening",
+      "compound probability independent"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The scientific method",
+    "desc": "The scientific method is a way to test ideas: ask a question, form a hypothesis, plan a fair test, collect data, and draw a conclusion. Other people should be able to repeat the test to see if they get similar results.",
+    "prompts": [
+      "what is the scientific method",
+      "steps of the scientific method",
+      "how do scientists test an idea",
+      "hypothesis experiment conclusion",
+      "what comes after a hypothesis",
+      "how does the scientific method work",
+      "why do experiments need to be repeatable",
+      "scientific method for a school project"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Hypotheses and theories",
+    "desc": "A hypothesis is a testable possible explanation for something you observed. A scientific theory is a well-supported explanation built from many tested hypotheses and a large body of evidence, not a guess. Theories can still be revised if new evidence appears.",
+    "prompts": [
+      "what is a hypothesis",
+      "what is a scientific theory",
+      "is a theory just a guess",
+      "difference between hypothesis and theory",
+      "how is a theory different from a hypothesis",
+      "what does theory mean in science",
+      "testable explanation",
+      "can a scientific theory change"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Atoms",
+    "desc": "An atom is the basic unit of a chemical element. It has a nucleus of protons and neutrons, with electrons around the nucleus. The number of protons, called the atomic number, identifies the element.",
+    "prompts": [
+      "what is an atom",
+      "what is an atom made of",
+      "protons neutrons electrons",
+      "what does the atomic number mean",
+      "how are atoms structured",
+      "what is in the nucleus of an atom",
+      "basic unit of an element",
+      "explain atoms simply"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Molecules",
+    "desc": "A molecule is two or more atoms bonded together. The atoms can be the same, as in O₂, or different, as in water, H₂O. The chemical formula tells you which atoms are in the molecule and how many of each.",
+    "prompts": [
+      "what is a molecule",
+      "how is a molecule different from an atom",
+      "what does h2o mean",
+      "two or more atoms bonded",
+      "what is a chemical formula",
+      "explain molecules",
+      "is o2 a molecule",
+      "atoms versus molecules"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The periodic table",
+    "desc": "The periodic table organizes elements by atomic number. Rows are called periods and columns are called groups. Elements in the same group often have similar chemical properties, such as the noble gases in the far-right column.",
+    "prompts": [
+      "what is the periodic table",
+      "how is the periodic table organized",
+      "what are periods and groups",
+      "why are elements in the same column similar",
+      "what are noble gases",
+      "how do i read the periodic table",
+      "atomic number on the periodic table",
+      "explain the periodic table"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "States of matter",
+    "desc": "The common states of matter are solid, liquid and gas. In a solid, particles are packed in a fixed shape. In a liquid they flow and take the shape of the container. In a gas they spread out to fill the available space. Heat or pressure can change the state.",
+    "prompts": [
+      "what are the states of matter",
+      "solid liquid gas",
+      "how do particles move in a gas",
+      "what's the difference between a solid and a liquid",
+      "how can matter change state",
+      "explain states of matter",
+      "what is a gas made of",
+      "plasma is a state of matter"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Density",
+    "desc": "Density is mass divided by volume. A material with higher density has more mass in the same amount of space. That is why a steel bolt sinks in water while a larger piece of wood can float: steel’s density is greater than water’s, and most wood is less dense than water.",
+    "prompts": [
+      "what is density",
+      "how do i calculate density",
+      "mass divided by volume",
+      "why does density decide if something floats",
+      "why does steel sink and wood float",
+      "how does density work",
+      "units for density",
+      "what has a higher density"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Acids and bases",
+    "desc": "Acids and bases are opposite kinds of substances in water. Acids increase hydrogen ion concentration and often taste sour, such as lemon juice. Bases decrease that concentration or increase hydroxide, and many feel slippery, such as soap. They can neutralize each other.",
+    "prompts": [
+      "what is an acid",
+      "what is a base in chemistry",
+      "acids versus bases",
+      "what does neutralize mean",
+      "is lemon juice an acid",
+      "is soap a base",
+      "how do acids and bases work",
+      "hydrogen ions and acids"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "pH",
+    "desc": "pH is a scale that usually runs from 0 to 14 and measures how acidic or basic a water solution is. 7 is neutral, like pure water. Numbers below 7 are acidic and numbers above 7 are basic. Each step of 1 is a tenfold change in acidity.",
+    "prompts": [
+      "what is ph",
+      "what does ph measure",
+      "what is a neutral ph",
+      "is ph 3 acidic or basic",
+      "ph scale 0 to 14",
+      "what ph is water",
+      "how does the ph scale work",
+      "what does a low ph mean"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Chemical versus physical change",
+    "desc": "A physical change alters form but not the substance itself, such as melting ice or tearing paper. A chemical change makes a new substance, such as burning wood or baking a cake. Clues can include a new color, gas, temperature change or unexpected solid, though those clues are not proof by themselves.",
+    "prompts": [
+      "what is a chemical change",
+      "what is a physical change",
+      "is melting ice a chemical change",
+      "is burning wood a chemical change",
+      "how can i tell chemical from physical change",
+      "new substance formed",
+      "tearing paper physical or chemical",
+      "difference between chemical and physical change"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Animal and plant cells",
+    "desc": "Both animal and plant cells have a nucleus, cytoplasm and a cell membrane. Plant cells also have a cell wall and usually chloroplasts for photosynthesis, and they often have a large central vacuole. Animal cells do not have a cell wall or chloroplasts.",
+    "prompts": [
+      "what's the difference between plant and animal cells",
+      "what do plant cells have that animal cells don't",
+      "what are chloroplasts",
+      "do animal cells have a cell wall",
+      "nucleus in plant and animal cells",
+      "large central vacuole",
+      "compare animal and plant cells",
+      "how are plant cells different"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "DNA",
+    "desc": "DNA is the molecule in cells that carries genetic instructions. It is shaped like a double helix, a twisted ladder, with paired bases: A with T, and C with G. Those instructions help determine how an organism grows and how its cells work.",
+    "prompts": [
+      "what is dna",
+      "what does dna stand for",
+      "what is a double helix",
+      "a pairs with t",
+      "how does dna work",
+      "genetic instructions in cells",
+      "what are the dna bases",
+      "explain dna simply"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Food chains",
+    "desc": "A food chain shows how energy moves from one living thing to another. It often starts with a producer, such as a plant, that makes its own food. A consumer eats plants or other animals, and a decomposer breaks down dead material. Arrows point toward the eater, the direction energy flows.",
+    "prompts": [
+      "what is a food chain",
+      "what is a producer in a food chain",
+      "what do the arrows in a food chain mean",
+      "what is a consumer in science",
+      "what is a decomposer",
+      "how does a food chain work",
+      "energy in a food chain",
+      "example of a food chain"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Ecosystems",
+    "desc": "An ecosystem is a community of living things plus the nonliving parts of their environment, such as water, soil, air and climate. A change in one part, like a drought or the loss of a species, can affect many other parts.",
+    "prompts": [
+      "what is an ecosystem",
+      "living and nonliving parts of an ecosystem",
+      "how do ecosystems work",
+      "what happens if a species disappears",
+      "community of organisms and their environment",
+      "examples of ecosystems",
+      "biotic and abiotic factors",
+      "explain ecosystems"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The water cycle",
+    "desc": "The water cycle is the movement of water between Earth’s surface and the atmosphere. Water evaporates, condenses into clouds, and falls as precipitation. It can then flow as runoff, soak into the ground, or evaporate again.",
+    "prompts": [
+      "what is the water cycle",
+      "evaporation condensation precipitation",
+      "how does the water cycle work",
+      "what happens after rain falls",
+      "water cycle steps",
+      "runoff and groundwater in the water cycle",
+      "explain the water cycle",
+      "how does water move on earth"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The solar system",
+    "desc": "The solar system is the Sun and everything that orbits it, including eight planets, moons, asteroids and comets. The four inner planets are rocky. The four outer planets are much larger and are mostly gas and ice. Gravity from the Sun keeps the planets in orbit.",
+    "prompts": [
+      "what is the solar system",
+      "how many planets are there",
+      "inner and outer planets",
+      "what orbits the sun",
+      "why do planets stay in orbit",
+      "asteroids and comets",
+      "explain the solar system",
+      "what are the eight planets"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Solar and lunar eclipses",
+    "desc": "A solar eclipse happens when the Moon passes between the Sun and Earth and the Moon’s shadow falls on Earth. A lunar eclipse happens when Earth passes between the Sun and the Moon and Earth’s shadow falls on the Moon. They do not occur every month because the Moon’s orbit is tilted.",
+    "prompts": [
+      "what is a solar eclipse",
+      "what is a lunar eclipse",
+      "difference between solar and lunar eclipse",
+      "why don't eclipses happen every month",
+      "moon between the sun and earth",
+      "earth's shadow on the moon",
+      "how do eclipses work",
+      "when can i see an eclipse"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Plate tectonics",
+    "desc": "Earth’s outer shell is broken into large plates that move slowly over the mantle. Where plates meet they can pull apart, collide, or slide past each other. That movement helps explain earthquakes, many volcanoes, and the building of mountain ranges.",
+    "prompts": [
+      "what is plate tectonics",
+      "what are tectonic plates",
+      "how do earth's plates move",
+      "what happens when plates collide",
+      "plates sliding past each other",
+      "why do plates cause earthquakes",
+      "explain plate tectonics",
+      "continental drift and plates"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Earthquakes",
+    "desc": "An earthquake is the shaking caused when rocks along a fault suddenly slip and release energy as seismic waves. Most earthquakes occur near tectonic plate boundaries. During shaking, drop to the ground, take cover under sturdy furniture, and hold on until it stops.",
+    "prompts": [
+      "what causes an earthquake",
+      "what is an earthquake",
+      "what should i do during an earthquake",
+      "drop cover and hold on",
+      "what is a fault in geology",
+      "seismic waves",
+      "where do most earthquakes happen",
+      "how do earthquakes work"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Volcanoes",
+    "desc": "A volcano is an opening where molten rock, ash and gas can reach the surface. Most volcanoes form near plate boundaries, especially where a plate sinks or where plates pull apart. Magma is molten rock underground; once it reaches the surface it is called lava.",
+    "prompts": [
+      "what is a volcano",
+      "what is the difference between magma and lava",
+      "why do volcanoes erupt",
+      "where do most volcanoes form",
+      "how do volcanoes work",
+      "what comes out of a volcano",
+      "explain volcanoes",
+      "plate boundaries and volcanoes"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Fossils",
+    "desc": "Fossils are remains or traces of past life, such as bones, shells, footprints or leaf impressions, preserved in rock. They form more often when an organism is buried quickly and hard parts are slowly replaced or left as an imprint. Fossils help scientists learn how life and environments have changed.",
+    "prompts": [
+      "what is a fossil",
+      "how do fossils form",
+      "are fossils only bones",
+      "footprints and fossil traces",
+      "why are fossils important",
+      "how do we learn from fossils",
+      "explain fossils",
+      "preserved remains of plants and animals"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Acceleration",
+    "desc": "Acceleration is the rate of change of velocity. An object accelerates if it speeds up, slows down, or changes direction. In everyday use people often say acceleration only for speeding up, but in physics all of those changes count.",
+    "prompts": [
+      "what is acceleration",
+      "is slowing down acceleration",
+      "change in velocity over time",
+      "does changing direction count as acceleration",
+      "how does acceleration work",
+      "acceleration versus speed",
+      "explain acceleration",
+      "rate of change of velocity"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Kinetic and potential energy",
+    "desc": "Kinetic energy is the energy of motion. Potential energy is stored energy because of position or condition, such as a bike at the top of a hill or a stretched spring. Energy can change from one form to the other, like a ball slowing as it rolls uphill and speeding up as it comes down.",
+    "prompts": [
+      "what is kinetic energy",
+      "what is potential energy",
+      "energy of motion versus stored energy",
+      "bike at the top of a hill",
+      "how can energy change forms",
+      "stretched spring energy",
+      "difference between kinetic and potential energy",
+      "explain kinetic and potential energy"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Simple circuits",
+    "desc": "A simple electric circuit is a closed loop that lets current flow from a power source through a load, such as a bulb, and back again. If the loop is broken, the current stops. A switch opens or closes the loop, and wires need a complete path of conductive material.",
+    "prompts": [
+      "what is a simple circuit",
+      "why doesn't my bulb light",
+      "closed loop for current",
+      "how does a switch work in a circuit",
+      "what is a complete circuit",
+      "how do simple circuits work",
+      "battery bulb and wire",
+      "open versus closed circuit"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Electrical conductors",
+    "desc": "An electrical conductor lets electric current flow easily. Metals such as copper and aluminum are common conductors and are used in wires. An electrical insulator, such as rubber, glass or many plastics, resists current and is used to coat wires for safety.",
+    "prompts": [
+      "what is an electrical conductor",
+      "what metals conduct electricity",
+      "what is an electrical insulator",
+      "why are wires made of copper",
+      "why is rubber around a wire",
+      "conductors versus insulators",
+      "what materials conduct electricity",
+      "how do electrical conductors work"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The greenhouse effect",
+    "desc": "The greenhouse effect is the way some gases in the atmosphere, including carbon dioxide and water vapor, absorb heat and keep Earth warmer than it would be without them. A stronger greenhouse effect from extra greenhouse gases traps more heat and raises global average temperatures.",
+    "prompts": [
+      "what is the greenhouse effect",
+      "how do greenhouse gases work",
+      "why does carbon dioxide trap heat",
+      "is the greenhouse effect always bad",
+      "what gases cause the greenhouse effect",
+      "how does the greenhouse effect warm the earth",
+      "explain the greenhouse effect",
+      "greenhouse effect versus global warming"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Renewable energy",
+    "desc": "Renewable energy comes from sources that are naturally replenished, such as sunlight, wind, moving water and geothermal heat. Fossil fuels like coal, oil and natural gas form much more slowly than we use them. Renewable sources still have costs, land use and other tradeoffs, but they do not run out in the same way.",
+    "prompts": [
+      "what is renewable energy",
+      "examples of renewable energy",
+      "is solar energy renewable",
+      "renewable versus fossil fuels",
+      "what is wind energy",
+      "how does renewable energy work",
+      "why is renewable energy important",
+      "geothermal and hydropower"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Recycling",
+    "desc": "Recycling turns used materials into new products instead of throwing them away. Rinse containers, follow your local rules, and keep items loose rather than bagged unless your collector says otherwise. Not everything with a recycling symbol is accepted curbside, so check the local list.",
+    "prompts": [
+      "how does recycling work",
+      "what can i recycle",
+      "do i need to rinse containers",
+      "what does the recycling symbol mean",
+      "why isn't everything recyclable",
+      "how do i recycle at home",
+      "local recycling rules",
+      "should i bag recyclables"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The atmosphere",
+    "desc": "Earth’s atmosphere is the layer of gases around the planet. It is mostly nitrogen and oxygen, with smaller amounts of argon, carbon dioxide and other gases. It provides air to breathe, helps protect the surface from much of the Sun’s harmful radiation, and is where weather happens.",
+    "prompts": [
+      "what is the atmosphere",
+      "what gases are in the atmosphere",
+      "is the atmosphere mostly oxygen",
+      "what does the atmosphere do",
+      "layers of earth's atmosphere",
+      "how does the atmosphere protect us",
+      "explain the atmosphere",
+      "nitrogen and oxygen in the air"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Microscopes",
+    "desc": "A microscope magnifies things that are too small to see clearly with your eyes alone. A compound light microscope uses lenses and light; start on the lowest power, use the coarse knob to find the specimen, then sharpen with the fine knob. Keep slides thin and never use the coarse knob on high power.",
+    "prompts": [
+      "how do i use a microscope",
+      "what is a microscope",
+      "coarse focus versus fine focus",
+      "why start on low power",
+      "how does a light microscope work",
+      "how to focus a microscope",
+      "parts of a microscope",
+      "tips for using a school microscope"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The human heart",
+    "desc": "The heart is a muscle that pumps blood through the body. The right side sends blood to the lungs to pick up oxygen. The left side sends oxygen-rich blood to the rest of the body. Valves keep blood moving in one direction.",
+    "prompts": [
+      "how does the heart work",
+      "what does the human heart do",
+      "right side versus left side of the heart",
+      "why does blood go to the lungs",
+      "what do heart valves do",
+      "how does the heart pump blood",
+      "explain the human heart",
+      "oxygen rich blood"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The lungs",
+    "desc": "The lungs are where oxygen enters the blood and carbon dioxide leaves it. When you inhale, air travels down the windpipe to smaller airways and into tiny air sacs called alveoli. Oxygen crosses into the blood there, and carbon dioxide crosses out to be exhaled.",
+    "prompts": [
+      "how do the lungs work",
+      "what do lungs do",
+      "what are alveoli",
+      "how does oxygen get into the blood",
+      "what happens when you inhale",
+      "explain the lungs",
+      "carbon dioxide and breathing",
+      "windpipe to the lungs"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Digestion",
+    "desc": "Digestion breaks food into nutrients the body can absorb. It starts in the mouth with chewing and saliva, continues in the stomach, and most nutrient absorption happens in the small intestine. The large intestine absorbs water and forms leftover material into stool.",
+    "prompts": [
+      "how does digestion work",
+      "what happens to food after you eat",
+      "where are nutrients absorbed",
+      "what does the small intestine do",
+      "what does the stomach do in digestion",
+      "explain the digestive system",
+      "does digestion start in the mouth",
+      "what does the large intestine do"
+    ],
+    "code": "",
+    "answer": ""
+  }
+]
