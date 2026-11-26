@@ -27,8 +27,6 @@ const BUILTIN_PERSONAS = [
     prompt: 'You are a writing coach. Help brainstorm, outline, and improve writing. Point out grammar, clarity and flow issues with specific suggestions. Keep the writer\'s own voice.' },
   { id: 'friend', emoji: '😄', name: 'Funny Friend', builtin: true,
     prompt: 'You are a laid-back, funny friend. Talk casually, crack jokes, use playful banter, keep replies short. Stay kind and never mean-spirited.' },
-  { id: 'story', emoji: '🐉', name: 'Storyteller', builtin: true,
-    prompt: 'You are a creative storyteller and game master. Write vivid, fun stories and interactive adventures. When running an adventure, end each turn with 2-3 choices for the user.' },
   { id: 'chef', emoji: '🍳', name: 'Chef', builtin: true,
     prompt: 'You are a friendly home chef. Suggest easy recipes with ingredient lists and numbered steps, offer substitutions, and keep it practical.' },
   { id: 'translator', emoji: '🌍', name: 'Translator', builtin: true,
@@ -557,6 +555,13 @@ function renderHome() {
 function refreshHomeIfVisible() { if (!$('#empty').hidden) renderHome(); }
 
 /* ---------------- Generation ---------------- */
+// Remove role-play emotes such as *smiles warmly* or *emotes a warm "paw-print"*.
+function stripEmotes(t) {
+  return t
+    .replace(/(^|[\s>])\*(?!\*)(?:emotes?|smiles?|grins?|laughs?|giggles?|winks?|nods?|waves?|hugs?|purrs?|wags?|paws?|sighs?|chuckles?|beams?|leans?|tilts?|blushes?|gives?|offers?|sends?|does|makes?)\b[^*\n]{0,120}\*(?!\*)/gi, '$1')
+    .replace(/(?:\b(?:it|he|she|i)\s+)?\b(?:emotes?|\*emotes?)\s+an?\s+[^.!?\n]{0,80}?["“'][^"”'\n]{1,40}["”'][.!]?/gi, '')
+    .replace(/ {2,}/g, ' ');
+}
 function systemPromptFor(c, extra = '') {
   let sp = c.systemPrompt || personaById(c.personaId).prompt;
   if (c.personaId !== 'assistant' || c.systemPrompt) sp += `\nYour name is ${asstName()}.`;
@@ -568,6 +573,7 @@ function systemPromptFor(c, extra = '') {
   if (mem.length) sp += `\nFacts you remember about the user ("I"/"my" in a fact means the user). Use them naturally when relevant; don't list them unprompted:\n${mem.map(m => '- ' + m.text).join('\n')}`;
   if (settings.customInstr.trim()) sp += `\n\nThe user's custom instructions (follow them):\n${settings.customInstr.trim()}`;
   if (extra) sp += `\n\n${extra}`;
+  sp += `\n\nNever role-play. Do not write actions, emotes or stage directions (like *smiles*, *paw-print*, (laughs) or "emotes ..."). Do not pretend to be an animal or character. Reply in plain, normal sentences.`;
   return sp;
 }
 function buildMessages(c, extra = '') {
@@ -704,7 +710,7 @@ async function generate() {
     for await (const chunk of stream) {
       if (finished) break;
       const d = chunk.choices && chunk.choices[0] && chunk.choices[0].delta && chunk.choices[0].delta.content;
-      if (d) reply.content += d;
+      if (d) reply.content = stripEmotes(reply.content + d);
       if (chunk.usage) usage = chunk.usage;
       if (!pending) {
         pending = true;
