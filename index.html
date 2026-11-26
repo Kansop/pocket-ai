@@ -43,6 +43,7 @@
       <button id="personaChip" class="chip" title="Change persona"><span id="personaEmoji">✨</span><span id="personaName">Assistant</span><span class="caret">▾</span></button>
       <div class="spacer"></div>
       <button id="modelChip" class="chip model-chip" title="Choose model"><span class="dot" id="modelDot"></span><span id="modelLabel">No model</span></button>
+      <button id="saveChatBtn" class="chip save-chip" hidden></button>
       <button class="icon-btn" id="chatMenuBtn" aria-label="Chat options">⋯</button>
     </header>
 
@@ -76,7 +77,7 @@
 <!-- Dialogs -->
 <dialog id="modelsDlg" class="sheet">
   <div class="sheet-head"><h2>Choose a model</h2><button class="icon-btn" data-close aria-label="Close">✕</button></div>
-  <p class="muted">Models download once and are saved on this device. Bigger = smarter but slower and needs more memory.</p>
+  <p class="muted">Only one model is kept on this device. Switching downloads the new model, and once it loads, it <b>replaces the current one</b> (the old one is deleted to save space). Bigger = smarter but slower and needs more memory.</p>
   <div id="deviceInfo" class="device-info"></div>
   <div id="modelCards" class="model-cards"></div>
   <div class="sheet-foot">
@@ -223,7 +224,7 @@
   <button data-act="exportmd">⬇ Export as Markdown</button>
   <button data-act="exportjson">⬇ Export as JSON</button>
   <button data-act="copy">📋 Copy whole chat</button>
-  <button data-act="delete" class="danger">🗑 Delete chat</button>
+  <button data-act="delete" class="danger">🗑 Delete / discard chat</button>
 </dialog>
 
 <dialog id="promptDlg" class="sheet small">

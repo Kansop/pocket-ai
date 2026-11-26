@@ -384,3 +384,9 @@ body.chat-wide .msg-row,body.chat-wide #composer{max-width:1040px}
 .fit-ok{color:var(--ok);font-size:12.5px;margin-top:6px}
 .fit-bad{color:var(--warn);font-size:12.5px;margin-top:6px}
 .w-storage .meter-block{margin:4px 0 8px}
+
+/* Save-this-chat button */
+.save-chip{font-weight:600;border-color:var(--accent);color:var(--accent)}
+.save-chip.saved{border-color:var(--border);color:var(--ok);font-weight:500}
+.save-chip .short{display:none}
+@media (max-width: 480px){ .save-chip .long{display:none} .save-chip .short{display:inline} #modelChip{max-width:30vw} }

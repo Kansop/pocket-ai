@@ -5,7 +5,7 @@ import { webSearch, shouldAutoSearch, resultsToPrompt } from './search.js';
 import { parseRemember, parseForget, extractMemories } from './memory.js';
 import { getStorage, modelSizes, chatsSizeMB, ramInfo, fitCheck, fmt } from './device.js';
 
-const APP_VERSION = '1.2.0';
+const APP_VERSION = '1.3.0';
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const CTX_TOKENS = 4096;
 
@@ -307,6 +307,7 @@ async function ensureEngine(key = settings.model) {
     showProgress(false);
     setModelChip('ready');
     toast(`${m.name} is ready`);
+    removeOtherModels(id, lib);  // only after the new model loaded fine
     return engine;
   })();
   try { return await loadingPromise; }
@@ -318,6 +319,24 @@ async function ensureEngine(key = settings.model) {
   } finally { loadingPromise = null; }
 }
 
+// Keep only one model on the device: delete every other cached model (both f16/f32 builds).
+async function removeOtherModels(keepId, lib) {
+  try {
+    const removed = [];
+    for (const mm of MODELS) {
+      for (const vid of [mm.f16, mm.f32]) {
+        if (vid === keepId) continue;
+        let has = false;
+        try { has = await lib.hasModelInCache(vid); } catch {}
+        await lib.deleteModelAllInfoInCache(vid).catch(() => {});
+        if (has && mm.f16 !== keepId && mm.f32 !== keepId && !removed.includes(mm.name)) removed.push(mm.name);
+      }
+    }
+    if (removed.length) setTimeout(() => toast(`Replaced ${removed.join(', ')} to free up space`, 3500), 2400);
+    lastStats = null;
+    refreshHomeIfVisible();
+  } catch {}
+}
 function resetEngine() {
   try { worker && worker.terminate(); } catch {}
   worker = null; engine = null; loadedId = null; loadingPromise = null;
@@ -338,20 +357,51 @@ function newChat() {
   renderChat();
   renderList();
   updatePersonaChip();
+  updateSaveBtn();
   closeSidebarMobile();
   setTimeout(() => !isMobile && $('#input').focus(), 30);
 }
+// Persists the current chat only if the user chose "Save this chat".
 async function saveCurrent() {
   if (!current) return;
   current.updatedAt = Date.now();
+  if (!current.saved) { updateSaveBtn(); return; }
+  await persistCurrent();
+}
+async function saveThisChat() {
+  if (!current || !current.messages.length) return;
   current.saved = true;
+  await persistCurrent();
+  toast('Chat saved ✓');
+}
+async function unsaveThisChat() {
+  if (!current || !current.saved) return;
+  if (!await confirmBox('Remove from saved chats?', 'It will be deleted from your chat list. You can keep reading it until you start a new chat.', 'Remove')) return;
+  await db.del(current.id);
+  chats = chats.filter(x => x.id !== current.id);
+  current.saved = false;
+  if (settings.lastChatId === current.id) { settings.lastChatId = null; saveSettings(); }
+  renderList(); updateSaveBtn(); refreshHomeIfVisible();
+  toast('Removed from saved chats');
+}
+function updateSaveBtn() {
+  const b = $('#saveChatBtn'); if (!b) return;
+  const has = !!(current && current.messages.length);
+  b.hidden = !has;
+  const saved = !!(current && current.saved);
+  b.classList.toggle('saved', saved);
+  b.innerHTML = saved ? 'Saved ✓<span class="caret">▾</span>' : '💾 <span class="long">Save this chat</span><span class="short">Save</span>';
+  b.title = saved ? 'Saved. Tap to remove it from your saved chats' : 'This chat isn\'t saved. It disappears when you start a new chat or close the app.';
+}
+async function persistCurrent() {
+  current.updatedAt = Date.now();
   const { saved, ...rest } = current;
   await db.put(rest);
   const i = chats.findIndex(c => c.id === current.id);
   if (i >= 0) chats[i] = current; else chats.unshift(current);
   chats.sort((a, b) => b.updatedAt - a.updatedAt);
   settings.lastChatId = current.id; saveSettings();
-  renderList();
+  renderList(); updateSaveBtn();
 }
 async function openChat(id) {
   if (generating) { toast('Stop the current reply first'); return; }
@@ -376,7 +426,7 @@ async function renameChat(id) {
   const v = await promptBox('Rename chat', c.title);
   if (v == null || !v.trim()) return;
   c.title = v.trim().slice(0, 80);
-  if (current && current.id === id) { current.title = c.title; if (current.saved || current.messages.length) await saveCurrent(); }
+  if (current && current.id === id) { current.title = c.title; await saveCurrent(); document.title = `${c.title} · Pocket AI`; }
   else { const { saved, ...rest } = c; await db.put(rest); renderList(); }
 }
 function chatToMarkdown(c) {
@@ -416,7 +466,7 @@ function renderList() {
     });
   }
   if (!list.length) {
-    nav.innerHTML = `<div class="no-chats">${q ? 'No chats match your search.' : 'No saved chats yet.<br>Start typing below!'}</div>`;
+    nav.innerHTML = `<div class="no-chats">${q ? 'No chats match your search.' : 'No saved chats yet.<br>Tap “💾 Save this chat” at the top of a chat to keep it.'}</div>`;
     return;
   }
   let lastGroup = '';
@@ -478,6 +528,7 @@ function renderChat() {
   if (!empty.hidden) renderHome(); else stopClock();
   if (current) current.messages.forEach((m, i) => box.appendChild(messageEl(m, i)));
   if (empty.hidden) scrollBottom(true); else box.scrollTop = 0;
+  updateSaveBtn();
   document.title = current && current.messages.length ? `${current.title} · Pocket AI` : 'Pocket AI';
 }
 function updatePersonaChip() {
@@ -776,7 +827,7 @@ async function renderModels() {
       <div class="mc-meta"><span>Download <b>${m.download}</b></span><span>Memory <b>~${fmtMB(m.memMB)}</b></span><span>Speed ${meter(m.speed)}</span><span>Smarts ${meter(m.smarts)}</span></div>
       <div class="mc-warn">⚠️ ${esc(m.warn)}</div>
       <div class="mc-actions">
-        <button class="btn ${m.key === settings.model ? '' : 'primary'}" data-use="${m.key}">${m.key === settings.model ? (loadedId === modelIdFor(m) ? '✓ In use' : 'Selected · Load now') : 'Use this model'}</button>
+        <button class="btn ${m.key === settings.model ? '' : 'primary'}" data-use="${m.key}">${m.key === settings.model ? (loadedId === modelIdFor(m) ? '✓ In use' : 'Selected · Load now') : 'Switch to this model'}</button>
         <button class="btn danger-outline" data-del="${m.key}" hidden>Delete download</button>
       </div>
     </div>`).join('');
@@ -1050,6 +1101,7 @@ function updateWebBtn() {
 
 /* ---------------- Events ---------------- */
 function bind() {
+  $('#saveChatBtn').onclick = () => { if (current && current.saved) unsaveThisChat(); else saveThisChat(); };
   $('#goHome').onclick = () => { if (generating) return toast('Stop the current reply first'); newChat(); };
   $('#webBtn').onclick = () => {
     if (settings.searchMode === 'always') { openSettings('search'); return; }
