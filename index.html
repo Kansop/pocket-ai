@@ -1,286 +1,105 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pocket AI</title>
-<meta name="description" content="A private AI chat that runs entirely on your device. No server, no API key.">
-<meta name="theme-color" content="#0f1117">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Pocket AI">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icons/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<script>
-  // Startup safety net: if the app fails to start, show a recovery screen instead of a broken page.
-  window.__POCKETAI_BUILD = '1.5.0';
-  (function () {
-    var shown = false;
-    function show(msg) {
-      if (shown || (window.__pocketai && window.__pocketai.ready)) return;
-      shown = true;
-      var d = document.createElement('div');
-      d.id = 'recovery';
-      d.setAttribute('style', 'position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:#0f1117;color:#e8eaf0;font:16px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif');
-      d.innerHTML = '<div style="max-width:420px;text-align:center"><div style="font-size:44px">🛠️</div><h2 style="margin:8px 0">Pocket AI didn\u2019t start properly</h2>' +
-        '<p style="color:#9aa3b5;margin:0 0 18px">This usually happens right after an update when your browser mixes old and new files. Resetting fixes it. <b>Your saved chats are kept.</b></p>' +
-        '<button id="rcReset" style="font:inherit;font-weight:600;border:0;border-radius:12px;padding:12px 20px;background:linear-gradient(135deg,#7c5cff,#38bdf8);color:#fff;cursor:pointer">Reset app</button>' +
-        '<p style="margin:14px 0 0"><label style="color:#9aa3b5;font-size:14px"><input type="checkbox" id="rcSettings"> Also reset settings &amp; look (chats still kept)</label></p>' +
-        '<details style="margin-top:14px;color:#6b7385;font-size:12px"><summary>Error details</summary><pre style="white-space:pre-wrap;text-align:left">' + String(msg || '').replace(/[<&]/g, function (c) { return c === '<' ? '&lt;' : '&amp;'; }).slice(0, 600) + '</pre></details></div>';
-      (document.body || document.documentElement).appendChild(d);
-      document.getElementById('rcReset').onclick = window.__pocketaiReset;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pocket AI</title>
+  <meta name="description" content="Winter Pocket Assistant and Python Trail.">
+  <meta name="theme-color" content="#0b1520">
+  <style>
+    :root {
+      --bg: #0b1520;
+      --card: #132333;
+      --card-border: rgba(186, 214, 235, 0.14);
+      --text: #e8f1f7;
+      --muted: #9fb3c4;
+      --accent: #8ec8e8;
+      --accent-2: #c9e6a6;
     }
-    window.__pocketaiReset = function () {
-      var keepSettings = !(document.getElementById('rcSettings') || {}).checked;
-      var jobs = [];
-      try { if (navigator.serviceWorker) jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); })); } catch (e) {}
-      try { if (window.caches) jobs.push(caches.keys().then(function (ks) { return Promise.all(ks.filter(function (k) { return k.indexOf('pocketai-') === 0; }).map(function (k) { return caches.delete(k); })); })); } catch (e) {}
-      if (!keepSettings) { try { localStorage.removeItem('pocketai.settings'); localStorage.removeItem('pocketai.wallpaper'); } catch (e) {} }
-      Promise.all(jobs).catch(function () {}).then(function () { location.replace(location.pathname + '?fresh=' + Date.now()); });
-    };
-    window.__pocketaiFatal = show;
-    window.addEventListener('error', function (e) { if (e && (e.error || e.message)) show((e.error && e.error.stack) || e.message); }, true);
-    window.addEventListener('unhandledrejection', function (e) { show(e && e.reason && (e.reason.stack || e.reason.message || e.reason)); });
-    setTimeout(function () { if (!(window.__pocketai && window.__pocketai.ready)) show('The app took too long to start (timeout).'); }, 12000);
-  })();
-</script>
-<link rel="stylesheet" href="css/app.css?v=1.5.0">
-<script>
-  (function(){try{var s=JSON.parse(localStorage.getItem('pocketai.settings')||'{}');var t=s.theme||'system';if(t==='system')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;}catch(e){}})();
-</script>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font: 17px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 500px at 50% -80px, #1b3a52 0%, transparent 70%),
+        var(--bg);
+      min-height: 100vh;
+      padding: 48px 20px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main { width: 100%; max-width: 560px; }
+    h1 {
+      font: 600 34px/1.15 system-ui, -apple-system, "Segoe UI", sans-serif;
+      letter-spacing: -0.03em;
+      margin: 0 0 8px;
+    }
+    .lead { color: var(--muted); margin: 0 0 28px; }
+    .cards { display: grid; gap: 14px; }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px 22px;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+    a.card:hover, a.card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(142, 200, 232, 0.45);
+      background: #173044;
+      outline: none;
+    }
+    .kicker {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 6px;
+    }
+    .card h2 { margin: 0 0 6px; font-size: 22px; font-weight: 600; }
+    .card p { margin: 0; color: var(--muted); }
+    .go { margin-top: 14px; color: var(--accent-2); font-weight: 600; }
+  </style>
 </head>
 <body>
-<div id="backdrop" aria-hidden="true"></div>
-<div id="app">
-  <aside id="sidebar" aria-label="Chats">
-    <div class="side-top">
-      <div class="brand"><span class="brand-av" id="brandAv">✨</span><span id="brandName">Pocket AI</span></div>
-      <button class="icon-btn only-mobile" id="closeSidebar" aria-label="Close sidebar">✕</button>
+  <main>
+    <h1>Pocket AI</h1>
+    <p class="lead">Two apps, both on this site.</p>
+    <div class="cards">
+      <a class="card" href="pocket-assistant/winter/">
+        <p class="kicker">Assistant</p>
+        <h2>Winter Pocket Assistant</h2>
+        <p>A private everyday assistant you can use in the browser.</p>
+        <p class="go">Open &rarr;</p>
+      </a>
+      <a class="card" href="python-trail/">
+        <p class="kicker">Learn</p>
+        <h2>Python Trail</h2>
+        <p>Learn Python and work through lessons with a friend.</p>
+        <p class="go">Open &rarr;</p>
+      </a>
     </div>
-    <button class="new-chat" id="newChat"><span class="plus">＋</span> New chat</button>
-    <div class="search-wrap"><input id="search" type="search" placeholder="Search chats" autocomplete="off" aria-label="Search chats"></div>
-    <nav id="chatList" aria-label="Saved chats"></nav>
-    <div class="side-bottom">
-      <button class="side-btn" id="goHome"><span>🏠</span> Home</button>
-      <button class="side-btn" id="openModels"><span>🧠</span> Models</button>
-      <button class="side-btn" id="openPersonas"><span>🎭</span> Personas</button>
-      <button class="side-btn" id="openSettings"><span>⚙️</span> Settings</button>
-    </div>
-  </aside>
-  <div id="scrim" hidden></div>
-
-  <main id="main">
-    <header id="topbar">
-      <button class="icon-btn" id="openSidebar" aria-label="Open sidebar">☰</button>
-      <button id="personaChip" class="chip" title="Change persona"><span id="personaEmoji">✨</span><span id="personaName">Assistant</span><span class="caret">▾</span></button>
-      <div class="spacer"></div>
-      <button id="modelChip" class="chip model-chip" title="Choose model"><span class="dot" id="modelDot"></span><span id="modelLabel">No model</span></button>
-      <button id="saveChatBtn" class="chip save-chip" hidden></button>
-      <button class="icon-btn" id="chatMenuBtn" aria-label="Chat options">⋯</button>
-    </header>
-
-    <div id="gpuBanner" class="banner warn" hidden></div>
-    <div id="progressBar" class="progress" hidden>
-      <div class="progress-info"><span id="progressText">Preparing…</span><span id="progressPct">0%</span></div>
-      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-      <div class="progress-sub" id="progressSub">Downloads once, then it's saved on this device and works offline.</div>
-    </div>
-
-    <section id="messages" aria-live="polite">
-      <div id="empty" class="home"></div>
-    </section>
-
-    <footer id="composerWrap">
-      <form id="composer" autocomplete="off">
-        <button type="button" id="webBtn" class="web-btn" title="Web search: auto" aria-label="Web search">🌐<span id="webBtnLabel">Auto</span></button>
-        <textarea id="input" rows="1" placeholder="Message Pocket AI" aria-label="Message"></textarea>
-        <button type="submit" id="sendBtn" class="send" aria-label="Send" disabled>
-          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 4l7 7-1.4 1.4L13 7.8V20h-2V7.8l-4.6 4.6L5 11z"/></svg>
-        </button>
-        <button type="button" id="stopBtn" class="send stop" aria-label="Stop" hidden>
-          <svg viewBox="0 0 24 24" width="16" height="16"><rect x="5" y="5" width="14" height="14" rx="2" fill="currentColor"/></svg>
-        </button>
-      </form>
-      <div class="foot-note" id="footNote">Small on-device models can make mistakes. Check important info.</div>
-    </footer>
   </main>
-</div>
-
-<!-- Dialogs -->
-<dialog id="modelsDlg" class="sheet">
-  <div class="sheet-head"><h2>Choose a model</h2><button class="icon-btn" data-close aria-label="Close">✕</button></div>
-  <p class="muted">Only one model is kept on this device. Switching downloads the new model, and once it loads, it <b>replaces the current one</b> (the old one is deleted to save space). Bigger = smarter but slower and needs more memory.</p>
-  <div id="deviceInfo" class="device-info"></div>
-  <div id="modelCards" class="model-cards"></div>
-  <div class="sheet-foot">
-    <button class="btn danger-outline" id="clearModels">🗑 Clear downloaded models</button>
-    <span class="muted small" id="storageInfo"></span>
-  </div>
-</dialog>
-
-<dialog id="settingsDlg" class="sheet">
-  <div class="sheet-head"><h2>Settings</h2><button class="icon-btn" data-close aria-label="Close">✕</button></div>
-  <div class="tabs" id="setTabs">
-    <button data-tab="general" class="on">General</button><button data-tab="me">You &amp; Memory</button><button data-tab="search">Web search</button><button data-tab="look">Look</button><button data-tab="home">Home page</button><button data-tab="storage">Storage</button>
-  </div>
-
-  <section data-pane="general">
-    <div class="field">
-      <label for="customInstr">Custom instructions <span class="muted small">(added to every chat)</span></label>
-      <textarea id="customInstr" rows="3" placeholder="e.g. Keep answers short. Explain things simply."></textarea>
-    </div>
-    <div class="field">
-      <label for="temp">Creativity (temperature): <b id="tempVal">0.7</b></label>
-      <input type="range" id="temp" min="0" max="1.5" step="0.05">
-      <div class="range-labels"><span>Precise</span><span>Balanced</span><span>Wild</span></div>
-    </div>
-    <div class="field">
-      <label for="maxTok">Max reply length: <b id="maxTokVal">1024</b> tokens</label>
-      <input type="range" id="maxTok" min="128" max="2048" step="64">
-    </div>
-    <div class="field row"><label for="sendEnter">Enter sends message (Shift+Enter for new line)</label><input type="checkbox" id="sendEnter" class="toggle"></div>
-    <div class="field row"><label for="showStats">Show speed (tokens/sec) under replies</label><input type="checkbox" id="showStats" class="toggle"></div>
-    <div class="field">
-      <label>Your data</label>
-      <div class="btn-row">
-        <button class="btn" id="exportAll">⬇ Export all chats (JSON)</button>
-        <button class="btn" id="exportMd">⬇ Export all (Markdown)</button>
-        <button class="btn" id="importBtn">⬆ Import chats</button>
-        <input type="file" id="importFile" accept="application/json,.json" hidden>
-      </div>
-      <div class="btn-row"><button class="btn danger-outline" id="deleteAll">Delete all chats</button></div>
-    </div>
-  </section>
-
-  <section data-pane="me" hidden>
-    <div class="field two">
-      <div><label for="userName">Your name</label><input id="userName" type="text" maxlength="40" placeholder="e.g. Luca"></div>
-      <div><label for="asstName">Assistant's name</label><input id="asstName" type="text" maxlength="30" placeholder="Pocket AI"></div>
-    </div>
-    <div class="field">
-      <label>Assistant avatar</label>
-      <div class="emoji-pick" id="emojiPick"></div>
-    </div>
-    <div class="field">
-      <label for="aboutMe">About me <span class="muted small">(the AI always knows this)</span></label>
-      <textarea id="aboutMe" rows="3" placeholder="e.g. I'm 15, I live in Michigan, I love basketball and coding."></textarea>
-    </div>
-    <div class="field row"><label for="autoMemory">Auto-remember facts I mention (like "my favorite food is…")</label><input type="checkbox" id="autoMemory" class="toggle"></div>
-    <div class="field">
-      <label>Memories <span class="muted small" id="memCount"></span></label>
-      <p class="muted small" style="margin:0 0 8px">Say <b>"remember that …"</b> or <b>/remember …</b> in any chat to add one, or <b>"forget …"</b> to remove it.</p>
-      <div id="memList" class="mem-list"></div>
-      <div class="mem-add"><input id="memNew" type="text" placeholder="Add a memory, e.g. My sister's name is Ana"><button class="btn primary" id="memAddBtn">Add</button></div>
-      <div class="btn-row"><button class="btn danger-outline" id="memClear">Clear all memories</button></div>
-    </div>
-  </section>
-
-  <section data-pane="search" hidden>
-    <p class="muted">Web search looks things up and gives the AI the results, with sources you can tap. It uses free Wikipedia + DuckDuckGo lookups (no key needed). Everything else stays on your device. Offline, chats work without search.</p>
-    <div class="field">
-      <label>When to search</label>
-      <div class="seg" id="searchSeg"><button data-v="off">Off</button><button data-v="auto">Auto-detect</button><button data-v="always">Every message</button></div>
-      <p class="muted small">Auto-detect searches for things like news, "latest…", "who is…", prices, dates, or when you say "search". Tap 🌐 next to the message box to force it for one message.</p>
-    </div>
-    <div class="field">
-      <label for="tavilyKey">Optional: Tavily API key <span class="muted small">(better, real web + news results)</span></label>
-      <input id="tavilyKey" type="text" autocomplete="off" spellcheck="false" placeholder="tvly-…  (free at tavily.com)">
-      <p class="muted small">Saved only on this device. Sent only to Tavily when searching.</p>
-    </div>
-    <div class="btn-row"><button class="btn" id="testSearch">🔎 Test search</button><span class="muted small" id="testSearchOut"></span></div>
-  </section>
-
-  <section data-pane="look" hidden>
-    <div class="field">
-      <label>Theme</label>
-      <div class="seg" id="themeSeg"><button data-v="system">System</button><button data-v="dark">Dark</button><button data-v="light">Light</button></div>
-    </div>
-    <div class="field">
-      <label>Seasonal effects</label>
-      <div class="seg wrap" id="seasonSeg"><button data-v="auto">Auto</button><button data-v="winter">❄️ Winter</button><button data-v="spring">🌸 Spring</button><button data-v="summer">✨ Summer</button><button data-v="autumn">🍂 Autumn</button><button data-v="off">Off</button></div>
-      <p class="muted small" id="seasonNow"></p>
-    </div>
-    <div class="field row"><label for="seasonColors">Use seasonal accent color</label><input type="checkbox" id="seasonColors" class="toggle"></div>
-    <div class="field">
-      <label>Accent color</label>
-      <div class="swatches" id="accentSw"></div>
-    </div>
-    <div class="field">
-      <label>Wallpaper</label>
-      <div class="walls" id="wallPick"></div>
-      <div class="btn-row"><button class="btn" id="wallUpload">🖼 Upload your own</button><input type="file" id="wallFile" accept="image/*" hidden><button class="btn" id="wallDim">Dim: <b id="wallDimVal">Medium</b></button></div>
-    </div>
-    <div class="field">
-      <label>Chat width</label>
-      <div class="seg" id="widthSeg"><button data-v="normal">Normal</button><button data-v="wide">Wide</button></div>
-    </div>
-  </section>
-
-  <section data-pane="home" hidden>
-    <div class="field row"><label for="homeOnLaunch">Open the home page when the app starts</label><input type="checkbox" id="homeOnLaunch" class="toggle"></div>
-    <div class="field">
-      <label>Layout</label>
-      <div class="seg" id="layoutSeg"><button data-v="centered">Centered</button><button data-v="grid">Dashboard</button><button data-v="minimal">Minimal</button></div>
-    </div>
-    <div class="field">
-      <label>Widgets <span class="muted small">(toggle and reorder)</span></label>
-      <div id="widgetList" class="widget-list"></div>
-    </div>
-    <div class="field">
-      <label>Quick prompts</label>
-      <div id="qpList" class="qp-list"></div>
-      <div class="btn-row"><button class="btn" id="qpAdd">＋ Add prompt</button><button class="btn" id="qpReset">Reset to defaults</button></div>
-    </div>
-  </section>
-
-  <section data-pane="storage" hidden>
-    <div id="storagePane" class="storage-pane"><p class="muted">Checking…</p></div>
-    <div class="btn-row"><button class="btn" id="storageRefresh">↻ Refresh</button><button class="btn danger-outline" id="clearModels2">🗑 Clear downloaded models</button></div>
-  </section>
-
-  <div class="about muted small">
-    Pocket AI runs open models (Qwen, Llama, SmolLM) in your browser with <a href="https://github.com/mlc-ai/web-llm" target="_blank" rel="noopener">WebLLM</a> + WebGPU. Your chats, memories and settings never leave this device. <a href="https://github.com/Kansop/pocket-ai" target="_blank" rel="noopener">Source</a> · <span id="appVersion"></span>
-  </div>
-</dialog>
-
-<dialog id="personasDlg" class="sheet">
-  <div class="sheet-head"><h2>Personas</h2><button class="icon-btn" data-close aria-label="Close">✕</button></div>
-  <p class="muted">Pick who the AI acts like in this chat, or make your own.</p>
-  <div id="personaList" class="persona-list"></div>
-  <details id="personaEditor" class="persona-editor">
-    <summary id="personaEditorTitle">＋ Create a persona</summary>
-    <div class="field"><label for="pEmoji">Emoji</label><input id="pEmoji" maxlength="4" placeholder="🤖"></div>
-    <div class="field"><label for="pName">Name</label><input id="pName" maxlength="40" placeholder="e.g. Gym Coach"></div>
-    <div class="field"><label for="pPrompt">System prompt</label><textarea id="pPrompt" rows="5" placeholder="You are a motivating gym coach. Give short, practical workout advice…"></textarea></div>
-    <div class="btn-row"><button class="btn primary" id="pSave">Save persona</button><button class="btn" id="pCancel">Cancel</button></div>
-  </details>
-</dialog>
-
-<dialog id="chatMenu" class="menu">
-  <button data-act="rename">✏️ Rename chat</button>
-  <button data-act="system">🧾 Edit system prompt for this chat</button>
-  <button data-act="exportmd">⬇ Export as Markdown</button>
-  <button data-act="exportjson">⬇ Export as JSON</button>
-  <button data-act="copy">📋 Copy whole chat</button>
-  <button data-act="delete" class="danger">🗑 Delete / discard chat</button>
-</dialog>
-
-<dialog id="promptDlg" class="sheet small">
-  <div class="sheet-head"><h2 id="promptTitle">Rename</h2><button class="icon-btn" data-close aria-label="Close">✕</button></div>
-  <div class="field"><textarea id="promptInput" rows="1"></textarea></div>
-  <div class="btn-row end"><button class="btn" data-close>Cancel</button><button class="btn primary" id="promptOk">Save</button></div>
-</dialog>
-
-<dialog id="confirmDlg" class="sheet small">
-  <h2 id="confirmTitle">Are you sure?</h2>
-  <p id="confirmText" class="muted"></p>
-  <div class="btn-row end"><button class="btn" data-close>Cancel</button><button class="btn danger" id="confirmOk">Delete</button></div>
-</dialog>
-
-<div id="toast" role="status" hidden></div>
-
-<script type="module" src="js/app.js?v=1.5.0"></script>
+  <script>
+    (function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          return Promise.all(regs.map(function (r) { return r.unregister(); }));
+        }).catch(function () {});
+      }
+      if (window.caches && caches.keys) {
+        caches.keys().then(function (keys) {
+          return Promise.all(keys.filter(function (k) {
+            return k.indexOf("pocketai-") === 0;
+          }).map(function (k) { return caches.delete(k); }));
+        }).catch(function () {});
+      }
+    })();
+  </script>
 </body>
 </html>
