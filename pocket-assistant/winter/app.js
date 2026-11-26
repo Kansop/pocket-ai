@@ -1,4 +1,4 @@
-const BUILD = '1.6.9';
+const BUILD = '1.6.10';
 const MODEL_URL = 'model.json?v=' + BUILD;
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const STORE = 'pocket-assistant-winter-v2';
@@ -526,6 +526,54 @@ function decodeMatrices(raw) {
   return raw;
 }
 
+// Rank distinctive terms in the topic name, example phrasings and explanation
+// alongside the neural score. Build the index only once per model load.
+let termIndex;
+const filler = new Set('about would could whats thing things example example simple basic really know explain please practical someone connection english terms actually matter someone talking remember everyday specifically does when should question understand work what why how which where with help give topic behind think describe quick mean'.split(' '));
+function searchTerms(text) {
+  const words = text.toLowerCase().match(/[a-z0-9]+/g) || [];
+  const terms = [];
+  for (let word of words) {
+    if (word.length < 2 || stop.has(word) || filler.has(word)) continue;
+    if (word.length > 5 && word.endsWith('ies')) word = word.slice(0, -3) + 'y';
+    else if (word.length > 3 && word.endsWith('s') && !word.endsWith('ss') && !word.endsWith('us')) word = word.slice(0, -1);
+    terms.push(word);
+  }
+  return new Set(terms.concat(terms.slice(1).map((w,i) => terms[i] + ' ' + w)));
+}
+function buildTermIndex() {
+  const byTopic = model.topics.map(() => new Map());
+  function collect(index, text, weight) {
+    const weights = byTopic[index];
+    for (const term of searchTerms(text)) weights.set(term, Math.max(weight,weights.get(term) || 0));
+  }
+  for (const [text,id] of Object.entries(model.exact)) collect(id,text,1);
+  model.topics.forEach((topic,id) => { collect(id,topic.title,1.3); collect(id,topic.desc,.55); });
+  const inverted = new Map();
+  byTopic.forEach((weights,id) => {
+    for (const [term,weight] of weights) {
+      if (!inverted.has(term)) inverted.set(term,[]);
+      inverted.get(term).push([id,weight]);
+    }
+  });
+  return inverted;
+}
+function addTermEvidence(scores,text) {
+  if (!termIndex) termIndex = buildTermIndex();
+  const evidence = new Float32Array(scores.length);
+  let mass = 0;
+  for (const term of searchTerms(text)) {
+    const hits = termIndex.get(term);
+    if (!hits) continue;
+    const idf = Math.log(1 + scores.length / hits.length);
+    mass += idf;
+    for (const [i,w] of hits) evidence[i] += w * idf;
+  }
+  if (!mass) return scores;
+  const scale = 3.2 / Math.sqrt(Math.max(mass,10));
+  return scores.map((score,i) => score + evidence[i]*scale);
+}
+
 function featuresFor(s) {
   const words = (s.toLowerCase().match(/[a-z0-9_]+|==|=/g) || []).filter(w => !stop.has(w));
   const definition = s.toLowerCase().trim().match(/^what(?: is|'s|s| are) (?:an? |the )?([a-z0-9-]+)[?!.]*$/);
@@ -545,7 +593,7 @@ function scoreQuery(s) {
   if (!ids) return null;
   const norm = Math.sqrt(ids.reduce((n, i) => n + model.idf[i] ** 2, 0));
   const hidden = model.V.map((_, j) => Math.tanh(ids.reduce((n, i) => n + model.W[i][j] * model.idf[i] / norm, 0)));
-  return model.topics.map((_, k) => hidden.reduce((n, h, j) => n + h * model.V[j][k], 0));
+  return addTermEvidence(model.topics.map((_, k) => hidden.reduce((n, h, j) => n + h * model.V[j][k], 0)),s);
 }
 
 function classify(s) {
