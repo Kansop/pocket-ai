@@ -1,4 +1,4 @@
-const BUILD = '1.6.6';
+const BUILD = '1.6.7';
 const MODEL_URL = 'model.json?v=' + BUILD;
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const STORE = 'pocket-assistant-winter';

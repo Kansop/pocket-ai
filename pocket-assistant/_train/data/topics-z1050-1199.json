@@ -1,0 +1,2102 @@
+[
+  {
+    "title": "Using a washing machine",
+    "desc": "Read the machine's labels, don't overload it, add detergent in the right place, and pick a cycle that matches the fabric—cold is safer for most everyday colors. Zip zippers, check pockets, and stay nearby the first time so you can hear a problem. If you're not sure about a setting, a regular or mixed cycle on cold is a reasonable start.",
+    "prompts": [
+      "how do I use a washing machine",
+      "washing machine for beginners",
+      "don't overload the washer",
+      "where to put detergent",
+      "what cycle should I use",
+      "check pockets before I wash",
+      "cold wash for colors",
+      "help me run a load of laundry"
+    ]
+  },
+  {
+    "title": "Using a dryer",
+    "desc": "Clean the lint trap before every load, don't overdry delicate items, and take clothes out when they're dry so they wrinkle less. If something says air dry or low heat, believe the tag. Clean the lint trap so the dryer can vent; a packed trap is a fire risk. If a load stays wet, the machine may be overloaded or the lint path may need an adult to check.",
+    "prompts": [
+      "how do I use a dryer",
+      "dryer lint trap",
+      "don't overdry clothes",
+      "which dryer setting",
+      "clothes still wet after drying",
+      "help me use a clothes dryer",
+      "low heat for delicates",
+      "clean the lint screen first"
+    ]
+  },
+  {
+    "title": "Treating a stain",
+    "desc": "Treat a stain sooner rather than later: blot, don't rub, and check the care tag. A little detergent on many food or dirt stains, then a normal wash, is a common start. Don't toss a stained item straight into a hot dryer, which can set the stain. If it's blood, ink, or grease, look up that kind of stain or ask someone who's done it, and never mix strong chemicals.",
+    "prompts": [
+      "how do I treat a stain",
+      "stain on my shirt",
+      "blot don't rub a stain",
+      "don't put a stain in a hot dryer",
+      "food stain on clothes",
+      "help me get a stain out",
+      "treat a stain before washing",
+      "a stain I just got"
+    ]
+  },
+  {
+    "title": "How much detergent",
+    "desc": "Use the amount the bottle lists for a regular load, often less than a full cap if the cup has lines, and less if you have a high-efficiency washer. Too much soap can leave residue and isn't cleaner. If clothes feel slimy or soapy, try a smaller amount next time. I won't invent a brand's current instructions; the label on your bottle is the one to follow.",
+    "prompts": [
+      "how much detergent should I use",
+      "too much laundry detergent",
+      "detergent cap lines",
+      "HE washer detergent amount",
+      "clothes feel soapy after a wash",
+      "help me measure detergent",
+      "don't fill the cap by habit",
+      "how much soap for a load"
+    ]
+  },
+  {
+    "title": "Ironing a shirt",
+    "desc": "Check the care tag, start with a lower heat than you think, and use the iron only on a stable board, never on a person or an empty thin air. If you're unsure, a parent should help the first time. Work in sections, keep the cord out of the way, and unplug the iron when you stop. A damp shirt or a steam setting can help wrinkles, but water and a hot iron still need care.",
+    "prompts": [
+      "how do I iron a shirt",
+      "ironing for beginners",
+      "iron heat setting",
+      "unplug the iron when I'm done",
+      "help me iron a wrinkled shirt",
+      "iron on an ironing board",
+      "care tag before I iron",
+      "first time using an iron"
+    ]
+  },
+  {
+    "title": "Clothes that shrank",
+    "desc": "Clothes often shrink from heat in the washer or dryer, or from a fabric that wasn't meant for that cycle. For the future, use cold water and lower heat, and read the tag. A slightly shrunken cotton item sometimes relaxes a little if you gently stretch it while damp, but that's not a promise. If it still doesn't fit, it may be a donate-or-repurpose situation, not something to force.",
+    "prompts": [
+      "my clothes shrank",
+      "why did this shirt shrink",
+      "hot dryer shrank my clothes",
+      "can I unshrink a shirt",
+      "help with clothes that shrank",
+      "prevent shrinking in the laundry",
+      "cold wash so clothes don't shrink",
+      "this hoodie got smaller"
+    ]
+  },
+  {
+    "title": "Setting an oven temperature",
+    "desc": "Set the oven to the temperature the recipe lists, give it time to get there before the food goes in, and use oven mitts. Don't put food on a cardboard box, and keep clear of the heating elements. The preheat signal means the air is close to that temperature, not that every pan is already hot. If your oven runs hot or cold, an adult can help you check it.",
+    "prompts": [
+      "how do I set an oven temperature",
+      "what temperature should the oven be",
+      "oven dial or digital temperature",
+      "wait for the oven to reach temperature",
+      "help me set the oven",
+      "recipe temperature in the oven",
+      "fahrenheit on an oven",
+      "using the oven temperature the recipe lists"
+    ]
+  },
+  {
+    "title": "Measuring ingredients",
+    "desc": "For most baking, level dry ingredients in a measuring cup or spoon, and read liquid amounts at eye level in a liquid cup. A kitchen scale is even clearer when a recipe lists grams or ounces. Don't pack flour unless the recipe says to. Measuring carefully matters more in baking than in a loose soup.",
+    "prompts": [
+      "how do I measure ingredients",
+      "level a measuring cup",
+      "liquid measuring cup at eye level",
+      "don't pack flour",
+      "help me measure for a recipe",
+      "using measuring spoons",
+      "baking measurements",
+      "how to measure flour and sugar"
+    ]
+  },
+  {
+    "title": "Cooking frozen vegetables",
+    "desc": "Frozen vegetables can go in a pan, the microwave, or the oven, following the bag's directions. Cook until they're hot all the way through; you usually don't need to thaw them first. Don't eat them still icy in the middle if the bag says to cook them, and drain extra water if they get soggy in a pan. I won't invent a brand's times; the bag is the first place to look.",
+    "prompts": [
+      "how do I cook frozen vegetables",
+      "frozen veggies in a pan",
+      "do I thaw frozen vegetables first",
+      "microwave frozen vegetables",
+      "help me cook frozen vegetables",
+      "frozen vegetables still icy",
+      "bag directions for frozen veggies",
+      "easy frozen vegetable side"
+    ]
+  },
+  {
+    "title": "Cleaning as you cook",
+    "desc": "Cleaning as you cook means washing a bowl or wiping a counter between steps so the mess doesn't pile up at the end. Set a basin or the sink for used tools, and put trash where it belongs before it spreads. You don't have to be perfect; rinsing as you go already helps. Leave the stove safe and off when you're done.",
+    "prompts": [
+      "how do I clean as I cook",
+      "wash dishes while I cook",
+      "don't let kitchen mess pile up",
+      "wipe the counter between steps",
+      "help me clean as I go in the kitchen",
+      "cooking without a huge mess after",
+      "rinse tools as I cook",
+      "tidier cooking habits"
+    ]
+  },
+  {
+    "title": "Making an omelet",
+    "desc": "An omelet is beaten eggs cooked in a lightly oiled pan on medium heat, then folded, with optional fillings that are already cooked or don't need long heat, like cheese. Don't crank the heat so high the bottom burns while the top is raw. A nonstick pan and a spatula help. Wash your hands after handling raw egg.",
+    "prompts": [
+      "how do I make an omelet",
+      "omelet for beginners",
+      "folding an omelet",
+      "omelet fillings",
+      "don't burn an omelet",
+      "help me make an omelet",
+      "eggs in a pan for an omelet",
+      "simple cheese omelet"
+    ]
+  },
+  {
+    "title": "Using a kitchen timer",
+    "desc": "A kitchen timer keeps you from guessing: set it for the shorter end of a recipe range, then check the food. Use a phone timer, a microwave timer, or a stand-alone one you can hear. If you leave the room, take the timer with you. A timer is a reminder, not a promise the food is done, so still look and test safely.",
+    "prompts": [
+      "how should I use a kitchen timer",
+      "set a timer when I cook",
+      "don't guess cooking time",
+      "phone timer in the kitchen",
+      "help me remember food on the stove",
+      "timer for baking",
+      "take the timer with me",
+      "check food when the timer rings"
+    ]
+  },
+  {
+    "title": "Mopping a floor",
+    "desc": "Sweep or vacuum first, then use a mop and a cleaner meant for that floor, wrung out so you're not flooding it. Work in sections and let it dry before you walk on it in socks that will slide. Too much water can wreck some wood floors, so damp is usually enough. Keep the bucket where no one will trip.",
+    "prompts": [
+      "how do I mop a floor",
+      "mopping for beginners",
+      "sweep before I mop",
+      "don't flood the floor",
+      "what cleaner for this floor",
+      "help me mop",
+      "wring out the mop",
+      "mopping a kitchen floor"
+    ]
+  },
+  {
+    "title": "Vacuuming",
+    "desc": "Empty or check the bin or bag, then vacuum slowly in overlapping passes, moving chairs as needed. Pick up coins, charging cables and small toys first so they don't get sucked in. Use the right tool for corners or a rug if you have one. If the vacuum smells burnt or stops picking up, turn it off and check for a clog, or ask for help.",
+    "prompts": [
+      "how do I vacuum",
+      "vacuuming a room",
+      "empty the vacuum bin",
+      "pick up cables before I vacuum",
+      "help me vacuum the floor",
+      "vacuum slowly in passes",
+      "vacuum a rug and the corners",
+      "vacuum isn't picking up"
+    ]
+  },
+  {
+    "title": "Dusting a room",
+    "desc": "Dust from high to low so you don't sprinkle dirt onto a surface you already wiped. A slightly damp cloth often works better than only waving a dry one around. Don't press hard on shelves of loose items, and unplug or be careful around electronics. Do a little often so it doesn't become a huge job.",
+    "prompts": [
+      "how do I dust a room",
+      "dusting high to low",
+      "damp cloth for dust",
+      "help me dust shelves",
+      "dusting around electronics",
+      "dusting for beginners",
+      "don't skip the tops of things",
+      "quick dust of a room"
+    ]
+  },
+  {
+    "title": "Wiping kitchen counters",
+    "desc": "Clear crumbs, then wipe with a cloth and a cleaner that's safe for food surfaces, and let it sit if the label says to. Don't mix bleach and ammonia or random strong cleaners. Wipe the edges and around the sink, and wash the cloth so you're not spreading the same mess. Wash your hands when you're done.",
+    "prompts": [
+      "how do I wipe kitchen counters",
+      "cleaning a kitchen counter",
+      "food-safe cleaner on the counter",
+      "don't mix strong cleaners",
+      "help me clean the counters",
+      "wipe crumbs then the surface",
+      "kitchen counter after cooking",
+      "cleaning around the sink"
+    ]
+  },
+  {
+    "title": "Cleaning a toilet",
+    "desc": "Use a toilet cleaner and a brush meant for that job, wear gloves if you have them, and never mix different cleaners in the bowl. Let the product sit for the time on the label, brush under the rim, then flush. Wash your hands, and keep the brush in its holder. If you're not sure about a product, ask an adult before you pour it.",
+    "prompts": [
+      "how do I clean a toilet",
+      "toilet brush and cleaner",
+      "don't mix toilet cleaners",
+      "cleaning under the rim",
+      "help me clean the toilet",
+      "gloves when I clean a toilet",
+      "toilet cleaning steps",
+      "wash my hands after cleaning the toilet"
+    ]
+  },
+  {
+    "title": "Changing bed sheets",
+    "desc": "Strip the old sheets, put the fitted sheet on the corners first, then the flat sheet if you use one, and the pillowcases. A laundry day for bedding once a week or so is a common habit, sooner if they're dirty or you were sick. Tucking the corners keeps the fitted sheet from popping off. Wash them on a setting that matches the care tag.",
+    "prompts": [
+      "how do I change bed sheets",
+      "putting on a fitted sheet",
+      "when to wash bed sheets",
+      "help me change the bedding",
+      "pillowcases and a flat sheet",
+      "fitted sheet corners",
+      "changing sheets on laundry day",
+      "how to make the bed with clean sheets"
+    ]
+  },
+  {
+    "title": "Tightening a loose screw",
+    "desc": "Use a screwdriver that actually fits the screw head, turn it clockwise to tighten, and stop when it's snug so you don't strip it. If the hole is worn and the screw won't grab, don't force it—ask for help or a longer or thicker screw. Keep your other hand clear of the sharp tip. A loose chair or handle is worth fixing before it breaks.",
+    "prompts": [
+      "how do I tighten a loose screw",
+      "screwdriver that fits the head",
+      "clockwise to tighten a screw",
+      "don't strip a screw",
+      "help me tighten a screw",
+      "loose handle screw",
+      "loose screw on a chair",
+      "which way do I turn a screw"
+    ]
+  },
+  {
+    "title": "Replacing a light bulb",
+    "desc": "Turn the light off and let a hot bulb cool, then unscrew the old one and screw in a new bulb with the same base and a wattage or LED equivalent that's safe for that fixture. If a bulb breaks in the socket, stop and get an adult. Recycle or dispose of bulbs the way your area asks, especially fluorescents. Don't stand on a wobbly chair.",
+    "prompts": [
+      "how do I change a light bulb",
+      "replacing a light bulb safely",
+      "let the bulb cool first",
+      "same base and wattage",
+      "help me replace a bulb",
+      "bulb broke in the socket",
+      "LED bulb in a lamp",
+      "turn the light off before I change it"
+    ]
+  },
+  {
+    "title": "Using a plunger",
+    "desc": "For a clogged toilet or sink, a plunger can work if you get a seal and use steady pushes, not wild splashing. Don't use a chemical drain cleaner at the same time, and don't keep flushing a full clogged toilet. If sewage is overflowing or a plunger doesn't work, stop and get an adult. Wash your hands and the plunger after.",
+    "prompts": [
+      "how do I use a plunger",
+      "clogged toilet plunger",
+      "get a seal with the plunger",
+      "don't mix plunger and drain chemicals",
+      "help me unclog a toilet",
+      "sink clog and a plunger",
+      "don't keep flushing a clog",
+      "plunger for beginners"
+    ]
+  },
+  {
+    "title": "Changing remote batteries",
+    "desc": "Open the battery door, note the plus and minus markings, and put new batteries in the same way. Don't mix old and new batteries in the same remote if you can help it, and don't leave dead batteries in for months if they might leak. Recycle batteries if your area has a drop-off. If it still doesn't work, try cleaning the contacts or checking that you're on the right device.",
+    "prompts": [
+      "how do I change remote batteries",
+      "batteries in a TV remote",
+      "plus and minus in a remote",
+      "remote still doesn't work",
+      "help me change remote batteries",
+      "don't mix old and new batteries",
+      "battery door on a remote",
+      "dead batteries in a remote"
+    ]
+  },
+  {
+    "title": "A squeaky door",
+    "desc": "A squeaky door often needs a little lubricant on the hinges, not a huge spray everywhere. Have something to catch drips, and open and close the door so the product works in. If a hinge screw is loose, tightening it may help more than oil. Ask before you use a product on a door that isn't yours.",
+    "prompts": [
+      "how do I fix a squeaky door",
+      "squeaky door hinge",
+      "lubricate a door hinge",
+      "loose hinge screws",
+      "help me stop a door squeak",
+      "door squeaks when I open it",
+      "oil a hinge carefully",
+      "squeaky bedroom door"
+    ]
+  },
+  {
+    "title": "Unsticking a zipper",
+    "desc": "If a zipper is stuck, don't yank hard. Pull the fabric gently out of the teeth, then try the slider with small movements. A little bit of a graphite pencil on the teeth can help some metal zippers; skip anything messy on a light-colored garment if you're unsure. If the slider is broken, that's a repair, not a force job.",
+    "prompts": [
+      "how do I unstick a zipper",
+      "zipper is stuck",
+      "fabric caught in a zipper",
+      "don't yank a stuck zipper",
+      "help me fix a stuck zipper",
+      "pencil on a metal zipper",
+      "zipper slider won't move",
+      "unsticking a jacket zipper"
+    ]
+  },
+  {
+    "title": "iPhone battery draining fast",
+    "desc": "If your iPhone battery drops quickly, check Battery settings to see which apps are using power, turn down unused radios like Bluetooth if you're not using them, lower the screen brightness, and use Low Power Mode when you need to. Heat, an old battery, and a weak signal can also drain it faster. I can't see your phone's health from here; Settings is the place to look, and an adult can help if it's still sudden and extreme.",
+    "prompts": [
+      "why is my iPhone battery draining so fast",
+      "iPhone battery dies quickly",
+      "which apps drain iPhone battery",
+      "iPhone battery draining overnight",
+      "help with iPhone battery drain",
+      "phone battery dropping fast",
+      "iPhone loses charge in a few hours",
+      "battery usage in iPhone Settings"
+    ]
+  },
+  {
+    "title": "Checking battery health",
+    "desc": "On many iPhones you can open Settings, then Battery, then Battery Health to see a capacity reading and whether the phone is running at full performance. That number is a guide, not a grade, and it naturally goes down over years of charging. I won't invent your phone's number. If the phone suggests a service, a parent can help you decide what to do.",
+    "prompts": [
+      "how do I check iPhone battery health",
+      "where is Battery Health on iPhone",
+      "iPhone battery capacity",
+      "is my iPhone battery worn out",
+      "help me check battery health",
+      "Settings Battery Battery Health",
+      "what does battery health mean",
+      "iPhone says battery health is degraded"
+    ]
+  },
+  {
+    "title": "iPhone won't charge",
+    "desc": "If an iPhone won't charge, try a cable and brick you know work, a different outlet, and a clean charging port, without poking it with a metal pin. A cheap or damaged cable can be the whole problem. Restart the phone, and if it still won't take any charge, don't keep forcing it—get it to an adult or a repair shop. I won't invent repair prices.",
+    "prompts": [
+      "my iPhone won't charge",
+      "iPhone not charging with the cable",
+      "clean the iPhone charging port",
+      "try a different charger",
+      "iPhone charging but not going up",
+      "help me when my iPhone won't charge",
+      "restart a phone that won't charge",
+      "charging cable might be broken"
+    ]
+  },
+  {
+    "title": "What's using iPhone storage",
+    "desc": "To see what's using space, open Settings, then General, then iPhone Storage. Photos, videos, apps, and messages are the usual heavy items. Delete what you don't need, offload unused apps, or move photos to a backup you actually have before you erase them. 'Other' or system space isn't always something you can fully clear, and that's normal.",
+    "prompts": [
+      "what's using my iPhone storage",
+      "storage is filling up on my iPhone",
+      "where to see iPhone storage",
+      "photos taking up iPhone space",
+      "help me see what's using storage",
+      "iPhone Storage in Settings",
+      "what's taking all the space on my phone",
+      "storage breakdown on iPhone"
+    ]
+  },
+  {
+    "title": "iPhone won't join Wi-Fi",
+    "desc": "If your iPhone won't join Wi-Fi, confirm you're using the right network name and password, then try forgetting the network and joining again, toggling Wi-Fi off and on, or restarting the phone and the router. Stay close enough to the router, and remember some networks use a login page. If only one phone fails, it's likely the phone; if every device fails, it's likely the network.",
+    "prompts": [
+      "iPhone won't connect to Wi-Fi",
+      "iPhone won't join the Wi-Fi",
+      "wrong Wi-Fi password on iPhone",
+      "forget the network and rejoin",
+      "help my iPhone join Wi-Fi",
+      "toggle Wi-Fi off and on",
+      "iPhone can't see my Wi-Fi",
+      "restart router and iPhone for Wi-Fi"
+    ]
+  },
+  {
+    "title": "Forgetting a Wi-Fi network",
+    "desc": "Forgetting a Wi-Fi network on an iPhone removes the saved password so the phone stops joining it automatically. Open the network's details in Wi-Fi settings and choose Forget. You'll need the password to join again, so only forget a network on purpose. It's useful when a network is misbehaving or you no longer want the phone to auto-join.",
+    "prompts": [
+      "how do I forget a Wi-Fi network on iPhone",
+      "forget this network iPhone",
+      "remove a saved Wi-Fi password",
+      "iPhone keeps joining the wrong Wi-Fi",
+      "help me forget a Wi-Fi network",
+      "forget network in Wi-Fi settings",
+      "stop auto-joining a Wi-Fi",
+      "delete a saved wireless network"
+    ]
+  },
+  {
+    "title": "Bluetooth won't stay connected",
+    "desc": "If Bluetooth headphones or a device keep dropping on an iPhone, keep them charged and close, forget the device and pair again, and check that some other phone isn't grabbing them. Restart both devices, and avoid cheap adapters that drop often. If it only happens in one app, that app may be the issue. I can't see your hardware from here, so official pairing steps for that device still matter.",
+    "prompts": [
+      "iPhone Bluetooth keeps disconnecting",
+      "Bluetooth headphones drop on iPhone",
+      "Bluetooth won't stay connected",
+      "forget and re-pair Bluetooth",
+      "help with Bluetooth dropping",
+      "AirPods or headphones keep cutting out",
+      "Bluetooth disconnects when I walk away",
+      "re-pair a Bluetooth device on iPhone"
+    ]
+  },
+  {
+    "title": "Installing an iOS update",
+    "desc": "To install an iOS update, plug the iPhone in, connect to Wi-Fi, back up first if you can, then go to Settings, General, Software Update. Use enough free storage, and don't interrupt the update mid-install. Download only from Apple's Software Update screen, not a random link. A parent can help if the phone asks for a passcode or Apple ID during the install.",
+    "prompts": [
+      "how do I update iOS",
+      "install an iOS update",
+      "Settings General Software Update",
+      "back up before I update iPhone",
+      "iPhone needs space for an update",
+      "help me install an iOS update",
+      "don't download iOS from a random site",
+      "plug in the iPhone to update"
+    ]
+  },
+  {
+    "title": "An iOS update is stuck",
+    "desc": "If an iOS update sits on a logo or a progress bar for a very long time, leave it on power and wait a bit first—updates can look frozen when they're still working. If it's truly stuck for a long time, an adult can help with a restart or, if needed, official recovery steps from Apple, not a random 'bypass' site. Don't force unplug in a panic in the first few minutes.",
+    "prompts": [
+      "iOS update is stuck",
+      "iPhone update frozen on the Apple logo",
+      "update progress bar not moving",
+      "help with a stuck iOS update",
+      "iPhone stuck updating",
+      "wait or restart a stuck update",
+      "iOS update hanging",
+      "update has been on the same screen"
+    ]
+  },
+  {
+    "title": "iPhone running hot",
+    "desc": "An iPhone can run warm during charging, updates, navigation, or a heavy game, especially in a thick case in the sun. If it's uncomfortably hot, take the case off, get it out of direct sun, close heavy apps, and let it cool. If it gets extremely hot, shows a temperature warning, or heat came with a swollen battery or damage, stop using it and tell an adult.",
+    "prompts": [
+      "why is my iPhone so hot",
+      "iPhone running hot",
+      "iPhone overheating in the sun",
+      "hot iPhone while charging",
+      "help with a hot iPhone",
+      "iPhone temperature warning",
+      "take the case off a hot phone",
+      "phone gets hot during a game"
+    ]
+  },
+  {
+    "title": "An app keeps crashing",
+    "desc": "If one iPhone app keeps crashing, update the app, restart the phone, and offload or delete and reinstall it if you won't lose something you need. Check that iOS is reasonably up to date, and free a little storage if the phone is packed full. If every app crashes, restart and look at storage and iOS version. Don't install a 'fixer' app from a random site.",
+    "prompts": [
+      "an iPhone app keeps crashing",
+      "app closes by itself on iPhone",
+      "reinstall a crashing app",
+      "help with an app that crashes",
+      "update the app that's crashing",
+      "iPhone app crashes when I open it",
+      "one app keeps failing",
+      "offload or delete a crashing app"
+    ]
+  },
+  {
+    "title": "Closing apps on an iPhone",
+    "desc": "On an iPhone, swipe up from the bottom (or double-click the Home button on older phones) to see open apps, then swipe an app up to close it. Closing apps can help if one is frozen, but it isn't a magic way to save a lot of battery all day. If an app is stuck, close it and reopen it. You don't have to close everything every time you leave an app.",
+    "prompts": [
+      "how do I close apps on an iPhone",
+      "swipe up to close an iPhone app",
+      "app switcher on iPhone",
+      "close a frozen iPhone app",
+      "help me close apps on my iPhone",
+      "do I need to close iPhone apps for battery",
+      "double-click Home to see apps",
+      "force close an app on iPhone"
+    ]
+  },
+  {
+    "title": "Checking your iOS version",
+    "desc": "To see your iOS version, open Settings, then General, then About, and look for iOS or Software Version. That number tells you how current the system is and what features or fixes you already have. You can compare it with Software Update to see if a newer version is offered. I can't see your phone's version from here.",
+    "prompts": [
+      "how do I check my iOS version",
+      "what iOS am I on",
+      "Settings General About software version",
+      "which iOS version is this",
+      "help me find my iOS version",
+      "see the iPhone software version",
+      "what version of iOS do I have",
+      "where to find iOS number"
+    ]
+  },
+  {
+    "title": "Autocorrect issues",
+    "desc": "If iPhone autocorrect keeps changing a word you want, tap the suggestion bar to put your spelling back, or add the word to your dictionary by using it and accepting it. You can turn off Auto-Correction in Keyboard settings if it's more trouble than help. A quick undo after a bad change is often enough. Check you're on the keyboard language you meant.",
+    "prompts": [
+      "iPhone autocorrect is wrong",
+      "turn off Auto-Correction",
+      "autocorrect keeps changing my word",
+      "help with iPhone autocorrect",
+      "add a word so autocorrect stops",
+      "keyboard language and autocorrect",
+      "undo a bad autocorrect",
+      "Settings Keyboard Auto-Correction"
+    ]
+  },
+  {
+    "title": "Focus modes on iPhone",
+    "desc": "Focus modes, including Do Not Disturb, let you silence or allow certain notifications for sleep, work, or driving. You can schedule a Focus or turn it on from Control Center. Make sure a Focus isn't blocking a person you still need to hear from. Start with one simple Focus so it doesn't get confusing.",
+    "prompts": [
+      "what are Focus modes on iPhone",
+      "how do I use Focus on iPhone",
+      "Focus versus Do Not Disturb",
+      "schedule a Focus",
+      "help me set up a Focus mode",
+      "Focus is silencing people I need",
+      "turn on Focus from Control Center",
+      "iPhone Sleep or Work Focus"
+    ]
+  },
+  {
+    "title": "Clearing Safari data",
+    "desc": "Clearing Safari history and website data can fix a stuck or odd page, but it also signs you out of some sites and removes saved page data. You can do it in Safari or Settings; pick the option that matches what you want to remove. Don't do it just because a pop-up told you to. If you only needed to reload a page, try that first.",
+    "prompts": [
+      "how do I clear Safari data on iPhone",
+      "clear Safari history",
+      "Safari website data",
+      "help me clear Safari",
+      "Safari page acting weird",
+      "clearing Safari will sign me out",
+      "don't clear data because of a pop-up",
+      "Settings Safari clear history"
+    ]
+  },
+  {
+    "title": "Building a PC",
+    "desc": "Building a PC means choosing compatible parts—a case, motherboard, CPU, RAM, storage, power supply, and usually a graphics card—then assembling them carefully with the power unplugged. Watch a current guide for your parts, ground yourself, and don't force a pin or connector. If you're new, a prebuilt or a shop build can be the safer path. I can explain the pieces; I won't invent a parts list of current prices.",
+    "prompts": [
+      "how do I build a PC",
+      "building a PC for beginners",
+      "what parts do I need to build a PC",
+      "PC build compatibility",
+      "help me understand a PC build",
+      "assemble a desktop PC",
+      "should a beginner build a PC",
+      "parts in a typical PC build"
+    ]
+  },
+  {
+    "title": "What a motherboard is",
+    "desc": "A motherboard is the main board that everything in a PC plugs into: the CPU in its socket, RAM in the slots, storage, power, and usually the graphics card. The board has to match the CPU brand and socket and fit the case size. Ports on the back are how you connect a monitor, keyboard and network. Compatibility matters more than a flashy name.",
+    "prompts": [
+      "what is a motherboard",
+      "what does a motherboard do",
+      "motherboard CPU socket",
+      "motherboard RAM slots",
+      "help me understand a motherboard",
+      "motherboard has to match the CPU",
+      "ATX or smaller motherboard",
+      "choosing a motherboard"
+    ]
+  },
+  {
+    "title": "Choosing RAM for a PC",
+    "desc": "RAM is the fast working memory a PC uses while programs are open. For a gaming or school PC, the amount, the type (such as DDR4 or DDR5), and the speed the motherboard supports all matter, and two matching sticks are often better than one. I won't invent prices or a single magic number; tell me what you'll use the PC for and I can help you think about a range.",
+    "prompts": [
+      "how much RAM do I need in a PC",
+      "choosing RAM for a PC",
+      "DDR4 versus DDR5 RAM",
+      "two sticks of RAM",
+      "RAM speed and the motherboard",
+      "help me pick RAM",
+      "RAM for a desktop build",
+      "what kind of RAM fits this board"
+    ]
+  },
+  {
+    "title": "What a power supply is",
+    "desc": "A PSU, or power supply, converts wall power into the voltages a PC needs and should have enough wattage and the right connectors for your parts, especially a modern graphics card. A quality PSU is not the place to pick the cheapest no-name option. Leave some headroom above the estimated draw, and use the official connectors, not a risky adapter if you can avoid it. I won't invent wattage charts or prices.",
+    "prompts": [
+      "what is a PSU",
+      "what is a power supply in a PC",
+      "PSU wattage basics",
+      "power supply connectors",
+      "don't cheap out on a PSU",
+      "help me understand a power supply",
+      "PSU for a graphics card",
+      "what a PC power supply does"
+    ]
+  },
+  {
+    "title": "What an RTX 5090 is",
+    "desc": "An RTX 5090 is NVIDIA's flagship GeForce 50-series desktop graphics card, made for very demanding games and heavy creative work at high resolutions. Most people do not need one for everyday or 1080p play; a mid-range card is often enough. Check NVIDIA's current official specs for the details, and I won't invent prices or a made-up benchmark. Tell me your monitor, games and budget if you want help thinking about whether a card in that class even makes sense.",
+    "prompts": [
+      "what is a 5090",
+      "what is an RTX 5090",
+      "is a 5090 a graphics card",
+      "RTX 5090 explained",
+      "do I need a 5090 to game",
+      "help me understand the 5090",
+      "NVIDIA 5090 basics",
+      "what does a 5090 do"
+    ]
+  },
+  {
+    "title": "CPU versus GPU in a game",
+    "desc": "In a game, the GPU usually draws the 3-D scene, and the CPU handles a lot of game logic, like AI, physics and preparing work for the GPU. At higher resolutions the GPU often does more of the heavy lifting; at lower resolutions a weaker CPU can hold the frame rate down. A balanced pair matters more than one extreme part.",
+    "prompts": [
+      "what's the difference between CPU and GPU in a game",
+      "CPU versus GPU for gaming",
+      "does a game use the CPU or the GPU",
+      "GPU draws the scene",
+      "CPU bottleneck in a game",
+      "help me compare CPU and GPU",
+      "who does what in a game, CPU or GPU",
+      "gaming CPU and GPU roles"
+    ]
+  },
+  {
+    "title": "How much RAM for gaming",
+    "desc": "How much RAM you need for gaming depends on the games and what else you leave open, such as a browser or a voice app. Many current games are comfortable with a moderate amount, and going far above that doesn't always raise frame rate the way a GPU upgrade can. I won't invent a single required number or a price; tell me what you play and I can help you think about a sensible range.",
+    "prompts": [
+      "how much RAM for gaming",
+      "is 16 gigs enough RAM to game",
+      "RAM for games and a browser",
+      "does more RAM increase FPS",
+      "help me choose gaming RAM amount",
+      "how much memory for a gaming PC",
+      "gaming RAM recommendations without inventing a number",
+      "RAM if I also have tabs open"
+    ]
+  },
+  {
+    "title": "What a bottleneck is",
+    "desc": "A bottleneck is when one part of a PC limits the rest, such as a GPU waiting on a slower CPU, or a game waiting on a full RAM or a slow drive. Some bottleneck is normal; the goal is a balance for the resolution and games you care about, not a perfect score on a website. Upgrading the part that's actually limiting you helps more than buying a flagship of everything.",
+    "prompts": [
+      "what is a bottleneck in a PC",
+      "CPU bottleneck versus GPU bottleneck",
+      "is my PC bottlenecked",
+      "help me understand a bottleneck",
+      "one part holding the rest back",
+      "bottleneck at 1080p or 4K",
+      "does a bottleneck mean my PC is bad",
+      "gaming bottleneck basics"
+    ]
+  },
+  {
+    "title": "Picking PSU wattage",
+    "desc": "Pick a power-supply wattage from your parts list, especially the GPU, with some room left over rather than running a unit at its limit. Official manufacturer guidance and a reputable wattage calculator are better than a guess. A modest extra doesn't hurt; a huge number doesn't make the PC faster. I won't invent a wattage for your build; tell me the main parts if you want help thinking it through.",
+    "prompts": [
+      "how many watts should my PSU be",
+      "picking PSU wattage",
+      "PSU headroom for a GPU",
+      "help me size a power supply",
+      "don't run a PSU at its limit",
+      "wattage calculator for a PC",
+      "does a bigger PSU make more FPS",
+      "what wattage power supply do I need"
+    ]
+  },
+  {
+    "title": "What VRAM is",
+    "desc": "VRAM is the memory on a graphics card that holds textures, frame data and other GPU work. Heavier settings, higher resolutions, and bigger textures use more of it. If a game runs out, you can get stuttering or texture issues; lowering settings can help. I won't invent a required number for every game; the card's official listing and in-game behavior are the better guides.",
+    "prompts": [
+      "what is VRAM",
+      "graphics card memory",
+      "how much VRAM do I need",
+      "VRAM at 1080p or 4K",
+      "help me understand VRAM",
+      "game stuttering from VRAM",
+      "textures and VRAM",
+      "what's video memory on a GPU"
+    ]
+  },
+  {
+    "title": "Integrated versus dedicated graphics",
+    "desc": "Integrated graphics share the main system's chip or memory and can be enough for school work, video, and lighter games. A dedicated GPU is a separate card (or a higher-power laptop GPU) made for heavier 3-D work. You don't always need a dedicated card, and a weak dedicated card isn't automatically better than a strong integrated one. It depends on what you'll run.",
+    "prompts": [
+      "what's the difference between integrated and dedicated graphics",
+      "integrated graphics versus a GPU",
+      "do I need a dedicated graphics card",
+      "iGPU versus a graphics card",
+      "help me compare integrated and dedicated graphics",
+      "is integrated graphics enough",
+      "school laptop with integrated graphics",
+      "dedicated GPU for games"
+    ]
+  },
+  {
+    "title": "Minimum versus recommended specs",
+    "desc": "A game's minimum specs are a rough floor for starting it, often at lower settings; recommended specs are closer to a smoother or nicer experience. Both can be out of date, and your own test or a recent reliable review matters more than a single number. If you're under minimum, don't expect it to run well. I won't invent a game's current spec sheet.",
+    "prompts": [
+      "what's the difference between minimum and recommended specs",
+      "minimum specs for a game",
+      "recommended specs versus minimum",
+      "will this game run on my PC",
+      "help me read game system requirements",
+      "under the minimum specs",
+      "recommended specs for smoother play",
+      "game requirements explained"
+    ]
+  },
+  {
+    "title": "A prebuilt PC versus building one",
+    "desc": "A prebuilt PC is assembled and often tested for you, which can be easier and sometimes better supported; building one can offer more control and, sometimes, a better parts mix for the same budget. Building takes time, tools, and care with static and cables. Neither path is automatically cheaper. I won't invent prices; tell me your comfort level and budget if you want help thinking it through.",
+    "prompts": [
+      "should I buy a prebuilt or build a PC",
+      "prebuilt PC versus building one",
+      "is building a PC worth it",
+      "prebuilt for a beginner",
+      "help me choose prebuilt or a build",
+      "warranty on a prebuilt",
+      "control over parts if I build",
+      "buying a prebuilt desktop"
+    ]
+  },
+  {
+    "title": "Why a game stutters",
+    "desc": "A game can stutter from a GPU or CPU that's at its limit, not enough RAM or VRAM, a drive that's full or slow, background apps, or settings that are too high for the machine. Try lowering a demanding setting, closing extra apps, and checking temperatures aren't extreme. One test at a time tells you more than changing everything at once. A short hitch when an area first loads can be normal.",
+    "prompts": [
+      "why does my game stutter",
+      "game stutters then is fine",
+      "FPS dips and hitching",
+      "help me with game stuttering",
+      "lower settings to stop stutter",
+      "not enough RAM and stuttering",
+      "background apps making a game hitch",
+      "stuttering in a game on a PC"
+    ]
+  },
+  {
+    "title": "Buying a surge protector",
+    "desc": "A surge protector can help guard electronics from a power spike, and it's different from a simple power strip that only adds outlets. Look for a protector with a clearly stated rating, enough outlets, and a place you'll actually use it, then stay in your budget. It isn't a promise against every kind of outage. I won't invent prices; tell me your budget if you want help thinking about features.",
+    "prompts": [
+      "should I buy a surge protector",
+      "surge protector versus a power strip",
+      "what to look for in a surge protector",
+      "surge protector on a budget",
+      "help me choose a surge protector",
+      "do I need a surge protector",
+      "buying a surge protector for a PC",
+      "power strip that actually protects"
+    ]
+  },
+  {
+    "title": "Buying a flash drive",
+    "desc": "A flash drive is handy for school files you need to carry, but it isn't a full backup by itself. Choose a trusted brand, a capacity that fits what you'll move, and a plug that matches your computer, such as USB-C or a common USB-A port, then stay in your budget. I won't invent prices. Eject it before you unplug.",
+    "prompts": [
+      "what should I look for in a flash drive",
+      "buying a USB flash drive",
+      "how big a flash drive do I need",
+      "USB-C or USB-A flash drive",
+      "flash drive on a budget",
+      "help me choose a flash drive",
+      "flash drive for school files",
+      "trusted flash drive versus a no-name one"
+    ]
+  },
+  {
+    "title": "Buying a calculator",
+    "desc": "Start with what your class actually allows or requires: a basic calculator, a scientific one, or a graphing model. Don't buy a graphing calculator if you only need simple arithmetic. Check used or school options, and stay in your budget. I won't invent prices or a required model number; your teacher or syllabus is the first source.",
+    "prompts": [
+      "what calculator should I buy",
+      "do I need a graphing calculator",
+      "scientific versus a basic calculator",
+      "calculator for class",
+      "help me buy a calculator",
+      "calculator on a budget",
+      "what calculator does my class require",
+      "buying a calculator for school"
+    ]
+  },
+  {
+    "title": "Buying a vacuum",
+    "desc": "A vacuum should match your floors, your budget, and whether you'll actually carry or push it. Look at emptying the bin or bag, a tool for edges, and noise you'll live with. You don't need every attachment. I won't invent prices; tell me your floors and budget and I can help you think about types, such as upright or stick.",
+    "prompts": [
+      "what should I look for in a vacuum",
+      "buying a vacuum",
+      "vacuum for carpet or hard floors",
+      "vacuum on a budget",
+      "help me choose a vacuum",
+      "upright versus a stick vacuum",
+      "vacuum that's easy to empty",
+      "buying a vacuum for a room"
+    ]
+  },
+  {
+    "title": "Buying a suitcase",
+    "desc": "A suitcase should fit the length of your trips, airline size rules if you fly, and your budget. Look at a zipper and handle that feel sturdy, wheels that roll straight, and a weight you can actually lift. I won't invent prices or airline limits; check the airline if you fly, and tell me your budget and trip type if you want help thinking about size.",
+    "prompts": [
+      "what should I look for in a suitcase",
+      "buying a suitcase",
+      "carry-on size suitcase",
+      "suitcase on a budget",
+      "help me choose a suitcase",
+      "sturdy zipper and wheels",
+      "suitcase I can lift",
+      "buying luggage for a trip"
+    ]
+  },
+  {
+    "title": "Buying a tent",
+    "desc": "A tent should match how many people will sleep in it, the weather you expect, and your budget. Look at a waterproof rating you can live with, packed size, and a setup you can practice at home. A cheap tent that leaks is not a deal. I won't invent prices; tell me the trip and budget if you want help thinking about size and season.",
+    "prompts": [
+      "what should I look for in a tent",
+      "buying a tent",
+      "tent size for the people camping",
+      "tent on a budget",
+      "help me choose a tent",
+      "waterproof tent for a trip",
+      "practice setting up a tent",
+      "buying a camping tent"
+    ]
+  },
+  {
+    "title": "Buying a sleeping bag",
+    "desc": "A sleeping bag should match the coldest night you reasonably expect, your height, and your budget. Temperature ratings are a guide, not a guarantee, and a pad underneath matters too. I won't invent prices; tell me the season and budget if you want help thinking about features. A bag that's too warm can be unzipped; one that's far too cold is a harder night.",
+    "prompts": [
+      "what should I look for in a sleeping bag",
+      "buying a sleeping bag",
+      "sleeping bag temperature rating",
+      "sleeping bag on a budget",
+      "help me choose a sleeping bag",
+      "sleeping bag for a cool night",
+      "do I need a sleeping pad too",
+      "buying a bag for camping"
+    ]
+  },
+  {
+    "title": "Buying a first-aid kit",
+    "desc": "A first-aid kit is for small injuries and should include basics like bandages, antiseptic, and any personal items a parent wants in it, plus a list of emergency numbers. Buy a ready kit or build one, then actually learn what's inside. It isn't a substitute for calling for help in an emergency. I won't invent prices; tell me your budget if you want help listing what to look for.",
+    "prompts": [
+      "what should be in a first-aid kit",
+      "buying a first-aid kit",
+      "first-aid kit for home or a bag",
+      "first-aid kit on a budget",
+      "help me choose a first-aid kit",
+      "bandages and antiseptic in a kit",
+      "learn what's in the kit",
+      "buying a small first-aid kit"
+    ]
+  },
+  {
+    "title": "Buying a flashlight",
+    "desc": "A flashlight should be bright enough for the job, run on batteries or a charge you can actually keep up with, and fit your budget. A phone light is fine for a quick moment, but a real flashlight helps when you need your hands or a longer beam. I won't invent prices or lumen numbers to chase; tell me how you'll use it and your budget.",
+    "prompts": [
+      "what should I look for in a flashlight",
+      "buying a flashlight",
+      "flashlight versus a phone light",
+      "flashlight on a budget",
+      "help me choose a flashlight",
+      "rechargeable or battery flashlight",
+      "flashlight for around the house",
+      "buying a small flashlight"
+    ]
+  },
+  {
+    "title": "Buying an HDMI cable",
+    "desc": "An HDMI cable should match the ports on your TV, monitor, or console and be long enough for the actual path, without buying a huge 'gold' premium you don't need for a short run. A trusted, reasonably sturdy cable is usually enough. I won't invent prices; tell me what you're connecting and your budget if you want help thinking about length and version.",
+    "prompts": [
+      "what HDMI cable should I buy",
+      "buying an HDMI cable",
+      "HDMI for a TV or a monitor",
+      "HDMI cable length",
+      "HDMI cable on a budget",
+      "help me choose an HDMI cable",
+      "do I need an expensive HDMI cable",
+      "cable from a console to a TV"
+    ]
+  },
+  {
+    "title": "Buying rain boots",
+    "desc": "Rain boots should keep water out, fit with the socks you'll wear, and have a sole you can walk in without slipping too easily, then stay in your budget. Try them if you can, and don't size them so tight you can't wear a sock. I won't invent prices; tell me your budget and whether they're for standing water or a short walk.",
+    "prompts": [
+      "what should I look for in rain boots",
+      "buying rain boots",
+      "rain boots that don't leak",
+      "rain boots on a budget",
+      "help me choose rain boots",
+      "fit rain boots with socks",
+      "soles that won't slip in the rain",
+      "buying waterproof boots"
+    ]
+  },
+  {
+    "title": "Buying a planner",
+    "desc": "A planner is worth it if you'll actually open it. Pick a weekly or daily layout you like, a size that fits your bag, and a budget that won't make you afraid to write in it. A notes app can work too if that's what you'll use. I won't invent prices; tell me your budget and whether this is for school or everything else.",
+    "prompts": [
+      "should I buy a paper planner",
+      "buying a planner",
+      "weekly or daily planner",
+      "planner on a budget",
+      "help me choose a planner",
+      "planner versus a notes app",
+      "planner I'll actually use",
+      "buying a school planner"
+    ]
+  },
+  {
+    "title": "Buying a soccer ball",
+    "desc": "A soccer ball should be the right size for your age group if you're in a league, feel reasonably stitched or bonded, and fit your budget. Grass and pavement wear a ball differently. I won't invent prices or a required brand; tell me your budget and where you'll play if you want help thinking about size and durability.",
+    "prompts": [
+      "what soccer ball should I buy",
+      "buying a soccer ball",
+      "soccer ball size",
+      "soccer ball on a budget",
+      "help me choose a soccer ball",
+      "ball for grass or pavement",
+      "league soccer ball size",
+      "buying a football for soccer"
+    ]
+  },
+  {
+    "title": "Buying an Ethernet cable",
+    "desc": "An Ethernet cable can give a more stable connection than Wi-Fi when you can run a wire to a router or a wall jack. Match the length to the room and a standard such as Cat5e or Cat6 for ordinary use; you don't need a mythical 'gaming' markup. I won't invent prices; tell me the run length and budget if you want help thinking about it.",
+    "prompts": [
+      "should I buy an Ethernet cable",
+      "buying an Ethernet cable",
+      "Cat5e or Cat6 cable",
+      "Ethernet cable length",
+      "Ethernet on a budget",
+      "help me choose an Ethernet cable",
+      "wired internet versus Wi-Fi",
+      "cable from the router to a PC"
+    ]
+  },
+  {
+    "title": "Should I buy a high-end GPU",
+    "desc": "A high-end GPU such as a flagship 50-series card only pays off if your monitor, games, and budget actually need that much power. For a lot of 1080p or casual play, a mid-range card is enough, and the rest of the PC still has to keep up. I won't invent prices or scores; tell me your resolution, games, and budget and I can help you think it through.",
+    "prompts": [
+      "should I buy a 5090",
+      "should I buy a high-end GPU",
+      "is a flagship graphics card worth it",
+      "do I need a high-end GPU for 1080p",
+      "help me decide on a high-end GPU",
+      "mid-range GPU versus a flagship",
+      "don't buy a 5090 if my monitor is 1080p",
+      "buying a top graphics card"
+    ]
+  },
+  {
+    "title": "Buying an air fryer",
+    "desc": "An air fryer is a small counter oven with a fan, useful if you'll actually use it and have the space. Look at basket size, cleanup, and your budget, and keep it away from walls when it runs. It doesn't replace every kind of cooking. I won't invent prices; tell me your budget and how many people you're cooking for if you want help thinking about size.",
+    "prompts": [
+      "should I buy an air fryer",
+      "what should I look for in an air fryer",
+      "air fryer size",
+      "air fryer on a budget",
+      "help me choose an air fryer",
+      "do I need an air fryer",
+      "air fryer cleanup and space",
+      "buying a counter air fryer"
+    ]
+  },
+  {
+    "title": "Why the ocean is salty",
+    "desc": "The ocean is salty because rivers and rocks slowly add dissolved minerals, including salt, and when water evaporates, most of that salt stays behind. It isn't as simple as someone pouring a shaker into the sea. Different parts of the ocean can be a little more or less salty, and freshwater lakes work differently because they have other ways to lose water and minerals.",
+    "prompts": [
+      "why is the ocean salty",
+      "why is seawater salty",
+      "where does ocean salt come from",
+      "why isn't a lake as salty",
+      "help me understand ocean salinity",
+      "salt left behind when seawater evaporates",
+      "why rivers don't taste like the ocean",
+      "what makes the ocean salty"
+    ]
+  },
+  {
+    "title": "Why ice floats",
+    "desc": "Ice floats because it is less dense than liquid water. As water freezes, its molecules form a more open structure, so the same mass takes up more space. That's unusual compared with many substances, and it matters in nature because ice can sit on top of a lake instead of sinking and freezing the whole body of water from the bottom.",
+    "prompts": [
+      "why does ice float",
+      "why is ice less dense than water",
+      "ice floats in a drink",
+      "help me understand why ice floats",
+      "water expands when it freezes",
+      "why ice sits on a lake",
+      "is ice lighter than liquid water",
+      "why doesn't ice sink"
+    ]
+  },
+  {
+    "title": "Hibernation",
+    "desc": "Hibernation is a long, deep rest some animals use in cold seasons, with a slower body and less need for food. Not every animal that sleeps a lot in winter is a true hibernator, and different species do it in different ways. It's a survival strategy, not laziness. Bears are a commonly mentioned example, though biologists sometimes debate how their sleep compares with smaller hibernators.",
+    "prompts": [
+      "what is hibernation",
+      "why do some animals hibernate",
+      "hibernation in winter",
+      "do bears hibernate",
+      "help me understand hibernation",
+      "animals that sleep through the cold",
+      "hibernation versus just sleeping a lot",
+      "how does hibernation work"
+    ]
+  },
+  {
+    "title": "Animal migration",
+    "desc": "Migration is a regular, often seasonal movement of animals from one region to another, usually for food, weather, or breeding. Birds, some fish, and some insects are well-known examples. It can cover a short distance or a huge one, and people and habitat changes can make a route harder. A map of a species' route is more useful than a single 'they all go south' line.",
+    "prompts": [
+      "what is animal migration",
+      "why do birds migrate",
+      "migration for food or breeding",
+      "help me understand migration",
+      "animals that travel with the seasons",
+      "how do animals migrate",
+      "migration routes",
+      "why do some animals leave for winter"
+    ]
+  },
+  {
+    "title": "Adaptation",
+    "desc": "An adaptation is a trait that helps a living thing survive and reproduce in its environment, such as a bird's beak shape or a plant that holds water. Adaptations build up in a population over many generations; one animal doesn't 'decide' to grow a new feature in a week. A trait that helps in one place might not help in another.",
+    "prompts": [
+      "what is an adaptation in biology",
+      "animal adaptations",
+      "how does a trait help an animal survive",
+      "help me understand adaptation",
+      "adaptation versus a change in one lifetime",
+      "beak or fur as an adaptation",
+      "plant adaptations",
+      "adaptations in a habitat"
+    ]
+  },
+  {
+    "title": "The carbon cycle",
+    "desc": "The carbon cycle is the way carbon moves among the air, living things, soil, and oceans. Plants take in carbon dioxide, animals eat plants, and carbon returns to the air when living things breathe, decay, or when fuels are burned. It's a set of paths, not one circle you can memorize as a single arrow. Human burning of fossil fuels adds extra carbon to the air.",
+    "prompts": [
+      "what is the carbon cycle",
+      "how does carbon move in nature",
+      "carbon dioxide and the carbon cycle",
+      "help me understand the carbon cycle",
+      "plants and the carbon cycle",
+      "fossil fuels and extra carbon",
+      "carbon cycle for class",
+      "where carbon goes in the environment"
+    ]
+  },
+  {
+    "title": "The Milky Way",
+    "desc": "The Milky Way is the galaxy we live in: a huge system of stars, gas, and dust, including our Sun. On a dark night you can see its band as a cloudy streak of many distant stars. It isn't a path of spilled milk, and we don't see the whole shape from Earth the way a picture of another spiral galaxy looks, because we are inside it.",
+    "prompts": [
+      "what is the Milky Way",
+      "the Milky Way galaxy",
+      "why does the Milky Way look like a band",
+      "are we in the Milky Way",
+      "help me understand the Milky Way",
+      "stars in the Milky Way",
+      "the Sun is in the Milky Way",
+      "what is that cloudy streak of stars"
+    ]
+  },
+  {
+    "title": "Comets versus asteroids",
+    "desc": "Asteroids are rocky or metallic bodies, many of them in a belt between Mars and Jupiter. Comets are icy bodies that can grow a glowing coma and tail when they get close enough to the Sun. Both orbit in the solar system, and both are different from stars. A meteor is the flash we see when a bit of space rock burns in Earth's air.",
+    "prompts": [
+      "what's the difference between an asteroid and a comet",
+      "what is an asteroid",
+      "what is a comet",
+      "comet tail near the Sun",
+      "help me compare comets and asteroids",
+      "meteor versus an asteroid",
+      "rocky asteroid versus an icy comet",
+      "asteroids in the solar system"
+    ]
+  },
+  {
+    "title": "Natural selection",
+    "desc": "Natural selection is the idea that individuals with traits better suited to their environment are more likely to survive and reproduce, so those traits can become more common over generations. It isn't a plan or a person choosing, and it doesn't mean every change is an improvement in every situation. Variation and inheritance have to be part of the picture. It's a core idea in biology class.",
+    "prompts": [
+      "what is natural selection",
+      "how does natural selection work",
+      "traits that help an animal reproduce",
+      "help me understand natural selection",
+      "natural selection isn't a person choosing",
+      "survival of traits over generations",
+      "natural selection in biology",
+      "variation and natural selection"
+    ]
+  },
+  {
+    "title": "Why bees matter",
+    "desc": "Bees matter because many of them pollinate flowers, including a lot of the plants that become food. Not every bee lives in a big hive, and not all insects that look like bees are bees. Habitat, pesticides, and disease can put pressure on bee populations. You can help in small ways, like leaving some flowering plants, without needing to panic or become an expert overnight.",
+    "prompts": [
+      "why do bees matter",
+      "why are bees important",
+      "bees and pollination",
+      "help me understand why bees matter",
+      "not all bees live in a hive",
+      "bees and food plants",
+      "what would happen without bees",
+      "why people talk about saving bees"
+    ]
+  },
+  {
+    "title": "Biodiversity",
+    "desc": "Biodiversity is the variety of living things in a place, from genes to species to whole ecosystems. A more diverse system can often handle change better, though it's not a simple score. People affect biodiversity through habitat, climate, and what they introduce or remove. You can think of it as more than a species count: connections matter too.",
+    "prompts": [
+      "what is biodiversity",
+      "why does biodiversity matter",
+      "variety of species in an ecosystem",
+      "help me understand biodiversity",
+      "biodiversity in a habitat",
+      "what reduces biodiversity",
+      "biodiversity for science class",
+      "diversity of life in a place"
+    ]
+  },
+  {
+    "title": "How mountains form",
+    "desc": "Many mountains form when Earth's plates push together and the crust folds or lifts, or when volcanoes build cones, or when a fault lifts a block of crust. Water and ice then wear them down. A mountain range can take a very long time to build. The Rockies, the Himalayas, and volcanic peaks don't all have the exact same story, but they share those big ideas.",
+    "prompts": [
+      "how do mountains form",
+      "why are there mountains",
+      "plates pushing together make mountains",
+      "volcanic mountains",
+      "help me understand how mountains form",
+      "do mountains grow and wear down",
+      "mountain formation in earth science",
+      "fold mountains and volcanoes"
+    ]
+  },
+  {
+    "title": "The Middle Ages",
+    "desc": "The Middle Ages, or medieval period, is a long stretch of European history usually placed between the end of the Western Roman Empire and the start of the early modern era. Life wasn't only knights and castles: most people farmed, and other parts of the world had their own histories at the same time. Dates are a convenience, not a switch that flipped in one year.",
+    "prompts": [
+      "what were the Middle Ages",
+      "what is the medieval period",
+      "Middle Ages in Europe",
+      "were the Middle Ages only knights",
+      "help me understand the Middle Ages",
+      "when were the Middle Ages",
+      "medieval everyday life",
+      "Middle Ages for history class"
+    ]
+  },
+  {
+    "title": "The French Revolution",
+    "desc": "The French Revolution, beginning in 1789, was a period when France's monarchy was overthrown and the country went through deep, often violent political change, with ideas about rights, citizenship, and power still discussed today. It wasn't a single event. Causes included money troubles, inequality, and new political ideas. A class timeline helps more than one slogan.",
+    "prompts": [
+      "what was the French Revolution",
+      "when was the French Revolution",
+      "why did the French Revolution start",
+      "help me understand the French Revolution",
+      "1789 in France",
+      "French Revolution for class",
+      "what happened to the French monarchy",
+      "French Revolution causes"
+    ]
+  },
+  {
+    "title": "The Enlightenment",
+    "desc": "The Enlightenment was an intellectual movement, especially in the 1600s and 1700s, that emphasized reason, observation, and debate about government, rights, and knowledge. Thinkers didn't all agree, and not everyone in society gained power at once. Some of those ideas later showed up in documents and revolutions, including in the United States. A class usually names a few people and a few core claims.",
+    "prompts": [
+      "what was the Enlightenment",
+      "Enlightenment ideas",
+      "reason and the Enlightenment",
+      "help me understand the Enlightenment",
+      "Enlightenment and government",
+      "Enlightenment for history class",
+      "when was the Enlightenment",
+      "thinkers of the Enlightenment"
+    ]
+  },
+  {
+    "title": "The printing press",
+    "desc": "The printing press, developed in Europe in the 1400s by Johannes Gutenberg in a well-known form, made it possible to copy books much faster than by hand. That helped ideas, news, and religious texts spread more widely, though literacy still took time to grow. Printing existed in other forms in other places too; the European press is the usual classroom focus for later European history.",
+    "prompts": [
+      "what was the printing press",
+      "why was the printing press important",
+      "Gutenberg printing press",
+      "help me understand the printing press",
+      "how did the printing press change Europe",
+      "books before the printing press",
+      "printing press for history class",
+      "spreading ideas with the printing press"
+    ]
+  },
+  {
+    "title": "The thirteen colonies",
+    "desc": "The thirteen colonies were British colonies on the Atlantic coast of North America that later became the first U.S. states. They were not all the same: economies, religions, and relations with Native nations differed by region. They existed under British rule before the American Revolution. A map and a regional split, such as New England, the middle colonies, and the South, is the usual class view.",
+    "prompts": [
+      "what were the thirteen colonies",
+      "the 13 colonies",
+      "British colonies in North America",
+      "help me with the thirteen colonies",
+      "thirteen colonies before the Revolution",
+      "New England middle and southern colonies",
+      "the original thirteen colonies",
+      "thirteen colonies for class"
+    ]
+  },
+  {
+    "title": "Reconstruction",
+    "desc": "Reconstruction was the period after the U.S. Civil War when the country tried to reunite and to define freedom and rights for formerly enslaved people. There were real gains, then a violent backlash, and many of those gains were rolled back for a long time. It's not only a story of laws on paper. A class usually covers amendments, political conflict, and the end of that era.",
+    "prompts": [
+      "what was Reconstruction",
+      "Reconstruction after the Civil War",
+      "help me understand Reconstruction",
+      "Reconstruction and rights",
+      "what happened during Reconstruction",
+      "end of Reconstruction",
+      "Reconstruction for history class",
+      "after the Civil War, Reconstruction"
+    ]
+  },
+  {
+    "title": "Women's suffrage",
+    "desc": "Women's suffrage is the right of women to vote. In the United States, the 19th Amendment in 1920 barred denying the vote on the basis of sex, after a long campaign, but in practice not every woman could vote equally right away because of racism and other barriers. Other countries have their own dates. A class usually covers the movement, not only one year.",
+    "prompts": [
+      "what was women's suffrage",
+      "when did women get the right to vote in the US",
+      "the 19th Amendment",
+      "help me understand women's suffrage",
+      "women's suffrage movement",
+      "did all women vote after 1920",
+      "women's suffrage for class",
+      "the fight for women's voting rights"
+    ]
+  },
+  {
+    "title": "The Berlin Wall",
+    "desc": "The Berlin Wall was a barrier built in 1961 by East Germany that divided Berlin during the Cold War, meant to stop people from leaving for the West. It stood until 1989, when it was opened and later torn down, a symbol of the Cold War's end in Europe. Families and a city were split for decades. A map of East and West Berlin helps the story make sense.",
+    "prompts": [
+      "what was the Berlin Wall",
+      "why was the Berlin Wall built",
+      "when did the Berlin Wall fall",
+      "help me understand the Berlin Wall",
+      "Berlin Wall and the Cold War",
+      "1961 and 1989 Berlin",
+      "East and West Berlin",
+      "the Berlin Wall for class"
+    ]
+  },
+  {
+    "title": "The United Nations",
+    "desc": "The United Nations, or UN, is an international organization founded in 1945 after World War II, where member countries discuss peace, development, and other shared problems. It can pass resolutions and run programs, but it doesn't replace a country's government. It isn't a world government. A class usually covers the founding and a few of its bodies, such as the General Assembly.",
+    "prompts": [
+      "what is the United Nations",
+      "what does the UN do",
+      "when was the UN founded",
+      "help me understand the United Nations",
+      "UN after World War II",
+      "is the UN a world government",
+      "United Nations for class",
+      "why was the United Nations created"
+    ]
+  },
+  {
+    "title": "Westward expansion",
+    "desc": "Westward expansion is the 19th-century movement of the United States' claims and settlers across the continent. It is often told as a pioneer story, but it also involved the displacement, broken treaties, and violence faced by Native nations who already lived on that land, and it included forced migrations such as the Trail of Tears. A fair account holds both the settler story and that cost.",
+    "prompts": [
+      "what was westward expansion",
+      "westward expansion in the United States",
+      "help me understand westward expansion",
+      "westward expansion and Native nations",
+      "Trail of Tears and expansion",
+      "manifest destiny in class",
+      "the US expanding west",
+      "westward expansion for history"
+    ]
+  },
+  {
+    "title": "Adding fractions",
+    "desc": "To add fractions, give them a common denominator, add the numerators, and simplify if you can. For 1/4 + 1/2, rewrite 1/2 as 2/4, then add to get 3/4. Mixed numbers can be turned into improper fractions first, or you can add whole numbers and fractions separately with care. Same denominator means you only add the top numbers, not the bottoms.",
+    "prompts": [
+      "how do I add two fractions together",
+      "adding fractions with different denominators",
+      "common denominator to add",
+      "1/4 plus 1/2",
+      "help me add fractions",
+      "don't add the denominators straight across",
+      "adding mixed numbers",
+      "fraction addition for class"
+    ]
+  },
+  {
+    "title": "Multiplying fractions",
+    "desc": "To multiply fractions, multiply the numerators together and the denominators together, then simplify. For 2/3 × 1/4, you get 2/12, which simplifies to 1/6. You can cancel common factors first if that helps. Multiplying by a fraction less than 1 makes a number smaller, which surprises people who only think of multiplication as making things bigger.",
+    "prompts": [
+      "how do I multiply fractions",
+      "multiplying fractions straight across",
+      "2/3 times 1/4",
+      "help me multiply fractions",
+      "simplify after multiplying fractions",
+      "multiplying fractions makes it smaller",
+      "fraction multiplication",
+      "times a fraction in math"
+    ]
+  },
+  {
+    "title": "Dividing fractions",
+    "desc": "To divide by a fraction, multiply by its reciprocal: flip the second fraction, then multiply. For 1/2 ÷ 1/4, flip 1/4 to 4/1, then multiply to get 2. A common phrase is 'keep, change, flip,' meaning keep the first fraction, change division to multiplication, and flip the second. Check with a simple picture, like how many quarter-pieces fit into a half.",
+    "prompts": [
+      "how do I divide fractions",
+      "keep change flip",
+      "multiply by the reciprocal",
+      "1/2 divided by 1/4",
+      "help me divide fractions",
+      "dividing fractions for class",
+      "flip the second fraction",
+      "fraction division steps"
+    ]
+  },
+  {
+    "title": "Fractions, decimals, and percents",
+    "desc": "Fractions, decimals, and percents can name the same amount in different forms. 1/2 is 0.5, which is 50 percent. To convert, you use place value and the idea that percent means per 100. Pick the form that makes the problem easier, and double-check by converting back. A simple table of common ones, like 1/4 = 0.25 = 25%, is worth knowing.",
+    "prompts": [
+      "how do I convert fractions decimals and percents",
+      "1/2 as a decimal and a percent",
+      "fraction to a percent",
+      "decimal to a fraction",
+      "help me convert between fractions and percents",
+      "percent means per 100",
+      "0.5 is what fraction",
+      "changing a fraction into a decimal"
+    ]
+  },
+  {
+    "title": "Comparing mean, median, and mode",
+    "desc": "The mean is the average, the median is the middle value once the numbers are ordered, and the mode is the value that appears most often. A set can have one mode, more than one, or no mode if nothing repeats. Use the one that matches the question: typical average, middle value, or most common category. Outliers pull the mean more than the median.",
+    "prompts": [
+      "what's the difference between mean median and mode",
+      "when to use median instead of mean",
+      "most common value versus the average",
+      "help me compare mean median and mode",
+      "outliers and the mean",
+      "mean median and mode in a data set",
+      "which average should I use",
+      "mode versus the mean and the median"
+    ]
+  },
+  {
+    "title": "The coordinate plane",
+    "desc": "The coordinate plane is a grid with a horizontal x-axis and a vertical y-axis that meet at the origin (0, 0). A point is named (x, y): first the left-right value, then the up-down value. The four sections are quadrants. Plotting a few points carefully is the way to get comfortable, and signs tell you which side of the origin you're on.",
+    "prompts": [
+      "what is the coordinate plane",
+      "how do I plot a point",
+      "x and y axis",
+      "what is the origin",
+      "help me with the coordinate plane",
+      "(x, y) coordinates",
+      "the four quadrants",
+      "plotting points on a graph"
+    ]
+  },
+  {
+    "title": "A variable in algebra",
+    "desc": "In algebra, a variable is a letter that stands for a number, often one you don't know yet, like x in x + 3 = 10. It can also stand for a number that can change in a formula. This is different from a variable in a computer program, even though both are names that hold values. You can do the same operation to both sides of an equation to find what the letter equals.",
+    "prompts": [
+      "what is a variable in algebra",
+      "what does x stand for in math",
+      "algebra variable versus a programming variable",
+      "help me understand variables in algebra",
+      "a letter that stands for a number",
+      "x in an equation",
+      "variables in a formula",
+      "what is a variable in math class"
+    ]
+  },
+  {
+    "title": "Evaluating an expression",
+    "desc": "Evaluating an expression means plugging in the given numbers and computing the result, following the order of operations. If x is 3, then 2x + 1 is 2 times 3 plus 1, which is 7. Parentheses, exponents, multiplication and division, then addition and subtraction, still apply. Write the substitution clearly so you don't lose a sign or a product.",
+    "prompts": [
+      "how do I evaluate an expression",
+      "plug in a value for x",
+      "evaluate 2x + 1 when x is 3",
+      "help me evaluate an expression",
+      "substituting into an expression",
+      "order of operations when I evaluate",
+      "evaluate an algebraic expression",
+      "what does evaluate mean in math"
+    ]
+  },
+  {
+    "title": "Two-step equations",
+    "desc": "A two-step equation needs two inverse operations to isolate the variable, such as 2x + 3 = 11: subtract 3, then divide by 2 to get x = 4. Do the same thing to both sides, and check by plugging the answer back in. It builds on one-step equations. If the variable is in more than one place, that's a different pattern, and you combine like terms first.",
+    "prompts": [
+      "how do I solve a two-step equation",
+      "2x + 3 = 11",
+      "two-step equations for class",
+      "help me with two-step equations",
+      "subtract then divide to solve",
+      "isolate x in two steps",
+      "two-step equation check",
+      "undo addition then undo multiplication"
+    ]
+  },
+  {
+    "title": "Finding the whole from a percent",
+    "desc": "If you know a part and a percent, you can find the whole. If 30 is 25 percent of a number, then the number is 30 divided by 0.25, which is 120. A percent equation, part = percent times whole, is the usual setup. Convert the percent to a decimal first. Check that the part is smaller than the whole when the percent is less than 100.",
+    "prompts": [
+      "how do I find the whole from a percent",
+      "30 is 25 percent of what",
+      "finding the original amount",
+      "help me find the whole from a percent",
+      "part equals percent times whole",
+      "working backwards from a percent",
+      "what was the original number",
+      "percent of a missing whole"
+    ]
+  },
+  {
+    "title": "Body paragraphs",
+    "desc": "A body paragraph in an essay usually has a clear point, evidence or a concrete example, and a sentence that ties it back to your thesis. One main idea per paragraph is easier to follow than a pile of unrelated facts. Transitions help the reader get from one paragraph to the next. If a paragraph is trying to do three jobs, split it.",
+    "prompts": [
+      "how do I write a body paragraph",
+      "body paragraphs in an essay",
+      "one idea per paragraph",
+      "evidence in a body paragraph",
+      "help me write body paragraphs",
+      "tie a paragraph back to the thesis",
+      "body paragraph structure",
+      "what goes in a body paragraph"
+    ]
+  },
+  {
+    "title": "Topic sentences",
+    "desc": "A topic sentence states the main point of a paragraph, often at the start, so the rest of the paragraph can support it. It should be specific enough to prove, not a vague 'this is important.' If your examples don't match the topic sentence, change one or the other. You can adjust it after you draft if that helps.",
+    "prompts": [
+      "what is a topic sentence",
+      "how do I write a strong topic sentence",
+      "topic sentence of a paragraph",
+      "help me write a topic sentence",
+      "first sentence of a body paragraph",
+      "make a topic sentence specific",
+      "topic sentence versus a thesis",
+      "a topic sentence that the paragraph can prove"
+    ]
+  },
+  {
+    "title": "Writing a hook",
+    "desc": "A hook is the opening that gets a reader reasonably interested, such as a short surprising fact, a question, or a small scene, then you still have to get to your point. Don't spend the whole introduction on a huge story, and don't use a dictionary definition as a default. A hook should fit the assignment, not only sound flashy.",
+    "prompts": [
+      "how do I write a hook",
+      "essay hook ideas",
+      "opening sentence of an essay",
+      "help me write a hook",
+      "don't start with a dictionary definition",
+      "a hook that fits the paper",
+      "hook then get to the point",
+      "introduction hook for an essay"
+    ]
+  },
+  {
+    "title": "Writing a first draft",
+    "desc": "A first draft is for getting ideas on the page, not for sounding finished. Use your outline if you have one, skip ahead if a section is stuck, and leave holes you can fill later. You can write a messy version and then revise. Waiting for a perfect first sentence is a common way to write nothing.",
+    "prompts": [
+      "how do I write a first draft",
+      "the first draft can be messy",
+      "don't wait for a perfect opening",
+      "help me start a first draft",
+      "draft then revise",
+      "skip a stuck part in a draft",
+      "get words on the page",
+      "writing a rough draft of an essay"
+    ]
+  },
+  {
+    "title": "Email subject lines",
+    "desc": "A subject line should be short and specific, like 'Question about Friday's homework' rather than 'Hi' or a blank subject. Name the class or the reason if you're writing to a teacher. You'll get a better reply if the person can tell what the email is about before they open it. Don't put the whole message in the subject.",
+    "prompts": [
+      "how do I write an email subject line",
+      "what to put in the subject line",
+      "subject line for a teacher email",
+      "help me write a subject line",
+      "don't leave the subject blank",
+      "short specific subject line",
+      "email subject examples",
+      "a clear subject for an email"
+    ]
+  },
+  {
+    "title": "Writing a formal email",
+    "desc": "A formal email has a clear subject, a greeting, a short reason for writing, what you need, and a polite close with your name. Use regular capitalization and complete sentences. This is broader than emailing a teacher, but the same habits help with a coach, a supervisor, or an office. Don't write in all caps, and don't send until you've checked the recipient.",
+    "prompts": [
+      "how do I write a formal email",
+      "formal email format",
+      "greeting and a polite close",
+      "help me write a formal email",
+      "email to a coach or a supervisor",
+      "formal email versus a casual text",
+      "complete sentences in an email",
+      "what to include in a formal email"
+    ]
+  },
+  {
+    "title": "A counterargument",
+    "desc": "A counterargument is a reasonable point someone on the other side might make, which you then answer. Including one can make an essay stronger if you treat it fairly and explain why your claim still holds. Don't invent a silly version of the other side that's easy to knock down. A short, honest objection is enough in many school essays.",
+    "prompts": [
+      "what is a counterargument",
+      "how do I write a counterargument",
+      "the other side of an argument",
+      "help me with a counterargument",
+      "answer a counterargument in an essay",
+      "don't straw-man the other side",
+      "counterclaim and a response",
+      "including the other side in a paper"
+    ]
+  },
+  {
+    "title": "Integrating a quotation",
+    "desc": "To integrate a quotation, introduce it with a signal phrase, use only the words you need, and then explain how it supports your point. Don't drop a quote in as its own paragraph with no lead-in. Keep the citation style your class asked for, and quote accurately. A short, well-explained line is better than a long block you never discuss.",
+    "prompts": [
+      "how do I integrate a quotation",
+      "introduce a quote with a signal phrase",
+      "don't drop a quote in alone",
+      "help me put a quote in a paragraph",
+      "explain a quotation after I use it",
+      "using a short quotation in an essay",
+      "signal phrase then a quote",
+      "integrating quotes in a paper"
+    ]
+  },
+  {
+    "title": "Starting an essay when you're stuck",
+    "desc": "If you're stuck starting an essay, write the thesis or a body paragraph first, or type a messy sentence you can fix later. Re-read the prompt and list three points you could actually support. A timer for ten minutes of no-deleting draft can get you moving. You don't have to begin with the introduction just because that's where the reader will start.",
+    "prompts": [
+      "I can't start my essay",
+      "stuck on the first sentence of an essay",
+      "write a body paragraph first",
+      "help me start an essay when I'm stuck",
+      "re-read the prompt and list points",
+      "messy start is ok",
+      "how to begin an essay I'm stuck on",
+      "don't wait for the perfect intro"
+    ]
+  },
+  {
+    "title": "A thank-you email",
+    "desc": "A thank-you email is short: say thanks, name the specific thing they did, and add one sincere line if it fits, then close with your name. You don't need a long story. Send it reasonably soon, and keep the tone like you'd speak politely in person. A subject line like 'Thank you for the recommendation' is enough.",
+    "prompts": [
+      "how do I write a thank-you email",
+      "thank-you email after someone helps",
+      "short thank-you email",
+      "help me write a thank-you email",
+      "thank someone by email",
+      "subject line for a thank-you",
+      "don't make a thank-you email too long",
+      "email to say thank you"
+    ]
+  },
+  {
+    "title": "Feeling sad",
+    "desc": "Feeling sad is a normal response when something hurts, changes, or doesn't go the way you hoped. You don't have to justify it or cheer up on a schedule. Name it, tell someone you trust if that helps, and do one small kind thing for yourself, like rest or a short walk. If sadness stays heavy for a long time or daily life is hard, that's a reason to talk with a parent, counselor, or another trusted adult. I'm here to listen, not to replace that kind of help.",
+    "prompts": [
+      "I feel sad",
+      "what to do when I'm sad",
+      "feeling down today",
+      "help me when I feel sad",
+      "it's ok to feel sad",
+      "sad and I don't know why",
+      "talk to someone when I'm sad",
+      "I need support because I'm sad"
+    ]
+  },
+  {
+    "title": "Feeling lonely",
+    "desc": "Loneliness is the feeling that you want more connection than you have right now, even if people are around. It doesn't mean you're unlikable. One message to a safe person, a shared activity, or being around people without a huge conversation can help a little. If it has lasted and feels heavy, tell a trusted adult. You deserve company that is kind, and it's okay to start small.",
+    "prompts": [
+      "I feel lonely",
+      "what to do when I feel lonely",
+      "lonely even with people around",
+      "help me with loneliness",
+      "I want a friend and I feel alone",
+      "lonely after school",
+      "how to feel less lonely",
+      "talk to someone when I'm lonely"
+    ]
+  },
+  {
+    "title": "Feeling nervous",
+    "desc": "Nerves often show up before something that matters: a test, a talk, or meeting people. Your body can feel jumpy even when you're not in danger. Slow breaths, arriving a little early, and naming what you're going to do first can help. It's okay to be nervous and still go ahead. If nerves are so big you can't do daily things, a trusted adult should hear about it.",
+    "prompts": [
+      "I feel nervous",
+      "what to do when I'm nervous",
+      "nervous before a test or a talk",
+      "help me with feeling nervous",
+      "butterflies in my stomach",
+      "I'm anxious about something coming up",
+      "how to calm down when I'm nervous",
+      "nervous and I still have to do the thing"
+    ]
+  },
+  {
+    "title": "Feeling angry",
+    "desc": "Anger is a real feeling, often a sign that something feels unfair, blocked, or hurt. You can feel it without taking it out on someone. Step away if you can, breathe, and name the problem in a sentence once you're cooler. It's okay to say you're mad; it's not okay to hurt people or yourself. If anger feels out of control, that's a reason to get help from a trusted adult.",
+    "prompts": [
+      "I feel angry",
+      "what to do when I'm mad",
+      "how to cool down when I'm angry",
+      "help me with feeling angry",
+      "I'm furious and I don't want to yell",
+      "anger is a feeling I can have",
+      "step away when I'm mad",
+      "angry and I need to calm down"
+    ]
+  },
+  {
+    "title": "Feeling left out",
+    "desc": "Feeling left out hurts, and the feeling is valid even if no one meant it that way. You can name it to a trusted friend, make other plans, and you don't have to pretend it doesn't sting. It isn't proof that you're not wanted everywhere. If a group is repeatedly unkind, that's about them, and an adult can help you think about next steps. You still get to belong somewhere.",
+    "prompts": [
+      "I feel left out",
+      "friends didn't include me",
+      "what to do when I feel left out",
+      "help me with feeling left out",
+      "they made plans without me",
+      "left out of a group",
+      "it hurts to be left out",
+      "feeling excluded by friends"
+    ]
+  },
+  {
+    "title": "Feeling jealous",
+    "desc": "Jealousy can show up when someone has a thing, a friendship, or a kind of attention you want. It doesn't make you a bad person. Notice it, avoid taking it out on them, and name what you actually want, which might be something you can work toward or a feeling you can talk about. Comparing every detail of your life to someone else's highlight reel usually makes it worse.",
+    "prompts": [
+      "I feel jealous",
+      "what to do with jealousy",
+      "jealous of a friend",
+      "help me with feeling jealous",
+      "I'm envious and I don't like it",
+      "jealousy doesn't mean I'm a bad person",
+      "comparing myself and feeling jealous",
+      "how to handle feeling jealous"
+    ]
+  },
+  {
+    "title": "Feeling embarrassed",
+    "desc": "Embarrassment is that hot, exposed feeling after a mistake, a fall, or being called out. It almost always feels bigger to you than it does to everyone else, and most people move on faster than you think. A short recovery, a little humor if it fits, or just going on with your day is enough. You don't have to disappear, and one awkward moment isn't your whole story.",
+    "prompts": [
+      "I feel embarrassed",
+      "I embarrassed myself",
+      "what to do after an embarrassing moment",
+      "help me with feeling embarrassed",
+      "everyone saw me mess up",
+      "embarrassed at school",
+      "how to recover from embarrassment",
+      "I want to hide because I'm embarrassed"
+    ]
+  },
+  {
+    "title": "Setting a boundary",
+    "desc": "A boundary is a clear line about what you are and aren't okay with, said as calmly as you can. 'I don't want to talk about that' or 'I can't hang out tonight' are enough. You don't have to give a long speech, and a kind person can respect a no. If someone keeps pushing past a reasonable boundary, tell a trusted adult, especially if you feel unsafe.",
+    "prompts": [
+      "how do I set a boundary",
+      "what is a boundary with a friend",
+      "saying I'm not okay with something",
+      "help me set a boundary",
+      "I don't want to talk about that",
+      "a boundary without a long speech",
+      "they keep pushing after I said no",
+      "setting a limit with a friend"
+    ]
+  },
+  {
+    "title": "Saying no",
+    "desc": "You can say no without a made-up excuse: 'I can't,' 'I don't want to,' or 'not this time' are complete answers. A short, clear no is kinder than a maybe you don't mean. If you feel pressured, repeating the no and leaving the situation is fair. You don't owe anyone your time, your things, or a yes that feels wrong. If the pressure is about safety, get an adult involved.",
+    "prompts": [
+      "how do I say no",
+      "I don't know how to say no",
+      "saying no without a long excuse",
+      "help me say no to a friend",
+      "it's ok to say no",
+      "they keep asking after I said no",
+      "a short clear no",
+      "I feel pressured to say yes"
+    ]
+  },
+  {
+    "title": "Reaching out when you need support",
+    "desc": "Reaching out when you need support is a skill, not a failure. Be as specific as you can about what you need, and go to a person who can actually help, like a parent, teacher, counselor, or a friend you trust. You don't have to have the perfect words. If the problem is big, scary, or about your safety, that's exactly when you should tell an adult, even if it feels awkward.",
+    "prompts": [
+      "I need support and it's hard to reach out",
+      "how do I reach out when I need support",
+      "telling a parent I need support",
+      "help me reach out for support",
+      "it's ok to ask someone to support me",
+      "I don't want to bother anyone but I need support",
+      "what to say when I need support",
+      "reaching out to a trusted adult"
+    ]
+  },
+  {
+    "title": "A friendship that's changing",
+    "desc": "Friendships can change when people grow, switch schools, or just want different things. That can feel like a loss even when no one did something cruel. You can talk about it, make a little room, and still be decent. Not every friendship is meant to stay exactly the same. If a change includes being treated badly, you get to step back and talk with a trusted adult.",
+    "prompts": [
+      "my friendship is changing",
+      "growing apart from a friend",
+      "friends who aren't as close now",
+      "help me with a friendship that's changing",
+      "we used to be closer",
+      "a friendship fading",
+      "is it normal for friends to change",
+      "when a friendship feels different"
+    ]
+  },
+  {
+    "title": "After an argument with a friend",
+    "desc": "After an argument, give both of you a little time if things are still hot, then talk about the specific thing that happened instead of dragging in every old complaint. A real apology names what you did, if you did something. You can want to stay friends and still need a boundary. If arguments turn into insults or you feel unsafe, get an adult involved.",
+    "prompts": [
+      "I argued with a friend",
+      "what to do after a fight with a friend",
+      "how to talk after an argument",
+      "help me after an argument with a friend",
+      "we had a fight and I feel bad",
+      "apologizing after an argument",
+      "cooling off after a disagreement",
+      "making up with a friend after a fight"
+    ]
+  },
+  {
+    "title": "Peer pressure",
+    "desc": "Peer pressure is when people around you push you toward a choice you wouldn't make on your own, sometimes with jokes, eye rolls, or 'everyone's doing it.' You can say no, leave, or text an adult if you need an out. Your gut is worth listening to, especially if a choice could get someone hurt or in trouble. A real friend can respect a no.",
+    "prompts": [
+      "what is peer pressure",
+      "how do I handle peer pressure",
+      "everyone's doing it and I don't want to",
+      "help me with peer pressure",
+      "saying no when friends push me",
+      "peer pressure to do something I shouldn't",
+      "I feel pushed by my friends",
+      "how to get out of a peer pressure situation"
+    ]
+  },
+  {
+    "title": "Being a good friend",
+    "desc": "A good friend is reasonably reliable, listens, keeps private things private, and repairs a mistake when they mess up. You don't have to be available every second or agree with everything. Friendship is two-way: you can be kind and still have limits. If a friendship is only taking, or it often leaves you feeling worse, that's worth talking about with someone you trust.",
+    "prompts": [
+      "how do I be a good friend",
+      "what makes a good friend",
+      "being a better friend",
+      "help me be a good friend",
+      "listening and showing up for a friend",
+      "good friends respect limits",
+      "friendship is two-way",
+      "qualities of a good friend"
+    ]
+  },
+  {
+    "title": "Camping basics",
+    "desc": "Camping goes better with a plan for shelter, weather, water, food that doesn't need a lot of fuss, a light, and a way to tell someone where you'll be. Practice a tent at home if it's new, pack layers, and follow the site's rules. Leave the place as clean as you found it, or better. A first trip can be close to home. I won't invent gear prices; tell me your budget if you're packing a list.",
+    "prompts": [
+      "how do I go camping",
+      "camping for beginners",
+      "what to bring camping",
+      "help me with camping basics",
+      "first camping trip",
+      "tent weather and a light",
+      "tell someone where we're camping",
+      "simple camping plan"
+    ]
+  },
+  {
+    "title": "Leave no trace",
+    "desc": "Leave no trace means you pack out what you packed in, stay on trails when that's the rule, leave plants and objects where they are, and keep wildlife wild by not feeding it. It's so the next person, and the place itself, aren't stuck with your mess. Even a little wrapper counts. Local rules at a park or campground still come first.",
+    "prompts": [
+      "what is leave no trace",
+      "pack out what I pack in",
+      "don't leave trash on a trail",
+      "help me with leave no trace",
+      "leave plants and rocks where they are",
+      "keep wildlife wild and unfed",
+      "leave no trace camping",
+      "outdoor etiquette so I don't wreck a place"
+    ]
+  },
+  {
+    "title": "Building a campfire safely",
+    "desc": "Only build a fire where it's allowed, in a proper ring or pit, away from tents and low branches, with water or dirt ready to put it fully out. An adult should be in charge if you're new or if rules require it. Never use gasoline, and don't leave a fire, even a small one. If the area has a fire ban, skip it. The fire is out only when it's cool to the touch.",
+    "prompts": [
+      "how do I build a campfire safely",
+      "safe campfire rules",
+      "fire only where it's allowed",
+      "put a campfire all the way out",
+      "help me with a safe campfire",
+      "don't use gasoline on a fire",
+      "adult with a campfire",
+      "fire ban means no campfire"
+    ]
+  },
+  {
+    "title": "What to pack for a hike",
+    "desc": "For a hike, pack water, a layer for weather, a little food, a charged phone, and anything you need for sun or blisters, plus a way to carry trash out. Tell someone your route, and don't pack so much that the bag is miserable. A short hike still needs water. I won't invent prices; tell me the length and weather if you want help thinking through a list.",
+    "prompts": [
+      "what should I pack for a hike",
+      "hiking packing list",
+      "water and a layer on a hike",
+      "help me pack for a hike",
+      "what to bring on a trail",
+      "tell someone my hiking plan",
+      "day hike packing basics",
+      "pack out trash from a hike"
+    ]
+  },
+  {
+    "title": "Poison ivy",
+    "desc": "Poison ivy is a plant that can cause an itchy rash in many people, often with leaves in groups of three, but plants vary, so don't rely on one rhyme alone. Don't touch it, don't burn it, and wash skin and clothes if you think you brushed it. If a rash is serious, near the eyes or mouth, or you're having a strong reaction, get medical help and tell an adult. I'm not a doctor, and a picture from a local guide is better than a guess.",
+    "prompts": [
+      "what does poison ivy look like",
+      "how to avoid poison ivy",
+      "leaves of three",
+      "I think I touched poison ivy",
+      "help me with poison ivy",
+      "don't burn poison ivy",
+      "wash after poison ivy",
+      "poison ivy rash and when to get help"
+    ]
+  },
+  {
+    "title": "Tick checks",
+    "desc": "After time in grass or woods, check your clothes and skin for ticks, including hidden spots, and have a parent help with places you can't see. Wear longer sleeves or pants if you can, and stay on the path when that's an option. If a tick is attached, an adult should help with safe removal and with any follow-up questions for a doctor. Don't wait and hope if you're unsure.",
+    "prompts": [
+      "how do I check for ticks",
+      "tick check after a hike",
+      "ticks in grass or woods",
+      "help me with a tick check",
+      "what to do if I find a tick",
+      "parent help removing a tick",
+      "preventing ticks on a hike",
+      "checking clothes for ticks"
+    ]
+  },
+  {
+    "title": "Sportsmanship",
+    "desc": "Sportsmanship is playing fair, shaking it off after a bad call, and treating the other team and your own as people, not enemies. You can want to win and still be decent. Cheering is fine; mocking is not. After the game, a 'good game' and moving on is enough. If someone is being cruel, you can walk away and tell a coach.",
+    "prompts": [
+      "what is sportsmanship",
+      "how to be a good sport",
+      "sportsmanship after a loss",
+      "help me with sportsmanship",
+      "don't mock the other team",
+      "fair play in a game",
+      "good game after we finish",
+      "sportsmanship when I want to win"
+    ]
+  },
+  {
+    "title": "Swimming safety",
+    "desc": "Swim where there's a lifeguard or a responsible adult, and don't dive in water you haven't checked. Know your limits, stay in a buddy system if that's the rule, and get out if you're too cold or too tired. Don't mess around with holding someone under. If someone is in trouble, yell for help rather than becoming a second victim if you're not trained.",
+    "prompts": [
+      "how do I stay safe when I swim",
+      "swimming safety tips",
+      "don't dive in unknown water",
+      "swim with a lifeguard or an adult",
+      "help me with swimming safety",
+      "buddy when I swim",
+      "get out if I'm too tired in the water",
+      "what to do if someone is in trouble in the water"
+    ]
+  },
+  {
+    "title": "Fishing basics",
+    "desc": "Fishing basics are a legal spot, a simple rod, bait or a lure, and patience, plus following local rules about licenses and what you can keep. Handle hooks carefully, and don't leave line behind. If you keep a fish, an adult should help with what's allowed. I won't invent license fees; check local rules, and tell me if you want a simple gear list in a budget.",
+    "prompts": [
+      "how do I start fishing",
+      "fishing for beginners",
+      "fishing basics",
+      "help me with fishing",
+      "do I need a fishing license",
+      "simple rod and bait",
+      "don't leave fishing line behind",
+      "first time fishing"
+    ]
+  },
+  {
+    "title": "Bike safety on the road",
+    "desc": "On a road or bike path, wear a helmet, use lights if it's dim, ride with traffic where that's the rule, and signal when you can. Watch for doors, driveways, and wet or icy patches. A sidewalk may or may not be allowed, depending on the place. Make yourself easy to see, and assume a driver might not have seen you yet.",
+    "prompts": [
+      "how do I ride a bike safely on the road",
+      "bike safety tips",
+      "helmet and lights on a bike",
+      "ride with traffic",
+      "help me with bike safety",
+      "watch for car doors on a bike",
+      "signaling on a bicycle",
+      "be visible when I bike"
+    ]
+  },
+  {
+    "title": "Having a catch",
+    "desc": "Having a catch works better if you agree on a distance, watch the ball into your hands, and don't throw harder than the other person can handle. A glove helps for a baseball; hands can work for a soft ball. Call for the ball if two people might go for it, and stop if something hurts. It's fine to start close and step back as you get the hang of it.",
+    "prompts": [
+      "how do we have a catch",
+      "having a catch in the yard",
+      "watch the ball into my hands",
+      "don't throw too hard when we have a catch",
+      "help me have a catch",
+      "having a catch with a baseball glove",
+      "start close when we have a catch",
+      "a game of catch in the yard"
+    ]
+  },
+  {
+    "title": "Staying found on a trail",
+    "desc": "Stay found by sticking to the marked trail, telling someone your plan, carrying a charged phone, and turning around early enough that you're not hiking out in the dark. If you think you're off the path, stop, don't wander in bigger circles, and use your map or your phone if you have a signal. A short trail can still get confusing at a fork. Pride is a bad reason to push farther.",
+    "prompts": [
+      "how do I stay found on a trail",
+      "don't get lost on a hike",
+      "stay on the marked trail",
+      "share my route before I hike",
+      "help me not get lost hiking",
+      "what to do if I think I'm off the trail",
+      "turn around before dark",
+      "marked trail and a charged phone"
+    ]
+  },
+  {
+    "title": "Trivia",
+    "desc": "Trivia is a game of short questions and answers, for fun, not a test grade. You can play with cards, an app, or questions you take turns asking. Guessing is allowed, and so is saying you don't know. If you're not sure a fact is true, that's a good moment to check it. Keep the questions kind, and it works as well with two people as with a group.",
+    "prompts": [
+      "let's play trivia",
+      "what is trivia",
+      "trivia questions for fun",
+      "help me play trivia",
+      "a short trivia game",
+      "trivia with friends",
+      "casual trivia not a test",
+      "ask me a trivia question"
+    ]
+  },
+  {
+    "title": "Charades",
+    "desc": "Charades is a game where you act out a word or a title without talking, and others guess. Agree on categories and a time limit, then keep clues big and simple. No mouthing the words. It's okay if a round is silly or a guess is wrong. A phone timer and a short list of ideas are enough to start.",
+    "prompts": [
+      "how do I play charades",
+      "let's play charades",
+      "charades rules",
+      "acting out a word",
+      "help me with charades",
+      "charades for a group",
+      "no talking in charades",
+      "charades categories and a timer"
+    ]
+  },
+  {
+    "title": "Twenty questions",
+    "desc": "Twenty questions is a guessing game: one person thinks of something, and others ask yes-or-no questions, usually up to twenty, to figure it out. Start with big categories, like animal, place, or object, then narrow it down. Honest yes-or-no answers keep it fair. If you go past twenty, you can decide whether a guess still counts.",
+    "prompts": [
+      "how do I play twenty questions",
+      "let's play 20 questions",
+      "yes or no questions to guess",
+      "help me with twenty questions",
+      "think of something for twenty questions",
+      "twenty questions rules",
+      "start with a category in twenty questions",
+      "a guessing game with yes and no"
+    ]
+  },
+  {
+    "title": "Two truths and a lie",
+    "desc": "Two truths and a lie is a get-to-know-you game: you say three statements, one of them false, and others guess which is the lie. Keep it kind and something you'd be okay sharing, not a trap about someone else. The fun is in a believable mix, not in embarrassing anyone. After people guess, you reveal which one was the lie.",
+    "prompts": [
+      "how do I play two truths and a lie",
+      "two truths and a lie examples",
+      "help me with two truths and a lie",
+      "three statements one is false",
+      "a get-to-know-you game",
+      "keep two truths and a lie kind",
+      "guess which one is the lie",
+      "two truths and a lie for a group"
+    ]
+  },
+  {
+    "title": "I spy",
+    "desc": "I spy is a simple game: one person says 'I spy, with my eye, something...' and names a color or a clear detail, and others guess the object that's actually in view. Take turns, and pick something people can reasonably see. It's a good waiting game. If a guess is close, you can give a second hint.",
+    "prompts": [
+      "how do I play I spy",
+      "let's play I spy",
+      "I spy with my little eye",
+      "help me with I spy",
+      "I spy a color",
+      "a waiting game like I spy",
+      "guess what I spy",
+      "I spy rules"
+    ]
+  },
+  {
+    "title": "An indoor treasure hunt",
+    "desc": "An indoor treasure hunt is a list of things to find or clues to follow inside a house or a classroom, with a clear boundary so no one leaves the area. Write clues that are fair, and keep it safe and kind. A short list is enough for a first hunt. Hide items so they can be found without making a mess you won't put back.",
+    "prompts": [
+      "how do I make an indoor treasure hunt",
+      "indoor treasure hunt clues",
+      "treasure hunt around the house",
+      "help me with an indoor treasure hunt",
+      "a fair indoor treasure hunt list",
+      "treasure hunt with friends inside",
+      "hiding clues indoors",
+      "making an indoor treasure hunt"
+    ]
+  },
+  {
+    "title": "Building a blanket fort",
+    "desc": "A blanket fort is chairs, a couch, or a table with blankets draped over, plus pillows inside. Don't block vents, heaters, or a doorway you need, and keep lights that can get hot out of the blankets. Ask before you take every cushion in the house. When you're done, putting it back is part of the project.",
+    "prompts": [
+      "how do I build a blanket fort",
+      "blanket fort at home",
+      "chairs and blankets for a fort",
+      "help me build a blanket fort",
+      "indoor fort with pillows",
+      "don't cover a heater with a blanket",
+      "couch cushion fort",
+      "making a blanket fort"
+    ]
+  },
+  {
+    "title": "Optical illusions",
+    "desc": "An optical illusion is a picture or scene that tricks your eyes or brain, so you see motion, hidden shapes, or two readings in one image. It's a fun way to notice that seeing is something your brain puts together, not a perfect camera. If you don't see an illusion the way someone else does, that's common. You can look up famous ones; I can also explain how some types work.",
+    "prompts": [
+      "what is an optical illusion",
+      "how do optical illusions work",
+      "show me how an illusion tricks my eyes",
+      "help me understand optical illusions",
+      "why does this picture look like it's moving",
+      "two pictures in one illusion",
+      "optical illusions and the brain",
+      "fun optical illusions explained"
+    ]
+  },
+  {
+    "title": "Why we get brain freeze",
+    "desc": "Brain freeze is that short, sharp headache some people get after eating or drinking something very cold too quickly. A common explanation is that cold on the roof of the mouth sets off nerves and a quick change in blood vessels, and it usually passes in a short time. Slowing down and warming the roof of your mouth with your tongue can help. If headaches are frequent or severe in general, that's a question for a parent and a doctor.",
+    "prompts": [
+      "why do we get brain freeze",
+      "what is brain freeze",
+      "ice cream headache",
+      "help me understand brain freeze",
+      "cold drink and a sudden headache",
+      "how to stop a brain freeze",
+      "why does ice cream hurt my head",
+      "brain freeze after a slushie"
+    ]
+  },
+  {
+    "title": "Palindromes",
+    "desc": "A palindrome is a word, phrase, or number that reads the same forward and backward, like 'level,' 'racecar,' or 121. Spaces and punctuation are often ignored in a phrase. They're just for fun, and you can try making a short one. Not every mirrored-looking word actually qualifies, so check letter by letter.",
+    "prompts": [
+      "what is a palindrome",
+      "palindrome examples",
+      "a word that's the same backwards",
+      "help me with palindromes",
+      "is racecar a palindrome",
+      "make a palindrome",
+      "palindrome numbers",
+      "words that read the same both ways"
+    ]
+  },
+  {
+    "title": "A paper fortune teller",
+    "desc": "A paper fortune teller, or cootie catcher, is a folded square of paper you open and close with your fingers while someone picks colors or numbers, then a flap reveals a silly message you wrote. Keep the messages kind. Any square paper works, and there are lots of folding guides if the first fold is confusing. It's a classic rainy-day thing, not actual fortune-telling.",
+    "prompts": [
+      "how do I make a paper fortune teller",
+      "cootie catcher",
+      "fold a fortune teller",
+      "help me make a fortune teller",
+      "paper fortune teller messages",
+      "origami fortune teller",
+      "fortune teller with colors and numbers",
+      "making a paper fortune teller"
+    ]
+  },
+  {
+    "title": "Making shadow puppets",
+    "desc": "Shadow puppets are shapes you make with your hands or cut paper in front of a lamp so they show up on a wall. Use a simple light, keep it away from anything that can burn, and leave room so no one bumps the lamp. A bird, a dog, or a talking mouth are classic starts. Dim the room a little so the shadow is clearer.",
+    "prompts": [
+      "how do I make shadow puppets",
+      "hand shadows on the wall",
+      "shadow puppets with a lamp",
+      "help me make shadow puppets",
+      "animal shadow with my hands",
+      "safe lamp for shadow puppets",
+      "shadow puppet show at home",
+      "making shadows on the wall"
+    ]
+  }
+]
