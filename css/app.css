@@ -82,7 +82,7 @@ a{color:var(--accent-2)}
 .only-mobile{display:none}
 
 .banner{margin:8px 14px 0;padding:12px 14px;border-radius:12px;font-size:14px;line-height:1.45}
-.banner.warn{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.35)}
+.banner.warn{background:color-mix(in srgb, var(--panel) 86%, #f59e0b);border:1px solid rgba(245,158,11,.4)}
 .banner b{display:block;margin-bottom:4px;font-size:15px}
 .banner{position:relative}
 .banner .banner-x{position:absolute;top:6px;right:6px;background:none;border:0;font-size:15px;padding:6px 9px;border-radius:8px;opacity:.7}
@@ -257,9 +257,6 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 }
 
 /* ---------- Wallpaper ---------- */
-#main{background:var(--bg)}
-body.has-wall #main::before{content:"";position:absolute;inset:0;background:var(--bg);opacity:var(--wall-dim,.45);pointer-events:none;z-index:0}
-#main>*{position:relative;z-index:1}
 body.has-wall #topbar{background:color-mix(in srgb, var(--bg) 55%, transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 body.has-wall #composerWrap{background:transparent}
 body.has-wall .msg-row.assistant .content{background:color-mix(in srgb, var(--panel) 82%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:10px 14px;border-radius:16px}
@@ -392,5 +389,18 @@ body.chat-wide .msg-row,body.chat-wide #composer{max-width:1040px}
 @media (max-width: 480px){ .save-chip .long{display:none} .save-chip .short{display:inline} #modelChip{max-width:30vw} }
 
 /* Seasonal canvas: behind all content, never blocks taps */
-#main>#seasonCanvas{position:absolute;inset:0;z-index:0;pointer-events:none}
+
 .seg.wrap{display:flex;flex-wrap:wrap}
+
+/* ---------- Backdrop layer (wallpaper + seasonal canvas), always BEHIND the app ---------- */
+#backdrop{position:fixed;inset:0;z-index:0;pointer-events:none;background:var(--bg);overflow:hidden}
+body.has-wall #backdrop::before{content:"";position:absolute;inset:0;background:var(--bg);opacity:var(--wall-dim,.45)}
+#backdrop canvas{position:absolute;inset:0;display:block}
+#app{position:relative;z-index:1;isolation:isolate}
+#main{background:var(--bg)}
+body.has-wall #main{background:transparent}
+/* iOS Safari: backdrop-filter over an animated layer can flicker, so use solid panels there */
+body.ios *, body.ios *::before{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+body.ios.has-wall .msg-row.assistant .content{background:color-mix(in srgb, var(--panel) 95%, transparent)}
+body.ios .widget{background:color-mix(in srgb, var(--panel) 96%, transparent)}
+body.ios.has-wall #topbar{background:color-mix(in srgb, var(--bg) 92%, transparent)}

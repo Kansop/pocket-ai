@@ -1,12 +1,12 @@
-import { db } from './db.js';
-import { MODELS, DEFAULT_MODEL, byKey } from './models.js';
-import { renderMarkdown, esc } from './markdown.js';
-import { webSearch, shouldAutoSearch, resultsToPrompt } from './search.js';
-import { parseRemember, parseForget, extractMemories } from './memory.js';
-import { SeasonFX, SEASONS, seasonForDate } from './seasons.js';
-import { getStorage, modelSizes, chatsSizeMB, ramInfo, fitCheck, fmt } from './device.js';
+import { db } from './db.js?v=1.5.0';
+import { MODELS, DEFAULT_MODEL, byKey } from './models.js?v=1.5.0';
+import { renderMarkdown, esc } from './markdown.js?v=1.5.0';
+import { webSearch, shouldAutoSearch, resultsToPrompt } from './search.js?v=1.5.0';
+import { parseRemember, parseForget, extractMemories } from './memory.js?v=1.5.0';
+import { SeasonFX, SEASONS, seasonForDate } from './seasons.js?v=1.5.0';
+import { getStorage, modelSizes, chatsSizeMB, ramInfo, fitCheck, fmt } from './device.js?v=1.5.0';
 
-const APP_VERSION = '1.4.0';
+const APP_VERSION = '1.5.0';
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const CTX_TOKENS = 4096;
 
@@ -89,7 +89,20 @@ const defaults = {
   homeOnLaunch: true, homeLayout: 'centered', widgets: DEFAULT_WIDGETS, quickPrompts: DEFAULT_PROMPTS,
 };
 let settings = { ...defaults };
-try { settings = { ...defaults, ...JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}') }; } catch {}
+try { const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}'); if (raw && typeof raw === 'object' && !Array.isArray(raw)) settings = { ...defaults, ...raw }; } catch {}
+// Guard every setting: anything with the wrong type (old versions, bad imports) falls back to its default.
+for (const [k, d] of Object.entries(defaults)) {
+  const v = settings[k];
+  if (Array.isArray(d) ? !Array.isArray(v) : (typeof v !== typeof d && !(d === null || d === undefined))) settings[k] = Array.isArray(d) ? d.map(x => (x && typeof x === 'object') ? { ...x } : x) : d;
+}
+settings.widgets = settings.widgets.filter(w => w && typeof w.id === 'string');
+settings.quickPrompts = settings.quickPrompts.filter(q => q && typeof q.text === 'string').map(q => ({ label: String(q.label || ''), text: q.text }));
+settings.memories = settings.memories.filter(m => m && typeof m.text === 'string').map(m => ({ id: m.id || Math.random().toString(36).slice(2), text: m.text, auto: !!m.auto, ts: m.ts || Date.now() }));
+settings.personas = settings.personas.filter(p => p && p.id && p.name && typeof p.prompt === 'string');
+if (!['system', 'dark', 'light'].includes(settings.theme)) settings.theme = 'system';
+if (!['auto', 'winter', 'spring', 'summer', 'autumn', 'off'].includes(settings.season)) settings.season = 'auto';
+if (!(settings.temperature >= 0 && settings.temperature <= 2)) settings.temperature = defaults.temperature;
+if (!(settings.maxTokens >= 64 && settings.maxTokens <= 4096)) settings.maxTokens = defaults.maxTokens;
 // seasonal theme is on by default, also for people who used an older version
 if (!settings.seasonV1) { if (settings.wallpaper === 'none') settings.wallpaper = 'seasonal'; settings.season = settings.season || 'auto'; settings.seasonColors = true; settings.seasonV1 = true; try { localStorage.setItem('pocketai.settings', JSON.stringify(settings)); } catch {} }
 // make sure newly added widgets appear for older saved settings
@@ -191,13 +204,12 @@ function applyLook() {
   if (settings.wallpaper === 'seasonal') wall = season ? SEASONS[season].wall[light ? 'light' : 'dark'] : '';
   else if (settings.wallpaper === 'custom') { const d = localStorage.getItem('pocketai.wallpaper'); if (d) wall = `url("${d}")`; }
   else if (WALLS[settings.wallpaper]) wall = WALLS[settings.wallpaper].css;
-  try { if (!seasonFx) seasonFx = new SeasonFX($('#main')); seasonFx.set(season, light); } catch {}
+  let back = $('#backdrop');
+  if (!back) { back = document.createElement('div'); back.id = 'backdrop'; back.setAttribute('aria-hidden', 'true'); document.body.prepend(back); }
+  try { if (!seasonFx) seasonFx = new SeasonFX(back); seasonFx.set(season, light); } catch { seasonFx = null; }
   document.body.classList.toggle('has-wall', !!wall || !!season);
-  const main = $('#main');
-  if (wall) {
-    main.style.background = settings.wallpaper === 'custom' ? `${wall} center / cover no-repeat` : wall;
-    main.style.backgroundAttachment = 'local';
-  } else main.style.background = '';
+  if (wall) back.style.background = settings.wallpaper === 'custom' ? `${wall} center / cover no-repeat` : wall;
+  else back.style.background = '';
   root.setProperty('--wall-dim', String(settings.wallDim ?? 0.45));
   document.body.classList.toggle('chat-wide', settings.chatWidth === 'wide');
   const name = asstName();
@@ -308,7 +320,7 @@ async function ensureEngine(key = settings.model) {
     };
     const chatOpts = { context_window_size: CTX_TOKENS };
     if (!engine) {
-      worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
+      worker = new Worker(new URL('./worker.js?v=1.5.0', import.meta.url), { type: 'module' });
       engine = await lib.CreateWebWorkerMLCEngine(worker, id, { initProgressCallback: cb }, chatOpts);
     } else {
       engine.setInitProgressCallback(cb);
@@ -1374,6 +1386,7 @@ function registerSW() {
 
 /* ---------------- Boot ---------------- */
 async function boot() {
+  document.body.classList.toggle('ios', isIOS);
   applyTheme();
   if (settings.sidebarCollapsed && !matchMedia('(max-width: 820px)').matches) document.body.classList.add('side-collapsed');
   bind();
@@ -1397,4 +1410,24 @@ async function boot() {
   registerSW();
   window.__pocketai = { version: APP_VERSION, gpu, ready: true };
 }
-boot();
+// Self-heal: if the page HTML is from an older version than this script (browser cache mixing
+// versions after an update), clear the app cache + service worker and reload a fresh copy once.
+const REQUIRED_IDS = ['backdrop', 'saveChatBtn', 'seasonSeg', 'setTabs', 'webBtn', 'storagePane', 'chatList', 'input'];
+async function selfHeal(reason) {
+  let tries = 0;
+  try { tries = +(sessionStorage.getItem('pocketai.heal') || 0); sessionStorage.setItem('pocketai.heal', String(tries + 1)); } catch {}
+  if (tries < 2) {
+    try { if (navigator.serviceWorker) for (const r of await navigator.serviceWorker.getRegistrations()) await r.unregister(); } catch {}
+    try { if (window.caches) for (const k of await caches.keys()) if (k.startsWith('pocketai-')) await caches.delete(k); } catch {}
+    location.replace(location.pathname + '?fresh=' + Date.now());
+    return;
+  }
+  if (window.__pocketaiFatal) window.__pocketaiFatal(reason);
+  else document.body.insertAdjacentHTML('beforeend', `<div style="position:fixed;inset:0;z-index:99999;background:#0f1117;color:#e8eaf0;display:grid;place-items:center;padding:24px;text-align:center;font:16px/1.5 -apple-system,sans-serif"><div><h2>Pocket AI needs a refresh</h2><p>Close the app completely and open it again. Your saved chats are safe.</p></div></div>`);
+}
+(async () => {
+  const missing = REQUIRED_IDS.filter(id => !document.getElementById(id));
+  if (missing.length) { selfHeal('Page is from an older version (missing: ' + missing.join(', ') + ')'); return; }
+  try { await boot(); try { sessionStorage.removeItem('pocketai.heal'); } catch {} }
+  catch (e) { selfHeal((e && (e.stack || e.message)) || String(e)); }
+})();

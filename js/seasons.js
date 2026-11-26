@@ -33,14 +33,27 @@ export class SeasonFX {
     this.t = 0; this.last = 0; this.wind = 0; this.windTarget = 0; this.slowFrames = 0; this.density = 1;
     this.reduced = matchMedia('(prefers-reduced-motion: reduce)');
     this.mobile = matchMedia('(max-width: 820px)').matches || navigator.maxTouchPoints > 1;
+    this.ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (this.ios) this.density = 0.7; // lighter rendering on iPhone/iPad
+    this.failed = false;
     this.sprites = new Map();
     this._loop = (ts) => this.loop(ts);
-    this.ro = new ResizeObserver(() => this.resize());
-    this.ro.observe(host);
+    const onResize = () => { try { this.resize(); } catch { this.fail(); } };
+    if (window.ResizeObserver) { this.ro = new ResizeObserver(onResize); this.ro.observe(host); }
+    else window.addEventListener('resize', onResize);
     document.addEventListener('visibilitychange', () => this.updateRunning());
     this.reduced.addEventListener?.('change', () => this.set(this.season, this.light));
   }
+  fail() {
+    // never let the decoration break the app: stop and hide it for this session
+    this.failed = true; this.running = false; this.season = null;
+    try { this.canvas.hidden = true; this.ctx.clearRect(0, 0, this.w || 0, this.h || 0); } catch {}
+  }
   set(season, light) {
+    if (this.failed) return;
+    try { this._set(season, light); } catch { this.fail(); }
+  }
+  _set(season, light) {
     const changed = season !== this.season || light !== this.light;
     this.season = season; this.light = light;
     this.canvas.hidden = !season;
@@ -49,7 +62,7 @@ export class SeasonFX {
   }
   resize(force = false) {
     const r = this.host.getBoundingClientRect();
-    const dpr = Math.min(window.devicePixelRatio || 1, this.mobile ? 1.5 : 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, this.ios ? 1 : this.mobile ? 1.5 : 2);
     const w = Math.max(1, Math.round(r.width)), h = Math.max(1, Math.round(r.height));
     if (!force && w === this.w && h === this.h) return;
     this.w = w; this.h = h; this.dpr = dpr;
@@ -101,10 +114,14 @@ export class SeasonFX {
   updateRunning() {
     const should = !!this.season && !document.hidden && !this.reduced.matches;
     if (should && !this.running) { this.running = true; this.last = 0; requestAnimationFrame(this._loop); }
-    else if (!should) { this.running = false; if (this.season && !document.hidden) this.draw(0); }
+    else if (!should) { this.running = false; if (this.season && !document.hidden) { try { this.draw(0); } catch { this.fail(); } } }
   }
   loop(ts) {
     if (!this.running) return;
+    try { this.frame(ts); } catch { this.fail(); return; }
+    requestAnimationFrame(this._loop);
+  }
+  frame(ts) {
     const dt = this.last ? Math.min(0.05, (ts - this.last) / 1000) : 0.016;
     // adaptive quality: if frames are consistently slow, use fewer particles
     if (this.last && ts - this.last > 26) { if (++this.slowFrames > 90 && this.density > 0.4) { this.density *= 0.75; this.parts.length = this.count(); this.slowFrames = 0; } }
@@ -112,7 +129,6 @@ export class SeasonFX {
     this.last = ts;
     this.update(dt);
     this.draw(dt);
-    requestAnimationFrame(this._loop);
   }
   update(dt) {
     this.t += dt;
@@ -185,7 +201,7 @@ export class SeasonFX {
         const grd = ctx.createLinearGradient(0, h - 18, 0, h);
         grd.addColorStop(0, this.light ? 'rgba(255,255,255,0.95)' : 'rgba(235,242,255,0.85)');
         grd.addColorStop(1, this.light ? 'rgba(225,235,248,1)' : 'rgba(190,210,240,0.9)');
-        ctx.fillStyle = grd; ctx.shadowColor = this.light ? 'rgba(90,120,170,.35)' : 'rgba(180,210,255,.5)'; ctx.shadowBlur = 6; ctx.fill(); ctx.shadowBlur = 0;
+        ctx.fillStyle = grd; if (!this.ios) { ctx.shadowColor = this.light ? 'rgba(90,120,170,.35)' : 'rgba(180,210,255,.5)'; ctx.shadowBlur = 6; } ctx.fill(); ctx.shadowBlur = 0;
       }
     } else if (s === 'spring') {
       for (const p of this.parts) {
