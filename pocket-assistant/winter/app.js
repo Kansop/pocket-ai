@@ -1,4 +1,4 @@
-const BUILD = '1.6.0';
+const BUILD = '1.6.1';
 const MODEL_URL = 'model.json?v=' + BUILD;
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const STORE = 'pocket-assistant-winter';
@@ -36,12 +36,12 @@ const historyBox = document.querySelector('#history');
 const field = document.querySelector('#q');
 
 function loadSettings() {
-  const base = { name: 'Luca', style: 'normal', model: 'qwen-3b' };
+  const base = { name: 'Luca', style: 'normal', model: 'qwen-3b', search: true };
   try { return Object.assign(base, JSON.parse(localStorage.getItem(STORE) || '{}')); }
   catch { return base; }
 }
 function saveSettings() {
-  localStorage.setItem(STORE, JSON.stringify({ name: settings.name, style: settings.style, model: settings.model }));
+  localStorage.setItem(STORE, JSON.stringify({ name: settings.name, style: settings.style, model: settings.model, search: !!settings.search }));
 }
 
 function decodeMatrices(raw) {
@@ -155,6 +155,76 @@ function prettyProgress(report, m) {
 
 function isOom(err) {
   return /memory|OOM|allocation|device.*lost|DeviceLost|mapAsync|GPUBuffer|out of memory|exceeded/i.test(String(err && (err.message || err) || err));
+}
+
+
+const SEARCH_STOP = new Set('a an the is are was were be been of to in on for and or with about can could would should you your me my i please tell what whats who whos when where which how why do does did search look up lookup google find web online internet latest current today news give show explain'.split(' '));
+function shouldAutoSearch(text) {
+  const t = text.toLowerCase();
+  if (t.length < 8) return false;
+  if (/\b(search|look ?up|google|on the (web|internet)|online)\b/.test(t)) return true;
+  if (/\b(latest|current(ly)?|today|tonight|yesterday|this (week|month|year)|right now|news|recent(ly)?|update[sd]?|price of|stock|score|weather|release date|came out|20(2[4-9]|3\d))\b/.test(t)) return true;
+  if (/^(who|what|when|where)\s+(is|was|are|were|did)\s+[a-z]/.test(t) && !/\b(you|your|i|my|me)\b/.test(t)) return true;
+  return false;
+}
+function toSearchQuery(text) {
+  let q = text.replace(/[?!.,"“”]/g, ' ').replace(/\s+/g, ' ').trim();
+  const words = q.split(' ');
+  const kept = words.filter(w => !SEARCH_STOP.has(w.toLowerCase()));
+  q = (kept.length >= 1 ? kept : words).join(' ');
+  return q.slice(0, 120);
+}
+function withTimeout(p, ms) {
+  return Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms))]);
+}
+async function wikipedia(q) {
+  const base = 'https://en.wikipedia.org/w/api.php?format=json&origin=*';
+  const sres = await withTimeout(fetch(`${base}&action=query&list=search&srlimit=3&srsearch=${encodeURIComponent(q)}`).then(r => r.json()), 7000);
+  const hits = (sres.query && sres.query.search) || [];
+  if (!hits.length) return [];
+  const ids = hits.map(h => h.pageid).join('|');
+  const ex = await withTimeout(fetch(`${base}&action=query&prop=extracts|info&inprop=url&exintro=1&explaintext=1&exchars=700&pageids=${ids}`).then(r => r.json()), 7000);
+  const pages = (ex.query && ex.query.pages) || {};
+  return hits.map(h => pages[h.pageid]).filter(Boolean).map(pg => ({
+    title: pg.title + ' (Wikipedia)',
+    url: pg.fullurl || ('https://en.wikipedia.org/?curid=' + pg.pageid),
+    snippet: (pg.extract || '').replace(/\s+/g, ' ').trim(),
+  })).filter(r => r.snippet);
+}
+let jsonpN = 0;
+function duckduckgo(q) {
+  return new Promise((resolve) => {
+    const cb = '__passist_ddg' + (++jsonpN);
+    const script = document.createElement('script');
+    const done = (v) => { clearTimeout(t); try { delete window[cb]; } catch {} script.remove(); resolve(v); };
+    const t = setTimeout(() => done([]), 5000);
+    window[cb] = (d) => {
+      const out = [];
+      if (d && d.AbstractText) out.push({ title: (d.Heading || q) + (d.AbstractSource ? ` (${d.AbstractSource})` : ''), url: d.AbstractURL || `https://duckduckgo.com/?q=${encodeURIComponent(q)}`, snippet: d.AbstractText });
+      if (d && d.Answer && typeof d.Answer === 'string') out.push({ title: 'DuckDuckGo answer', url: `https://duckduckgo.com/?q=${encodeURIComponent(q)}`, snippet: d.Answer });
+      if (d && d.Definition) out.push({ title: 'Definition' + (d.DefinitionSource ? ` (${d.DefinitionSource})` : ''), url: d.DefinitionURL || `https://duckduckgo.com/?q=${encodeURIComponent(q)}`, snippet: d.Definition });
+      if (out.length < 2 && d && Array.isArray(d.RelatedTopics)) {
+        for (const rt of d.RelatedTopics) { if (rt && rt.Text && rt.FirstURL) out.push({ title: rt.Text.split(' - ')[0].slice(0, 80), url: rt.FirstURL, snippet: rt.Text }); if (out.length >= 3) break; }
+      }
+      done(out);
+    };
+    script.onerror = () => done([]);
+    script.src = `https://api.duckduckgo.com/?q=${encodeURIComponent(q)}&format=json&no_html=1&skip_disambig=1&t=pocketassistant&callback=${cb}`;
+    document.head.appendChild(script);
+  });
+}
+async function webSearch(text) {
+  const query = toSearchQuery(text);
+  if (!navigator.onLine) return { query, results: [], offline: true };
+  const [w, d] = await Promise.all([wikipedia(query).catch(() => []), duckduckgo(query).catch(() => [])]);
+  const seen = new Set();
+  const results = [...d, ...w].filter(r => r.url && !seen.has(r.url) && seen.add(r.url)).slice(0, 4);
+  return { query, results };
+}
+function resultsToPrompt(res) {
+  const date = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+  return `Web search results for "${res.query}" (fetched ${date}). Use them if they are relevant, and mention sources in plain words. If they don't answer the question, say so.\n` +
+    res.results.map((r, i) => `[${i + 1}] ${r.title}: ${r.snippet.slice(0, 600)}`).join('\n');
 }
 
 async function detectGPU() {
@@ -276,7 +346,13 @@ function notesFromTopics(topics) {
 
 async function generateReply(q) {
   const topics = retrieve(q, 3);
-  const extra = notesFromTopics(topics);
+  let extra = notesFromTopics(topics);
+  let found = null;
+  const wantSearch = settings.search !== false && (shouldAutoSearch(q) || !topics.length);
+  if (wantSearch) {
+    try { found = await webSearch(q); } catch { found = null; }
+    if (found && found.results && found.results.length) extra = (extra ? extra + '\n\n' : '') + resultsToPrompt(found);
+  }
   const messages = [{ role: 'system', content: systemPrompt(extra) }];
   const hist = chatTurns.slice(-6);
   for (const turn of hist) messages.push(turn);
@@ -305,6 +381,18 @@ async function generateReply(q) {
     }
     text = stripEmotes(text).trim();
     p.textContent = text || 'I could not write a reply. Try asking again.';
+    if (found && found.results && found.results.length) {
+      const src = document.createElement('p');
+      src.append('Sources: ');
+      found.results.forEach((r, i) => {
+        if (i) src.append(' · ');
+        const a = document.createElement('a');
+        a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+        a.textContent = r.title.replace(/ \(Wikipedia\)$/, '');
+        src.append(a);
+      });
+      card.append(src);
+    }
     if (text) {
       chatTurns.push({ role: 'user', content: q });
       chatTurns.push({ role: 'assistant', content: text });
@@ -350,6 +438,7 @@ function bindSettings() {
   $('userName').value = settings.name || '';
   $('replyStyle').value = settings.style || 'normal';
   $('modelPick').value = settings.model || 'qwen-3b';
+  if ($('webSearch')) $('webSearch').checked = settings.search !== false;
   $('settings').hidden = false;
   $('userName').onchange = $('userName').onblur = () => {
     settings.name = $('userName').value.trim().slice(0, 40) || 'Luca';
@@ -357,6 +446,7 @@ function bindSettings() {
     greet();
   };
   $('replyStyle').onchange = () => { settings.style = $('replyStyle').value; saveSettings(); };
+  if ($('webSearch')) $('webSearch').onchange = () => { settings.search = $('webSearch').checked; saveSettings(); };
   $('modelPick').onchange = async () => {
     const next = $('modelPick').value;
     if (next === settings.model && loadedKey === next) return;
@@ -460,6 +550,8 @@ function refreshPicks(){
   window.__topicAt = (i) => model.topics[i];
   window.__readyAI = () => readyAI;
   window.__settings = settings;
+  window.__webSearch = webSearch;
+  window.__shouldAutoSearch = shouldAutoSearch;
 }
 
 async function boot() {
