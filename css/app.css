@@ -362,3 +362,25 @@ body.chat-wide .msg-row,body.chat-wide #composer{max-width:1040px}
   .field.two{grid-template-columns:1fr}
   .w-clock .time{font-size:34px}
 }
+
+/* ---------- Storage / memory meter ---------- */
+.meter-block{margin:12px 0 16px}
+.meter-head{display:flex;justify-content:space-between;gap:10px;font-size:14px;margin-bottom:6px}
+.meter-head b{font-weight:600}
+.meter-bar{height:12px;border-radius:99px;background:var(--panel-2);overflow:hidden;display:flex;border:1px solid var(--border)}
+.meter-bar i{display:block;height:100%}
+.meter-bar .seg-models{background:var(--accent)}
+.meter-bar .seg-chats{background:var(--accent-2)}
+.meter-bar .seg-other{background:var(--muted);opacity:.6}
+.meter-bar.ram i{background:linear-gradient(90deg,var(--ok),var(--warn))}
+.meter-legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--muted);margin-top:6px}
+.meter-legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:-1px;background:var(--c)}
+.size-list{display:flex;flex-direction:column;gap:4px;font-size:14px}
+.size-list div{display:flex;justify-content:space-between;gap:10px;padding:6px 2px;border-bottom:1px dashed var(--border)}
+.size-list div:last-child{border-bottom:0}
+.est{font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:99px;padding:0 6px;margin-left:6px;white-space:nowrap}
+.ram-grid{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:14px}
+.ram-grid span:nth-child(odd){color:var(--muted)}
+.fit-ok{color:var(--ok);font-size:12.5px;margin-top:6px}
+.fit-bad{color:var(--warn);font-size:12.5px;margin-top:6px}
+.w-storage .meter-block{margin:4px 0 8px}

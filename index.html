@@ -88,7 +88,7 @@
 <dialog id="settingsDlg" class="sheet">
   <div class="sheet-head"><h2>Settings</h2><button class="icon-btn" data-close aria-label="Close">✕</button></div>
   <div class="tabs" id="setTabs">
-    <button data-tab="general" class="on">General</button><button data-tab="me">You &amp; Memory</button><button data-tab="search">Web search</button><button data-tab="look">Look</button><button data-tab="home">Home page</button>
+    <button data-tab="general" class="on">General</button><button data-tab="me">You &amp; Memory</button><button data-tab="search">Web search</button><button data-tab="look">Look</button><button data-tab="home">Home page</button><button data-tab="storage">Storage</button>
   </div>
 
   <section data-pane="general">
@@ -192,6 +192,11 @@
       <div id="qpList" class="qp-list"></div>
       <div class="btn-row"><button class="btn" id="qpAdd">＋ Add prompt</button><button class="btn" id="qpReset">Reset to defaults</button></div>
     </div>
+  </section>
+
+  <section data-pane="storage" hidden>
+    <div id="storagePane" class="storage-pane"><p class="muted">Checking…</p></div>
+    <div class="btn-row"><button class="btn" id="storageRefresh">↻ Refresh</button><button class="btn danger-outline" id="clearModels2">🗑 Clear downloaded models</button></div>
   </section>
 
   <div class="about muted small">

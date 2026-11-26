@@ -3,8 +3,9 @@ import { MODELS, DEFAULT_MODEL, byKey } from './models.js';
 import { renderMarkdown, esc } from './markdown.js';
 import { webSearch, shouldAutoSearch, resultsToPrompt } from './search.js';
 import { parseRemember, parseForget, extractMemories } from './memory.js';
+import { getStorage, modelSizes, chatsSizeMB, ramInfo, fitCheck, fmt } from './device.js';
 
-const APP_VERSION = '1.1.0';
+const APP_VERSION = '1.2.0';
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const CTX_TOKENS = 4096;
 
@@ -44,12 +45,12 @@ const DEFAULT_PROMPTS = [
   { label: '📰 News', text: 'Search the web: what are the latest tech news today?' },
 ];
 const WIDGETS = {
-  clock: 'Clock & date', search: 'Search bar', prompts: 'Quick prompts', recent: 'Recent chats',
+  clock: 'Clock & date', storage: 'Memory & storage meter', search: 'Search bar', prompts: 'Quick prompts', recent: 'Recent chats',
   model: 'AI model status', memories: 'Memories', tip: 'Tip of the day',
 };
 const DEFAULT_WIDGETS = [
   { id: 'clock', on: true }, { id: 'search', on: true }, { id: 'prompts', on: true }, { id: 'recent', on: true },
-  { id: 'model', on: true }, { id: 'memories', on: false }, { id: 'tip', on: true },
+  { id: 'model', on: true }, { id: 'storage', on: true }, { id: 'memories', on: false }, { id: 'tip', on: true },
 ];
 const ACCENTS = ['#7c5cff', '#3b82f6', '#06b6d4', '#14b8a6', '#22c55e', '#eab308', '#f97316', '#ef4444', '#ec4899', '#a855f7'];
 const WALLS = {
@@ -107,6 +108,7 @@ let loadingPromise = null;
 let generating = false;
 let stopRequested = false;
 let activeGen = null;
+const fitChecked = new Set();
 let webForce = false;        // 🌐 button: force search for the next message
 let clockTimer = null;
 
@@ -276,6 +278,14 @@ async function ensureEngine(key = settings.model) {
   if (loadingPromise) {
     await loadingPromise.catch(() => {});
     if (engine && loadedId === id) return engine;
+  }
+  if (!fitChecked.has(id)) {
+    const st = await collectStats().catch(() => null);
+    const warns = st ? fitCheck(m, st.storage, st.ram, !!st.sizes[m.key]) : [];
+    if (warns.length && !await confirmBox(`${m.name} might not fit`, warns.join(' ') + ' You can pick a smaller model in Models.', 'Try anyway')) {
+      throw Object.assign(new Error('stopped'), { stopped: true });
+    }
+    fitChecked.add(id);
   }
   loadingPromise = (async () => {
     setModelChip('loading');
@@ -527,6 +537,10 @@ function renderHome() {
       const { m, st, label } = modelStateText();
       parts.push(`<div class="widget w-model"><h3>AI model <button type="button" data-home="models">Change</button></h3><div class="mrow"><span class="dot ${st}"></span><b>${esc(m.name)}</b><span class="muted small">${esc(label)}</span></div></div>`);
     }
+    else if (w.id === 'storage') {
+      parts.push(`<div class="widget w-storage"><h3>Memory & storage <button type="button" data-home="storage">Details</button></h3><div id="homeStorage">${lastStats ? storageBarHTML(lastStats, true) + ramHTML(lastStats.ram, true) : '<span class="muted-empty">Checking…</span>'}</div></div>`);
+      collectStats().then(st => { const el = $('#homeStorage'); if (el) el.innerHTML = storageBarHTML(st, true) + ramHTML(st.ram, true); }).catch(() => {});
+    }
     else if (w.id === 'memories') {
       const mem = settings.memories || [];
       parts.push(`<div class="widget w-mem"><h3>What I remember <button type="button" data-home="memories">Manage</button></h3>${mem.length ? `<ul>${mem.slice(-5).reverse().map(x => `<li>${esc(x.text)}</li>`).join('')}</ul>` : '<span class="muted-empty">Nothing yet. Say "remember that …" in a chat.</span>'}</div>`);
@@ -677,6 +691,7 @@ async function generate() {
       if (stopRequested) throw Object.assign(new Error('stopped'), { stopped: true });
     }
     const eng = await ensureEngine();
+    if (finished) return;
     if (stopRequested) throw Object.assign(new Error('stopped'), { stopped: true });
     const stream = await eng.chat.completions.create({
       messages: buildMessages({ ...c, messages: c.messages.slice(0, -1) }, extra),
@@ -720,7 +735,7 @@ async function stop() {
     if (g && activeGen === g) {
       g.reply.content = g.reply.content || '_(stopped)_';
       g.reply.stats = `${g.model.name} · stopped`;
-      if (loadingPromise || engine) resetEngine();
+      if (engine && !loadingPromise) resetEngine();  // keep a model download going
       g.finish();
     }
   }, 2500);
@@ -763,30 +778,47 @@ async function renderModels() {
   if (!gpu.ok) di.innerHTML = '⚠️ <b>WebGPU not available</b> in this browser, so models can\'t run here. See the note on the main screen.';
   else di.innerHTML = `✅ WebGPU ready${gpu.vendor ? ` · ${esc(gpu.vendor)} ${esc(gpu.arch)}` : ''} · ${gpu.f16 ? 'fast 16-bit mode' : '32-bit mode (a bit more memory)'}${isIOS ? '<br>📱 iPhone tip: <b>Llama 3.2 1B</b> is the best pick. The 3B model may crash Safari.' : ''}`;
   updateStorageInfo();
+  const st = await collectStats().catch(() => null);
+  if (st) {
+    for (const m of MODELS) {
+      const card = $(`.model-card[data-key="${m.key}"]`, wrap); if (!card) continue;
+      const z = st.sizes[m.key];
+      if (z) { const c = $('[data-cached]', card); c.hidden = false; c.textContent = `✓ Downloaded · ${fmt(z.mb)}`; $('[data-del]', card).hidden = false; }
+      const warns = fitCheck(m, st.storage, st.ram, !!z);
+      const fit = document.createElement('div');
+      fit.className = warns.length ? 'fit-bad' : 'fit-ok';
+      fit.textContent = warns.length ? '⚠️ ' + warns.join(' ') : (st.ram.tabBudgetMB || st.storage.freeMB != null ? '✓ Should fit on this device' : '');
+      if (fit.textContent) $('.mc-warn', card).after(fit);
+    }
+  }
   if (gpu.ok) {
     try {
       const lib = await getWebLLM();
       for (const m of MODELS) {
-        const has = await lib.hasModelInCache(modelIdFor(m)).catch(() => false);
         const card = $(`.model-card[data-key="${m.key}"]`, wrap);
-        if (card && has) { $('[data-cached]', card).hidden = false; $('[data-del]', card).hidden = false; }
+        if (!card || !$('[data-cached]', card).hidden) continue;
+        const has = await lib.hasModelInCache(modelIdFor(m)).catch(() => false);
+        if (has) { $('[data-cached]', card).hidden = false; $('[data-del]', card).hidden = false; }
       }
     } catch {}
   }
 }
 async function updateStorageInfo() {
   try {
-    if (navigator.storage && navigator.storage.estimate) {
-      const { usage, quota } = await navigator.storage.estimate();
-      $('#storageInfo').textContent = `Using ${fmtMB(usage / 1048576)} of storage${quota ? ` (≈${fmtMB(quota / 1048576)} available to this site)` : ''}`;
-    }
+    const s = await getStorage();
+    if (s.supported) $('#storageInfo').textContent = `Using ${fmt(s.usageMB)}${s.freeMB != null ? ` · ~${fmt(s.freeMB)} free for this site` : ''}`;
   } catch {}
 }
 async function useModel(key) {
   const m = byKey(key);
-  if (isIOS && m.memMB > 1500) {
+  const st = await collectStats().catch(() => null);
+  const downloaded = !!(st && st.sizes[m.key]);
+  const warns = st ? fitCheck(m, st.storage, st.ram, downloaded) : [];
+  if (warns.length) {
+    if (!await confirmBox(`${m.name} might not fit`, warns.join(' ') + (isIOS ? ' Llama 3.2 1B is the safer choice on iPhone.' : ' Try a smaller model if it fails.'), 'Load anyway')) return;
+  } else if (isIOS && m.memMB > 1500) {
     if (!await confirmBox(`Load ${m.name} on iPhone?`, `This model needs about ${fmtMB(m.memMB)} of memory. Safari may close the tab if it runs out. Llama 3.2 1B is the safer choice on iPhone.`, 'Load anyway')) return;
-  } else if (m.memMB > 2000) {
+  } else if (!downloaded && m.memMB > 2000) {
     if (!await confirmBox(`Download ${m.name}?`, `This is a big model: ${m.download} download and ~${fmtMB(m.memMB)} of memory. Use Wi-Fi. It's saved after the first download.`, 'Download')) return;
   }
   settings.model = key; saveSettings();
@@ -829,6 +861,59 @@ async function clearAllModels() {
     toast('Downloaded models cleared');
   } catch (e) { toast(friendlyError(e)); }
   renderModels();
+}
+
+
+/* ---------------- Storage / memory meter ---------------- */
+let lastStats = null;
+async function collectStats() {
+  const [storage, sizes] = await Promise.all([getStorage(), modelSizes(MODELS, modelIdFor)]);
+  const modelsMB = Object.values(sizes).reduce((a, b) => a + b.mb, 0);
+  const chatMB = chatsSizeMB(chats) + chatsSizeMB(settings) + ((localStorage.getItem('pocketai.wallpaper') || '').length / 1048576);
+  lastStats = { storage, sizes, modelsMB, chatMB, ram: ramInfo(gpu) };
+  return lastStats;
+}
+function storageBarHTML(st, compact = false) {
+  const { storage, modelsMB, chatMB } = st;
+  if (!storage.supported || !storage.quotaMB) return `<div class="muted small">This browser doesn't report storage space.${modelsMB ? ` Models use ~${fmt(modelsMB)}.` : ''}</div>`;
+  const q = storage.quotaMB, used = storage.usageMB;
+  const other = Math.max(0, used - modelsMB - chatMB);
+  const pct = (x) => Math.max(0, Math.min(100, x / q * 100)).toFixed(2) + '%';
+  return `<div class="meter-block">
+    <div class="meter-head"><b>Storage</b><span>${fmt(used)} used · <b>${fmt(storage.freeMB)} free</b>${compact ? '' : ` of ${fmt(q)}`}</span></div>
+    <div class="meter-bar" role="img" aria-label="Storage used ${fmt(used)} of ${fmt(q)}"><i class="seg-models" style="width:${pct(modelsMB)}"></i><i class="seg-chats" style="width:${pct(chatMB)}"></i><i class="seg-other" style="width:${pct(other)}"></i></div>
+    <div class="meter-legend"><span style="--c:var(--accent)">Models ${fmt(modelsMB)}</span><span style="--c:var(--accent-2)">Chats & settings ${fmt(chatMB)}</span><span style="--c:var(--muted)">App & other ${fmt(other)}</span></div>
+    ${compact ? '' : `<div class="muted small" style="margin-top:6px">"Free" is how much this site may use, as reported by your browser${/iPad|iPhone|iPod/.test(navigator.userAgent) ? ' (Safari reports a rough estimate)' : ''}. ${storage.persisted ? '🔒 Storage is protected from automatic cleanup.' : 'The browser may clear it if your device gets very low on space.'}</div>`}
+  </div>`;
+}
+function ramHTML(ram, compact = false) {
+  const rows = [];
+  if (ram.deviceGB) rows.push(['Device memory (RAM)', `${ram.deviceGB} GB${ram.exact ? '' : ' <span class="est">estimate</span>'}`]);
+  else rows.push(['Device memory (RAM)', 'Not shared by this browser']);
+  if (ram.tabBudgetMB) rows.push(['Likely free for the AI', `~${fmt(ram.tabBudgetMB)} <span class="est">estimate</span>`]);
+  if (!compact && ram.heapLimitMB) rows.push(['Page memory (JS heap)', `${fmt(ram.heapUsedMB)} of ${fmt(ram.heapLimitMB)}`]);
+  if (!compact && ram.gpuMaxBufferMB) rows.push(['GPU max buffer', fmt(ram.gpuMaxBufferMB)]);
+  const loaded = loadedId ? MODELS.find(m => m.f16 === loadedId || m.f32 === loadedId) : null;
+  rows.push(['AI model in memory', loaded ? `${esc(loaded.name)} · ~${fmt(loaded.memMB)}` : 'None loaded']);
+  let bar = '';
+  if (ram.tabBudgetMB) {
+    const usedMB = loaded ? loaded.memMB : 0;
+    bar = `<div class="meter-head" style="margin-top:10px"><b>Memory</b><span>${loaded ? `~${fmt(usedMB)} used by AI · ` : ''}~${fmt(Math.max(0, ram.tabBudgetMB - usedMB))} left <span class="est">estimate</span></span></div><div class="meter-bar ram"><i style="width:${Math.min(100, usedMB / ram.tabBudgetMB * 100).toFixed(1)}%"></i></div>`;
+  }
+  return `${bar}<div class="ram-grid" style="margin-top:10px">${rows.map(([a, b]) => `<span>${a}</span><span>${b}</span>`).join('')}</div>${!compact && ram.notes.length ? `<p class="muted small">${ram.notes.map(esc).join(' ')}</p>` : ''}`;
+}
+async function renderStoragePane() {
+  const pane = $('#storagePane');
+  const st = await collectStats();
+  const rows = MODELS.map(m => {
+    const z = st.sizes[m.key];
+    const warns = fitCheck(m, st.storage, st.ram, !!z);
+    return `<div><span>${esc(m.name)} ${z ? '' : '<span class="muted small">· not downloaded</span>'}${warns.length ? ` <span class="est" title="${esc(warns.join(' '))}">⚠️ may not fit</span>` : ''}</span><span>${z ? fmt(z.mb) + (z.estimated ? ' <span class="est">estimate</span>' : '') : `<span class="muted">${m.download}</span>`}</span></div>`;
+  }).join('');
+  pane.innerHTML = `${storageBarHTML(st)}
+    <label style="font-weight:600;font-size:14px">Downloaded models</label>
+    <div class="size-list">${rows}<div><span>Chats, memories & settings</span><span>${fmt(st.chatMB)}</span></div></div>
+    <div style="margin-top:18px"><label style="font-weight:600;font-size:14px">Memory (RAM)</label>${ramHTML(st.ram)}</div>`;
 }
 
 /* ---------------- Personas dialog ---------------- */
@@ -903,6 +988,7 @@ function fillSettings() {
 function showTab(t) {
   $$('#setTabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
   $$('#settingsDlg [data-pane]').forEach(p => p.hidden = p.dataset.pane !== t);
+  if (t === 'storage') renderStoragePane();
 }
 function openSettings(tab = 'general') { closeSidebarMobile(); fillSettings(); showTab(tab); if (!$('#settingsDlg').open) $('#settingsDlg').showModal(); }
 function renderEmojiPick() {
@@ -972,6 +1058,7 @@ function bind() {
     const a = h.dataset.home;
     if (a === 'editPrompts') openSettings('home');
     else if (a === 'memories') openSettings('me');
+    else if (a === 'storage') openSettings('storage');
     else if (a === 'models') { $('#modelsDlg').showModal(); renderModels(); }
     else if (a === 'allChats') { if (matchMedia('(max-width: 820px)').matches) openSidebar(); else { document.body.classList.remove('side-collapsed'); settings.sidebarCollapsed = false; saveSettings(); } }
   });
@@ -1083,6 +1170,8 @@ function bind() {
     const d = e.target.closest('[data-del]'); if (d) return deleteModel(d.dataset.del);
   });
   $('#clearModels').onclick = clearAllModels;
+  $('#clearModels2').onclick = async () => { await clearAllModels(); renderStoragePane(); };
+  $('#storageRefresh').onclick = renderStoragePane;
 
   $('#openPersonas').onclick = $('#personaChip').onclick = () => { closeSidebarMobile(); renderPersonas(); $('#personaEditor').open = false; $('#personasDlg').showModal(); };
   $('#personaList').addEventListener('click', (e) => {
