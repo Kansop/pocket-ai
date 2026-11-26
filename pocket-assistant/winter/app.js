@@ -1,4 +1,4 @@
-const BUILD = '1.6.8';
+const BUILD = '1.6.9';
 const MODEL_URL = 'model.json?v=' + BUILD;
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const STORE = 'pocket-assistant-winter-v2';
@@ -38,6 +38,432 @@ const menu = document.querySelector('#menu');
 const historyBox = document.querySelector('#history');
 const field = document.querySelector('#q');
 
+const CHAT_STORE = 'pocket-assistant-winter-chats-v1';
+const CHAT_STORE_OLD = ['pocket-assistant-winter-chats', 'pocket-assistant-winter-history'];
+
+let chats = [];
+let currentId = null;
+let stickToBottom = true;
+let snowRAF = 0;
+let snowResizeBound = false;
+
+function uid() {
+  return 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+function threadEl() { return $('thread') || document.scrollingElement; }
+function isWide() { return window.matchMedia('(min-width: 900px)').matches; }
+
+function titleFrom(messages) {
+  const u = (messages || []).find(m => m && m.role === 'user' && (m.text || m.content));
+  return u ? String(u.text || u.content).replace(/\s+/g, ' ').trim().slice(0, 48) : '';
+}
+function sanitizeMsg(m) {
+  if (!m || typeof m !== 'object') return null;
+  const role = m.role === 'user' ? 'user' : 'assistant';
+  const text = String(m.text || m.content || m.q || '').slice(0, 8000);
+  if (!text && !m.title && !m.code) return null;
+  const out = { role, text };
+  if (m.title) out.title = String(m.title).slice(0, 160);
+  if (m.note) out.note = String(m.note).slice(0, 2000);
+  if (m.code) out.code = String(m.code).slice(0, 8000);
+  if (m.output || m.answer) out.output = String(m.output || m.answer).slice(0, 8000);
+  if (Array.isArray(m.sources)) {
+    out.sources = m.sources.slice(0, 6).map(s => ({
+      title: String((s && (s.title || s.url)) || 'Source').slice(0, 120),
+      url: String((s && s.url) || ''),
+    })).filter(s => s.url);
+  }
+  return out;
+}
+function sanitizeChat(c) {
+  if (!c || typeof c !== 'object') return null;
+  const messages = Array.isArray(c.messages) ? c.messages.map(sanitizeMsg).filter(Boolean) : [];
+  if (!messages.length && !c.id) return null;
+  return {
+    id: String(c.id || uid()),
+    title: String(c.title || titleFrom(messages) || 'New chat').slice(0, 80),
+    messages,
+    updated: Number(c.updated) || Date.now(),
+  };
+}
+function normalizeChats(raw) {
+  if (!raw) return [];
+  let list = [];
+  if (Array.isArray(raw)) list = raw;
+  else if (Array.isArray(raw.chats)) list = raw.chats;
+  else if (Array.isArray(raw.messages)) list = [{ id: uid(), title: titleFrom(raw.messages) || 'Earlier chat', messages: raw.messages, updated: Date.now() }];
+  else if (raw.role && (raw.text || raw.content)) list = [{ id: uid(), title: String(raw.text || raw.content).slice(0, 48), messages: [raw], updated: Date.now() }];
+  else return [];
+  const looksLikeMessages = list.length && list.every(x => x && (x.role === 'user' || x.role === 'assistant') && !x.messages);
+  if (looksLikeMessages) {
+    list = [{ id: uid(), title: titleFrom(list) || 'Earlier chat', messages: list, updated: Date.now() }];
+  }
+  const asChats = list.map(sanitizeChat).filter(c => c && c.messages.length);
+  if (asChats.length > 8 && asChats.every(c => c.messages.length <= 1)) {
+    const messages = asChats.flatMap(c => c.messages);
+    return [{ id: uid(), title: titleFrom(messages) || 'Earlier chat', messages, updated: Date.now() }];
+  }
+  return asChats.sort((a, b) => (b.updated || 0) - (a.updated || 0)).slice(0, 80);
+}
+function loadChats() {
+  chats = [];
+  currentId = null;
+  let raw = null;
+  try { raw = JSON.parse(localStorage.getItem(CHAT_STORE) || 'null'); } catch { raw = null; }
+  if (!raw) {
+    for (const k of CHAT_STORE_OLD) {
+      try { raw = JSON.parse(localStorage.getItem(k) || 'null'); } catch { raw = null; }
+      if (raw) break;
+    }
+  }
+  try { chats = normalizeChats(raw); }
+  catch { chats = []; }
+  if (raw && raw.currentId && chats.some(c => c.id === raw.currentId)) currentId = raw.currentId;
+  else if (chats.length) currentId = chats[0].id;
+}
+function saveChats() {
+  const payload = { v: 1, currentId, chats: chats.filter(c => c.messages && c.messages.length) };
+  try { localStorage.setItem(CHAT_STORE, JSON.stringify(payload)); }
+  catch {
+    payload.chats = payload.chats.slice(0, Math.max(8, payload.chats.length - 12));
+    try { localStorage.setItem(CHAT_STORE, JSON.stringify(payload)); } catch {}
+  }
+}
+function currentChat() { return chats.find(c => c.id === currentId) || null; }
+function ensureChat() {
+  let c = currentChat();
+  if (c) return c;
+  c = { id: uid(), title: 'New chat', messages: [], updated: Date.now() };
+  chats.unshift(c);
+  currentId = c.id;
+  return c;
+}
+function persistMessage(msg) {
+  const c = ensureChat();
+  if (msg.role === 'user' && msg.text && !c.messages.some(m => m.role === 'user')) {
+    c.title = msg.text.replace(/\s+/g, ' ').trim().slice(0, 48) || c.title;
+  }
+  if (msg.role === 'assistant' && (!c.title || c.title === 'New chat') && msg.title) c.title = String(msg.title).slice(0, 48);
+  c.messages.push(msg);
+  c.updated = Date.now();
+  chats.sort((a, b) => b.updated - a.updated);
+  saveChats();
+  renderChatList();
+  document.body.classList.add('chat-on');
+}
+function mountSources(card, sources) {
+  if (!sources || !sources.length) return;
+  const src = document.createElement('p');
+  src.className = 'sources';
+  src.append('Sources: ');
+  sources.forEach((r, i) => {
+    if (i) src.append(' · ');
+    const a = document.createElement('a');
+    a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    a.textContent = (r.title || 'Source').replace(/ \(Wikipedia\)$/, '');
+    src.append(a);
+  });
+  card.append(src);
+}
+function mountMessage(msg) {
+  const card = document.createElement('article');
+  card.className = 'msg ' + (msg.role === 'user' ? 'user' : 'bot');
+  if (msg.role === 'user') {
+    add(card, 'p', msg.text || '');
+  } else {
+    if (msg.title) add(card, 'h2', msg.title);
+    add(card, 'p', msg.text || '').className = 'body';
+    if (msg.note) add(card, 'p', msg.note).className = 'note';
+    if (msg.code) {
+      add(card, 'pre', msg.code);
+      if (msg.output) {
+        const reveal = add(card, 'details', '');
+        add(reveal, 'summary', 'Reveal the output');
+        add(reveal, 'pre', msg.output);
+      }
+    }
+    mountSources(card, msg.sources);
+  }
+  historyBox.append(card);
+  return card;
+}
+function updateJump() {
+  const btn = $('jumpBottom');
+  if (btn) btn.hidden = stickToBottom;
+}
+function scrollToBottom(force) {
+  const el = threadEl();
+  if (!el) return;
+  if (!force && !stickToBottom) { updateJump(); return; }
+  el.scrollTo({ top: el.scrollHeight, behavior: 'auto' });
+  stickToBottom = true;
+  updateJump();
+}
+function afterMessage(force) {
+  const go = () => scrollToBottom(!!force);
+  requestAnimationFrame(() => { go(); requestAnimationFrame(go); });
+}
+function bindScroll() {
+  const el = threadEl();
+  if (!el || el.dataset.scrollBound) return;
+  el.dataset.scrollBound = '1';
+  el.addEventListener('scroll', () => {
+    const gap = el.scrollHeight - el.scrollTop - el.clientHeight;
+    stickToBottom = gap < 72;
+    updateJump();
+  }, { passive: true });
+  const btn = $('jumpBottom');
+  if (btn) btn.onclick = () => scrollToBottom(true);
+}
+function openSidebar() {
+  document.body.classList.add('side-open');
+  const shade = $('shade');
+  if (shade && !isWide()) shade.hidden = false;
+}
+function closeSidebar() {
+  document.body.classList.remove('side-open');
+  const shade = $('shade');
+  if (shade) shade.hidden = true;
+}
+function bindSwipe(row, id) {
+  let x0 = 0, dx = 0, on = false;
+  row.addEventListener('touchstart', (e) => { x0 = e.changedTouches[0].clientX; dx = 0; on = true; }, { passive: true });
+  row.addEventListener('touchmove', (e) => {
+    if (!on) return;
+    dx = e.changedTouches[0].clientX - x0;
+    if (dx < 0) row.style.transform = 'translateX(' + Math.max(dx, -84) + 'px)';
+  }, { passive: true });
+  const end = () => {
+    if (!on) return;
+    on = false;
+    if (dx < -56) deleteChat(id);
+    row.style.transform = '';
+    dx = 0;
+  };
+  row.addEventListener('touchend', end);
+  row.addEventListener('touchcancel', end);
+}
+function renderChatList() {
+  const nav = $('chatList');
+  if (!nav) return;
+  nav.replaceChildren();
+  const visible = chats.filter(c => c.messages && c.messages.length);
+  if (!visible.length) {
+    const p = document.createElement('p');
+    p.className = 'empty-chats';
+    p.textContent = 'No chats yet';
+    nav.append(p);
+    return;
+  }
+  for (const c of visible) {
+    const row = document.createElement('div');
+    row.className = 'chat-row' + (c.id === currentId ? ' active' : '');
+    row.dataset.id = c.id;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'chat-open';
+    btn.textContent = c.title || 'New chat';
+    btn.onclick = () => openChat(c.id);
+    const del = document.createElement('button');
+    del.type = 'button';
+    del.className = 'chat-del';
+    del.setAttribute('aria-label', 'Delete chat');
+    del.textContent = '×';
+    del.onclick = (e) => { e.stopPropagation(); deleteChat(c.id); };
+    row.append(btn, del);
+    bindSwipe(row, c.id);
+    nav.append(row);
+  }
+}
+function openChat(id) {
+  const c = chats.find(x => x.id === id);
+  if (!c) return;
+  currentId = id;
+  saveChats();
+  historyBox.replaceChildren();
+  for (const m of c.messages) mountMessage(m);
+  document.body.classList.toggle('chat-on', c.messages.length > 0);
+  renderChatList();
+  stickToBottom = true;
+  scrollToBottom(true);
+  if (!isWide()) closeSidebar();
+  greet();
+}
+function newChat() {
+  const cur = currentChat();
+  if (cur && !cur.messages.length) {
+    historyBox.replaceChildren();
+    document.body.classList.remove('chat-on');
+    stickToBottom = true;
+    scrollToBottom(true);
+    if (!isWide()) closeSidebar();
+    greet();
+    return;
+  }
+  currentId = null;
+  chats = chats.filter(c => c.messages.length);
+  saveChats();
+  historyBox.replaceChildren();
+  document.body.classList.remove('chat-on');
+  renderChatList();
+  stickToBottom = true;
+  scrollToBottom(true);
+  if (!isWide()) closeSidebar();
+  greet();
+}
+function deleteChat(id) {
+  chats = chats.filter(c => c.id !== id);
+  if (currentId === id) {
+    currentId = null;
+    historyBox.replaceChildren();
+    document.body.classList.remove('chat-on');
+    greet();
+  }
+  saveChats();
+  renderChatList();
+}
+function bindChatUI() {
+  loadChats();
+  renderChatList();
+  bindScroll();
+  const menuBtn = $('menuBtn');
+  if (menuBtn) menuBtn.onclick = openSidebar;
+  const closeBtn = $('closeSidebar');
+  if (closeBtn) closeBtn.onclick = closeSidebar;
+  const shade = $('shade');
+  if (shade) shade.onclick = closeSidebar;
+  const nc = $('newChat');
+  if (nc) nc.onclick = newChat;
+  if (currentChat() && currentChat().messages.length) openChat(currentId);
+  else document.body.classList.remove('chat-on');
+}
+function contextTurns() {
+  const c = currentChat();
+  const turns = [];
+  for (const m of (c && c.messages) || []) {
+    if (m.role === 'user' && m.text) turns.push({ role: 'user', content: m.text });
+    else if (m.role === 'assistant' && m.text) turns.push({ role: 'assistant', content: m.text });
+  }
+  return turns.slice(-6);
+}
+
+function stopSnow() {
+  if (snowRAF) cancelAnimationFrame(snowRAF);
+  snowRAF = 0;
+  const canvas = $('snowCanvas');
+  if (canvas) {
+    try {
+      const ctx = canvas.getContext('2d');
+      if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+    } catch {}
+    canvas.hidden = true;
+  }
+}
+function startSnow() {
+  const canvas = $('snowCanvas');
+  if (!canvas) return;
+  canvas.hidden = false;
+  if (snowRAF) cancelAnimationFrame(snowRAF);
+  const ctx = canvas.getContext('2d', { alpha: true });
+  let w = 0, h = 0, pile = new Uint8Array(0), flakes = [];
+  const CAP = 52;
+  const COL = 3;
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = window.innerWidth;
+    h = window.innerHeight;
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.max(1, Math.floor(w / COL));
+    const next = new Uint8Array(n);
+    if (pile.length) {
+      for (let i = 0; i < n; i++) next[i] = pile[Math.floor(i * pile.length / n)] || 0;
+    }
+    pile = next;
+  }
+  function spawn() {
+    const count = w < 500 ? 26 : 38;
+    flakes = Array.from({ length: count }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: 1 + Math.random() * 2.2,
+      vy: 0.45 + Math.random() * 0.9,
+      vx: -0.25 + Math.random() * 0.5,
+    }));
+  }
+  resize();
+  spawn();
+  if (!snowResizeBound) {
+    snowResizeBound = true;
+    window.addEventListener('resize', () => { if (snowRAF) resize(); });
+  }
+  let last = 0;
+  function tick(ts) {
+    if (!snowRAF && last) return;
+    if (document.hidden || canvas.hidden) { snowRAF = requestAnimationFrame(tick); return; }
+    const dt = Math.min(32, (ts - last) || 16) / 16;
+    last = ts;
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = 'rgba(255,255,255,0.84)';
+    ctx.beginPath();
+    ctx.moveTo(0, h);
+    for (let i = 0; i < pile.length; i++) ctx.lineTo((i + 0.5) * COL, h - pile[i]);
+    ctx.lineTo(w, h);
+    ctx.closePath();
+    ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.92)';
+    for (const f of flakes) {
+      f.x += f.vx * dt + Math.sin((ts / 800) + f.y) * 0.15;
+      f.y += f.vy * dt;
+      if (f.x < -4) f.x = w + 4;
+      if (f.x > w + 4) f.x = -4;
+      const col = Math.max(0, Math.min(pile.length - 1, Math.floor(f.x / COL)));
+      const ground = h - pile[col];
+      if (f.y + f.r >= ground) {
+        if (pile[col] < CAP) {
+          pile[col] = Math.min(CAP, pile[col] + Math.ceil(f.r));
+          if (col > 0 && pile[col] > pile[col - 1] + 3) pile[col - 1] = Math.min(CAP, pile[col - 1] + 1);
+          if (col + 1 < pile.length && pile[col] > pile[col + 1] + 3) pile[col + 1] = Math.min(CAP, pile[col + 1] + 1);
+        }
+        f.y = -6;
+        f.x = Math.random() * w;
+      }
+      ctx.beginPath();
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    snowRAF = requestAnimationFrame(tick);
+  }
+  snowRAF = requestAnimationFrame(tick);
+}
+function initSnow() {
+  const canvas = $('snowCanvas');
+  const box = $('snowToggle');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (settings.snow == null) {
+    settings.snow = !reduced;
+    saveSettings();
+  }
+  if (box) {
+    box.checked = !!settings.snow && !reduced;
+    box.disabled = reduced;
+    box.onchange = () => {
+      settings.snow = box.checked;
+      saveSettings();
+      if (settings.snow && !reduced) startSnow();
+      else stopSnow();
+    };
+  }
+  if (settings.snow && !reduced) startSnow();
+  else stopSnow();
+  if (canvas && reduced) canvas.hidden = true;
+}
+
+
+
 function loadSettings() {
   const base = { name: 'Luca', style: 'normal', model: 'qwen-1.5b', search: true, onDeviceAI: false, photoAI: false, ver: SETTINGS_VER };
   let saved = {};
@@ -73,6 +499,7 @@ function saveSettings() {
     search: !!settings.search,
     onDeviceAI: !!settings.onDeviceAI,
     photoAI: !!settings.photoAI,
+    snow: settings.snow !== false,
     ver: SETTINGS_VER,
   }));
 }
@@ -157,23 +584,30 @@ function add(parent, tag, text) {
   return el;
 }
 
-function showCanned(i, q, note) {
-  const card = document.createElement('article');
-  historyBox.append(card);
-  if (q) add(card, 'small', q);
+function showCanned(i, q, note, opts) {
+  const skipUser = opts && opts.skipUser;
+  if (q && !skipUser) {
+    const user = { role: 'user', text: q };
+    mountMessage(user);
+    persistMessage(user);
+  }
+  const msg = { role: 'assistant', text: '' };
   if (i < 0) {
-    add(card, 'p', 'I haven’t learned a reliable answer to that yet. Try a question from the topic menu, or turn on on-device AI in Settings.');
+    msg.text = 'I haven’t learned a reliable answer to that yet. Try a question from the topic menu, or turn on on-device AI in Settings.';
+    if (note) msg.note = note;
+    const card = mountMessage(msg);
+    persistMessage(msg);
+    afterMessage(true);
     return card;
   }
   const t = model.topics[i];
-  add(card, 'h2', t.title);
-  add(card, 'p', t.desc);
-  if (note) add(card, 'p', note).id = 'note';
-  if (!t.code) return card;
-  add(card, 'pre', t.code);
-  const reveal = add(card, 'details', '');
-  add(reveal, 'summary', 'Reveal the output');
-  add(reveal, 'pre', t.answer);
+  msg.title = t.title;
+  msg.text = t.desc;
+  if (note) msg.note = note;
+  if (t.code) { msg.code = t.code; msg.output = t.answer; }
+  const card = mountMessage(msg);
+  persistMessage(msg);
+  afterMessage(true);
   return card;
 }
 
@@ -493,7 +927,7 @@ async function generateReply(q) {
     try { found = await webSearch(q); } catch { found = null; }
     if (found && found.results && found.results.length) extra = (extra ? extra + '\n\n' : '') + resultsToPrompt(found);
   }
-  const hist = chatTurns.slice(-6);
+  const hist = contextTurns();
   const photo = pendingPhoto;
   let userContent = q;
   if (photo) {
@@ -510,19 +944,19 @@ async function generateReply(q) {
   const messages = [{ role: 'system', content: systemPrompt(extra) }];
   for (const turn of hist) messages.push(turn);
   messages.push({ role: 'user', content: userContent });
-  const card = document.createElement('article');
-  historyBox.append(card);
-  add(card, 'small', q);
-  const p = add(card, 'p', 'Thinking…');
-  card.scrollIntoView({ block: 'nearest' });
+  const userMsg = { role: 'user', text: q || 'What is in this photo?' };
+  mountMessage(userMsg);
+  persistMessage(userMsg);
+  const card = mountMessage({ role: 'assistant', text: 'Thinking…' });
+  const p = card.querySelector('p.body') || card.querySelector('p') || add(card, 'p', 'Thinking…');
+  afterMessage(true);
   generating = true;
   let text = '';
   try {
     const en = engine;
     if (!en) {
-      p.remove();
       card.remove();
-      await showCannedWithSearch(q, photo ? 'I can’t look at the photo without Photo AI. Here’s a built-in answer to your text.' : null);
+      await showCannedWithSearch(q, photo ? 'I can’t look at the photo without Photo AI. Here’s a built-in answer to your text.' : null, { skipUser: true });
       return;
     }
     const stream = await en.chat.completions.create({
@@ -536,33 +970,28 @@ async function generateReply(q) {
       if (bit) {
         text = stripEmotes(text + bit);
         p.textContent = text;
+        afterMessage(false);
       }
     }
     text = stripEmotes(text).trim();
     p.textContent = text || 'I could not write a reply. Try asking again.';
-    if (found && found.results && found.results.length) {
-      const src = document.createElement('p');
-      src.append('Sources: ');
-      found.results.forEach((r, i) => {
-        if (i) src.append(' · ');
-        const a = document.createElement('a');
-        a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
-        a.textContent = r.title.replace(/ \(Wikipedia\)$/, '');
-        src.append(a);
-      });
-      card.append(src);
-    }
-    if (text) {
-      chatTurns.push({ role: 'user', content: q });
-      chatTurns.push({ role: 'assistant', content: text });
-    }
+    const sources = (found && found.results && found.results.length) ? found.results.map(r => ({ title: r.title, url: r.url })) : [];
+    if (sources.length) mountSources(card, sources);
+    persistMessage({ role: 'assistant', text: p.textContent, sources });
+    afterMessage(true);
   } catch (e) {
     const i = classify(q);
-    p.textContent = i >= 0 ? model.topics[i].desc : ('The AI hit a problem: ' + friendlyError(e));
+    const errMsg = { role: 'assistant', text: i >= 0 ? model.topics[i].desc : ('The AI hit a problem: ' + friendlyError(e)) };
     if (i >= 0) {
-      add(card, 'h2', model.topics[i].title);
-      card.insertBefore(card.querySelector('h2'), p);
+      errMsg.title = model.topics[i].title;
+      let h = card.querySelector('h2');
+      if (!h) h = add(card, 'h2', errMsg.title);
+      h.textContent = errMsg.title;
+      card.insertBefore(h, p);
     }
+    p.textContent = errMsg.text;
+    persistMessage(errMsg);
+    afterMessage(true);
   } finally {
     generating = false;
     if (photo) {
@@ -574,40 +1003,39 @@ async function generateReply(q) {
   }
 }
 
-async function showCannedWithSearch(q, note) {
+async function showCannedWithSearch(q, note, opts) {
   const i = q ? classify(q) : -1;
-  const card = showCanned(i, q, note);
+  const card = showCanned(i, q, note, opts);
   if (!q || settings.search === false) return card;
   if (!(shouldAutoSearch(q) || i < 0)) return card;
   try {
     const found = await webSearch(q);
     if (found && found.results && found.results.length) {
       if (i < 0) {
-        const p = card.querySelector('p');
+        const p = card.querySelector('p.body') || card.querySelector('p');
         if (p) p.textContent = 'I don’t have a built-in answer, but here’s what I found on the web:';
       }
       const sn = document.createElement('p');
       sn.textContent = found.results[0].snippet.slice(0, 400);
       card.append(sn);
-      const src = document.createElement('p');
-      src.append('Sources: ');
-      found.results.forEach((r, n) => {
-        if (n) src.append(' · ');
-        const a = document.createElement('a');
-        a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
-        a.textContent = r.title.replace(/ \(Wikipedia\)$/, '');
-        src.append(a);
-      });
-      card.append(src);
+      const sources = found.results.map(r => ({ title: r.title, url: r.url }));
+      mountSources(card, sources);
+      const last = currentChat() && currentChat().messages.at(-1);
+      if (last && last.role === 'assistant') {
+        if (i < 0) last.text = 'I don’t have a built-in answer, but here’s what I found on the web:';
+        last.sources = sources;
+        saveChats();
+      }
     }
   } catch {}
+  afterMessage(true);
   return card;
 }
 
 async function handleQuestion(q) {
   q = (q || '').trim();
   if (!q && !pendingPhoto) {
-    add(historyBox, 'p', 'Type a question in the box first, or add a photo.');
+    setStatus('Type a question in the box first, or add a photo.');
     field.focus();
     return;
   }
@@ -621,7 +1049,7 @@ async function handleQuestion(q) {
         await showCannedWithSearch(q, 'The on-device AI couldn’t load, so here’s a built-in answer.');
         field.value = '';
         field.blur();
-        historyBox.lastElementChild?.scrollIntoView({ block: 'nearest' });
+        afterMessage(true);
         return;
       }
     }
@@ -640,7 +1068,7 @@ async function handleQuestion(q) {
   }
   field.value = '';
   field.blur();
-  historyBox.lastElementChild?.scrollIntoView({ block: 'nearest' });
+  afterMessage(true);
 }
 
 function greet() {
@@ -655,7 +1083,7 @@ function bindSettings() {
   if ($('onDeviceAI')) $('onDeviceAI').checked = !!settings.onDeviceAI;
   if ($('photoAI')) $('photoAI').checked = !!settings.photoAI;
   if ($('webSearch')) $('webSearch').checked = settings.search !== false;
-  $('settings').hidden = false;
+  if ($('settings')) $('settings').hidden = false;
   $('userName').onchange = $('userName').onblur = () => {
     settings.name = $('userName').value.trim().slice(0, 40) || 'Luca';
     saveSettings();
@@ -737,22 +1165,15 @@ function initChrome() {
     button.onclick = () => { field.blur(); handleQuestion(button.textContent); };
   }
   const identity = $('identity');
-  const profiles = new Map();
-  let active = identity.value || 'Luca';
-  identity.value = active;
+  if (identity) {
+    if (!identity.value) identity.value = settings.name || 'Luca';
+    identity.onchange = () => greet();
+  }
   greet();
-  identity.onchange = () => {
-    profiles.set(active, { cards: [...historyBox.childNodes], draft: field.value });
-    active = identity.value;
-    const profile = profiles.get(active);
-    historyBox.replaceChildren(...(profile?.cards || []));
-    field.value = profile?.draft || '';
-    menu.value = '';
-    greet();
-    window.scrollTo(0, 0);
-  };
   bindSettings();
   bindPhoto();
+  bindChatUI();
+  initSnow();
 const creativeBanks={"name": {"next": {"^": {"Midnight": 2, "Silver": 2, "Neon": 2, "Hidden": 2, "Golden": 2, "Wild": 2, "Blue": 2, "Rapid": 2, "Copper": 2}, "Midnight": {"Runners": 1, "Signal": 1}, "Runners": {"$": 3}, "Signal": {"Crew": 1, "Club": 1, "Studio": 1}, "Crew": {"$": 4}, "Silver": {"Signal": 1, "Comets": 1}, "Club": {"$": 4}, "Comets": {"$": 1}, "Neon": {"Comet": 1, "Drift": 1}, "Comet": {"Crew": 1, "Studio": 1}, "Drift": {"Club": 1, "Lab": 1}, "Hidden": {"Drift": 1, "Echo": 1}, "Lab": {"$": 1}, "Echo": {"Crew": 1, "Works": 1, "Runners": 1}, "Golden": {"Echo": 1, "Circuit": 1}, "Works": {"$": 2}, "Circuit": {"Club": 1, "Runners": 1}, "Wild": {"Circuit": 1, "Moon": 1}, "Moon": {"Studio": 1, "Crew": 1}, "Studio": {"$": 3}, "Blue": {"Moon": 1, "Signal": 1}, "Rapid": {"River": 1, "Echo": 1}, "River": {"Club": 1, "Works": 1}, "Copper": {"River": 1, "Comet": 1}}, "seen": ["Midnight Runners", "Midnight Signal Crew", "Silver Signal Club", "Silver Comets", "Neon Comet Crew", "Neon Drift Club", "Hidden Drift Lab", "Hidden Echo Crew", "Golden Echo Works", "Golden Circuit Club", "Wild Circuit Runners", "Wild Moon Studio", "Blue Moon Crew", "Blue Signal Studio", "Rapid River Club", "Rapid Echo Runners", "Copper River Works", "Copper Comet Studio"]}, "story": {"next": {"^": {"The": 6, "Nobody": 2, "Someone": 2, "A": 2}, "The": {"lights": 2, "clock": 2, "door": 2}, "lights": {"flickered": 2}, "flickered": {"just": 2}, "just": {"as": 4}, "as": {"the": 3, "a": 1}, "the": {"last": 4, "wall.": 2, "moment": 2, "scoreboard": 2, "missing": 2, "hidden": 2, "game": 2, "scoreboard.": 1}, "last": {"visitor": 3, "seat.": 1}, "visitor": {"left.": 3}, "left.": {"$": 3}, "a": {"message": 2}, "message": {"appeared": 2}, "appeared": {"on": 2}, "on": {"the": 2}, "wall.": {"$": 2}, "clock": {"stopped": 2}, "stopped": {"the": 1, "just": 1}, "moment": {"a": 1, "the": 1}, "door": {"opened": 2}, "opened": {"the": 1, "just": 1}, "scoreboard": {"went": 2}, "went": {"dark.": 2}, "dark.": {"$": 2}, "Nobody": {"noticed": 2}, "noticed": {"the": 2}, "missing": {"key": 2}, "key": {"until": 1, "under": 1}, "until": {"morning.": 1, "the": 1}, "morning.": {"$": 1}, "hidden": {"map": 2}, "map": {"until": 1, "under": 1}, "game": {"began.": 2}, "began.": {"$": 2}, "Someone": {"found": 2}, "found": {"the": 2}, "under": {"the": 2}, "seat.": {"$": 1}, "scoreboard.": {"$": 1}, "A": {"tiny": 2}, "tiny": {"screen": 1, "bell": 1}, "screen": {"blinked": 1}, "blinked": {"twice": 1}, "twice": {"before": 2}, "before": {"the": 2}, "bell": {"rang": 1}, "rang": {"twice": 1}}, "seen": ["The lights flickered just as the last visitor left.", "The lights flickered just as a message appeared on the wall.", "The clock stopped the moment a message appeared on the wall.", "The door opened the moment the last visitor left.", "The door opened just as the scoreboard went dark.", "The clock stopped just as the scoreboard went dark.", "Nobody noticed the missing key until morning.", "Nobody noticed the hidden map until the game began.", "Someone found the missing key under the last seat.", "Someone found the hidden map under the scoreboard.", "A tiny screen blinked twice before the game began.", "A tiny bell rang twice before the last visitor left."]}};
 const interests=document.querySelector('#interest');
 const picks=document.querySelector('#picks');
@@ -772,11 +1193,12 @@ function generateText(bank){
   return null;
 }
 function generate(kind,prompt){
-  const card=document.createElement('article');historyBox.append(card);
   const theme=interestList();const chosen=theme[Math.floor(Math.random()*theme.length)];
-  add(card,'h2',kind==='name'?'Name idea':'Story starter');
   const out=generateText(creativeBanks[kind]);
-  add(card,'p',out?(chosen?(kind==='name'?chosen+' · '+out:'At the '+chosen+' club, something was different today. '+out):out):'Try again for a fresh combination.');
+  const title=kind==='name'?'Name idea':'Story starter';
+  const text=out?(chosen?(kind==='name'?chosen+' · '+out:'At the '+chosen+' club, something was different today. '+out):out):'Try again for a fresh combination.';
+  const msg={role:'assistant',title,text};
+  mountMessage(msg);persistMessage(msg);afterMessage(true);
 }
 function refreshPicks(){
   picks.replaceChildren();
@@ -786,7 +1208,7 @@ function refreshPicks(){
   for(const term of interestList()){if(term.length>2){const i=classify(term);if(i>=0)targets.add(model.topics[i].title);}}
   for(const title of [...targets].slice(0,4)){
     const i=model.topics.findIndex(t=>t.title===title);
-    if(i>=0){const b=add(picks,'button',title);b.onclick=()=>show(i,'');}
+    if(i>=0){const b=add(picks,'button',title);b.onclick=()=>showCanned(i,'');}
   }
 }
 
@@ -809,6 +1231,15 @@ function refreshPicks(){
   window.__shouldAutoSearch = shouldAutoSearch;
   window.__loadedKey = () => loadedKey;
   window.__engine = () => engine;
+  window.__openSidebar = openSidebar;
+  window.__closeSidebar = closeSidebar;
+  window.__newChat = newChat;
+  window.__chats = () => chats.filter(c => c.messages && c.messages.length);
+  window.__threadScroll = () => {
+    const el = threadEl();
+    if (!el) return null;
+    return { top: el.scrollTop, height: el.scrollHeight, client: el.clientHeight, atBottom: (el.scrollHeight - el.scrollTop - el.clientHeight) < 10 };
+  };
 }
 
 async function boot() {
