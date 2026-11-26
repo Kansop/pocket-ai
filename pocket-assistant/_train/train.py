@@ -295,7 +295,8 @@ def main() -> None:
         for p in t["prompts"]:
             feats = feature_set(content_words(p))
             if not feats:
-                raise SystemExit(f"No features for prompt {p!r} ({t['title']})")
+                # All-stop-word chats such as "how are you" are exact-match only.
+                continue
             docs.append(feats)
             labels.append(i)
             prompt_texts.append(p)

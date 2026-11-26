@@ -1,0 +1,2402 @@
+[
+  {
+    "title": "How are you",
+    "desc": "I'm doing well, thanks for asking. How are you? If you want to talk, tell me about your day or ask whatever is on your mind.",
+    "prompts": [
+      "how are you",
+      "how are you doing",
+      "how r u",
+      "you good",
+      "how's it going",
+      "how have you been",
+      "are you doing ok",
+      "how are you today"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "What's up",
+    "desc": "Not much here, just ready to help. What's up with you? We can chat, look something up, or work through a question.",
+    "prompts": [
+      "what's up",
+      "whats up",
+      "sup",
+      "what’s going on",
+      "what is up",
+      "yo what's up",
+      "what’s happening",
+      "what up"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "How was your day",
+    "desc": "Thanks for asking. Mine is going fine. How was yours? If something stood out, good or annoying, you can tell me about it.",
+    "prompts": [
+      "how was your day",
+      "how was ur day",
+      "how is your day going",
+      "how's your day",
+      "tell me about your day",
+      "did you have a good day",
+      "how has your day been",
+      "how’s the day going"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Telling a short joke",
+    "desc": "A short, clean joke works best if you pause before the punchline. Here's one: why don't scientists trust atoms? Because they make up everything. If you want a different style, say so.",
+    "prompts": [
+      "tell me a joke",
+      "say a joke",
+      "tell me a short joke",
+      "got any jokes",
+      "make me laugh",
+      "know any clean jokes",
+      "tell a pun",
+      "joke please"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Reacting to a joke",
+    "desc": "If you thought it was funny, a simple laugh or “that's a good one” is enough. If you didn't, a polite smile or “nice try” is kinder than going silent or being harsh, unless the joke was actually unkind.",
+    "prompts": [
+      "how should i react to a joke",
+      "what do i say after a joke",
+      "i didn't get the joke",
+      "the joke wasn't funny",
+      "how to respond when someone tells a joke",
+      "should i fake a laugh",
+      "i didn't understand the punchline",
+      "reacting to a friend's joke"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Making small talk",
+    "desc": "Small talk stays light: the weather, a class, a game, or something nearby. Ask a short question, listen to the answer, and add one detail of your own. It's fine if it doesn't go deep.",
+    "prompts": [
+      "how do i make small talk",
+      "i'm bad at small talk",
+      "what can i say to start chatting",
+      "light conversation tips",
+      "what to talk about with someone i don't know well",
+      "small talk ideas",
+      "how to keep a casual conversation going",
+      "what do people talk about in small talk"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Casual talk about the weather",
+    "desc": "Weather is an easy, low-pressure topic. A simple “it's colder than I expected” or “nice out today” is enough. If you want to be useful, you can add what you're doing because of it, like bringing a jacket.",
+    "prompts": [
+      "what do i say about the weather",
+      "talking about the weather",
+      "nice out today what to say",
+      "small talk about rain",
+      "is talking about the weather awkward",
+      "casual weather conversation",
+      "it's so cold what do i say",
+      "comment on the weather"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Saying goodbye",
+    "desc": "A clear, friendly close works: “I have to go, talk later” or “bye, have a good one.” If you want to see the person again, add a plan, even a loose one, instead of fading away mid-chat.",
+    "prompts": [
+      "how do i say goodbye",
+      "how to end a conversation politely",
+      "i have to go what should i say",
+      "bye what else do i add",
+      "ending a chat without being rude",
+      "talk later versus goodbye",
+      "leaving a conversation",
+      "how to wrap up a call"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Checking in on a friend",
+    "desc": "A short, specific check-in is better than a vague “you good?” if you know something is going on. Try “I've been thinking about you. How are you doing today?” Then leave space for them to answer, and don't push if they're not ready.",
+    "prompts": [
+      "how do i check in on a friend",
+      "text to see if a friend is okay",
+      "i want to check on someone",
+      "what to say when a friend seems down",
+      "checking in without being nosy",
+      "how to ask if someone's alright",
+      "message to check on a friend",
+      "should I check in on my friend"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Congratulating someone",
+    "desc": "Keep it specific and sincere: name what they did, then add a simple “that's awesome” or “you earned that.” A short text is enough if you can't talk in person. Avoid immediately changing the subject to yourself.",
+    "prompts": [
+      "how do i congratulate someone",
+      "what to say when a friend wins",
+      "congrats message",
+      "they got the job what do i say",
+      "how to celebrate someone's good news",
+      "congratulations text",
+      "saying well done",
+      "how to be happy for a friend"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Comforting a friend",
+    "desc": "Listen first, and don't rush to fix everything. “That sounds really hard. I'm here” is often better than advice they didn't ask for. Ask if they want ideas or just someone to listen, and help them get an adult involved if they're unsafe.",
+    "prompts": [
+      "how do i comfort a friend",
+      "what to say when a friend is upset",
+      "friend is crying what do i do",
+      "how to support someone who's sad",
+      "should I give advice or just listen",
+      "comforting text to a friend",
+      "friend had a bad day",
+      "how to be there for someone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Changing the subject politely",
+    "desc": "If a topic is awkward or too heavy, you can say “can we switch gears for a bit?” and name a lighter subject. Don't mock what they just said. If they need to keep talking, let them.",
+    "prompts": [
+      "how do i change the subject politely",
+      "conversation got awkward",
+      "how to switch topics",
+      "i want to talk about something else",
+      "politely move on from a topic",
+      "subject change without being rude",
+      "this talk is uncomfortable",
+      "can we talk about something else"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Asking about someone's weekend",
+    "desc": "A simple “how was your weekend?” works. If they give a short answer, you can ask one follow-up about something they mentioned, or share one thing you did. Don't interrogate them.",
+    "prompts": [
+      "how was your weekend what to say",
+      "ask someone about their weekend",
+      "weekend small talk",
+      "they said my weekend was fine",
+      "follow up after how was your weekend",
+      "what to ask on monday morning",
+      "talking about the weekend",
+      "how do i ask about someone's weekend"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Giving a compliment",
+    "desc": "A good compliment is specific and true, like “that presentation was really clear” or “I like how you set that play up.” One sentence is enough. Compliment effort or a choice when you can, not only appearance.",
+    "prompts": [
+      "how do i give a compliment",
+      "what makes a good compliment",
+      "compliment a friend",
+      "i want to say something nice",
+      "specific versus generic compliments",
+      "compliment someone's work",
+      "how to compliment without being weird",
+      "nice thing to say to a classmate"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Accepting a compliment",
+    "desc": "A simple “thanks, that means a lot” is enough. You don't have to put yourself down or immediately return a compliment, though you can if you mean it. Let the kind words land.",
+    "prompts": [
+      "how do i take a compliment",
+      "i never know what to say when someone compliments me",
+      "should I say thanks or deflect",
+      "accepting a compliment without being awkward",
+      "someone said something nice",
+      "i always brush off compliments",
+      "how to reply to a compliment",
+      "thanks versus no I'm not"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Catching up after a long time",
+    "desc": "It's fine to admit it's been a while: “hey, I've been meaning to say hi.” Ask how they are, share one update of your own, and don't make them feel guilty for the gap. A short message is better than waiting for a perfect speech.",
+    "prompts": [
+      "how do i catch up after a long time",
+      "text someone I haven't talked to in months",
+      "it's been a while what do I say",
+      "reaching out after losing touch",
+      "catching up with an old friend",
+      "i feel awkward messaging them again",
+      "how to restart a conversation after a long gap",
+      "saying hi after a long time"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Icebreaker questions",
+    "desc": "Easy icebreakers are specific but low-stakes: a favorite game or show, a class, a weekend plan, or “what have you been into lately?” Avoid questions that feel like a quiz, and be ready to share your own answer too.",
+    "prompts": [
+      "what are good icebreaker questions",
+      "questions to get to know someone",
+      "what to ask a new classmate",
+      "icebreakers that aren't awkward",
+      "conversation starters",
+      "what should I ask at lunch",
+      "easy questions to start talking",
+      "icebreaker for a group project"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sharing good news",
+    "desc": "You can just say it: “I have some good news” and then tell them. Pick someone who will be glad for you, and keep the first message short. If they congratulate you, a simple thank-you is enough.",
+    "prompts": [
+      "how do i share good news",
+      "i want to tell my friends I did well",
+      "texting good news",
+      "should I brag about something good",
+      "how to tell people I got in or got the job",
+      "sharing a win without being annoying",
+      "I have good news what do I say",
+      "announcing good news"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "When you don't know what to say",
+    "desc": "It's okay to pause, or to say “I'm not sure what to say, but I'm listening.” You can also ask a simple question about what they just told you. Silence for a moment is better than filling the air with a joke that misses the mood.",
+    "prompts": [
+      "i don't know what to say",
+      "i go blank in conversations",
+      "what if I can't think of a reply",
+      "awkward silence what do I do",
+      "I'm stuck in a conversation",
+      "how to respond when my mind goes blank",
+      "don't know how to answer",
+      "i freeze when people talk to me"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Wishing someone luck",
+    "desc": "A short, specific wish is plenty: “good luck on your test tomorrow” or “hope the game goes well.” If you mean it, you can add “you've been practicing.” Afterward, a “how did it go?” matters as much as the luck wish.",
+    "prompts": [
+      "how do i wish someone luck",
+      "good luck text",
+      "what to say before a friend's game",
+      "good luck on a test",
+      "break a leg meaning",
+      "hoping it goes well",
+      "wish me luck what do I say back",
+      "sending good luck"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Saying you'll talk later",
+    "desc": "If you need to go, say so and when you might be back, like “I have to run, I'll text after dinner.” Then actually follow up if you promised. “Talk later” without any plan is fine for a casual goodbye, but don't use it to disappear mid-important talk.",
+    "prompts": [
+      "what does talk later mean",
+      "how to say I'll text you later",
+      "i have to go I'll talk later",
+      "ttyl versus goodbye",
+      "promise to talk later and follow up",
+      "ending a chat with talk soon",
+      "I'll hit you up later",
+      "saying talk later without being rude"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Asking someone to repeat themselves",
+    "desc": "It's better to ask than to fake that you heard them. “Sorry, can you say that again?” or “I missed the last part” is polite. In a loud place, you can add that you couldn't hear, so it doesn't sound like you weren't listening.",
+    "prompts": [
+      "how do i ask someone to repeat themselves",
+      "i didn't hear what they said",
+      "can you say that again politely",
+      "i missed what you said",
+      "asking someone to repeat without being rude",
+      "what if I didn't catch that",
+      "pardon versus what",
+      "i couldn't hear you"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "I'm bored, let's chat",
+    "desc": "Boredom is a fine reason to start a chat. Tell me if you want a joke, a question to think about, an idea of something to do, or just a back-and-forth. We can also pick a topic from school, games or whatever is going on.",
+    "prompts": [
+      "i'm bored",
+      "im bored talk to me",
+      "let's chat",
+      "i'm bored what should we talk about",
+      "entertain me",
+      "i have nothing to do let's talk",
+      "bored can you chat",
+      "talk to me i'm bored"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Good morning and good night",
+    "desc": "A simple “good morning” or “good night” is enough, and you can add one warm detail if you want, like “sleep well” or “hope today goes okay.” You don't need a long message unless you both like that.",
+    "prompts": [
+      "what to say good morning",
+      "good night text",
+      "how to say good morning to a friend",
+      "gm what does it mean",
+      "goodnight versus good night",
+      "morning text ideas",
+      "how to say good night without being weird",
+      "saying good morning"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "FaceTime",
+    "desc": "FaceTime is Apple's video and audio calling app for iPhone, iPad and Mac. Open FaceTime or a contact, choose a FaceTime video or audio call, and the other person has to use a compatible Apple device or a FaceTime link you send, depending on the settings. Use Wi-Fi when you can so it doesn't eat mobile data.",
+    "prompts": [
+      "what is facetime",
+      "how does facetime work",
+      "facetime versus a regular phone call",
+      "how to video call on iphone",
+      "do I need an iphone for facetime",
+      "facetime audio versus video",
+      "explain facetime",
+      "can I facetime on wifi"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Starting a group FaceTime",
+    "desc": "In FaceTime, start a call and add people with the add button, or create a FaceTime link and share it. Everyone you add needs a way to join, and the call works best on a solid connection. If someone can't hear, check that they aren't muted and that the call has permission to use the microphone.",
+    "prompts": [
+      "how do i start a group facetime",
+      "facetime with more than one person",
+      "add someone to a facetime call",
+      "facetime link for a group",
+      "group video call on iphone",
+      "why can't my friend join facetime",
+      "group facetime not working",
+      "how many people can be on facetime"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sending an iMessage",
+    "desc": "iMessage is the blue-bubble chat between Apple devices, sent over Wi-Fi or cellular data. Open Messages, pick a contact, type, and send. If the bubble is green, it's going as a regular text instead, usually because the other person isn't using iMessage or data is off.",
+    "prompts": [
+      "how do i send an imessage",
+      "why is my message green not blue",
+      "what's the difference between imessage and text",
+      "blue bubble versus green bubble",
+      "imessage not sending",
+      "send a message on iphone",
+      "explain imessage",
+      "texts using data versus sms"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "iMessage read receipts",
+    "desc": "Read receipts tell the other person when you opened their iMessage. You can turn them on or off in Settings, then Messages, and in some iOS versions you can change it for one conversation. Turning them off doesn't mean you're ignoring someone; it just keeps that status private.",
+    "prompts": [
+      "what are read receipts",
+      "how do i turn off read receipts",
+      "they can see I read the message",
+      "imessage read receipts for one person",
+      "hide that I opened a text",
+      "settings messages read receipts",
+      "does leaving someone on read mean I saw it",
+      "turn on read receipts"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using Control Center",
+    "desc": "Control Center is the quick panel for Wi-Fi, brightness, flashlight, Focus and more. On a recent iPhone with Face ID, swipe down from the top-right corner. On many iPhones with a Home button, swipe up from the bottom. You can add or remove tiles in Settings, then Control Center.",
+    "prompts": [
+      "how do i open control center",
+      "where is control center on iphone",
+      "swipe down from the right corner",
+      "add buttons to control center",
+      "flashlight in control center",
+      "control center not opening",
+      "explain control center",
+      "customize control center"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using the flashlight",
+    "desc": "Open Control Center and tap the flashlight tile, or on many iPhones ask Siri to turn it on. On some lock screens you can hold the flashlight icon. Turn it off the same way, and don't point it in someone's eyes.",
+    "prompts": [
+      "how do i turn on the flashlight",
+      "iphone flashlight",
+      "torch on my phone",
+      "control center flashlight",
+      "siri turn on the flashlight",
+      "flashlight icon on the lock screen",
+      "how to turn the flashlight off",
+      "where is the flashlight on iphone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Setting an alarm",
+    "desc": "Open the Clock app, go to Alarm, and tap plus to set a time. You can repeat days, change the sound, and give it a label. Make sure the ringer or alarm volume isn't muted if you need to actually hear it, and test it once if this is important.",
+    "prompts": [
+      "how do i set an alarm on iphone",
+      "clock app alarm",
+      "alarm didn't go off",
+      "repeat an alarm on weekdays",
+      "change alarm sound",
+      "set a morning alarm",
+      "iphone alarm volume",
+      "add a new alarm"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using a timer",
+    "desc": "In the Clock app, open Timer, set the hours and minutes, and tap Start. You can change the when-timer-ends sound, or ask Siri to set a timer for a number of minutes. It's handy for cooking, laundry or a study block.",
+    "prompts": [
+      "how do i set a timer on my phone",
+      "clock app timer",
+      "siri set a timer for 10 minutes",
+      "timer for cooking",
+      "where is the timer on iphone",
+      "change the timer sound",
+      "start a countdown on my phone",
+      "phone timer how to"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "iPhone Camera basics",
+    "desc": "Open Camera and swipe to switch Photo, Video, Portrait or Pano. Tap the screen to focus, and drag the sun slider to adjust exposure. The camera flip button switches front and back. Keep a finger off the lens, and give the phone a second to focus before you shoot.",
+    "prompts": [
+      "how do i use the iphone camera",
+      "switch between photo and video",
+      "how to flip to the front camera",
+      "tap to focus",
+      "exposure slider in camera",
+      "iphone camera basics",
+      "blurry photos on iphone",
+      "swipe camera modes"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Portrait mode photos",
+    "desc": "Portrait mode tries to keep the person or subject sharp and blur the background. Switch to Portrait in Camera, follow any on-screen distance tip, and tap to focus on the face or object you want sharp. Natural light helps, and you can often adjust the blur later in Photos.",
+    "prompts": [
+      "how do i use portrait mode",
+      "blur the background on iphone",
+      "portrait mode not working",
+      "iphone portrait photos",
+      "focus on the face in portrait",
+      "adjust portrait blur later",
+      "when to use portrait mode",
+      "portrait mode lighting tips"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Lock screen widgets",
+    "desc": "On a recent iOS version, touch and hold the lock screen, tap Customize, and add widgets such as calendar, weather or a battery. Keep the set small so the time stays easy to read. You'll need a lock screen that supports widgets, which newer iPhones on recent iOS have.",
+    "prompts": [
+      "how do i add lock screen widgets",
+      "customize the lock screen",
+      "widgets under the clock",
+      "iphone lock screen widgets",
+      "change lock screen widgets",
+      "touch and hold the lock screen",
+      "lock screen customize",
+      "weather on the lock screen"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Adding a home-screen widget",
+    "desc": "Touch and hold an empty spot on the Home Screen, tap the add button, then pick a widget and a size. Place it where you want and tap Done. Widgets show info at a glance; they aren't a full replacement for opening the app.",
+    "prompts": [
+      "how do i add a widget to the home screen",
+      "iphone home screen widgets",
+      "long press home screen add widget",
+      "change widget size",
+      "move a widget",
+      "remove a home screen widget",
+      "widgets versus app icons",
+      "add a calendar widget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Spotlight search",
+    "desc": "Spotlight finds apps, settings, contacts and some file or web results on your iPhone. Swipe down in the middle of the Home Screen and type what you want. You can also search from the lock screen on many versions by swiping down, then open the result you need.",
+    "prompts": [
+      "how do i search my iphone",
+      "what is spotlight search",
+      "swipe down to search",
+      "find an app by typing",
+      "search settings on iphone",
+      "spotlight not showing an app",
+      "search contacts on iphone",
+      "home screen search bar"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Copy, cut and paste",
+    "desc": "Double-tap or hold a word, adjust the handles, then choose Copy or Cut. Switch to the other app, hold an empty spot, and tap Paste. On iPhone you can also pinch in with three fingers to copy and pinch out to paste, if that gesture is turned on.",
+    "prompts": [
+      "how do i copy and paste on iphone",
+      "cut versus copy on a phone",
+      "three finger pinch to copy",
+      "paste into a text",
+      "copy a link on iphone",
+      "select text on iphone",
+      "how to paste",
+      "copy and paste between apps"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Shake to undo",
+    "desc": "On iPhone, shaking the phone can bring up Undo if that setting is on. You can also undo by pinching in with three fingers, or by tapping with three fingers and choosing Undo. If shake to undo keeps popping up by accident, you can turn it off in Settings, then Accessibility, then Touch.",
+    "prompts": [
+      "how do i undo on iphone",
+      "shake to undo",
+      "three finger undo",
+      "undo typing on iphone",
+      "shake to undo by accident",
+      "turn off shake to undo",
+      "undo in notes or messages",
+      "how to redo on iphone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using Notes",
+    "desc": "The Notes app stores lists, class notes and quick ideas, and can stay on the device or sync with iCloud if you turn that on. Tap the compose button to start a note, and you can add checklists, photos or a scan. Put important notes in a folder so they don't get lost in the main list.",
+    "prompts": [
+      "how do i use the notes app",
+      "make a new note on iphone",
+      "notes checklist",
+      "where did my note go",
+      "icloud notes",
+      "scan into notes",
+      "organize notes into folders",
+      "quick notes on iphone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using Reminders",
+    "desc": "Reminders is Apple's to-do list app. Add an item, optionally set a date, time or location, and check it off when it's done. Lists help you separate school, home and errands. A reminder only works if notifications for the app are allowed.",
+    "prompts": [
+      "how do i use reminders on iphone",
+      "set a reminder for later",
+      "location reminder",
+      "reminders app lists",
+      "reminder didn't notify me",
+      "to do list on iphone",
+      "add a reminder with siri",
+      "check off a reminder"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Getting walking directions",
+    "desc": "Open Maps, type a destination, choose Walk, and start the route. Follow the on-screen path and spoken prompts if you turn those on, and glance at the map when you can do it safely. Download offline maps if you might lose signal, and don't stare at the phone while crossing a street.",
+    "prompts": [
+      "how do i get walking directions",
+      "apple maps walk",
+      "directions to a place on iphone",
+      "walking route versus driving",
+      "maps not showing the right street",
+      "offline maps for walking",
+      "use maps without staring at the phone",
+      "start walking navigation"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sharing your location",
+    "desc": "You can share your location with a person in Find My or, for a short time, from Messages. Share only with people you trust, and pick a time limit when you can instead of leaving it on forever. You can stop sharing in Find My when you no longer want them to see it.",
+    "prompts": [
+      "how do i share my location",
+      "share location in messages",
+      "find my share location",
+      "stop sharing my location",
+      "share location for an hour",
+      "is it safe to share my location",
+      "friend asked for my location",
+      "temporary location sharing"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Apple Pay and Wallet",
+    "desc": "Apple Pay lets you pay with a card you added to the Wallet app, using Face ID, Touch ID or a passcode and the side button or NFC. Add a card in Wallet and follow the bank's verification steps. Only use it at a reader or site you trust, and keep your passcode private.",
+    "prompts": [
+      "how does apple pay work",
+      "add a card to wallet",
+      "pay with my iphone",
+      "apple pay at a store",
+      "wallet app on iphone",
+      "is apple pay safe",
+      "side button to pay",
+      "set up apple pay"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Changing your wallpaper",
+    "desc": "Open Settings, then Wallpaper, and choose a new photo or a built-in look for the lock screen, Home Screen or both. On recent iOS versions you can also touch and hold the lock screen and tap Customize. Pick an image that still lets you read the time and app names.",
+    "prompts": [
+      "how do i change my wallpaper",
+      "change lock screen photo",
+      "iphone background image",
+      "settings wallpaper",
+      "customize lock screen wallpaper",
+      "different wallpaper for home screen",
+      "wallpaper too busy",
+      "set a photo as wallpaper"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using Dictation",
+    "desc": "Dictation types what you say. On the keyboard, tap the microphone, speak clearly, and say the punctuation if you want it, like “comma” or “question mark.” Check the text for mistakes, especially names, and don't dictate private information in a crowded place.",
+    "prompts": [
+      "how do i use dictation on iphone",
+      "keyboard microphone",
+      "talk to type",
+      "voice to text on iphone",
+      "dictation punctuation",
+      "dictation getting words wrong",
+      "where is the dictate button",
+      "speak instead of typing"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Voice assistants",
+    "desc": "A voice assistant like Siri can set timers, send a text, or answer short questions if you enable it in Settings. Speak a clear request, and check that the phone heard you right before you send a message. It can make mistakes, and it isn't a substitute for your own judgment on important or private matters.",
+    "prompts": [
+      "how do i use siri",
+      "voice assistant on iphone",
+      "hey siri",
+      "set up siri",
+      "siri not listening",
+      "what can a voice assistant do",
+      "ask siri to send a text",
+      "turn on the voice assistant"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Night Shift",
+    "desc": "Night Shift shifts the screen toward warmer colors in the evening, which some people find easier on the eyes at night. Turn it on or schedule it in Settings, then Display & Brightness, then Night Shift. It doesn't replace sleep, and you can still lower brightness or use Dark Mode with it.",
+    "prompts": [
+      "what is night shift",
+      "how do i turn on night shift",
+      "warmer screen at night",
+      "night shift schedule",
+      "night shift versus dark mode",
+      "yellow screen at night",
+      "display and brightness night shift",
+      "does night shift help me sleep"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Scanning a document",
+    "desc": "In Notes, start a note, tap the camera or attachment button, and choose Scan Documents. Hold the phone above the page, let it capture the edges, then adjust the crop and save. Keep the page flat and well lit so the text stays readable.",
+    "prompts": [
+      "how do i scan a document on iphone",
+      "scan papers into notes",
+      "document scanner",
+      "scan homework to pdf",
+      "camera scan a page",
+      "crop a scanned document",
+      "best way to scan a worksheet",
+      "iphone scan to pdf"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using Markup",
+    "desc": "Markup lets you draw, write or add text on a screenshot, photo or PDF. Open the image or file, tap the Markup pen icon, and pick a tool. Use Undo if you slip, and tap Done to save or copy. It's handy for circling something or signing a form.",
+    "prompts": [
+      "what is markup on iphone",
+      "draw on a screenshot",
+      "markup a photo",
+      "pen tool on a pdf",
+      "how to use markup",
+      "circle something on a picture",
+      "markup undo",
+      "add text on a screenshot"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Signing a document on your phone",
+    "desc": "Open the PDF in Files, Mail or a scan in Notes, turn on Markup, and choose the signature tool to write a signature with your finger or Apple Pencil, then place it on the line. Only sign things you actually agree to, and use a method your school or employer accepts if they require a special e-sign tool.",
+    "prompts": [
+      "how do i sign a pdf on iphone",
+      "add a signature in markup",
+      "sign a document with my finger",
+      "electronic signature on iphone",
+      "files app sign a form",
+      "save a signed pdf",
+      "signature tool on iphone",
+      "can I sign school paperwork on my phone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Back Tap",
+    "desc": "Back Tap lets you double or triple tap the back of the iPhone to run a shortcut, like taking a screenshot or opening Control Center. Turn it on in Settings, then Accessibility, then Touch, then Back Tap. It may trigger in a tight pocket, so pick an action you don't mind happening by accident, or turn it off.",
+    "prompts": [
+      "what is back tap",
+      "how do i turn on back tap",
+      "double tap the back of the iphone",
+      "accessibility touch back tap",
+      "back tap for screenshot",
+      "back tap happens in my pocket",
+      "triple tap back of phone",
+      "set up back tap"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Measure app",
+    "desc": "The Measure app uses the camera to estimate distances and can show a level. Open Measure, follow the on-screen prompts, and move the phone slowly to place points. It's fine for a rough idea of furniture or a room, but it isn't as exact as a tape measure for something that has to fit tightly.",
+    "prompts": [
+      "how do i use the measure app",
+      "measure a room with my iphone",
+      "iphone tape measure",
+      "measure app level",
+      "how accurate is the measure app",
+      "measure furniture with my phone",
+      "AR measure on iphone",
+      "where is the measure app"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Translating text on a phone",
+    "desc": "The Translate app, or the translate feature in Camera or Safari, can turn text or speech from one language into another. Check important wording yourself if it matters, because translations can miss tone or a technical term. Download a language for offline use if you might not have data.",
+    "prompts": [
+      "how do i translate text on iphone",
+      "translate app",
+      "camera translate a sign",
+      "translate a conversation",
+      "download a language for offline translate",
+      "is phone translation accurate",
+      "safari translate a page",
+      "how to use translate"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The App Library",
+    "desc": "The App Library is the last page of your Home Screen, where iPhone groups apps automatically so you don't have to keep every icon on the first pages. Swipe all the way right, or search at the top of the library to find an app. You can also remove an app from the Home Screen without deleting it.",
+    "prompts": [
+      "what is the app library",
+      "where did my app icon go",
+      "swipe to the app library",
+      "search in the app library",
+      "remove from home screen but keep the app",
+      "iphone app library",
+      "find a hidden app",
+      "app is in the library not on the home screen"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Silencing the ringer",
+    "desc": "The Ring/Silent switch on the side of the iPhone mutes ringtones and many alerts; an orange mark means Silent. Alarms in the Clock app still make a sound in Silent mode on iPhone. You can also lower the ringer volume with the side buttons when the switch is on Ring.",
+    "prompts": [
+      "how do i silence my iphone",
+      "ring silent switch",
+      "orange switch on the side",
+      "why is my iphone on silent",
+      "do alarms still ring in silent mode",
+      "mute the ringer",
+      "iphone not ringing",
+      "turn off silent mode"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying an office chair",
+    "desc": "Before you buy a chair, tell me your budget and whether you'll sit for long stretches, because that changes what matters. Look for a seat that supports the curve of your lower back, adjustable height, and a trial or return option if you can get one. Sit in it if possible, and skip a flashy design that isn't comfortable. I won't guess current prices.",
+    "prompts": [
+      "what should i look for in an office chair",
+      "buying a desk chair",
+      "best chair for doing homework",
+      "how to choose an office chair",
+      "office chair on a budget",
+      "ergonomic chair what matters",
+      "should I buy a gaming chair or office chair",
+      "help me pick a chair"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a computer monitor",
+    "desc": "First decide your budget, desk depth and what you'll do: homework, games or both. Look at size, resolution, refresh rate if you game, and whether the stand or a mount will actually fit your desk. Check ports, like HDMI, and try to see the panel in person if you can. I won't invent prices; a current listing or review is better for that.",
+    "prompts": [
+      "what should i look for in a monitor",
+      "buying a computer monitor",
+      "what size monitor should I get",
+      "monitor for homework and games",
+      "refresh rate on a monitor",
+      "hdmi ports on a monitor",
+      "help me choose a monitor",
+      "monitor advice without a price"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a gaming PC",
+    "desc": "A gaming PC should match your budget, the games you play and whether you also need it for school work. Look at the graphics card, RAM, storage type and cooling, and leave a little room in the budget for a decent monitor and power supply, not only the flashiest part. Prebuilt is easier; building can cost less if you know what you're doing. I won't quote prices that might be wrong; tell me your budget and I’ll help you think through the parts.",
+    "prompts": [
+      "what should i look for in a gaming pc",
+      "buying a gaming computer",
+      "prebuilt versus building a pc",
+      "how much ram do I need",
+      "help me pick a gaming pc",
+      "graphics card advice",
+      "gaming pc on a budget",
+      "what matters in a pc for games"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a laptop",
+    "desc": "Start with your budget and what you'll do: school writing, video, or some games. Look at screen size, keyboard comfort, battery life, storage, and RAM, and check the weight if you'll carry it every day. A store display can tell you more about the keyboard and screen than a photo. I won't invent current prices.",
+    "prompts": [
+      "what should i look for in a laptop",
+      "buying a laptop for school",
+      "laptop advice",
+      "light laptop versus gaming laptop",
+      "how much storage on a laptop",
+      "battery life on a laptop",
+      "help me choose a laptop",
+      "laptop on a budget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying an e-bike",
+    "desc": "An e-bike is a bicycle with a motor that helps you pedal. Decide your budget, how far you'll ride, and whether you need it for hills, then look at the motor type, battery range, brakes, frame size and local rules for speed and bike paths. Test-ride if you can, and include a strong lock and helmet in your plan. I won't guess prices; tell me your budget and how you'll use it.",
+    "prompts": [
+      "what should i look for in an e-bike",
+      "buying an electric bike",
+      "e-bike for commuting",
+      "e-bike battery range",
+      "do I need a license for an e-bike",
+      "e-bike safety and locks",
+      "help me choose an ebike",
+      "e-bike on a budget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying headphones",
+    "desc": "Tell me your budget and whether you want them for music, games, calls or all three. Look at fit, comfort for long sessions, wired versus wireless, battery life if they're wireless, and whether you need a mic. Try them on if you can, because comfort matters as much as sound. I won't invent prices.",
+    "prompts": [
+      "what should i look for in headphones",
+      "buying headphones",
+      "headphones for music and games",
+      "wired versus wireless headphones",
+      "headphones with a mic",
+      "comfortable headphones",
+      "help me pick headphones",
+      "headphones on a budget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a keyboard",
+    "desc": "Decide your budget and whether you want a quiet keyboard for class or a clickier one for home. Look at layout, size, switch feel if it's mechanical, and whether you need it to be wired, backlit or portable. Typing on it in a store, if you can, beats guessing from a photo. I won't quote prices that may be out of date.",
+    "prompts": [
+      "what should i look for in a keyboard",
+      "buying a keyboard",
+      "mechanical versus membrane keyboard",
+      "quiet keyboard for school",
+      "keyboard size and layout",
+      "help me choose a keyboard",
+      "wired or wireless keyboard",
+      "keyboard on a budget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a game console",
+    "desc": "Pick a console based on the games you actually want, who you'll play with, and your budget, including a TV or monitor, extra controllers and a storage plan. Compare exclusive games, online fees, disc versus digital, and whether friends are already on that platform. I won't invent sale prices; tell me your budget and favorite games and I can help you think it through.",
+    "prompts": [
+      "what console should i buy",
+      "buying a game console",
+      "ps5 versus xbox versus switch",
+      "which console are my friends on",
+      "console budget including games",
+      "disc or digital console",
+      "help me pick a console",
+      "should I buy a used console"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying everyday shoes",
+    "desc": "For everyday shoes, start with your budget, the weather you deal with, and how much you'll walk. Look for a fit with a little room at the toes, a secure heel, and a sole that isn't too slippery. Try them on later in the day when feet are a bit bigger, and walk around the store. I won't guess current prices.",
+    "prompts": [
+      "what should i look for in everyday shoes",
+      "buying casual shoes",
+      "how should shoes fit",
+      "shoes for walking around school",
+      "buying sneakers",
+      "help me pick shoes",
+      "shoes on a budget",
+      "try shoes on in the afternoon"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying running shoes",
+    "desc": "Running shoes should match your budget and the surface you'll run on. Look for a secure, comfortable fit and enough room in the toe box, and replace them when the midsole feels packed out or worn. A running shop that watches you walk or jog can help more than a guess from ads. I won't invent prices.",
+    "prompts": [
+      "what should i look for in running shoes",
+      "buying running shoes",
+      "running shoe fit",
+      "shoes for jogging",
+      "running store gait advice",
+      "when to replace running shoes",
+      "help me choose running shoes",
+      "running shoes on a budget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a backpack",
+    "desc": "Decide your budget and what you'll carry: laptop, binders or gym clothes. Look for padded straps, a laptop sleeve if you need one, a fit that sits on your hips more than your neck, and zippers that feel sturdy. Try it on with some weight if you can. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a backpack",
+      "buying a school backpack",
+      "backpack for a laptop",
+      "backpack straps and fit",
+      "help me pick a backpack",
+      "sturdy backpack zippers",
+      "backpack on a budget",
+      "how should a backpack fit"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a desk",
+    "desc": "Measure the space, the chair and the path through the door before you buy a desk, and set a budget. Look at height, width, depth for a monitor, and storage. A desk that's too tall or too shallow will feel bad every day. I won't guess prices; tell me your budget and room size if you want help narrowing features.",
+    "prompts": [
+      "what should i look for in a desk",
+      "buying a desk",
+      "desk size for a monitor",
+      "desk height",
+      "measure the room for a desk",
+      "help me choose a desk",
+      "desk on a budget",
+      "will my new desk make it through the doorway"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a TV",
+    "desc": "Start with your budget, how far you sit, and whether you care most about sports, movies or a game console. Look at size, a simple picture quality comparison, HDMI ports, and the inputs you'll actually use. Sit at your usual distance if you can see it in a store. I won't invent current prices.",
+    "prompts": [
+      "what should i look for in a tv",
+      "buying a television",
+      "what size tv for my room",
+      "tv for a game console",
+      "hdmi ports on a tv",
+      "help me pick a tv",
+      "tv on a budget",
+      "how far should I sit from a tv"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a used phone",
+    "desc": "If you're buying used, set a budget and confirm the model, storage, battery health and that the phone is unpaid and not stolen, with a trusted seller or a store policy. Test the buttons, cameras, speakers and Wi-Fi before you pay, and ask whether it can still get software updates. I won't guess street prices.",
+    "prompts": [
+      "what should i look for in a used phone",
+      "buying a used iphone",
+      "check battery health on a used phone",
+      "is this used phone stolen",
+      "buying a refurbished phone",
+      "help me buy a used phone",
+      "used phone checklist",
+      "used phone on a budget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a tablet",
+    "desc": "A tablet is handy for reading, video and some homework, but it may not replace a laptop if you write a lot. Decide your budget, screen size, storage and whether you need a keyboard. Check if the apps you need actually work well on it. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a tablet",
+      "buying a tablet",
+      "tablet versus a laptop for school",
+      "tablet storage and size",
+      "tablet with a keyboard",
+      "help me choose a tablet",
+      "tablet on a budget",
+      "is a tablet enough for homework"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a mouse",
+    "desc": "Choose a mouse based on your budget, hand size and whether you need it for school work, games or both. Look at a comfortable shape, a reliable sensor, wired versus wireless, and whether the buttons are easy to reach. Try it if you can. I won't quote prices.",
+    "prompts": [
+      "what should i look for in a mouse",
+      "buying a computer mouse",
+      "wired versus wireless mouse",
+      "mouse for school and games",
+      "help me pick a mouse",
+      "mouse that fits my hand",
+      "mouse on a budget",
+      "how to choose a mouse"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying earbuds",
+    "desc": "Earbuds should stay in your ears comfortably and match your budget and phone. Look at fit, a secure case, battery life, and whether you want a mic or noise control. A model that stays put on a walk matters more than extra features you won't use. I won't invent prices.",
+    "prompts": [
+      "what should i look for in earbuds",
+      "buying earbuds",
+      "earbuds that stay in",
+      "earbuds versus headphones",
+      "earbuds for a walk",
+      "help me choose earbuds",
+      "earbuds on a budget",
+      "earbuds with a mic"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a power bank",
+    "desc": "A power bank is a portable charger. Pick a budget, then look at capacity, the ports your phone uses, and airline rules if you'll fly with it. A well-known brand with safety certifications is worth paying attention to. I won't guess prices or exact capacities you should buy without knowing your phone.",
+    "prompts": [
+      "what should i look for in a power bank",
+      "buying a portable charger",
+      "power bank for an iphone",
+      "can I take a power bank on a plane",
+      "power bank ports",
+      "help me pick a power bank",
+      "power bank on a budget",
+      "how to choose a portable battery"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a router",
+    "desc": "A router sends Wi-Fi through your home. Match it to your budget, internet plan and the size of the place, and look at current Wi-Fi standards, coverage and easy parental or guest controls if you need them. Your internet provider may already include one. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a router",
+      "buying a wifi router",
+      "is my provider router enough",
+      "router for a larger home",
+      "wifi 6 router",
+      "help me choose a router",
+      "router on a budget",
+      "better coverage than my current wifi"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a winter coat",
+    "desc": "Pick a coat for your budget, the coldest weather you actually face, and whether you need it to stay dry in snow or rain. Look at fit over a sweater, a closable collar or hood, and pockets you'll use. Try it on and move your arms. I won't guess current prices.",
+    "prompts": [
+      "what should i look for in a winter coat",
+      "buying a winter jacket",
+      "coat for snow and wind",
+      "winter coat fit over a hoodie",
+      "waterproof versus warm coat",
+      "help me pick a winter coat",
+      "winter coat on a budget",
+      "hood and pockets on a coat"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a used laptop",
+    "desc": "For a used laptop, set a budget and check the age, storage, RAM, battery health, keyboard and screen, and whether it still gets security updates. Ask for the original charger, test it in person, and avoid a deal that seems hidden or rushed. I won't invent resale prices.",
+    "prompts": [
+      "what should i look for in a used laptop",
+      "buying a used laptop",
+      "used laptop battery and ram",
+      "does this used laptop still get updates",
+      "help me buy a secondhand laptop",
+      "used laptop checklist",
+      "used laptop on a budget",
+      "is a used laptop a bad idea"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Buying a game controller",
+    "desc": "Choose a controller that works with your console or PC, fits your hands, and matches your budget. Look at genuine compatibility, a solid analog stick feel, and a warranty or return option in case of stick drift. Official and well-reviewed third-party pads can both be fine. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a controller",
+      "buying a game controller",
+      "controller for pc or console",
+      "controller stick drift",
+      "official versus third party controller",
+      "help me pick a controller",
+      "controller on a budget",
+      "extra controller for friends"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Going for a walk",
+    "desc": "A walk doesn't have to be long to help. Pick a safe route, wear shoes you can actually walk in, and tell someone if you're going farther than around the block. Notice one thing along the way, and bring water if it will be more than a short loop.",
+    "prompts": [
+      "i should go for a walk",
+      "ideas for a walk",
+      "walking around the neighborhood",
+      "how to make a walk less boring",
+      "quick walk to clear my head",
+      "is a short walk worth it",
+      "walk when i'm bored",
+      "going for a walk by myself"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "A neighborhood bike ride",
+    "desc": "Ride a bike that's the right size, wear a helmet, and follow the same road rules as you would on a busier street: lights if it's dim, and hand signals when you can. Stick to a route you know if you're going out alone, and lock the bike if you stop.",
+    "prompts": [
+      "neighborhood bike ride",
+      "going for a bike ride for fun",
+      "safe bike ride around town",
+      "bike ride when i'm bored",
+      "do I need a helmet on a short ride",
+      "fun looping bike route",
+      "ride bikes with a friend",
+      "casual bike ride ideas"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Planning a picnic",
+    "desc": "Keep a picnic simple: something to sit on, water, food that travels well, and a bag for trash. Check the weather and park rules, and pick a public spot you can get to safely. You don't need a huge spread for it to count.",
+    "prompts": [
+      "how do i plan a picnic",
+      "picnic ideas",
+      "what to bring to a picnic",
+      "simple picnic food",
+      "picnic at the park",
+      "picnic with a friend",
+      "picnic blanket and trash bag",
+      "easy picnic when i'm bored"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Visiting a park",
+    "desc": "A park visit can be a walk, a bench and a snack, or a game of catch. Check hours, bring water, and leave the place as tidy as you found it. If you're going alone, stay in well-used areas and tell someone where you are.",
+    "prompts": [
+      "what to do at a park",
+      "visiting a park",
+      "park ideas when i'm bored",
+      "hang out at the park",
+      "things to do at a local park",
+      "park walk",
+      "go to the park with a friend",
+      "how to enjoy a park"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "A short hike",
+    "desc": "For a short hike, pick a marked trail that matches your fitness, tell someone the plan, and bring water, a phone and a layer in case the weather turns. Stay on the trail, and turn around early enough to get back in daylight. You don't need a huge backpack for a short loop.",
+    "prompts": [
+      "how do i do a short hike",
+      "easy hiking trail",
+      "what to bring on a short hike",
+      "beginner hike",
+      "hike with a friend",
+      "stay on the trail",
+      "daylight on a hike",
+      "short hike when i'm bored"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "A photo walk",
+    "desc": "A photo walk is just walking with a camera or phone and looking for interesting light, textures or small details. Pick a neighborhood or park, give yourself a loose theme like “circles” or “blue things,” and don't block a sidewalk to get a shot. You can do this in 20 minutes.",
+    "prompts": [
+      "what is a photo walk",
+      "taking photos while walking",
+      "photo walk ideas",
+      "photography when i'm bored",
+      "theme for a photo walk",
+      "walk around taking pictures",
+      "photo walk with a friend",
+      "interesting photos in my neighborhood"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Watching a sunset",
+    "desc": "To watch a sunset, check about when the sun will go down, pick a west-facing spot with a clear view, and arrive a little early. Bring a layer because it cools off fast. Stay aware of traffic and your way home if it will be dark after.",
+    "prompts": [
+      "where can i watch the sunset",
+      "watching a sunset",
+      "when does the sun go down",
+      "sunset with a friend",
+      "what to bring to a sunset",
+      "sunset ideas",
+      "is it worth watching the sunset",
+      "good spot to see the sun go down"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Looking at the stars",
+    "desc": "Stars show up better away from bright lights, after your eyes adjust for a few minutes. A free sky app can help you name a few bright ones, but you don't need it. Dress warmer than you think, and stay in a place you know is safe at night.",
+    "prompts": [
+      "how can i look at the stars",
+      "stargazing near home",
+      "why can't I see many stars",
+      "star app",
+      "looking at the night sky",
+      "stargazing with a friend",
+      "best time to see stars",
+      "stargazing in the backyard"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "A scavenger hunt",
+    "desc": "A scavenger hunt is a list of things to find or photograph, like something red, a leaf with interesting edges, or a kind street sign. Write 8 to 12 items, set a time limit, and agree on the area and rules. It's an easy way to make a walk with a friend more fun.",
+    "prompts": [
+      "how do i make a scavenger hunt",
+      "scavenger hunt ideas",
+      "photo scavenger hunt",
+      "scavenger hunt around the neighborhood",
+      "things to find on a walk",
+      "scavenger hunt with a friend",
+      "simple scavenger hunt list",
+      "bored scavenger hunt"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Playing catch",
+    "desc": "Playing catch only needs a ball and a little open space away from windows and streets. Start close, agree on how hard you'll throw, and watch the area behind your partner. Move farther apart once you're both warmed up.",
+    "prompts": [
+      "let's play catch",
+      "playing catch at the park",
+      "how to play catch",
+      "soft toss versus throwing hard",
+      "catch with a baseball or a football",
+      "playing catch with a friend",
+      "safe place to play catch",
+      "catch when i'm bored"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Shooting hoops at a park",
+    "desc": "A park hoop is an easy way to move around, even if you only take turns shooting. Bring a ball if the court might not have one, wait your turn if others are running a game, and be decent about sharing the court. Water and a break in the heat help.",
+    "prompts": [
+      "shooting hoops at the park",
+      "going to the basketball court",
+      "can I use the park hoop",
+      "shootaround by myself",
+      "playing basketball at a park with a friend",
+      "park court etiquette",
+      "shooting baskets when i'm bored",
+      "do I need a ball for the park"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Building a snowman",
+    "desc": "Roll a packed base, then a smaller middle and a head, and stack them on fairly level snow. Pack the joints so the head doesn't slide, and use sticks, stones or a hat only if you're allowed to and you pick them up later. Dress for wet and cold, and watch for ice underfoot.",
+    "prompts": [
+      "how do i build a snowman",
+      "snowman ideas",
+      "packing snowballs for a snowman",
+      "snowman with a friend",
+      "what to use for a snowman face",
+      "building a snowman in the yard",
+      "snow is too powdery",
+      "snowman basics"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Going to a farmers market",
+    "desc": "A farmers market is a place to walk, look at produce and sometimes hear music, even if you only buy a snack. Bring a bag and a little cash or a card if you plan to purchase something, and ask before you taste. Go early or later if you want it less crowded.",
+    "prompts": [
+      "what do i do at a farmers market",
+      "farmers market with a friend",
+      "do I need to buy something at a market",
+      "farmers market tips",
+      "walking around a market",
+      "farmers market when i'm bored",
+      "what to bring to a farmers market",
+      "is a farmers market free to enter"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Exploring your neighborhood",
+    "desc": "Pick a direction you don't usually walk, stay on public sidewalks, and notice one new street, shop or tree. Bring a charged phone, and tell someone if you'll be gone more than a short loop. You don't need a plan beyond “turn left at the end of the block and loop back.”",
+    "prompts": [
+      "exploring my neighborhood",
+      "walk a new street",
+      "what to do near my house",
+      "explore town when i'm bored",
+      "neighborhood walk with a friend",
+      "find something new nearby",
+      "safe way to explore around home",
+      "wander around the block"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Reading outside",
+    "desc": "Reading outside works well on a bench or a stoop with a book or your phone in shade, so the screen isn't washed out. Bring a layer, something to drink, and a way to keep pages from blowing around. Pick a public spot you feel comfortable in.",
+    "prompts": [
+      "reading outside",
+      "taking a book to the park",
+      "where to read outdoors",
+      "reading on a bench",
+      "outside reading when i'm bored",
+      "shade for reading",
+      "book and a snack outside",
+      "reading on the porch"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Drawing outside",
+    "desc": "A small notebook and a pencil are enough for drawing outside. Pick a simple subject, like a cup, a tree or a doorway, and spend ten minutes on shapes before details. Don't block a path, and go inside if the weather turns.",
+    "prompts": [
+      "drawing outside",
+      "sketching at the park",
+      "what to draw outdoors",
+      "urban sketching basics",
+      "drawing in a notebook outside",
+      "draw a tree or a building",
+      "outdoor sketching when i'm bored",
+      "taking a sketchbook on a walk"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Skipping stones",
+    "desc": "A good skipping stone is fairly flat, and you throw it low and sidearm so it spins and kisses the water. Stand somewhere you have space and a safe backswing, and don't throw if people or animals are in the way. It takes a few tries.",
+    "prompts": [
+      "how do i skip stones",
+      "skipping rocks on water",
+      "best rocks for skipping",
+      "sidearm throw for skipping stones",
+      "skipping stones at a lake",
+      "skipping stones with a friend",
+      "why won't my stone skip",
+      "bored at the water skipping rocks"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Geocaching",
+    "desc": "Geocaching is an outdoor scavenger hunt that uses a map or an official app to find hidden containers. Follow the listing's rules, put things back as you found them, and stay off private property. It's more fun with a friend, and you should tell someone where you're going.",
+    "prompts": [
+      "what is geocaching",
+      "how do i start geocaching",
+      "geocaching app",
+      "finding a geocache",
+      "geocaching with a friend",
+      "geocaching rules",
+      "outdoor treasure hunt with gps",
+      "is geocaching free"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Flying a kite",
+    "desc": "Kites need open space away from streets, power lines and airports, plus enough wind to lift them without knocking you over. Let the line out gradually, and don't fly in a thunderstorm. A simple diamond kite is enough to start.",
+    "prompts": [
+      "how do i fly a kite",
+      "where can I fly a kite",
+      "best wind for a kite",
+      "kite safety power lines",
+      "flying a kite with a friend",
+      "simple kite for beginners",
+      "kite in a park",
+      "flying a kite when i'm bored"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Rainy-day indoor activities",
+    "desc": "On a rainy day you can cook something simple, organize a drawer, draw, write, play a board or video game, or watch a movie with a friend online. Set a short timer and pick one thing so the day doesn't just disappear. If you're stir-crazy, stretch or walk around the house between activities.",
+    "prompts": [
+      "what to do on a rainy day",
+      "stuck inside because of rain",
+      "rainy day ideas",
+      "indoor activities when i'm bored",
+      "rainy day with a friend",
+      "can't go outside today",
+      "fun things to do inside",
+      "rainy afternoon ideas"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Things to do with a friend when you're bored",
+    "desc": "When you're both bored, pick something with a clear start: a walk, a catch session, a co-op game, a photo hunt, cooking a simple snack, or working on a project together. Agree on a time so it doesn't stall. If plans fall through, have a backup that works at home.",
+    "prompts": [
+      "what to do with a friend when we're bored",
+      "bored with my friend",
+      "fun things to do together",
+      "friend is over and we're bored",
+      "activities for two people",
+      "hang out ideas when there's nothing to do",
+      "me and my friend are bored",
+      "easy plans with a friend"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Things to do alone when you're bored",
+    "desc": "When you're alone and bored, try a short walk, a playlist and a tidy-up, a chapter of a book, a game you actually enjoy, practicing a skill for 15 minutes, or writing down a list of things you might want later. You don't have to be productive the whole time, but choosing one thing beats scrolling by default.",
+    "prompts": [
+      "what to do alone when i'm bored",
+      "bored by myself",
+      "solo activities",
+      "i have no one to hang out with",
+      "things to do alone at home",
+      "entertaining myself",
+      "alone and bored ideas",
+      "what can I do by myself"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "A backyard game",
+    "desc": "A backyard or driveway game can be catch, HORSE, a beanbag toss, or a simple made-up rule game with a ball. Check you have space away from windows and streets, and agree on the rules before the first throw. It can last 10 minutes and still reset the afternoon.",
+    "prompts": [
+      "backyard game ideas",
+      "what to play in the yard",
+      "driveway games",
+      "simple outdoor games",
+      "yard games with a friend",
+      "games with a ball outside",
+      "bored in the backyard",
+      "easy backyard games"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Visiting a museum",
+    "desc": "A museum is a low-pressure place to walk and look. Check hours, student or free times, and bag rules before you go. You don't have to read every label; pick a few rooms and one object that actually interests you.",
+    "prompts": [
+      "what to do at a museum",
+      "visiting a museum",
+      "is a museum boring",
+      "museum with a friend",
+      "free or student museum day",
+      "how to enjoy a museum",
+      "museum when i'm bored",
+      "do I have to see everything in a museum"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Respecting wildlife at a park",
+    "desc": "At a park, watch animals from a distance, don't feed them human food, and keep dogs where the rules say. Feeding ducks bread can make them sick, and getting close for a photo can stress the animal. Leave nests, burrows and babies alone.",
+    "prompts": [
+      "should i feed ducks at the park",
+      "how close can I get to a park animal",
+      "don't feed wildlife",
+      "park wildlife rules",
+      "is bread bad for ducks",
+      "taking photos of animals at a park",
+      "respecting wildlife",
+      "goose or squirrel at the park"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Choosing a difficulty level",
+    "desc": "Pick a difficulty you can learn on, not the one that just looks impressive. If every fight is a wall, drop it a step and turn it up later. If you're bored, raise it or add a personal rule. The “right” setting is the one where you still want to play tomorrow.",
+    "prompts": [
+      "what difficulty should i play on",
+      "game is too hard",
+      "should I lower the difficulty",
+      "is easy mode cheating",
+      "difficulty too easy",
+      "choosing a difficulty level",
+      "I'm stuck should I turn the difficulty down",
+      "recommended difficulty"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Being a good teammate",
+    "desc": "A good teammate communicates clearly, doesn't blame people for one mistake, and plays the objective you all agreed on. Call out useful info, ping if that's easier, and say “nice” when someone does well. If you're tilted, take a breath or a short break instead of dumping it on the squad.",
+    "prompts": [
+      "how to be a good teammate",
+      "good teammate in a game",
+      "don't blame the team",
+      "playing the objective",
+      "positive in voice chat",
+      "being helpful in a party",
+      "what makes a good teammate",
+      "support your teammates"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Dealing with a toxic teammate",
+    "desc": "If a teammate is being cruel, mute or report them with the in-game tools and stop feeding the argument. You don't have to stay in voice chat. If it crosses into threats or targeted harassment, leave the match if you can and tell a trusted adult.",
+    "prompts": [
+      "teammate is being toxic",
+      "someone is trash talking in my game",
+      "how to mute a toxic player",
+      "report a toxic teammate",
+      "toxic voice chat",
+      "don't argue with a toxic teammate",
+      "harassment in a game",
+      "mean people in matchmaking"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Taking a break from a game",
+    "desc": "If a game is making you angry, you can't focus, or it's eating the time you needed for sleep or school, step away for a bit. Save if you can, close it, and do something physical or offline even for ten minutes. Coming back later with a clearer head usually beats forcing one more match.",
+    "prompts": [
+      "i need a break from this game",
+      "game is taking over my time",
+      "should I stop playing for a while",
+      "taking a break from gaming",
+      "I'm addicted to this game",
+      "game is making me mad I should stop",
+      "how to step away from a game",
+      "too many hours on a game"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Learning a new game",
+    "desc": "When you pick up a new game, play the tutorial, try the lowest-stakes mode, and learn one system at a time instead of reading everything at once. It's fine to die or lose a lot at first. A short “beginner” video can help after you've tried it yourself.",
+    "prompts": [
+      "how do i learn a new game",
+      "I'm new to this game",
+      "where to start in a new game",
+      "tutorial and practice mode",
+      "learning a game without getting overwhelmed",
+      "beginner tips for a new game",
+      "I keep losing because I'm new",
+      "getting started in a game"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using a walkthrough",
+    "desc": "A walkthrough is useful when you're stuck, but it can spoil surprises. Try a hint or a specific puzzle first instead of a full story guide. If you use a guide, jump to the part you need and stop when you're unstuck so the rest of the game stays yours.",
+    "prompts": [
+      "should i use a walkthrough",
+      "i'm stuck in a game",
+      "walkthrough versus spoiling the story",
+      "hint without a full guide",
+      "when to look up a boss",
+      "using a guide in a game",
+      "I don't want spoilers",
+      "look up a puzzle solution"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Boss fights",
+    "desc": "In a boss fight, watch the attack pattern before you rush in, use the space you have, and don't empty every resource on the first phase if you can help it. Take a short break if you've failed many times in a row. A specific tip for that boss is fair to look up after a real try.",
+    "prompts": [
+      "how do i beat a boss",
+      "boss fight tips",
+      "I keep dying to a boss",
+      "learn the boss pattern",
+      "boss is too hard",
+      "don't panic in a boss fight",
+      "should I look up the boss",
+      "boss fight strategy"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Inventory management",
+    "desc": "Inventory management means deciding what to keep, stack or drop so you can still pick up what you need. Store extra at a stash or vendor when the game allows it, and don't hoard a dozen almost-the-same items. A little cleanup after a mission saves you from being full at a bad time.",
+    "prompts": [
+      "my inventory is full",
+      "how to manage inventory in a game",
+      "what should I drop",
+      "stash versus carrying items",
+      "inventory management tips",
+      "too much loot",
+      "cleaning up my inventory",
+      "I can't pick anything up"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Side quests",
+    "desc": "A side quest is an extra task that isn't required to finish the main story. Do a few if they look fun or give a useful reward, and skip them if you're tired of the game or want to see the ending. You can always come back later if the game lets you.",
+    "prompts": [
+      "should i do side quests",
+      "what is a side quest",
+      "side quests versus the main story",
+      "are side quests worth it",
+      "too many side quests",
+      "when to skip a side quest",
+      "side missions in a game",
+      "I don't want to 100 percent everything"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "New Game Plus",
+    "desc": "New Game Plus is a mode that lets you start the story again with some of your progress, gear or levels still intact. It's meant for a second run, often with harder enemies. Finish the first playthrough and read what that game actually carries over, because it isn't the same in every title.",
+    "prompts": [
+      "what is new game plus",
+      "should I start new game plus",
+      "ng+ meaning",
+      "what do I keep in new game plus",
+      "second playthrough with my gear",
+      "is new game plus harder",
+      "when to start ng+",
+      "new game plus versus a fresh save"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Party chat with friends",
+    "desc": "Party or group chat lets you talk with friends while you play, often in the console, PC or phone app. Use a headset, mute when there's loud background noise, and don't share personal details in a party with people you just met. If the chat is being ugly, you can leave.",
+    "prompts": [
+      "how do i start a party chat",
+      "talking with friends while gaming",
+      "party chat on console",
+      "discord versus party chat",
+      "mute in a party",
+      "party chat with randoms",
+      "voice chat with friends",
+      "set up a group chat for a game"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "When a game makes you tilt",
+    "desc": "Tilt means you're playing worse because you're angry. After a bad loss, pause: get a drink, stretch, or stop the session. Complaining at teammates usually makes the next game worse. It's a normal feeling, and stepping away is a real strategy, not quitting forever.",
+    "prompts": [
+      "i'm tilting",
+      "game is making me so mad",
+      "how to stop tilting",
+      "I get angry when I lose",
+      "calm down after a bad game",
+      "rage in a video game",
+      "tilted after a loss",
+      "I need to stop playing angry"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Picking a class or character",
+    "desc": "Pick a class or character that matches how you like to play: up close, from a distance, or supporting others. Try one in a training or low-stakes mode before you buy a lot of upgrades. You can often switch later, so you don't have to lock in a “main” on day one.",
+    "prompts": [
+      "what class should i pick",
+      "choosing a character in a game",
+      "starter class advice",
+      "i don't know who to main",
+      "try a character in training",
+      "support versus damage class",
+      "picking a character that fits me",
+      "best class for a beginner"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Reading a skill tree",
+    "desc": "A skill tree is a map of upgrades. Read what a node actually does, then spend points on a plan that supports how you already play, instead of grabbing every bright icon. You can often respec later. If you're stuck, look up that game's reset rules, not a random “best build” you can't use yet.",
+    "prompts": [
+      "how do i read a skill tree",
+      "where should I put skill points",
+      "skill tree advice",
+      "respec a build",
+      "don't waste skill points",
+      "understanding a talent tree",
+      "beginner skill tree",
+      "what upgrades should I take"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Co-op games",
+    "desc": "A co-op game is made for people to play together toward the same goal, not against each other. Agree on the difficulty, who leads, and how long you'll play. Patience matters more than being the best, especially if one of you is new.",
+    "prompts": [
+      "what is a co-op game",
+      "games to play together",
+      "co-op with a friend",
+      "cooperative versus versus modes",
+      "good co-op for two people",
+      "how to enjoy a co-op game",
+      "my friend is new at co-op",
+      "playing a campaign together"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Speedrunning basics",
+    "desc": "Speedrunning is trying to finish a game, or a part of it, as quickly as you can under agreed rules. Start by learning a clean route, then shave time once you're consistent. Watch a beginner's run, not only world records, and don't wreck a file you care about.",
+    "prompts": [
+      "what is a speedrun",
+      "how do i start speedrunning",
+      "speedrun route",
+      "speedrun rules and categories",
+      "learning a speedrun",
+      "watch a beginner speedrun",
+      "speedrunning versus casual play",
+      "is speedrunning hard"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Completion and collectibles",
+    "desc": "Going for completion means finding collectibles or finishing every side activity. It can be satisfying, or it can burn you out. If you're tired, stop, enjoy the ending, and come back later with a checklist only if you still want to. The game is allowed to be finished at 60 percent.",
+    "prompts": [
+      "should i 100 percent a game",
+      "collectibles are exhausting",
+      "completionist tips",
+      "do I need every collectible",
+      "checklist for collectibles",
+      "100 percent versus just finishing",
+      "I'm tired of hunting items",
+      "is 100 percent worth it"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Asking for an extension",
+    "desc": "If you need more time on an assignment, ask before the deadline when you can. Email or tell your teacher clearly: the assignment name, why you need more time, and a realistic date you can turn it in. Be honest, and have a plan to finish, because an extension is a request, not a guarantee.",
+    "prompts": [
+      "how do i ask for an extension",
+      "email a teacher for more time",
+      "I need more time on an assignment",
+      "asking for an extension before the due date",
+      "what to say to get an extension",
+      "extension request to a teacher",
+      "I missed the deadline can I still ask",
+      "how to request extra time"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Studying with a classmate",
+    "desc": "Studying with a classmate works if you set a goal, like reviewing a chapter or quizzing each other, and a time limit. Take turns explaining, and don't only copy answers. If you start just chatting, take a short break, then come back to the list.",
+    "prompts": [
+      "how do i study with a classmate",
+      "study with a friend",
+      "study session plan",
+      "quizzing each other",
+      "studying together without getting distracted",
+      "group study tips for two people",
+      "can we study together",
+      "study buddy ideas"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Breaking down a long project",
+    "desc": "Split a long project into pieces with their own due dates: research, outline, first draft, and a final pass. Start with the part that unlocks the rest, and put those mini-deadlines on a calendar. A little work several days in a row beats one all-nighter.",
+    "prompts": [
+      "how do i break down a long project",
+      "big project feels impossible",
+      "project due in two weeks",
+      "chunk a research project",
+      "steps for a long assignment",
+      "don't wait until the night before a project",
+      "planning a multi day project",
+      "long school project help"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Math word problems",
+    "desc": "For a word problem, read it twice, underline what it's asking, and list the numbers and units you have. Write an equation or a picture before you calculate, then check that the answer's units and size make sense. If you're stuck, try a simpler example with smaller numbers first.",
+    "prompts": [
+      "how do i solve word problems",
+      "math word problem tips",
+      "I don't understand story problems",
+      "underline what the question asks",
+      "word problem strategy",
+      "units in a word problem",
+      "turn a word problem into an equation",
+      "help with math word problems"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Studying for a quiz tomorrow",
+    "desc": "If the quiz is tomorrow, focus on the main ideas, formulas or terms your teacher emphasized, not a perfect reread of everything. Make a short list, test yourself out loud or on paper, sleep enough, and do a quick review in the morning. Don't stay up so late that you can't think.",
+    "prompts": [
+      "i have a quiz tomorrow",
+      "how to study tonight for a quiz",
+      "last minute quiz study",
+      "what to study if I only have one night",
+      "cram for a quiz the smart way",
+      "quiz in the morning",
+      "quick review before a quiz",
+      "I didn't study and I have a quiz"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "When you missed class",
+    "desc": "If you missed class, get the notes and any handouts from a classmate or the class page, then ask the teacher what you should prioritize, not “did I miss anything?” Do the work as soon as you can so the next lesson isn't a pile-on.",
+    "prompts": [
+      "i missed class what do i do",
+      "how to catch up after an absence",
+      "ask a classmate for notes",
+      "email a teacher after missing class",
+      "I was absent today",
+      "what I missed in class",
+      "catching up after being out sick",
+      "missed a lesson"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Organizing a binder",
+    "desc": "Use a binder with a simple system: one tab per class, newest papers in a consistent place, and a pocket for things that still need to go home. Once a week, take out junk and file what's left. A messy binder costs you more time than the few minutes of sorting.",
+    "prompts": [
+      "how do i organize a binder",
+      "binder tabs for school",
+      "papers everywhere",
+      "where to put handouts",
+      "weekly binder cleanup",
+      "school binder system",
+      "my binder is a mess",
+      "organizing class papers"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Writing a lab report",
+    "desc": "A lab report usually has a purpose, method, data, and a conclusion that answers the question using your results. Write the steps so someone else could repeat them, put the data in a table or graph if you can, and don't change numbers to look “right.” Follow your teacher's required headings.",
+    "prompts": [
+      "how do i write a lab report",
+      "lab report sections",
+      "purpose method data conclusion",
+      "writing a science lab",
+      "I don't know what to put in a lab report",
+      "lab report graph or table",
+      "don't fake lab data",
+      "school lab writeup"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Reading a textbook chapter",
+    "desc": "For a textbook chapter, skim headings and the summary first, then read a section at a time and write a few questions or notes in your own words. Don't highlight everything. If a paragraph is dense, slow down and work an example before you move on.",
+    "prompts": [
+      "how do i read a textbook chapter",
+      "textbook reading strategy",
+      "I can't get through a chapter",
+      "skim headings first",
+      "taking notes from a textbook",
+      "reading a science or history chapter",
+      "textbook feels impossible",
+      "how to study a textbook"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Memorizing a speech",
+    "desc": "Memorize a speech in chunks, out loud, and practice the transitions between chunks more than any single sentence. Recite it without the paper, then check where you stumble and practice those spots. A few shorter practices beat one exhausted run the night before.",
+    "prompts": [
+      "how do i memorize a speech",
+      "memorizing a presentation",
+      "learn a speech out loud",
+      "I keep forgetting my speech",
+      "practice a speech in parts",
+      "memorize lines for class",
+      "speech practice without notes",
+      "help memorizing what I have to say"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Estimating your grade",
+    "desc": "To estimate a grade, list each graded item, its score, and its weight, then add the weighted pieces. If you don't have weights, use the syllabus or ask the teacher. A grade calculator or a simple spreadsheet can help, but the syllabus is the source of truth.",
+    "prompts": [
+      "how do i estimate my grade",
+      "what is my grade right now",
+      "weighted grades",
+      "grade calculator",
+      "syllabus grade weights",
+      "am I failing this class",
+      "how to figure out my average",
+      "estimating a report card grade"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "When you don't understand the homework",
+    "desc": "If you don't understand the homework, try the directions and one example from class first, then try a short official explanation or your notes. Write down exactly where you got stuck and ask the teacher, a tutor or a classmate that specific question. Don't copy a finished answer just to be done.",
+    "prompts": [
+      "i don't understand the homework",
+      "homework doesn't make sense",
+      "I'm stuck on the assignment",
+      "how to ask for homework help",
+      "I don't know where to start on homework",
+      "get help without copying",
+      "confused about tonight's homework",
+      "what to do if I can't do the homework"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Citing a website",
+    "desc": "To cite a website, you usually need the author if there is one, the title, the site name, the date you accessed it, and the URL, in the style your teacher asked for, such as MLA or APA. If no author is listed, start with the title. When you're unsure, cite it anyway.",
+    "prompts": [
+      "how do i cite a website",
+      "citing a webpage in mla",
+      "website citation in apa",
+      "no author on a website",
+      "what do I need to cite a site",
+      "url in a citation",
+      "cite an article I found online",
+      "how to cite a source from the internet"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Talking to a school counselor",
+    "desc": "A school counselor can help with classes, college or job plans, and also with stress or problems at school. You can ask a teacher or the office how to make an appointment, and you can say as much or as little as you want at first. If you're in danger or thinking of being unsafe, tell them clearly so they can help you get support.",
+    "prompts": [
+      "how do i talk to a school counselor",
+      "should I see the counselor",
+      "making an appointment with the counselor",
+      "what do counselors help with",
+      "I'm nervous to talk to the counselor",
+      "counselor for classes or stress",
+      "can I talk to a counselor about a problem",
+      "going to guidance"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Choosing electives",
+    "desc": "Choose electives based on what you're curious about, what you might need later, and a realistic workload, not only what friends pick. Read the course description, ask a student who already took it, and leave a little room in your schedule so you aren't overloaded. You can often change it early if it's a poor fit.",
+    "prompts": [
+      "how do i choose electives",
+      "what elective should I take",
+      "picking classes for next year",
+      "electives with friends versus what I like",
+      "course description for an elective",
+      "elective workload",
+      "help choosing an elective",
+      "I don't know what elective to pick"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Organizing a backpack",
+    "desc": "Keep only what you need for the day in your backpack: binder or folders, a writing kit, charger, water and lunch if you bring it. Use the same pockets every time so keys and earbuds have a home. Empty crumbs and old papers once a week so the bag stays lighter.",
+    "prompts": [
+      "how do i organize a backpack",
+      "my backpack is a mess",
+      "what should I keep in my backpack",
+      "backpack pockets",
+      "backpack too heavy",
+      "weekly backpack cleanup",
+      "where to put chargers and keys",
+      "school bag organization"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Waking up on time",
+    "desc": "Put the alarm across the room so you have to stand up, set it for a time you can actually live with, and start winding down at a consistent hour. Lay out clothes and pack the bag the night before so morning is shorter. If you still can't get up, talk with a parent or a doctor; it isn't always just willpower.",
+    "prompts": [
+      "how do i wake up on time",
+      "I keep sleeping through my alarm",
+      "can't get out of bed",
+      "alarm across the room",
+      "morning routine to wake up",
+      "I stay up too late to wake up",
+      "tips for waking up",
+      "oversleeping for school"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Packing a lunch",
+    "desc": "A simple lunch is a main, a fruit or vegetable, and a drink, packed in containers that won't leak. Make it the night before if mornings are rushed, and include an ice pack if anything needs to stay cold. Leftovers and a sandwich are both fine; it doesn't have to look fancy.",
+    "prompts": [
+      "how do i pack a lunch",
+      "easy school lunch",
+      "what to pack for lunch",
+      "lunch the night before",
+      "lunchbox ideas",
+      "pack a sandwich and a snack",
+      "lunch that doesn't need a microwave",
+      "simple packed lunch"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Morning routine",
+    "desc": "A useful morning routine is short and repeatable: get up, wash up, get dressed, eat something, grab the bag you packed, and leave with a little time to spare. Put the things you always forget by the door. You don't need a perfect aesthetic routine for it to work.",
+    "prompts": [
+      "how do i make a morning routine",
+      "better mornings",
+      "I always leave late",
+      "morning routine for school",
+      "what to do when I wake up",
+      "simple morning routine",
+      "mornings feel chaotic",
+      "routine before I leave the house"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Evening routine",
+    "desc": "An evening routine can be packing the bag, setting out clothes, plugging in devices, washing up, and putting the phone away so you can sleep. Start it at a regular time, even if it's only 20 minutes. The goal is a calmer morning and enough sleep, not a perfect schedule.",
+    "prompts": [
+      "how do i make an evening routine",
+      "night routine for school",
+      "what to do before bed",
+      "pack my bag at night",
+      "evening routine to sleep better",
+      "I waste the whole night",
+      "wind down at night",
+      "simple nighttime routine"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Cleaning your room",
+    "desc": "Clean a room in passes, not all at once: trash first, then dishes and dishes-like cups, then clothes into hamper or put-away, then surfaces, then the floor. Set a timer for 15 minutes if the mess feels huge. Done-enough is better than waiting to do it perfectly.",
+    "prompts": [
+      "how do i clean my room",
+      "my room is a mess",
+      "where to start cleaning a bedroom",
+      "15 minute room clean",
+      "clothes all over the floor",
+      "clean a messy room fast",
+      "cleaning my room feels impossible",
+      "simple way to tidy a room"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Taking out the trash",
+    "desc": "Tie or close the bag, carry it so it doesn't tear, and put it where your home actually collects trash, on the right night if you have pickup. Replace the liner if you have one, and wash your hands after. If a bag is leaking, double-bag it.",
+    "prompts": [
+      "how do i take out the trash",
+      "when is trash night",
+      "the bag is leaking",
+      "taking garbage outside",
+      "replace the trash bag",
+      "trash smells what do I do",
+      "taking out the trash chore",
+      "where does the trash go"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Setting the table",
+    "desc": "A simple table setting is a plate, fork on the left, knife and spoon on the right with the knife blade toward the plate, and a drink above the knife. Add a napkin under the forks or to the side. For a casual meal at home, getting a plate, utensil and drink for each person is enough.",
+    "prompts": [
+      "how do i set the table",
+      "where do the fork and knife go",
+      "simple table setting",
+      "setting the table for dinner",
+      "which side is the fork",
+      "napkin placement",
+      "casual table setting",
+      "help setting the table"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Walking a dog",
+    "desc": "Use a secure leash, bring bags to clean up, and walk at a pace the dog can handle in the weather. Keep the dog away from traffic, and ask before you let it greet another dog or person. Bring water on a longer or hot walk, and don't leave a dog locked in a hot car.",
+    "prompts": [
+      "how should i walk a dog",
+      "dog walking tips",
+      "leash and poop bags",
+      "dog pulling on the leash",
+      "can I let the dog say hi",
+      "walking a dog in the heat",
+      "dog walking safety",
+      "taking the dog for a walk"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Remembering your keys",
+    "desc": "Give your keys a home, like a hook or a dish by the door, and put them there every time you walk in. Check for keys, phone and wallet as a set before you lock the door. A small tile or label on the keyring can help if they still go missing.",
+    "prompts": [
+      "i always lose my keys",
+      "how to remember my keys",
+      "key hook by the door",
+      "keys phone wallet check",
+      "where should I put my keys",
+      "I locked my keys somewhere",
+      "habit for not losing keys",
+      "key bowl idea"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "If you get locked out",
+    "desc": "If you're locked out, first check other doors and whether anyone you trust is home or nearby. Call a parent, roommate or the building office before you try to force a door or window, which can be unsafe or count as breaking in. Wait in a public, well-lit place if you can, and don't share that the house is empty with strangers.",
+    "prompts": [
+      "i'm locked out",
+      "locked out of the house",
+      "what to do if I forgot my keys",
+      "locked out who do I call",
+      "should I climb in a window",
+      "locked out of my apartment",
+      "waiting when I'm locked out",
+      "I left my keys inside"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Ordering at a counter",
+    "desc": "When you order at a counter, know what you want or ask a short question, then say the item clearly, including size or any change you need. Have your payment ready, check the order if they repeat it, and step aside if you need time. “Please” and “thank you” go a long way.",
+    "prompts": [
+      "how do i order at a counter",
+      "ordering food at the register",
+      "I get nervous ordering",
+      "what to say when I order",
+      "counter service tips",
+      "ordering at a cafe",
+      "they asked what I want and I froze",
+      "how to order politely"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using self-checkout",
+    "desc": "At self-checkout, scan each item so it lands in the bagging area, enter a produce code or use the scale when the screen asks, and follow the prompts to pay. If something won't scan or you have an age-restricted item, wait for the attendant instead of guessing. Don't take unpaid items.",
+    "prompts": [
+      "how do i use self checkout",
+      "self checkout is confusing",
+      "scan an item at self checkout",
+      "produce code at self checkout",
+      "self checkout keeps yelling at me",
+      "pay at self checkout",
+      "when to call the attendant",
+      "self checkout tips"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Being a good guest",
+    "desc": "As a guest, be on time, greet the hosts, follow the house rules, and clean up after yourself. Don't go through private rooms or the fridge without asking, and say thank you when you leave. A short thank-you text later is a nice extra, not a requirement.",
+    "prompts": [
+      "how to be a good guest",
+      "going to a friend's house etiquette",
+      "what not to do as a guest",
+      "house rules as a guest",
+      "thank the host",
+      "first time at someone's house",
+      "being polite when I visit",
+      "good guest behavior"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "When plans get canceled",
+    "desc": "If plans get canceled, a short “thanks for letting me know, let's find another time” is enough, even if you're disappointed. You can say you're bummered and still be civil. If you're the one canceling, tell them as soon as you know and offer another day when you can.",
+    "prompts": [
+      "plans got canceled",
+      "friend canceled last minute",
+      "what to say when plans fall through",
+      "I'm disappointed plans canceled",
+      "how to cancel plans politely",
+      "reschedule after a cancel",
+      "canceled hangout",
+      "they flaked what do I say"
+    ],
+    "code": "",
+    "answer": ""
+  }
+]
