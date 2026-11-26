@@ -47,7 +47,7 @@ export function chatsSizeMB(chats) {
 
 export function ramInfo(gpu) {
   const r = { deviceGB: null, heapLimitMB: null, heapUsedMB: null, gpuMaxBufferMB: null, tabBudgetMB: null, exact: false, notes: [] };
-  if (navigator.deviceMemory) { r.deviceGB = navigator.deviceMemory; r.notes.push('Device RAM is rounded by the browser (Chrome reports at most 8 GB).'); }
+  if (navigator.deviceMemory) { r.deviceGB = navigator.deviceMemory; r.notes.push('Device RAM is rounded by the browser for privacy, so treat it as approximate.'); }
   if (performance && performance.memory) { r.heapLimitMB = performance.memory.jsHeapSizeLimit / MB; r.heapUsedMB = performance.memory.usedJSHeapSize / MB; }
   if (gpu && gpu.ok && gpu.maxBufferMB) r.gpuMaxBufferMB = gpu.maxBufferMB;
   if (isIOS) {
