@@ -63,6 +63,7 @@ function sanitizeMsg(m) {
   const text = String(m.text || m.content || m.q || '').slice(0, 8000);
   if (!text && !m.title && !m.code) return null;
   const out = { role, text };
+  if (Array.isArray(m.choices)) out.choices=m.choices.filter(x=>typeof x==='string').slice(0,3);
   if (m.title) out.title = String(m.title).slice(0, 160);
   if (m.note) out.note = String(m.note).slice(0, 2000);
   if (m.code) out.code = String(m.code).slice(0, 8000);
@@ -183,6 +184,7 @@ function mountMessage(msg) {
       }
     }
     mountSources(card, msg.sources);
+    if (msg.choices && model) topicChoices(card,msg.choices.map(title => model.topics.find(t=>t.title===title)).filter(Boolean));
   }
   historyBox.append(card);
   return card;
@@ -642,6 +644,8 @@ function showCanned(i, q, note, opts) {
   const msg = { role: 'assistant', text: '' };
   if (i < 0) {
     msg.text = 'I haven’t learned a reliable answer to that yet. Try a question from the topic menu, or turn on on-device AI in Settings.';
+    if (opts?.choices?.length) msg.choices = opts.choices.map(t => t.title);
+    if (opts?.choices?.length) msg.text = 'Which of these topics did you mean?';
     if (note) msg.note = note;
     const card = mountMessage(msg);
     persistMessage(msg);
@@ -650,9 +654,10 @@ function showCanned(i, q, note, opts) {
   }
   const t = model.topics[i];
   msg.title = t.title;
-  msg.text = t.desc;
+  if (opts?.choices?.length) msg.choices = opts.choices.map(t => t.title);
+  msg.text = opts?.reply || t.desc;
   if (note) msg.note = note;
-  if (t.code) { msg.code = t.code; msg.output = t.answer; }
+  if (t.code && !opts?.reply) { msg.code = t.code; msg.output = t.answer; }
   const card = mountMessage(msg);
   persistMessage(msg);
   afterMessage(true);
@@ -1051,9 +1056,38 @@ async function generateReply(q) {
   }
 }
 
+function topicChoices(card, topics) {
+  for (const topic of topics) {
+    const button = add(card, 'button', topic.title);
+    button.type = 'button';
+    button.onclick = () => showCanned(model.topics.indexOf(topic), topic.title);
+  }
+}
+
+function resolveBuiltIn(q) {
+  const messages = currentChat()?.messages || [];
+  const previous = [...messages].reverse().find(m => m.role === 'assistant');
+  const prior = previous?.title ? model.topics.find(t => t.title === previous.title) : null;
+  const short = /^(?:shorter|simpler|short version|in short|in simple terms|summarize (?:that|it)|make (?:it|that) (?:shorter|simpler))[.!? ]*$/i.test(q);
+  const follow = /^(?:why|how so|tell me more|explain more|give me an example|example|how does (?:it|that) work)[.!? ]*$/i.test(q);
+  const query = prior && follow ? prior.title + ' ' + q : q;
+  const index = prior && (short || follow) ? model.topics.indexOf(prior) : classify(q);
+  const topic = model.topics[index];
+  if (topic && topic === prior && short) {
+    const first = topic.desc.match(/^.*?[.!?](?=\s|$)/)?.[0] || topic.desc;
+    if (first !== previous.text) return {index, text:first};
+  }
+  if (topic && topic === prior && (previous.text === topic.desc || follow || short)) {
+    const choices = retrieve(query,5).filter(t => t !== topic).slice(0,3);
+    return {index, text:choices.length ? 'Which part do you want to explore? Pick a related topic below, or ask a more specific question.' : 'What part would you like explained differently?', choices};
+  }
+  return {index, choices:index < 0 ? retrieve(q,3) : []};
+}
+
 async function showCannedWithSearch(q, note, opts) {
-  const i = q ? classify(q) : -1;
-  const card = showCanned(i, q, note, opts);
+  const match = resolveBuiltIn(q);
+  const i = match.index;
+  const card = showCanned(i, q, note, {...opts, reply:match.text, choices:match.choices});
   if (!q || settings.search === false) return card;
   if (!(shouldAutoSearch(q) || i < 0)) return card;
   try {
