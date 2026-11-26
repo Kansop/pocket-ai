@@ -262,8 +262,13 @@ def write_page(topics: list[dict], version: str) -> None:
     page = (
         prefix
         + render_details(topics)
-        + "</section><form id=\"chat\" hidden><input id=\"q\" maxlength=\"600\" enterkeyhint=\"send\" "
+        + "</section><form id=\"chat\" hidden>"
+        "<div id=\"photoBar\" hidden><img id=\"photoImg\" alt=\"Attached photo\">"
+        "<button type=\"button\" id=\"photoClear\">Remove photo</button></div>"
+        "<input id=\"q\" maxlength=\"600\" enterkeyhint=\"send\" "
         "aria-label=\"Your question\" placeholder=\"Message Pocket Assistant…\">"
+        "<input id=\"photo\" type=\"file\" accept=\"image/*\" hidden>"
+        "<button type=\"button\" id=\"photoBtn\">Photo</button>"
         "<button type=\"submit\">Send</button></form></main>\n"
         f'<script type="module" src="app.js?v={version}"></script></html>\n'
     )

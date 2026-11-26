@@ -1,4 +1,4 @@
-const BUILD = '1.6.1';
+const BUILD = '1.6.2';
 const MODEL_URL = 'model.json?v=' + BUILD;
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const STORE = 'pocket-assistant-winter';
@@ -29,6 +29,7 @@ let model, stop = new Set(), gpu = null, webllm = null, engine = null, worker = 
 let loadedKey = null, loadingPromise = null, generating = false, readyAI = false;
 let settings = loadSettings();
 const chatTurns = [];
+let pendingPhoto = null;
 
 const $ = (id) => document.getElementById(id);
 const menu = document.querySelector('#menu');
@@ -344,6 +345,102 @@ function notesFromTopics(topics) {
     topics.map(t => `### ${t.title}\n${t.desc}${t.code ? '\nExample:\n' + t.code + (t.answer ? '\nOutput: ' + t.answer : '') : ''}`).join('\n\n');
 }
 
+
+const VISION = {
+  key: 'phi-vision',
+  name: 'Phi-3.5 Vision',
+  f16: 'Phi-3.5-vision-instruct-q4f16_1-MLC',
+  f32: 'Phi-3.5-vision-instruct-q4f32_1-MLC',
+  download: '~2.5 GB',
+};
+
+function bindPhoto() {
+  const file = $('photo');
+  const btn = $('photoBtn');
+  const bar = $('photoBar');
+  const img = $('photoImg');
+  const clear = $('photoClear');
+  if (!file || !btn) return;
+  btn.onclick = () => file.click();
+  clear.onclick = () => { pendingPhoto = null; file.value = ''; bar.hidden = true; img.removeAttribute('src'); };
+  file.onchange = async () => {
+    const f = file.files && file.files[0];
+    if (!f) return;
+    try { pendingPhoto = await shrinkImage(f); img.src = pendingPhoto; bar.hidden = false; }
+    catch { pendingPhoto = null; bar.hidden = true; }
+  };
+}
+
+function shrinkImage(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error('read'));
+    reader.onload = () => {
+      const im = new Image();
+      im.onload = () => {
+        const max = 768;
+        let w = im.width, h = im.height;
+        if (w > max || h > max) {
+          const scale = max / Math.max(w, h);
+          w = Math.round(w * scale); h = Math.round(h * scale);
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(im, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', 0.85));
+      };
+      im.onerror = () => reject(new Error('image'));
+      im.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+async function ensureVision() {
+  if (loadedKey === 'phi-vision' && engine) return true;
+  if (!gpu || !gpu.ok) return false;
+  const previous = loadedKey;
+  try {
+    setStatus('Loading Phi-3.5 Vision so I can look at your photo. It needs a lot of memory and may not fit on iPhone.');
+    await loadEngineVision();
+    return true;
+  } catch (e) {
+    setStatus('I couldn’t load the vision model on this device (' + friendlyError(e) + '). I’ll answer from your text only.');
+    if (previous && MODELS[previous]) {
+      try { await loadEngine(previous, { fallback: previous === 'qwen-3b' }); } catch {}
+    }
+    return false;
+  }
+}
+
+async function loadEngineVision() {
+  const m = VISION;
+  if (!gpu || !gpu.ok) throw new Error('WebGPU is not available in this browser.');
+  if (loadingPromise) await loadingPromise.catch(() => {});
+  loadingPromise = (async () => {
+    readyAI = false;
+    showProgress(true, `Starting ${m.name}…`, 0, `This is a large download (${m.download}) and uses a lot of memory. Keep this tab open.`);
+    const lib = await getWebLLM();
+    const id = modelIdFor(m);
+    const cb = (r) => {
+      const cached = /cache/i.test(r.text || '') && !/fetch/i.test(r.text || '');
+      showProgress(true, prettyProgress(r, m), r.progress || 0, cached
+        ? 'Already downloaded, loading into memory…'
+        : `Downloads ${m.download} once. This may not fit in iPhone memory.`);
+    };
+    if (engine) { try { await engine.unload(); } catch {} resetEngine(); }
+    worker = new Worker(new URL('./worker.js?v=' + BUILD, import.meta.url), { type: 'module' });
+    engine = await lib.CreateWebWorkerMLCEngine(worker, id, { initProgressCallback: cb }, { context_window_size: 4096 });
+    loadedKey = m.key;
+    readyAI = true;
+    showProgress(false);
+    setStatus(m.name + ' is ready for this photo. You can switch back to Qwen in Settings after.');
+    return engine;
+  })();
+  try { return await loadingPromise; }
+  finally { loadingPromise = null; }
+}
+
 async function generateReply(q) {
   const topics = retrieve(q, 3);
   let extra = notesFromTopics(topics);
@@ -353,10 +450,23 @@ async function generateReply(q) {
     try { found = await webSearch(q); } catch { found = null; }
     if (found && found.results && found.results.length) extra = (extra ? extra + '\n\n' : '') + resultsToPrompt(found);
   }
-  const messages = [{ role: 'system', content: systemPrompt(extra) }];
   const hist = chatTurns.slice(-6);
+  const photo = pendingPhoto;
+  let userContent = q;
+  if (photo) {
+    const canSee = await ensureVision();
+    if (canSee) {
+      userContent = [
+        { type: 'image_url', image_url: { url: photo } },
+        { type: 'text', text: q || 'What is in this photo? Describe it clearly in plain sentences.' },
+      ];
+    } else {
+      extra = (extra ? extra + '\n\n' : '') + 'The user attached a photo, but a vision model could not be loaded on this device. Answer the text question only and say you cannot see the photo.';
+    }
+  }
+  const messages = [{ role: 'system', content: systemPrompt(extra) }];
   for (const turn of hist) messages.push(turn);
-  messages.push({ role: 'user', content: q });
+  messages.push({ role: 'user', content: userContent });
   const card = document.createElement('article');
   historyBox.append(card);
   add(card, 'small', q);
@@ -406,18 +516,24 @@ async function generateReply(q) {
     }
   } finally {
     generating = false;
+    if (photo) {
+      pendingPhoto = null;
+      const file = $('photo'); if (file) file.value = '';
+      const bar = $('photoBar'); if (bar) bar.hidden = true;
+      const img = $('photoImg'); if (img) img.removeAttribute('src');
+    }
   }
 }
 
 async function handleQuestion(q) {
   q = (q || '').trim();
-  if (!q) {
-    add(historyBox, 'p', 'Type a question in the box first.');
+  if (!q && !pendingPhoto) {
+    add(historyBox, 'p', 'Type a question in the box first, or add a photo.');
     field.focus();
     return;
   }
   if (generating) return;
-  if (readyAI && engine) await generateReply(q);
+  if ((readyAI && engine) || pendingPhoto) await generateReply(q || 'What is in this photo?');
   else {
     const note = loadingPromise
       ? 'The AI is still downloading — here’s a quick answer in the meantime.'
@@ -498,6 +614,7 @@ function initChrome() {
     window.scrollTo(0, 0);
   };
   bindSettings();
+  bindPhoto();
 const creativeBanks={"name": {"next": {"^": {"Midnight": 2, "Silver": 2, "Neon": 2, "Hidden": 2, "Golden": 2, "Wild": 2, "Blue": 2, "Rapid": 2, "Copper": 2}, "Midnight": {"Runners": 1, "Signal": 1}, "Runners": {"$": 3}, "Signal": {"Crew": 1, "Club": 1, "Studio": 1}, "Crew": {"$": 4}, "Silver": {"Signal": 1, "Comets": 1}, "Club": {"$": 4}, "Comets": {"$": 1}, "Neon": {"Comet": 1, "Drift": 1}, "Comet": {"Crew": 1, "Studio": 1}, "Drift": {"Club": 1, "Lab": 1}, "Hidden": {"Drift": 1, "Echo": 1}, "Lab": {"$": 1}, "Echo": {"Crew": 1, "Works": 1, "Runners": 1}, "Golden": {"Echo": 1, "Circuit": 1}, "Works": {"$": 2}, "Circuit": {"Club": 1, "Runners": 1}, "Wild": {"Circuit": 1, "Moon": 1}, "Moon": {"Studio": 1, "Crew": 1}, "Studio": {"$": 3}, "Blue": {"Moon": 1, "Signal": 1}, "Rapid": {"River": 1, "Echo": 1}, "River": {"Club": 1, "Works": 1}, "Copper": {"River": 1, "Comet": 1}}, "seen": ["Midnight Runners", "Midnight Signal Crew", "Silver Signal Club", "Silver Comets", "Neon Comet Crew", "Neon Drift Club", "Hidden Drift Lab", "Hidden Echo Crew", "Golden Echo Works", "Golden Circuit Club", "Wild Circuit Runners", "Wild Moon Studio", "Blue Moon Crew", "Blue Signal Studio", "Rapid River Club", "Rapid Echo Runners", "Copper River Works", "Copper Comet Studio"]}, "story": {"next": {"^": {"The": 6, "Nobody": 2, "Someone": 2, "A": 2}, "The": {"lights": 2, "clock": 2, "door": 2}, "lights": {"flickered": 2}, "flickered": {"just": 2}, "just": {"as": 4}, "as": {"the": 3, "a": 1}, "the": {"last": 4, "wall.": 2, "moment": 2, "scoreboard": 2, "missing": 2, "hidden": 2, "game": 2, "scoreboard.": 1}, "last": {"visitor": 3, "seat.": 1}, "visitor": {"left.": 3}, "left.": {"$": 3}, "a": {"message": 2}, "message": {"appeared": 2}, "appeared": {"on": 2}, "on": {"the": 2}, "wall.": {"$": 2}, "clock": {"stopped": 2}, "stopped": {"the": 1, "just": 1}, "moment": {"a": 1, "the": 1}, "door": {"opened": 2}, "opened": {"the": 1, "just": 1}, "scoreboard": {"went": 2}, "went": {"dark.": 2}, "dark.": {"$": 2}, "Nobody": {"noticed": 2}, "noticed": {"the": 2}, "missing": {"key": 2}, "key": {"until": 1, "under": 1}, "until": {"morning.": 1, "the": 1}, "morning.": {"$": 1}, "hidden": {"map": 2}, "map": {"until": 1, "under": 1}, "game": {"began.": 2}, "began.": {"$": 2}, "Someone": {"found": 2}, "found": {"the": 2}, "under": {"the": 2}, "seat.": {"$": 1}, "scoreboard.": {"$": 1}, "A": {"tiny": 2}, "tiny": {"screen": 1, "bell": 1}, "screen": {"blinked": 1}, "blinked": {"twice": 1}, "twice": {"before": 2}, "before": {"the": 2}, "bell": {"rang": 1}, "rang": {"twice": 1}}, "seen": ["The lights flickered just as the last visitor left.", "The lights flickered just as a message appeared on the wall.", "The clock stopped the moment a message appeared on the wall.", "The door opened the moment the last visitor left.", "The door opened just as the scoreboard went dark.", "The clock stopped just as the scoreboard went dark.", "Nobody noticed the missing key until morning.", "Nobody noticed the hidden map until the game began.", "Someone found the missing key under the last seat.", "Someone found the hidden map under the scoreboard.", "A tiny screen blinked twice before the game began.", "A tiny bell rang twice before the last visitor left."]}};
 const interests=document.querySelector('#interest');
 const picks=document.querySelector('#picks');
