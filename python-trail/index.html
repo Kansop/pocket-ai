@@ -506,10 +506,25 @@ window.TrailOnline = (() => {
     app.innerHTML =
       '<div class="lesson chatwrap"><a class="back" href="#friends">‹ Friends</a>' +
       title("Chat", "Loading…") +
-      '<div id="chatmeta"></div><div id="chatlog" class="chatlog" aria-live="polite"></div><form id="chatform" class="chatform"><input id="chattext" maxlength="1000" autocomplete="off" placeholder="Write a message"><button class="btn primary" type="submit">Send</button></form><p class="muted" id="chatstatus"></p></div>';
+      '<div id="chatmeta"><button class="btn" id="chatnotify" type="button">Enable notifications</button></div><div id="chatlog" class="chatlog" aria-live="polite"></div><form id="chatform" class="chatform"><input id="chattext" maxlength="1000" autocomplete="off" placeholder="Write a message"><button class="btn primary" type="submit">Send</button></form><p class="muted" id="chatstatus"></p></div>';
     const log = document.querySelector("#chatlog");
     const status = document.querySelector("#chatstatus");
-    let after = 0;
+    let after = 0, loaded = false, sending = false;
+    const seen = new Set();
+    const notify = document.querySelector("#chatnotify");
+    notify.onclick = async () => {
+      try { if (!("Notification" in window)) throw Error(); const p = await Notification.requestPermission(); notify.textContent = p === "granted" ? "Notifications enabled" : "Notifications unavailable"; } catch { notify.textContent = "In-app alerts enabled"; }
+    };
+    const append = (m, alert) => {
+      if (seen.has(m.id)) return;
+      seen.add(m.id);
+      log.insertAdjacentHTML("beforeend", bubble(m));
+      log.scrollTop = log.scrollHeight;
+      if (alert && me() && m.from !== me().username) {
+        status.textContent = "New message from " + m.from;
+        try { if (document.hidden && "Notification" in window && Notification.permission === "granted") new Notification("Python Trail", {body:"New message from " + m.from}); } catch {}
+      }
+    };
     const paintFriend = (friend) => {
       const head = document.querySelector(".chatwrap .title");
       if (head && friend) {
@@ -531,38 +546,40 @@ window.TrailOnline = (() => {
       if (location.hash !== "#chat/" + encodeURIComponent(username) && location.hash !== "#chat/" + username) return;
       try {
         const data = await api("/chats/" + encodeURIComponent(username) + "?after=" + after);
+        if (!log.isConnected) return;
         paintFriend(data.friend);
         for (const m of data.messages || []) {
-          log.insertAdjacentHTML("beforeend", bubble(m));
+          append(m, loaded);
           after = Math.max(after, m.id);
-          log.scrollTop = log.scrollHeight;
         }
+        loaded = true;
         if (status && status.textContent === "Connecting…") status.textContent = "";
       } catch (err) {
         if (status) status.textContent = err.message || "Chat is unavailable.";
       }
-      later(pull, 2500);
+      if (log.isConnected) later(pull, 750);
     };
     document.querySelector("#chatform").addEventListener("submit", async (e) => {
       e.preventDefault();
       const input = document.querySelector("#chattext");
       const text = input.value;
-      if (!text.trim()) return;
+      if (!text.trim() || sending) return;
+      sending = true;
       input.value = "";
+      status.textContent = "Sending…";
       try {
         const data = await api("/chats/" + encodeURIComponent(username), {
           method: "POST",
           body: { text },
         });
         if (data.message) {
-          log.insertAdjacentHTML("beforeend", bubble(data.message));
-          after = Math.max(after, data.message.id);
-          log.scrollTop = log.scrollHeight;
+          append(data.message, false);
+          status.textContent = "Sent";
         }
       } catch (err) {
-        input.value = text;
+        if (!input.value) input.value = text;
         if (status) status.textContent = err.message || "Could not send.";
-      }
+      } finally { sending = false; }
     });
     status.textContent = "Connecting…";
     pull();
@@ -587,7 +604,7 @@ window.TrailOnline = (() => {
   return { onRender, syncProgress, setCurrentLesson, signedIn, startHeartbeat };
 })();
 </script>
-<script>const TRAIL_VERSION = "1.6.1";
+<script>const TRAIL_VERSION = "1.6.2";
 const paths = {
   home: "M3 10l9-7 9 7v10h-6v-6H9v6H3z",
   route: "M5 4v10a4 4 0 004 4h8m-2-3 3 3-3 3M12 5h8m-8 4h6",
