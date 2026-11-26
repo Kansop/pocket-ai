@@ -1,7 +1,9 @@
-const BUILD = '1.6.7';
+const BUILD = '1.6.8';
 const MODEL_URL = 'model.json?v=' + BUILD;
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
-const STORE = 'pocket-assistant-winter';
+const STORE = 'pocket-assistant-winter-v2';
+const STORE_OLD = 'pocket-assistant-winter';
+const SETTINGS_VER = 2;
 const MODELS = {
   'qwen-3b': {
     key: 'qwen-3b',
@@ -37,12 +39,54 @@ const historyBox = document.querySelector('#history');
 const field = document.querySelector('#q');
 
 function loadSettings() {
-  const base = { name: 'Luca', style: 'normal', model: 'qwen-3b', search: true };
-  try { return Object.assign(base, JSON.parse(localStorage.getItem(STORE) || '{}')); }
-  catch { return base; }
+  const base = { name: 'Luca', style: 'normal', model: 'qwen-1.5b', search: true, onDeviceAI: false, photoAI: false, ver: SETTINGS_VER };
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(STORE) || 'null') || {}; }
+  catch { saved = {}; }
+  if (!saved.ver) {
+    try { saved = Object.assign({}, JSON.parse(localStorage.getItem(STORE_OLD) || '{}'), saved); }
+    catch {}
+  }
+  if (saved.ver !== SETTINGS_VER) {
+    return Object.assign({}, base, {
+      name: saved.name || base.name,
+      style: saved.style || base.style,
+      search: saved.search !== false,
+      model: 'qwen-1.5b',
+      onDeviceAI: false,
+      photoAI: false,
+      ver: SETTINGS_VER,
+    });
+  }
+  return Object.assign({}, base, saved, {
+    onDeviceAI: !!saved.onDeviceAI,
+    photoAI: !!saved.photoAI,
+    model: saved.model === 'qwen-3b' || saved.model === 'qwen-1.5b' ? saved.model : 'qwen-1.5b',
+    ver: SETTINGS_VER,
+  });
 }
 function saveSettings() {
-  localStorage.setItem(STORE, JSON.stringify({ name: settings.name, style: settings.style, model: settings.model, search: !!settings.search }));
+  localStorage.setItem(STORE, JSON.stringify({
+    name: settings.name,
+    style: settings.style,
+    model: settings.model,
+    search: !!settings.search,
+    onDeviceAI: !!settings.onDeviceAI,
+    photoAI: !!settings.photoAI,
+    ver: SETTINGS_VER,
+  }));
+}
+function setOnDeviceAI(on) {
+  settings.onDeviceAI = !!on;
+  saveSettings();
+  const box = $('onDeviceAI');
+  if (box) box.checked = settings.onDeviceAI;
+}
+function setPhotoAI(on) {
+  settings.photoAI = !!on;
+  saveSettings();
+  const box = $('photoAI');
+  if (box) box.checked = settings.photoAI;
 }
 
 function decodeMatrices(raw) {
@@ -118,7 +162,7 @@ function showCanned(i, q, note) {
   historyBox.append(card);
   if (q) add(card, 'small', q);
   if (i < 0) {
-    add(card, 'p', 'I haven’t learned a reliable answer to that yet. Try a question from the topic menu, or wait until the AI finishes loading.');
+    add(card, 'p', 'I haven’t learned a reliable answer to that yet. Try a question from the topic menu, or turn on on-device AI in Settings.');
     return card;
   }
   const t = model.topics[i];
@@ -252,7 +296,7 @@ function resetEngine() {
 }
 
 async function loadEngine(key, { fallback = true } = {}) {
-  const m = MODELS[key] || MODELS['qwen-3b'];
+  const m = MODELS[key] || MODELS['qwen-1.5b'];
   if (!gpu || !gpu.ok) throw new Error('WebGPU is not available in this browser.');
   if (engine && loadedKey === m.key && !loadingPromise) return engine;
   if (loadingPromise) {
@@ -295,16 +339,8 @@ async function loadEngine(key, { fallback = true } = {}) {
   } catch (e) {
     showProgress(false);
     resetEngine();
-    if (fallback && m.key === 'qwen-3b' && isOom(e)) {
-      settings.model = 'qwen-1.5b';
-      saveSettings();
-      $('modelPick').value = 'qwen-1.5b';
-      sessionStorage.setItem(STORE + '.oom3b', '1');
-      setStatus('Qwen2.5 3B needed more memory than Safari allowed, so I switched to Qwen2.5 1.5B. You can try 3B again in Settings.');
-      loadingPromise = null;
-      return loadEngine('qwen-1.5b', { fallback: false });
-    }
-    setStatus(friendlyError(e) + ' Quick answers still work.');
+    setOnDeviceAI(false);
+    setStatus(friendlyError(e) + ' I turned on-device AI off so Safari doesn’t keep crashing. Built-in answers and web search still work.');
     throw e;
   } finally {
     loadingPromise = null;
@@ -351,7 +387,7 @@ const VISION = {
   name: 'Phi-3.5 Vision',
   f16: 'Phi-3.5-vision-instruct-q4f16_1-MLC',
   f32: 'Phi-3.5-vision-instruct-q4f32_1-MLC',
-  download: '~2.5 GB',
+  download: '~4.5 GB',
 };
 
 function bindPhoto() {
@@ -397,18 +433,25 @@ function shrinkImage(file) {
 }
 
 async function ensureVision() {
+  if (!settings.photoAI) return false;
   if (loadedKey === 'phi-vision' && engine) return true;
-  if (!gpu || !gpu.ok) return false;
-  const previous = loadedKey;
+  if (!gpu || !gpu.ok) {
+    setStatus('Photo AI needs WebGPU, which this browser doesn’t have. I’ll answer from your text only.');
+    return false;
+  }
+  const ok = confirm('Download Photo AI (Phi-3.5 Vision, about 4.5 GB) to look at this photo? This is meant for Mac and may crash Safari on iPhone.');
+  if (!ok) {
+    setStatus('Photo AI download canceled. I’ll answer from your text only.');
+    return false;
+  }
   try {
     setStatus('Loading Phi-3.5 Vision so I can look at your photo. It needs a lot of memory and may not fit on iPhone.');
     await loadEngineVision();
     return true;
   } catch (e) {
-    setStatus('I couldn’t load the vision model on this device (' + friendlyError(e) + '). I’ll answer from your text only.');
-    if (previous && MODELS[previous]) {
-      try { await loadEngine(previous, { fallback: previous === 'qwen-3b' }); } catch {}
-    }
+    resetEngine();
+    setPhotoAI(false);
+    setStatus('I couldn’t load Photo AI (' + friendlyError(e) + '). I turned it off. I’ll answer from your text only.');
     return false;
   }
 }
@@ -476,6 +519,12 @@ async function generateReply(q) {
   let text = '';
   try {
     const en = engine;
+    if (!en) {
+      p.remove();
+      card.remove();
+      await showCannedWithSearch(q, photo ? 'I can’t look at the photo without Photo AI. Here’s a built-in answer to your text.' : null);
+      return;
+    }
     const stream = await en.chat.completions.create({
       messages,
       stream: true,
@@ -525,6 +574,36 @@ async function generateReply(q) {
   }
 }
 
+async function showCannedWithSearch(q, note) {
+  const i = q ? classify(q) : -1;
+  const card = showCanned(i, q, note);
+  if (!q || settings.search === false) return card;
+  if (!(shouldAutoSearch(q) || i < 0)) return card;
+  try {
+    const found = await webSearch(q);
+    if (found && found.results && found.results.length) {
+      if (i < 0) {
+        const p = card.querySelector('p');
+        if (p) p.textContent = 'I don’t have a built-in answer, but here’s what I found on the web:';
+      }
+      const sn = document.createElement('p');
+      sn.textContent = found.results[0].snippet.slice(0, 400);
+      card.append(sn);
+      const src = document.createElement('p');
+      src.append('Sources: ');
+      found.results.forEach((r, n) => {
+        if (n) src.append(' · ');
+        const a = document.createElement('a');
+        a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+        a.textContent = r.title.replace(/ \(Wikipedia\)$/, '');
+        src.append(a);
+      });
+      card.append(src);
+    }
+  } catch {}
+  return card;
+}
+
 async function handleQuestion(q) {
   q = (q || '').trim();
   if (!q && !pendingPhoto) {
@@ -533,12 +612,31 @@ async function handleQuestion(q) {
     return;
   }
   if (generating) return;
-  if ((readyAI && engine) || pendingPhoto) await generateReply(q || 'What is in this photo?');
-  else {
-    const note = loadingPromise
-      ? 'The AI is still downloading — here’s a quick answer in the meantime.'
-      : null;
-    showCanned(classify(q), q, note);
+  const wantVision = !!(pendingPhoto && settings.photoAI);
+  const wantTextAI = !!settings.onDeviceAI;
+  if (wantVision || wantTextAI) {
+    if (wantTextAI && !wantVision && (!readyAI || !engine || loadedKey === 'phi-vision')) {
+      try { await loadEngine(settings.model || 'qwen-1.5b', { fallback: false }); }
+      catch {
+        await showCannedWithSearch(q, 'The on-device AI couldn’t load, so here’s a built-in answer.');
+        field.value = '';
+        field.blur();
+        historyBox.lastElementChild?.scrollIntoView({ block: 'nearest' });
+        return;
+      }
+    }
+    if (wantVision || (readyAI && engine)) await generateReply(q || 'What is in this photo?');
+    else await showCannedWithSearch(q);
+  } else {
+    await showCannedWithSearch(q, pendingPhoto
+      ? 'Photo AI is off in Settings, so I can’t look at the picture. Turn on “Photo AI – Mac (4.5 GB)” if you want me to try (it can crash Safari on iPhone).'
+      : (loadingPromise ? 'The AI is still downloading — here’s a quick answer in the meantime.' : null));
+    if (pendingPhoto) {
+      pendingPhoto = null;
+      const file = $('photo'); if (file) file.value = '';
+      const bar = $('photoBar'); if (bar) bar.hidden = true;
+      const img = $('photoImg'); if (img) img.removeAttribute('src');
+    }
   }
   field.value = '';
   field.blur();
@@ -553,7 +651,9 @@ function greet() {
 function bindSettings() {
   $('userName').value = settings.name || '';
   $('replyStyle').value = settings.style || 'normal';
-  $('modelPick').value = settings.model || 'qwen-3b';
+  $('modelPick').value = settings.model || 'qwen-1.5b';
+  if ($('onDeviceAI')) $('onDeviceAI').checked = !!settings.onDeviceAI;
+  if ($('photoAI')) $('photoAI').checked = !!settings.photoAI;
   if ($('webSearch')) $('webSearch').checked = settings.search !== false;
   $('settings').hidden = false;
   $('userName').onchange = $('userName').onblur = () => {
@@ -563,14 +663,52 @@ function bindSettings() {
   };
   $('replyStyle').onchange = () => { settings.style = $('replyStyle').value; saveSettings(); };
   if ($('webSearch')) $('webSearch').onchange = () => { settings.search = $('webSearch').checked; saveSettings(); };
-  $('modelPick').onchange = async () => {
+  if ($('onDeviceAI')) $('onDeviceAI').onchange = () => {
+    if ($('onDeviceAI').checked) {
+      const m = MODELS[settings.model] || MODELS['qwen-1.5b'];
+      const ok = confirm('Turn on on-device AI? ' + m.name + ' (' + m.download + ') will download when you ask a question. It may crash Safari on iPhone. Leave this off to keep using built-in answers and web search.');
+      if (!ok) { $('onDeviceAI').checked = false; return; }
+      setOnDeviceAI(true);
+      setStatus('On-device AI is on (' + m.name + '). It will download when you ask a question, not when you open the app.');
+    } else {
+      setOnDeviceAI(false);
+      if (loadedKey !== 'phi-vision') {
+        resetEngine();
+        showProgress(false);
+      }
+      setStatus('On-device AI is off. Built-in answers and web search still work.');
+    }
+  };
+  if ($('photoAI')) $('photoAI').onchange = () => {
+    if ($('photoAI').checked) {
+      const ok = confirm('Turn on Photo AI – Mac (4.5 GB)? This is a large model meant for Mac and can crash Safari on iPhone. It will only download after you add a photo and confirm.');
+      if (!ok) { $('photoAI').checked = false; return; }
+      setPhotoAI(true);
+      setStatus('Photo AI is on. It will only download when you add a photo and confirm.');
+    } else {
+      setPhotoAI(false);
+      if (loadedKey === 'phi-vision') {
+        resetEngine();
+        showProgress(false);
+      }
+      setStatus('Photo AI is off.');
+    }
+  };
+  $('modelPick').onchange = () => {
     const next = $('modelPick').value;
-    if (next === settings.model && loadedKey === next) return;
+    const prev = settings.model;
+    if (next === prev && loadedKey === next) return;
     settings.model = next;
     saveSettings();
-    if (!gpu || !gpu.ok) return;
-    try { await loadEngine(next, { fallback: next === 'qwen-3b' }); }
-    catch {}
+    if (!settings.onDeviceAI) return;
+    const m = MODELS[next] || MODELS['qwen-1.5b'];
+    const ok = confirm('Use ' + m.name + ' (' + m.download + ')? This may download a new model and can crash Safari on iPhone.');
+    if (!ok) {
+      settings.model = prev;
+      saveSettings();
+      $('modelPick').value = prev;
+      return;
+    }
   };
 }
 
@@ -669,6 +807,8 @@ function refreshPicks(){
   window.__settings = settings;
   window.__webSearch = webSearch;
   window.__shouldAutoSearch = shouldAutoSearch;
+  window.__loadedKey = () => loadedKey;
+  window.__engine = () => engine;
 }
 
 async function boot() {
@@ -686,20 +826,17 @@ async function boot() {
     window.__assistantError = String(err && err.message || err);
     return;
   }
+  saveSettings();
   gpu = await detectGPU();
   if (!gpu.ok) {
-    setStatus('This browser can’t run the on-device AI (it needs WebGPU, which iPhone Safari has on iOS 26+). Quick answers still work.');
+    setStatus('This browser can’t run the on-device AI (it needs WebGPU, which iPhone Safari has on iOS 26+). Built-in answers and web search still work.');
     return;
   }
-  let startKey = settings.model || 'qwen-3b';
-  if (startKey === 'qwen-3b' && sessionStorage.getItem(STORE + '.oom3b') === '1') {
-    startKey = 'qwen-1.5b';
-    settings.model = 'qwen-1.5b';
-    $('modelPick').value = 'qwen-1.5b';
-    setStatus('Last time, Qwen2.5 3B ran out of memory. Loading Qwen2.5 1.5B. You can try 3B again in Settings.');
+  if (settings.onDeviceAI || settings.photoAI) {
+    setStatus('Topics are ready. On-device models will not load until you ask a question or add a photo and confirm, so opening the app will not start a download.');
+  } else {
+    setStatus('Topics are ready. On-device AI and Photo AI are off, so nothing heavy will download when you open the app. Turn them on in Settings if you want — they may crash Safari on iPhone.');
   }
-  try { await loadEngine(startKey, { fallback: startKey === 'qwen-3b' }); }
-  catch {}
 }
 
 boot();
