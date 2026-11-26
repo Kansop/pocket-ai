@@ -587,7 +587,7 @@ window.TrailOnline = (() => {
   return { onRender, syncProgress, setCurrentLesson, signedIn, startHeartbeat };
 })();
 </script>
-<script>const TRAIL_VERSION = "1.6.0";
+<script>const TRAIL_VERSION = "1.6.1";
 const paths = {
   home: "M3 10l9-7 9 7v10h-6v-6H9v6H3z",
   route: "M5 4v10a4 4 0 004 4h8m-2-3 3 3-3 3M12 5h8m-8 4h6",
@@ -861,7 +861,7 @@ function wire(i) {
     b.disabled = true;
     s.hidden = false;
     try {
-      let w = new Worker(window.trailWorkerURL || "worker.js?v=" + TRAIL_VERSION);
+      let w = new Worker("worker.js?v=1.6.1");
       activeWorker = w;
       timer = setTimeout(() => {
         finish();
