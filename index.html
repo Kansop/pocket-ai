@@ -22,13 +22,14 @@
 <div id="app">
   <aside id="sidebar" aria-label="Chats">
     <div class="side-top">
-      <div class="brand"><img src="icons/favicon.png" alt=""><span>Pocket AI</span></div>
+      <div class="brand"><span class="brand-av" id="brandAv">✨</span><span id="brandName">Pocket AI</span></div>
       <button class="icon-btn only-mobile" id="closeSidebar" aria-label="Close sidebar">✕</button>
     </div>
     <button class="new-chat" id="newChat"><span class="plus">＋</span> New chat</button>
     <div class="search-wrap"><input id="search" type="search" placeholder="Search chats" autocomplete="off" aria-label="Search chats"></div>
     <nav id="chatList" aria-label="Saved chats"></nav>
     <div class="side-bottom">
+      <button class="side-btn" id="goHome"><span>🏠</span> Home</button>
       <button class="side-btn" id="openModels"><span>🧠</span> Models</button>
       <button class="side-btn" id="openPersonas"><span>🎭</span> Personas</button>
       <button class="side-btn" id="openSettings"><span>⚙️</span> Settings</button>
@@ -53,16 +54,12 @@
     </div>
 
     <section id="messages" aria-live="polite">
-      <div id="empty" class="empty">
-        <div class="hero-icon"><img src="icons/icon-192.png" alt=""></div>
-        <h1>What can I help with?</h1>
-        <p class="sub">Runs 100% on your device. Private, free, unlimited, works offline after the first download.</p>
-        <div class="suggestions" id="suggestions"></div>
-      </div>
+      <div id="empty" class="home"></div>
     </section>
 
     <footer id="composerWrap">
       <form id="composer" autocomplete="off">
+        <button type="button" id="webBtn" class="web-btn" title="Web search: auto" aria-label="Web search">🌐<span id="webBtnLabel">Auto</span></button>
         <textarea id="input" rows="1" placeholder="Message Pocket AI" aria-label="Message"></textarea>
         <button type="submit" id="sendBtn" class="send" aria-label="Send" disabled>
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 4l7 7-1.4 1.4L13 7.8V20h-2V7.8l-4.6 4.6L5 11z"/></svg>
@@ -90,47 +87,115 @@
 
 <dialog id="settingsDlg" class="sheet">
   <div class="sheet-head"><h2>Settings</h2><button class="icon-btn" data-close aria-label="Close">✕</button></div>
-  <div class="field">
-    <label>Theme</label>
-    <div class="seg" id="themeSeg">
-      <button data-v="system">System</button><button data-v="dark">Dark</button><button data-v="light">Light</button>
+  <div class="tabs" id="setTabs">
+    <button data-tab="general" class="on">General</button><button data-tab="me">You &amp; Memory</button><button data-tab="search">Web search</button><button data-tab="look">Look</button><button data-tab="home">Home page</button>
+  </div>
+
+  <section data-pane="general">
+    <div class="field">
+      <label for="customInstr">Custom instructions <span class="muted small">(added to every chat)</span></label>
+      <textarea id="customInstr" rows="3" placeholder="e.g. Keep answers short. Explain things simply."></textarea>
     </div>
-  </div>
-  <div class="field">
-    <label for="customInstr">Custom instructions <span class="muted small">(added to every chat's system prompt)</span></label>
-    <textarea id="customInstr" rows="3" placeholder="e.g. My name is Luca. Keep answers short. I'm in high school."></textarea>
-  </div>
-  <div class="field">
-    <label for="temp">Creativity (temperature): <b id="tempVal">0.7</b></label>
-    <input type="range" id="temp" min="0" max="1.5" step="0.05">
-    <div class="range-labels"><span>Precise</span><span>Balanced</span><span>Wild</span></div>
-  </div>
-  <div class="field">
-    <label for="maxTok">Max reply length: <b id="maxTokVal">1024</b> tokens</label>
-    <input type="range" id="maxTok" min="128" max="2048" step="64">
-  </div>
-  <div class="field row">
-    <label for="sendEnter">Enter sends message (Shift+Enter for new line)</label>
-    <input type="checkbox" id="sendEnter" class="toggle">
-  </div>
-  <div class="field row">
-    <label for="showStats">Show speed (tokens/sec) under replies</label>
-    <input type="checkbox" id="showStats" class="toggle">
-  </div>
-  <div class="field">
-    <label>Your data</label>
-    <div class="btn-row">
-      <button class="btn" id="exportAll">⬇ Export all chats (JSON)</button>
-      <button class="btn" id="exportMd">⬇ Export all (Markdown)</button>
-      <button class="btn" id="importBtn">⬆ Import chats</button>
-      <input type="file" id="importFile" accept="application/json,.json" hidden>
+    <div class="field">
+      <label for="temp">Creativity (temperature): <b id="tempVal">0.7</b></label>
+      <input type="range" id="temp" min="0" max="1.5" step="0.05">
+      <div class="range-labels"><span>Precise</span><span>Balanced</span><span>Wild</span></div>
     </div>
-    <div class="btn-row">
-      <button class="btn danger-outline" id="deleteAll">Delete all chats</button>
+    <div class="field">
+      <label for="maxTok">Max reply length: <b id="maxTokVal">1024</b> tokens</label>
+      <input type="range" id="maxTok" min="128" max="2048" step="64">
     </div>
-  </div>
+    <div class="field row"><label for="sendEnter">Enter sends message (Shift+Enter for new line)</label><input type="checkbox" id="sendEnter" class="toggle"></div>
+    <div class="field row"><label for="showStats">Show speed (tokens/sec) under replies</label><input type="checkbox" id="showStats" class="toggle"></div>
+    <div class="field">
+      <label>Your data</label>
+      <div class="btn-row">
+        <button class="btn" id="exportAll">⬇ Export all chats (JSON)</button>
+        <button class="btn" id="exportMd">⬇ Export all (Markdown)</button>
+        <button class="btn" id="importBtn">⬆ Import chats</button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+      </div>
+      <div class="btn-row"><button class="btn danger-outline" id="deleteAll">Delete all chats</button></div>
+    </div>
+  </section>
+
+  <section data-pane="me" hidden>
+    <div class="field two">
+      <div><label for="userName">Your name</label><input id="userName" type="text" maxlength="40" placeholder="e.g. Luca"></div>
+      <div><label for="asstName">Assistant's name</label><input id="asstName" type="text" maxlength="30" placeholder="Pocket AI"></div>
+    </div>
+    <div class="field">
+      <label>Assistant avatar</label>
+      <div class="emoji-pick" id="emojiPick"></div>
+    </div>
+    <div class="field">
+      <label for="aboutMe">About me <span class="muted small">(the AI always knows this)</span></label>
+      <textarea id="aboutMe" rows="3" placeholder="e.g. I'm 15, I live in Michigan, I love basketball and coding."></textarea>
+    </div>
+    <div class="field row"><label for="autoMemory">Auto-remember facts I mention (like "my favorite food is…")</label><input type="checkbox" id="autoMemory" class="toggle"></div>
+    <div class="field">
+      <label>Memories <span class="muted small" id="memCount"></span></label>
+      <p class="muted small" style="margin:0 0 8px">Say <b>"remember that …"</b> or <b>/remember …</b> in any chat to add one, or <b>"forget …"</b> to remove it.</p>
+      <div id="memList" class="mem-list"></div>
+      <div class="mem-add"><input id="memNew" type="text" placeholder="Add a memory, e.g. My sister's name is Ana"><button class="btn primary" id="memAddBtn">Add</button></div>
+      <div class="btn-row"><button class="btn danger-outline" id="memClear">Clear all memories</button></div>
+    </div>
+  </section>
+
+  <section data-pane="search" hidden>
+    <p class="muted">Web search looks things up and gives the AI the results, with sources you can tap. It uses free Wikipedia + DuckDuckGo lookups (no key needed). Everything else stays on your device. Offline, chats work without search.</p>
+    <div class="field">
+      <label>When to search</label>
+      <div class="seg" id="searchSeg"><button data-v="off">Off</button><button data-v="auto">Auto-detect</button><button data-v="always">Every message</button></div>
+      <p class="muted small">Auto-detect searches for things like news, "latest…", "who is…", prices, dates, or when you say "search". Tap 🌐 next to the message box to force it for one message.</p>
+    </div>
+    <div class="field">
+      <label for="tavilyKey">Optional: Tavily API key <span class="muted small">(better, real web + news results)</span></label>
+      <input id="tavilyKey" type="text" autocomplete="off" spellcheck="false" placeholder="tvly-…  (free at tavily.com)">
+      <p class="muted small">Saved only on this device. Sent only to Tavily when searching.</p>
+    </div>
+    <div class="btn-row"><button class="btn" id="testSearch">🔎 Test search</button><span class="muted small" id="testSearchOut"></span></div>
+  </section>
+
+  <section data-pane="look" hidden>
+    <div class="field">
+      <label>Theme</label>
+      <div class="seg" id="themeSeg"><button data-v="system">System</button><button data-v="dark">Dark</button><button data-v="light">Light</button></div>
+    </div>
+    <div class="field">
+      <label>Accent color</label>
+      <div class="swatches" id="accentSw"></div>
+    </div>
+    <div class="field">
+      <label>Wallpaper</label>
+      <div class="walls" id="wallPick"></div>
+      <div class="btn-row"><button class="btn" id="wallUpload">🖼 Upload your own</button><input type="file" id="wallFile" accept="image/*" hidden><button class="btn" id="wallDim">Dim: <b id="wallDimVal">Medium</b></button></div>
+    </div>
+    <div class="field">
+      <label>Chat width</label>
+      <div class="seg" id="widthSeg"><button data-v="normal">Normal</button><button data-v="wide">Wide</button></div>
+    </div>
+  </section>
+
+  <section data-pane="home" hidden>
+    <div class="field row"><label for="homeOnLaunch">Open the home page when the app starts</label><input type="checkbox" id="homeOnLaunch" class="toggle"></div>
+    <div class="field">
+      <label>Layout</label>
+      <div class="seg" id="layoutSeg"><button data-v="centered">Centered</button><button data-v="grid">Dashboard</button><button data-v="minimal">Minimal</button></div>
+    </div>
+    <div class="field">
+      <label>Widgets <span class="muted small">(toggle and reorder)</span></label>
+      <div id="widgetList" class="widget-list"></div>
+    </div>
+    <div class="field">
+      <label>Quick prompts</label>
+      <div id="qpList" class="qp-list"></div>
+      <div class="btn-row"><button class="btn" id="qpAdd">＋ Add prompt</button><button class="btn" id="qpReset">Reset to defaults</button></div>
+    </div>
+  </section>
+
   <div class="about muted small">
-    Pocket AI runs open models (Qwen, Llama, SmolLM) in your browser with <a href="https://github.com/mlc-ai/web-llm" target="_blank" rel="noopener">WebLLM</a> + WebGPU. Nothing you type leaves this device. <a href="https://github.com/Kansop/pocket-ai" target="_blank" rel="noopener">Source</a> · <span id="appVersion"></span>
+    Pocket AI runs open models (Qwen, Llama, SmolLM) in your browser with <a href="https://github.com/mlc-ai/web-llm" target="_blank" rel="noopener">WebLLM</a> + WebGPU. Your chats, memories and settings never leave this device. <a href="https://github.com/Kansop/pocket-ai" target="_blank" rel="noopener">Source</a> · <span id="appVersion"></span>
   </div>
 </dialog>
 
