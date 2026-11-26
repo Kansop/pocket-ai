@@ -2,7 +2,7 @@ import { db } from './db.js';
 import { MODELS, DEFAULT_MODEL, byKey } from './models.js';
 import { renderMarkdown, esc } from './markdown.js';
 import { webSearch, shouldAutoSearch, resultsToPrompt } from './search.js';
-import { parseRemember, parseForget, extractMemories, toThirdPerson } from './memory.js';
+import { parseRemember, parseForget, extractMemories } from './memory.js';
 
 const APP_VERSION = '1.1.0';
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
@@ -305,10 +305,15 @@ async function ensureEngine(key = settings.model) {
   } finally { loadingPromise = null; }
 }
 
+function resetEngine() {
+  try { worker && worker.terminate(); } catch {}
+  worker = null; engine = null; loadedId = null; loadingPromise = null;
+  setModelChip('');
+}
 function friendlyError(e) {
   const s = String(e && (e.message || e) || 'Unknown error');
   if (/WebGPU/i.test(s) && /not available|not supported|unavailable/i.test(s)) return 'WebGPU is not available in this browser, so the AI can\'t run here.';
-  if (/memory|OOM|allocation|device.*lost|DeviceLost/i.test(s)) return 'Your device ran out of graphics memory. Try a smaller model (Models → Llama 3.2 1B or Qwen2.5 0.5B) and close other tabs.';
+  if (/memory|OOM|allocation|device.*lost|DeviceLost|mapAsync|Instance reference|GPUBuffer/i.test(s)) return 'Your device ran out of graphics memory. Try a smaller model (Models → Llama 3.2 1B or Qwen2.5 0.5B) and close other tabs.';
   if (/QuotaExceeded|quota|storage/i.test(s)) return 'Not enough storage space to save the model. Free up space or pick a smaller model.';
   if (/Failed to fetch|NetworkError|network/i.test(s)) return 'Download failed. Check your internet connection and try again (progress so far is saved).';
   return s.length > 300 ? s.slice(0, 300) + '…' : s;
@@ -541,7 +546,7 @@ function systemPromptFor(c, extra = '') {
   if (settings.userName.trim()) sp += `\nThe user's name is ${settings.userName.trim()}.`;
   if (settings.aboutMe.trim()) sp += `\nAbout the user: ${settings.aboutMe.trim()}`;
   const mem = (settings.memories || []).slice(-30);
-  if (mem.length) sp += `\nThings you remember about the user (use naturally when relevant, don't list them unprompted):\n${mem.map(m => '- ' + m.text).join('\n')}`;
+  if (mem.length) sp += `\nFacts you remember about the user ("I"/"my" in a fact means the user). Use them naturally when relevant; don't list them unprompted:\n${mem.map(m => '- ' + m.text).join('\n')}`;
   if (settings.customInstr.trim()) sp += `\n\nThe user's custom instructions (follow them):\n${settings.customInstr.trim()}`;
   if (extra) sp += `\n\n${extra}`;
   return sp;
@@ -580,7 +585,7 @@ async function send(text) {
   // local commands: remember / forget (no model needed)
   const rem = parseRemember(text), forget = !rem && parseForget(text);
   if (rem) {
-    const fact = toThirdPerson(rem.charAt(0).toUpperCase() + rem.slice(1));
+    const fact = normalizeFact(rem);
     addMemory(fact, false);
     current.messages.push({ role: 'assistant', content: `Got it 👍 I'll remember: **${fact}**\n\nYou can see and edit everything I remember in Settings → You & Memory.`, ts: Date.now(), local: true });
     webForce = false; updateWebBtn();
@@ -600,6 +605,12 @@ async function send(text) {
   await saveCurrent();
   renderChat();
   await generate();
+}
+function normalizeFact(t) {
+  t = t.trim().replace(/[.!]+$/, '');
+  const ex = extractMemories(t + '.');
+  if (ex.length === 1) return ex[0];
+  return t.charAt(0).toUpperCase() + t.slice(1);
 }
 function addMemory(text, auto) {
   text = text.trim();
@@ -673,7 +684,10 @@ async function generate() {
     if (!reply.content.trim()) reply.content = stopRequested ? '_(stopped)_' : '_(no reply, try again)_';
   } catch (e) {
     if (e && e.stopped) reply.content = reply.content || '_(stopped)_';
-    else reply.error = friendlyError(e);
+    else {
+      reply.error = friendlyError(e);
+      if (/lost|mapAsync|Instance reference|GPUBuffer|memory/i.test(String(e && e.message || e))) resetEngine();
+    }
   } finally {
     setGenerating(false);
     if (c === current) { fillAssistant(row, reply, idx, false); scrollBottom(); }
@@ -962,7 +976,7 @@ function bind() {
     saveSettings(); renderMemories();
   });
   $('#memList').addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.target.closest('.mt')) { e.preventDefault(); e.target.blur(); } });
-  const addMem = () => { const v = $('#memNew').value.trim(); if (!v) return; if (addMemory(toThirdPerson(v), false)) { $('#memNew').value = ''; renderMemories(); toast('Memory added'); } else toast('Already remembered'); };
+  const addMem = () => { const v = $('#memNew').value.trim(); if (!v) return; if (addMemory(normalizeFact(v), false)) { $('#memNew').value = ''; renderMemories(); toast('Memory added'); } else toast('Already remembered'); };
   $('#memAddBtn').onclick = addMem;
   $('#memNew').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); addMem(); } });
   $('#memClear').onclick = async () => { if (!settings.memories.length) return; if (!await confirmBox('Clear all memories?', 'Everything the AI remembers about you will be deleted.', 'Clear')) return; settings.memories = []; saveSettings(); renderMemories(); };
