@@ -1,8 +1,10 @@
 import { db } from './db.js';
 import { MODELS, DEFAULT_MODEL, byKey } from './models.js';
 import { renderMarkdown, esc } from './markdown.js';
+import { webSearch, shouldAutoSearch, resultsToPrompt } from './search.js';
+import { parseRemember, parseForget, extractMemories, toThirdPerson } from './memory.js';
 
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 const WEBLLM_URL = 'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.89/lib/index.js';
 const CTX_TOKENS = 4096;
 
@@ -32,13 +34,45 @@ const BUILTIN_PERSONAS = [
     prompt: 'You are a translator. Translate the user\'s text accurately and naturally. If the target language is not given, translate between English and Portuguese. Show only the translation unless asked for explanations.' },
 ];
 
-const SUGGESTIONS = [
-  ['Explain', 'how black holes form like I\'m 12'],
-  ['Write', 'a short funny poem about my dog'],
-  ['Help me study', 'quiz me on the causes of World War I'],
-  ['Code', 'a Python script that picks a random number game'],
-  ['Brainstorm', '5 ideas for a school project on India'],
-  ['Plan', 'a 20-minute home workout with no equipment'],
+const DEFAULT_PROMPTS = [
+  { label: '🪐 Explain', text: 'Explain how black holes form like I\'m 12' },
+  { label: '😂 Poem', text: 'Write a short funny poem about my dog' },
+  { label: '📚 Quiz me', text: 'Quiz me on the causes of World War I, one question at a time' },
+  { label: '💻 Code', text: 'Write a Python number guessing game' },
+  { label: '💡 Ideas', text: 'Give me 5 ideas for a school project on India' },
+  { label: '🏋️ Workout', text: 'Plan a 20-minute home workout with no equipment' },
+  { label: '📰 News', text: 'Search the web: what are the latest tech news today?' },
+];
+const WIDGETS = {
+  clock: 'Clock & date', search: 'Search bar', prompts: 'Quick prompts', recent: 'Recent chats',
+  model: 'AI model status', memories: 'Memories', tip: 'Tip of the day',
+};
+const DEFAULT_WIDGETS = [
+  { id: 'clock', on: true }, { id: 'search', on: true }, { id: 'prompts', on: true }, { id: 'recent', on: true },
+  { id: 'model', on: true }, { id: 'memories', on: false }, { id: 'tip', on: true },
+];
+const ACCENTS = ['#7c5cff', '#3b82f6', '#06b6d4', '#14b8a6', '#22c55e', '#eab308', '#f97316', '#ef4444', '#ec4899', '#a855f7'];
+const WALLS = {
+  none: { name: 'None', css: '' },
+  aurora: { name: 'Aurora', css: 'radial-gradient(at 20% 15%, #7c5cff 0, transparent 50%), radial-gradient(at 80% 10%, #22d3ee 0, transparent 45%), radial-gradient(at 50% 90%, #10b981 0, transparent 55%), #0b1020' },
+  sunset: { name: 'Sunset', css: 'linear-gradient(160deg, #ff7e5f 0%, #feb47b 35%, #6a3093 100%)' },
+  ocean: { name: 'Ocean', css: 'linear-gradient(170deg, #0f2027 0%, #203a43 45%, #2c5364 100%)' },
+  forest: { name: 'Forest', css: 'linear-gradient(165deg, #134e5e 0%, #71b280 100%)' },
+  candy: { name: 'Candy', css: 'linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)' },
+  midnight: { name: 'Midnight', css: 'radial-gradient(at 70% 20%, #312e81 0, transparent 55%), radial-gradient(at 10% 80%, #831843 0, transparent 50%), #05060a' },
+  peach: { name: 'Peach', css: 'linear-gradient(140deg, #ffecd2 0%, #fcb69f 100%)' },
+  galaxy: { name: 'Galaxy', css: 'radial-gradient(1px 1px at 20% 30%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 70% 60%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 40% 80%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 85% 15%, #fff 50%, transparent 51%), radial-gradient(at 50% 50%, #3b0764 0, #020617 70%)' },
+};
+const EMOJIS = ['✨', '🤖', '🧠', '🦊', '🐱', '🐼', '👾', '🚀', '⚡', '🔥', '🌙', '💎', '🎧', '🦄', '🐉', '😎'];
+const TIPS = [
+  'Say "remember that …" and I\'ll keep it in mind in every chat.',
+  'Tap 🌐 next to the message box to search the web for one message.',
+  'Add Pocket AI to your Home Screen: Share → Add to Home Screen. It works offline too.',
+  'Llama 3.2 1B is the best model for iPhone. On a Mac, try Llama 3.2 3B.',
+  'Make your own persona in 🎭 Personas, like a gym coach or a debate partner.',
+  'Press Esc to stop a reply, Ctrl/⌘+K to search chats.',
+  'Change the wallpaper and accent color in Settings → Look.',
+  'Export all your chats any time from Settings → General.',
 ];
 
 /* ---------------- Settings ---------------- */
@@ -47,12 +81,19 @@ const defaults = {
   theme: 'system', customInstr: '', temperature: 0.7, maxTokens: 1024,
   sendEnter: !isMobile, showStats: true, model: DEFAULT_MODEL,
   personaId: 'assistant', personas: [], sidebarCollapsed: false,
+  userName: '', aboutMe: '', assistantName: 'Pocket AI', assistantEmoji: '✨',
+  autoMemory: true, memories: [], searchMode: 'auto', tavilyKey: '',
+  accent: '#7c5cff', wallpaper: 'none', wallDim: 0.45, chatWidth: 'normal',
+  homeOnLaunch: true, homeLayout: 'centered', widgets: DEFAULT_WIDGETS, quickPrompts: DEFAULT_PROMPTS,
 };
 let settings = { ...defaults };
 try { settings = { ...defaults, ...JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}') }; } catch {}
-const saveSettings = () => localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
-const allPersonas = () => [...BUILTIN_PERSONAS, ...(settings.personas || [])];
-const personaById = (id) => allPersonas().find(p => p.id === id) || BUILTIN_PERSONAS[0];
+// make sure newly added widgets appear for older saved settings
+settings.widgets = [...settings.widgets.filter(w => WIDGETS[w.id]), ...DEFAULT_WIDGETS.filter(d => !settings.widgets.find(w => w.id === d.id))];
+const saveSettings = () => { try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch { toast('Couldn\'t save settings (storage full?)'); } };
+const asstName = () => (settings.assistantName || '').trim() || 'Pocket AI';
+const allPersonas = () => [{ ...BUILTIN_PERSONAS[0], name: asstName(), emoji: settings.assistantEmoji || '✨', prompt: BUILTIN_PERSONAS[0].prompt.replace('You are Pocket AI', `You are ${asstName()}`) }, ...BUILTIN_PERSONAS.slice(1), ...(settings.personas || [])];
+const personaById = (id) => allPersonas().find(p => p.id === id) || allPersonas()[0];
 
 /* ---------------- State ---------------- */
 let chats = [];
@@ -65,6 +106,8 @@ let loadedId = null;
 let loadingPromise = null;
 let generating = false;
 let stopRequested = false;
+let webForce = false;        // 🌐 button: force search for the next message
+let clockTimer = null;
 
 /* ---------------- Utilities ---------------- */
 function toast(msg, ms = 2200) {
@@ -129,6 +172,22 @@ function applyTheme() {
   document.documentElement.dataset.theme = t;
   $('meta[name=theme-color]').setAttribute('content', t === 'light' ? '#ffffff' : '#0f1117');
   $$('#themeSeg button').forEach(b => b.classList.toggle('on', b.dataset.v === settings.theme));
+  applyLook();
+}
+function applyLook() {
+  const root = document.documentElement.style;
+  root.setProperty('--accent', settings.accent || '#7c5cff');
+  let wall = '';
+  if (settings.wallpaper === 'custom') { const d = localStorage.getItem('pocketai.wallpaper'); if (d) wall = `url("${d}")`; }
+  else if (WALLS[settings.wallpaper]) wall = WALLS[settings.wallpaper].css;
+  document.body.classList.toggle('has-wall', !!wall);
+  if (wall) root.setProperty('--wall', wall); else root.removeProperty('--wall');
+  root.setProperty('--wall-dim', String(settings.wallDim ?? 0.45));
+  document.body.classList.toggle('chat-wide', settings.chatWidth === 'wide');
+  const name = asstName();
+  $('#brandName').textContent = name;
+  $('#brandAv').textContent = settings.assistantEmoji || '✨';
+  $('#input').placeholder = `Message ${name}`;
 }
 matchMedia('(prefers-color-scheme: light)').addEventListener?.('change', () => settings.theme === 'system' && applyTheme());
 
@@ -179,6 +238,7 @@ function setModelChip(state) {
   $('#modelLabel').textContent = m.name;
   const dot = $('#modelDot');
   dot.className = 'dot' + (state ? ' ' + state : '');
+  setTimeout(refreshHomeIfVisible, 0);
   $('#modelChip').title = state === 'ready' ? `${m.name} loaded and ready` : state === 'loading' ? `Loading ${m.name}…` : `${m.name} (tap to choose a model)`;
 }
 
@@ -360,9 +420,6 @@ const msgBox = () => $('#messages');
 function nearBottom() { const m = msgBox(); return m.scrollHeight - m.scrollTop - m.clientHeight < 120; }
 function scrollBottom(force = false) { const m = msgBox(); if (force || nearBottom()) m.scrollTop = m.scrollHeight; }
 
-function renderSuggestions() {
-  $('#suggestions').innerHTML = SUGGESTIONS.map(([a, b]) => `<button type="button" data-s="${esc(a + ' ' + b)}"><b>${esc(a)}</b><span>${esc(b)}</span></button>`).join('');
-}
 
 function messageEl(m, idx) {
   const row = document.createElement('div');
@@ -371,6 +428,7 @@ function messageEl(m, idx) {
   if (m.role === 'user') {
     row.innerHTML = `<div class="user-wrap"><div class="bubble"></div><div class="msg-actions"><button data-a="edit" title="Edit">✏️ Edit</button><button data-a="copy" title="Copy">📋</button></div></div>`;
     $('.bubble', row).textContent = m.content;
+    if (m.learned && m.learned.length) { const n = document.createElement('div'); n.className = 'memory-note'; n.textContent = '🧠 Remembered: ' + m.learned.join(' · '); $('.user-wrap', row).appendChild(n); }
   } else {
     const p = personaById(current.personaId);
     row.innerHTML = `<div class="avatar">${esc(p.emoji)}</div><div class="content"><div class="bubble"></div><div class="msg-actions"></div></div>`;
@@ -380,9 +438,13 @@ function messageEl(m, idx) {
 }
 function fillAssistant(row, m, idx, streaming = false) {
   const b = $('.bubble', row);
-  if (m.error) b.innerHTML = `<div class="err-note">⚠️ ${esc(m.error)}</div>`;
-  else if (!m.content && streaming) b.innerHTML = '<div class="thinking"><i></i><i></i><i></i></div>';
-  else b.innerHTML = renderMarkdown(m.content || '', { streaming });
+  const status = m.searching ? `<div class="search-status"><span class="thinking"><i></i><i></i><i></i></span> Searching the web…</div>`
+    : m.searchNote ? `<div class="search-status">🌐 ${esc(m.searchNote)}</div>`
+    : (m.sources && m.sources.length && streaming && !m.content) ? `<div class="search-status">🌐 Found ${m.sources.length} sources, thinking…</div>` : '';
+  const sources = m.sources && m.sources.length ? `<div class="sources"><span class="src-label">Sources</span>${m.sources.map((x, i) => { let host = ''; try { host = new URL(x.url).hostname.replace(/^www\./, ''); } catch {} return `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" title="${esc(x.title)}"><b>${i + 1}</b>${esc(x.title.length > 42 ? x.title.slice(0, 40) + '…' : x.title)}<span class="muted">· ${esc(host)}</span></a>`; }).join('')}</div>` : '';
+  if (m.error) b.innerHTML = status + `<div class="err-note">⚠️ ${esc(m.error)}</div>`;
+  else if (!m.content && streaming) b.innerHTML = status + (m.searching ? '' : '<div class="thinking"><i></i><i></i><i></i></div>');
+  else b.innerHTML = status + renderMarkdown(m.content || '', { streaming }) + (streaming ? '' : sources);
   b.classList.toggle('cursor', streaming && !!m.content);
   const acts = $('.msg-actions', row);
   if (streaming) { acts.innerHTML = ''; return; }
@@ -395,6 +457,7 @@ function renderChat() {
   $$('.msg-row', box).forEach(n => n.remove());
   const empty = $('#empty');
   empty.hidden = !!(current && current.messages.length);
+  if (!empty.hidden) renderHome(); else stopClock();
   if (current) current.messages.forEach((m, i) => box.appendChild(messageEl(m, i)));
   scrollBottom(true);
   document.title = current && current.messages.length ? `${current.title} · Pocket AI` : 'Pocket AI';
@@ -405,14 +468,86 @@ function updatePersonaChip() {
   $('#personaName').textContent = current && current.systemPrompt ? `${p.name} (custom)` : p.name;
 }
 
+
+/* ---------------- Home page ---------------- */
+function greeting() {
+  const h = new Date().getHours();
+  const part = h < 5 ? 'Up late' : h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : h < 22 ? 'Good evening' : 'Up late';
+  const n = (settings.userName || '').trim();
+  return n ? `${part}, ${n}` : `${part}!`;
+}
+function relTime(ts) {
+  const d = Date.now() - ts, m = 60000, h = 60 * m, day = 24 * h;
+  if (d < m) return 'just now';
+  if (d < h) return Math.floor(d / m) + 'm ago';
+  if (d < day) return Math.floor(d / h) + 'h ago';
+  if (d < 7 * day) return Math.floor(d / day) + 'd ago';
+  return new Date(ts).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
+function stopClock() { if (clockTimer) { clearInterval(clockTimer); clockTimer = null; } }
+function tickClock() {
+  const now = new Date();
+  const t = $('#homeTime'), d = $('#homeDate');
+  if (t) t.textContent = now.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+  if (d) d.textContent = now.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+}
+function modelStateText() {
+  const m = byKey(settings.model);
+  const st = $('#modelDot') ? $('#modelDot').className.replace('dot', '').trim() : '';
+  const label = !gpu ? 'Checking device…' : !gpu.ok ? 'WebGPU not available in this browser' : st === 'ready' ? 'Loaded and ready' : st === 'loading' ? 'Loading…' : st === 'cached' ? 'Downloaded, loads when you chat' : `Downloads ${m.download} on first message`;
+  return { m, st, label };
+}
+function renderHome() {
+  const el = $('#empty');
+  const layout = settings.homeLayout || 'centered';
+  el.className = 'home layout-' + layout;
+  const name = asstName();
+  const parts = [];
+  parts.push(`<div class="w-greet"><div class="home-av">${esc(settings.assistantEmoji || '✨')}</div><div><h1>${esc(greeting())}</h1><p class="sub">${layout === 'minimal' ? 'What can I help with?' : `I'm ${esc(name)}. I run 100% on your device: private, free, unlimited, and I work offline.`}</p></div></div>`);
+  const widgets = layout === 'minimal' ? settings.widgets.filter(w => w.on && (w.id === 'prompts' || w.id === 'search')) : settings.widgets.filter(w => w.on);
+  for (const w of widgets) {
+    if (w.id === 'clock') parts.push(`<div class="widget w-clock"><span class="time" id="homeTime"></span><span class="date" id="homeDate"></span></div>`);
+    else if (w.id === 'search') parts.push(`<form class="widget w-search" id="homeSearch"><span>🔎</span><input id="homeSearchInput" type="search" placeholder="Search the web or ask ${esc(name)}…" autocomplete="off" aria-label="Search the web"><button type="submit">Ask</button></form>`);
+    else if (w.id === 'prompts') parts.push(`<div class="widget w-prompts"><h3>Quick prompts <button type="button" data-home="editPrompts">Edit</button></h3><div class="chips">${(settings.quickPrompts || []).map((q, i) => !q.text.trim() ? '' : `<button type="button" data-qp="${i}" title="${esc(q.text)}">${esc(q.label || q.text.slice(0, 30))}</button>`).join('') || '<span class="muted-empty">No quick prompts yet.</span>'}</div></div>`);
+    else if (w.id === 'recent') {
+      const rec = chats.slice(0, 5);
+      parts.push(`<div class="widget w-recent"><h3>Recent chats ${chats.length > 5 ? '<button type="button" data-home="allChats">See all</button>' : ''}</h3><div class="recent">${rec.map(c => `<button type="button" data-open="${esc(c.id)}"><span>${esc(personaById(c.personaId).emoji)}</span><span class="rt">${esc(c.title)}</span><span class="rd">${relTime(c.updatedAt)}</span></button>`).join('') || '<span class="muted-empty">Your chats will show up here.</span>'}</div></div>`);
+    }
+    else if (w.id === 'model') {
+      const { m, st, label } = modelStateText();
+      parts.push(`<div class="widget w-model"><h3>AI model <button type="button" data-home="models">Change</button></h3><div class="mrow"><span class="dot ${st}"></span><b>${esc(m.name)}</b><span class="muted small">${esc(label)}</span></div></div>`);
+    }
+    else if (w.id === 'memories') {
+      const mem = settings.memories || [];
+      parts.push(`<div class="widget w-mem"><h3>What I remember <button type="button" data-home="memories">Manage</button></h3>${mem.length ? `<ul>${mem.slice(-5).reverse().map(x => `<li>${esc(x.text)}</li>`).join('')}</ul>` : '<span class="muted-empty">Nothing yet. Say "remember that …" in a chat.</span>'}</div>`);
+    }
+    else if (w.id === 'tip') {
+      const tip = TIPS[Math.floor(Date.now() / 86400000) % TIPS.length];
+      parts.push(`<div class="widget w-tip"><h3>Tip</h3><p>${esc(tip)}</p></div>`);
+    }
+  }
+  el.innerHTML = parts.join('');
+  stopClock();
+  if ($('#homeTime')) { tickClock(); clockTimer = setInterval(tickClock, 15000); }
+}
+function refreshHomeIfVisible() { if (!$('#empty').hidden) renderHome(); }
+
 /* ---------------- Generation ---------------- */
-function systemPromptFor(c) {
+function systemPromptFor(c, extra = '') {
   let sp = c.systemPrompt || personaById(c.personaId).prompt;
+  if (c.personaId !== 'assistant' || c.systemPrompt) sp += `\nYour name is ${asstName()}.`;
+  const now = new Date();
+  sp += `\nToday is ${now.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}.`;
+  if (settings.userName.trim()) sp += `\nThe user's name is ${settings.userName.trim()}.`;
+  if (settings.aboutMe.trim()) sp += `\nAbout the user: ${settings.aboutMe.trim()}`;
+  const mem = (settings.memories || []).slice(-30);
+  if (mem.length) sp += `\nThings you remember about the user (use naturally when relevant, don't list them unprompted):\n${mem.map(m => '- ' + m.text).join('\n')}`;
   if (settings.customInstr.trim()) sp += `\n\nThe user's custom instructions (follow them):\n${settings.customInstr.trim()}`;
+  if (extra) sp += `\n\n${extra}`;
   return sp;
 }
-function buildMessages(c) {
-  const sys = systemPromptFor(c);
+function buildMessages(c, extra = '') {
+  const sys = systemPromptFor(c, extra);
   // rough budget: ~3.2 chars per token
   const budget = Math.max(1200, (CTX_TOKENS - settings.maxTokens - 150) * 3.2 - sys.length);
   const hist = c.messages.filter(m => !m.error && m.content);
@@ -442,9 +577,41 @@ async function send(text) {
   if (!current.messages.length) current.title = text.replace(/\s+/g, ' ').slice(0, 48) + (text.length > 48 ? '…' : '');
   current.messages.push({ role: 'user', content: text, ts: Date.now() });
   $('#input').value = ''; autosize();
+  // local commands: remember / forget (no model needed)
+  const rem = parseRemember(text), forget = !rem && parseForget(text);
+  if (rem) {
+    const fact = toThirdPerson(rem.charAt(0).toUpperCase() + rem.slice(1));
+    addMemory(fact, false);
+    current.messages.push({ role: 'assistant', content: `Got it 👍 I'll remember: **${fact}**\n\nYou can see and edit everything I remember in Settings → You & Memory.`, ts: Date.now(), local: true });
+    webForce = false; updateWebBtn();
+    await saveCurrent(); renderChat(); return;
+  }
+  if (forget) {
+    const q = forget.toLowerCase().replace(/^(that|about)\s+/, '');
+    const before = settings.memories.length;
+    const words = q.split(/\s+/).filter(w => w.length > 2);
+    settings.memories = settings.memories.filter(m => { const t = m.text.toLowerCase(); return !(t.includes(q) || (words.length && words.every(w => t.includes(w)))); });
+    const n = before - settings.memories.length; saveSettings();
+    current.messages.push({ role: 'assistant', content: n ? `Done, I forgot ${n} thing${n > 1 ? 's' : ''} about that. 🧹` : `I couldn't find a memory matching "${forget}". You can manage memories in Settings → You & Memory.`, ts: Date.now(), local: true });
+    await saveCurrent(); renderChat(); return;
+  }
+  const learned = settings.autoMemory ? extractMemories(text).filter(f => addMemory(f, true)) : [];
+  if (learned.length) current.messages[current.messages.length - 1].learned = learned;
   await saveCurrent();
   renderChat();
   await generate();
+}
+function addMemory(text, auto) {
+  text = text.trim();
+  if (!text) return false;
+  const norm = (x) => x.toLowerCase().replace(/[^a-z0-9 ]/g, '');
+  if (settings.memories.some(m => norm(m.text) === norm(text))) return false;
+  // replace an older fact with the same subject, e.g. "User's favorite food is …"
+  const subj = text.match(/^(User's (?:name|favorite [\w ]+?|birthday)) is /);
+  if (subj) settings.memories = settings.memories.filter(m => !m.text.startsWith(subj[1] + ' is '));
+  settings.memories.push({ id: uid(), text, auto: !!auto, ts: Date.now() });
+  saveSettings();
+  return true;
 }
 
 async function generate() {
@@ -463,10 +630,28 @@ async function generate() {
   const t0 = performance.now();
   try {
     if (!gpu.ok) throw new Error('WebGPU is not available in this browser, so the AI can\'t run here. See the note at the top for how to fix it.');
+    const lastUser = [...c.messages].reverse().find(x => x.role === 'user');
+    const forced = webForce; webForce = false; updateWebBtn();
+    const wantSearch = settings.searchMode !== 'off' || forced
+      ? (forced || settings.searchMode === 'always' || shouldAutoSearch(lastUser ? lastUser.content : ''))
+      : false;
+    let extra = '';
+    if (wantSearch && lastUser) {
+      if (!navigator.onLine) reply.searchNote = 'Offline: answered without web search.';
+      else {
+        reply.searching = true; fillAssistant(row, reply, idx, true);
+        const res = await webSearch(lastUser.content, { tavilyKey: settings.tavilyKey.trim() });
+        reply.searching = false;
+        if (res.results.length) { reply.sources = res.results.map(r => ({ title: r.title, url: r.url })); extra = resultsToPrompt(res); }
+        else reply.searchNote = 'Web search found nothing useful, answering from what I know.';
+        fillAssistant(row, reply, idx, true);
+      }
+      if (stopRequested) throw Object.assign(new Error('stopped'), { stopped: true });
+    }
     const eng = await ensureEngine();
     if (stopRequested) throw Object.assign(new Error('stopped'), { stopped: true });
     const stream = await eng.chat.completions.create({
-      messages: buildMessages({ ...c, messages: c.messages.slice(0, -1) }),
+      messages: buildMessages({ ...c, messages: c.messages.slice(0, -1) }, extra),
       stream: true,
       temperature: settings.temperature,
       max_tokens: settings.maxTokens,
@@ -655,6 +840,7 @@ function openSidebar() {
 function closeSidebarMobile() { document.body.classList.remove('side-open'); $('#scrim').hidden = true; }
 
 /* ---------------- Settings dialog ---------------- */
+const segOn = (sel, v) => $$(sel + ' button').forEach(b => b.classList.toggle('on', b.dataset.v === v));
 function fillSettings() {
   applyTheme();
   $('#customInstr').value = settings.customInstr;
@@ -663,10 +849,153 @@ function fillSettings() {
   $('#sendEnter').checked = settings.sendEnter;
   $('#showStats').checked = settings.showStats;
   $('#appVersion').textContent = 'v' + APP_VERSION;
+  // me
+  $('#userName').value = settings.userName; $('#asstName').value = settings.assistantName === 'Pocket AI' ? '' : settings.assistantName;
+  $('#aboutMe').value = settings.aboutMe; $('#autoMemory').checked = settings.autoMemory;
+  renderEmojiPick(); renderMemories();
+  // search
+  segOn('#searchSeg', settings.searchMode); $('#tavilyKey').value = settings.tavilyKey;
+  // look
+  renderAccents(); renderWalls(); segOn('#widthSeg', settings.chatWidth);
+  $('#wallDimVal').textContent = settings.wallDim <= 0.2 ? 'Low' : settings.wallDim >= 0.65 ? 'High' : 'Medium';
+  // home
+  $('#homeOnLaunch').checked = settings.homeOnLaunch; segOn('#layoutSeg', settings.homeLayout);
+  renderWidgetList(); renderQuickPrompts();
+}
+function showTab(t) {
+  $$('#setTabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  $$('#settingsDlg [data-pane]').forEach(p => p.hidden = p.dataset.pane !== t);
+}
+function openSettings(tab = 'general') { closeSidebarMobile(); fillSettings(); showTab(tab); if (!$('#settingsDlg').open) $('#settingsDlg').showModal(); }
+function renderEmojiPick() {
+  const cur = settings.assistantEmoji || '✨';
+  $('#emojiPick').innerHTML = EMOJIS.map(e => `<button type="button" data-emoji="${e}" class="${e === cur ? 'on' : ''}">${e}</button>`).join('') +
+    `<input type="text" id="emojiCustom" maxlength="4" placeholder="Any" value="${EMOJIS.includes(cur) ? '' : esc(cur)}" aria-label="Custom emoji">`;
+}
+function renderMemories() {
+  const mem = settings.memories || [];
+  $('#memCount').textContent = mem.length ? `(${mem.length})` : '';
+  $('#memList').innerHTML = mem.length ? mem.slice().reverse().map(m => `<div class="mem" data-mid="${m.id}"><span class="mt" contenteditable="true" spellcheck="false">${esc(m.text)}</span>${m.auto ? '<span class="auto">auto</span>' : ''}<button type="button" data-mdel="${m.id}" title="Delete" aria-label="Delete memory">🗑</button></div>`).join('')
+    : '<div class="mem-empty">No memories yet.</div>';
+}
+function renderAccents() {
+  $('#accentSw').innerHTML = ACCENTS.map(c => `<button type="button" data-accent="${c}" style="background:${c}" class="${c === settings.accent ? 'on' : ''}" aria-label="Accent ${c}"></button>`).join('') +
+    `<input type="color" id="accentCustom" value="${esc(settings.accent)}" title="Custom color" aria-label="Custom accent color">`;
+}
+function renderWalls() {
+  const custom = localStorage.getItem('pocketai.wallpaper');
+  $('#wallPick').innerHTML = Object.entries(WALLS).map(([k, w]) => `<button type="button" data-wall="${k}" class="${k === 'none' ? 'none ' : ''}${settings.wallpaper === k ? 'on' : ''}" style="${w.css ? `background:${w.css}` : ''}">${esc(w.name)}</button>`).join('') +
+    (custom ? `<button type="button" data-wall="custom" class="${settings.wallpaper === 'custom' ? 'on' : ''}" style="background-image:url('${custom}')">Yours</button>` : '');
+}
+function renderWidgetList() {
+  const ws = settings.widgets;
+  $('#widgetList').innerHTML = ws.map((w, i) => `<div class="wrow" data-wi="${i}"><input type="checkbox" class="toggle" data-wtoggle="${i}" ${w.on ? 'checked' : ''} aria-label="Show ${esc(WIDGETS[w.id])}"><span class="wn">${esc(WIDGETS[w.id])}</span><button type="button" data-wup="${i}" ${i === 0 ? 'disabled' : ''} aria-label="Move up">↑</button><button type="button" data-wdown="${i}" ${i === ws.length - 1 ? 'disabled' : ''} aria-label="Move down">↓</button></div>`).join('');
+}
+function renderQuickPrompts() {
+  $('#qpList').innerHTML = (settings.quickPrompts || []).map((q, i) => `<div class="qrow" data-qi="${i}"><input class="ql" data-qf="label" value="${esc(q.label)}" placeholder="Label" maxlength="30"><input class="qt" data-qf="text" value="${esc(q.text)}" placeholder="Prompt text"><button type="button" data-qdel="${i}" aria-label="Delete prompt">✕</button></div>`).join('') || '<div class="mem-empty">No quick prompts. Add one below.</div>';
+}
+async function loadWallpaperFile(file) {
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
+    const max = 1600, scale = Math.min(1, max / Math.max(img.width, img.height));
+    const cv = document.createElement('canvas'); cv.width = Math.round(img.width * scale); cv.height = Math.round(img.height * scale);
+    cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+    let q = 0.82, data = cv.toDataURL('image/jpeg', q);
+    while (data.length > 1.6e6 && q > 0.4) { q -= 0.12; data = cv.toDataURL('image/jpeg', q); }
+    localStorage.setItem('pocketai.wallpaper', data);
+    settings.wallpaper = 'custom'; saveSettings(); applyLook(); renderWalls(); toast('Wallpaper set');
+  } catch { toast('Couldn\'t use that image (too big or unsupported)'); }
+  finally { URL.revokeObjectURL(url); }
+}
+function updateWebBtn() {
+  const b = $('#webBtn'); if (!b) return;
+  const mode = settings.searchMode;
+  const on = webForce || mode === 'always';
+  b.classList.toggle('on', on);
+  b.classList.toggle('off', !on && mode === 'off');
+  $('#webBtnLabel').textContent = webForce ? 'On' : mode === 'always' ? 'Always' : mode === 'auto' ? 'Auto' : 'Off';
+  b.title = webForce ? 'Web search ON for your next message (tap to cancel)' : mode === 'auto' ? 'Web search: auto-detect. Tap to force for the next message' : mode === 'always' ? 'Web search on every message' : 'Web search off. Tap to search for the next message';
 }
 
 /* ---------------- Events ---------------- */
 function bind() {
+  $('#goHome').onclick = () => { if (generating) return toast('Stop the current reply first'); newChat(); };
+  $('#webBtn').onclick = () => {
+    if (settings.searchMode === 'always') { openSettings('search'); return; }
+    webForce = !webForce; updateWebBtn();
+    toast(webForce ? '🌐 Web search on for your next message' : 'Web search back to ' + (settings.searchMode === 'auto' ? 'auto-detect' : 'off'));
+  };
+  // home page interactions
+  $('#empty').addEventListener('click', (e) => {
+    const qp = e.target.closest('[data-qp]'); if (qp) { const q = settings.quickPrompts[+qp.dataset.qp]; if (q) send(q.text); return; }
+    const op = e.target.closest('[data-open]'); if (op) { openChat(op.dataset.open); return; }
+    const h = e.target.closest('[data-home]'); if (!h) return;
+    const a = h.dataset.home;
+    if (a === 'editPrompts') openSettings('home');
+    else if (a === 'memories') openSettings('me');
+    else if (a === 'models') { $('#modelsDlg').showModal(); renderModels(); }
+    else if (a === 'allChats') { if (matchMedia('(max-width: 820px)').matches) openSidebar(); else { document.body.classList.remove('side-collapsed'); settings.sidebarCollapsed = false; saveSettings(); } }
+  });
+  $('#empty').addEventListener('submit', (e) => {
+    if (e.target.id !== 'homeSearch') return;
+    e.preventDefault();
+    const v = $('#homeSearchInput').value.trim(); if (!v) return;
+    if (settings.searchMode !== 'always') webForce = true;
+    send(v);
+  });
+  // settings tabs
+  $('#setTabs').addEventListener('click', (e) => { const b = e.target.closest('[data-tab]'); if (b) showTab(b.dataset.tab); });
+  // you & memory
+  $('#userName').addEventListener('input', (e) => { settings.userName = e.target.value; saveSettings(); refreshHomeIfVisible(); });
+  $('#asstName').addEventListener('input', (e) => { settings.assistantName = e.target.value.trim() || 'Pocket AI'; saveSettings(); applyLook(); updatePersonaChip(); refreshHomeIfVisible(); });
+  $('#aboutMe').addEventListener('input', (e) => { settings.aboutMe = e.target.value; saveSettings(); });
+  $('#autoMemory').addEventListener('change', (e) => { settings.autoMemory = e.target.checked; saveSettings(); });
+  $('#emojiPick').addEventListener('click', (e) => { const b = e.target.closest('[data-emoji]'); if (!b) return; settings.assistantEmoji = b.dataset.emoji; saveSettings(); renderEmojiPick(); applyLook(); updatePersonaChip(); renderChat(); renderList(); });
+  $('#emojiPick').addEventListener('input', (e) => { if (e.target.id !== 'emojiCustom') return; const v = e.target.value.trim(); if (!v) return; settings.assistantEmoji = v; saveSettings(); $$('#emojiPick button').forEach(b => b.classList.remove('on')); applyLook(); updatePersonaChip(); });
+  $('#memList').addEventListener('click', (e) => { const d = e.target.closest('[data-mdel]'); if (!d) return; settings.memories = settings.memories.filter(m => m.id !== d.dataset.mdel); saveSettings(); renderMemories(); });
+  $('#memList').addEventListener('focusout', (e) => {
+    const t = e.target.closest('.mt'); if (!t) return;
+    const id = t.closest('.mem').dataset.mid; const m = settings.memories.find(x => x.id === id); if (!m) return;
+    const v = t.textContent.trim();
+    if (!v) settings.memories = settings.memories.filter(x => x.id !== id); else { m.text = v; m.auto = false; }
+    saveSettings(); renderMemories();
+  });
+  $('#memList').addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.target.closest('.mt')) { e.preventDefault(); e.target.blur(); } });
+  const addMem = () => { const v = $('#memNew').value.trim(); if (!v) return; if (addMemory(toThirdPerson(v), false)) { $('#memNew').value = ''; renderMemories(); toast('Memory added'); } else toast('Already remembered'); };
+  $('#memAddBtn').onclick = addMem;
+  $('#memNew').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); addMem(); } });
+  $('#memClear').onclick = async () => { if (!settings.memories.length) return; if (!await confirmBox('Clear all memories?', 'Everything the AI remembers about you will be deleted.', 'Clear')) return; settings.memories = []; saveSettings(); renderMemories(); };
+  // search
+  $('#searchSeg').addEventListener('click', (e) => { const b = e.target.closest('[data-v]'); if (!b) return; settings.searchMode = b.dataset.v; webForce = false; saveSettings(); segOn('#searchSeg', settings.searchMode); updateWebBtn(); });
+  $('#tavilyKey').addEventListener('input', (e) => { settings.tavilyKey = e.target.value.trim(); saveSettings(); });
+  $('#testSearch').onclick = async () => {
+    const out = $('#testSearchOut'); out.textContent = 'Searching…';
+    const r = await webSearch('Eiffel Tower height', { tavilyKey: settings.tavilyKey.trim() });
+    out.textContent = r.offline ? 'You are offline.' : r.results.length ? `✅ ${r.results.length} results via ${r.provider}` : '⚠️ No results (network blocked?)';
+  };
+  // look
+  $('#accentSw').addEventListener('click', (e) => { const b = e.target.closest('[data-accent]'); if (!b) return; settings.accent = b.dataset.accent; saveSettings(); applyLook(); renderAccents(); });
+  $('#accentSw').addEventListener('input', (e) => { if (e.target.id !== 'accentCustom') return; settings.accent = e.target.value; saveSettings(); applyLook(); $$('#accentSw button').forEach(b => b.classList.remove('on')); });
+  $('#wallPick').addEventListener('click', (e) => { const b = e.target.closest('[data-wall]'); if (!b) return; settings.wallpaper = b.dataset.wall; saveSettings(); applyLook(); renderWalls(); });
+  $('#wallUpload').onclick = () => $('#wallFile').click();
+  $('#wallFile').addEventListener('change', (e) => { const f = e.target.files[0]; if (f) loadWallpaperFile(f); e.target.value = ''; });
+  $('#wallDim').onclick = () => { const steps = [0.2, 0.45, 0.7]; const i = steps.findIndex(x => Math.abs(x - settings.wallDim) < 0.05); settings.wallDim = steps[(i + 1) % steps.length]; saveSettings(); applyLook(); fillSettings(); };
+  $('#widthSeg').addEventListener('click', (e) => { const b = e.target.closest('[data-v]'); if (!b) return; settings.chatWidth = b.dataset.v; saveSettings(); applyLook(); segOn('#widthSeg', settings.chatWidth); });
+  // home settings
+  $('#homeOnLaunch').addEventListener('change', (e) => { settings.homeOnLaunch = e.target.checked; saveSettings(); });
+  $('#layoutSeg').addEventListener('click', (e) => { const b = e.target.closest('[data-v]'); if (!b) return; settings.homeLayout = b.dataset.v; saveSettings(); segOn('#layoutSeg', settings.homeLayout); refreshHomeIfVisible(); });
+  $('#widgetList').addEventListener('change', (e) => { const t = e.target.closest('[data-wtoggle]'); if (!t) return; settings.widgets[+t.dataset.wtoggle].on = t.checked; saveSettings(); refreshHomeIfVisible(); });
+  $('#widgetList').addEventListener('click', (e) => {
+    const up = e.target.closest('[data-wup]'), dn = e.target.closest('[data-wdown]'); if (!up && !dn) return;
+    const i = +(up ? up.dataset.wup : dn.dataset.wdown), j = up ? i - 1 : i + 1;
+    const w = settings.widgets; if (j < 0 || j >= w.length) return;
+    [w[i], w[j]] = [w[j], w[i]]; saveSettings(); renderWidgetList(); refreshHomeIfVisible();
+  });
+  $('#qpList').addEventListener('input', (e) => { const f = e.target.closest('[data-qf]'); if (!f) return; const i = +f.closest('.qrow').dataset.qi; settings.quickPrompts[i][f.dataset.qf] = f.value; saveSettings(); refreshHomeIfVisible(); });
+  $('#qpList').addEventListener('click', (e) => { const d = e.target.closest('[data-qdel]'); if (!d) return; settings.quickPrompts.splice(+d.dataset.qdel, 1); saveSettings(); renderQuickPrompts(); refreshHomeIfVisible(); });
+  $('#qpAdd').onclick = () => { settings.quickPrompts.push({ label: '⭐ New', text: '' }); saveSettings(); renderQuickPrompts(); const rows = $$('#qpList .qt'); rows[rows.length - 1]?.focus(); };
+  $('#qpReset').onclick = () => { settings.quickPrompts = DEFAULT_PROMPTS.map(x => ({ ...x })); saveSettings(); renderQuickPrompts(); refreshHomeIfVisible(); };
   $('#newChat').onclick = () => { if (generating) return toast('Stop the current reply first'); newChat(); };
   $('#openSidebar').onclick = openSidebar;
   $('#closeSidebar').onclick = closeSidebarMobile;
@@ -681,7 +1010,6 @@ function bind() {
   });
   $('#chatList').addEventListener('keydown', (e) => { const item = e.target.closest('.chat-item'); if (item && e.key === 'Enter') openChat(item.dataset.id); });
 
-  $('#suggestions').addEventListener('click', (e) => { const b = e.target.closest('[data-s]'); if (b) send(b.dataset.s); });
 
   const input = $('#input');
   input.addEventListener('input', autosize);
@@ -742,7 +1070,7 @@ function bind() {
   };
   $('#pCancel').onclick = () => { editingPersona = null; $('#personaEditor').open = false; };
 
-  $('#openSettings').onclick = () => { closeSidebarMobile(); fillSettings(); $('#settingsDlg').showModal(); };
+  $('#openSettings').onclick = () => openSettings('general');
   $('#themeSeg').addEventListener('click', (e) => { const b = e.target.closest('[data-v]'); if (!b) return; settings.theme = b.dataset.v; saveSettings(); applyTheme(); });
   $('#customInstr').addEventListener('input', (e) => { settings.customInstr = e.target.value; saveSettings(); });
   $('#temp').addEventListener('input', (e) => { settings.temperature = +e.target.value; $('#tempVal').textContent = settings.temperature.toFixed(2); saveSettings(); });
@@ -751,7 +1079,7 @@ function bind() {
   $('#showStats').addEventListener('change', (e) => { settings.showStats = e.target.checked; saveSettings(); renderChat(); });
   $('#exportAll').onclick = async () => {
     const all = await db.all();
-    download(`pocket-ai-chats-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify({ app: 'pocket-ai', version: 1, exportedAt: new Date().toISOString(), chats: all, personas: settings.personas }, null, 2), 'application/json');
+    download(`pocket-ai-chats-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify({ app: 'pocket-ai', version: 1, exportedAt: new Date().toISOString(), chats: all, personas: settings.personas, memories: settings.memories }, null, 2), 'application/json');
   };
   $('#exportMd').onclick = async () => {
     const all = await db.all();
@@ -771,6 +1099,7 @@ function bind() {
           createdAt: c.createdAt || Date.now(), updatedAt: c.updatedAt || Date.now() };
         await db.put(chat); n++;
       }
+      if (Array.isArray(data.memories)) for (const m of data.memories) if (m && m.text) addMemory(String(m.text), !!m.auto);
       if (Array.isArray(data.personas)) for (const p of data.personas) if (p && p.id && !settings.personas.find(x => x.id === p.id)) settings.personas.push(p);
       saveSettings();
       chats = await db.all(); renderList();
@@ -845,13 +1174,13 @@ function registerSW() {
 async function boot() {
   applyTheme();
   if (settings.sidebarCollapsed && !matchMedia('(max-width: 820px)').matches) document.body.classList.add('side-collapsed');
-  renderSuggestions();
   bind();
   setModelChip('');
   try { chats = await db.all(); } catch { chats = []; toast('Couldn\'t open saved chats (private browsing?)'); }
   const last = settings.lastChatId && chats.find(c => c.id === settings.lastChatId);
-  if (last && isMobile === false) { current = { ...last, saved: true }; renderChat(); renderList(); updatePersonaChip(); }
+  if (last && !settings.homeOnLaunch) { current = { ...last, saved: true }; renderChat(); renderList(); updatePersonaChip(); }
   else newChat();
+  updateWebBtn();
   gpu = await detectGPU();
   showGpuBanner();
   if (gpu.ok) {
