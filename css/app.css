@@ -258,7 +258,6 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 
 /* ---------- Wallpaper ---------- */
 #main{background:var(--bg)}
-body.has-wall #main{background:var(--wall) center/cover no-repeat, var(--bg)}
 body.has-wall #main::before{content:"";position:absolute;inset:0;background:var(--bg);opacity:var(--wall-dim,.45);pointer-events:none;z-index:0}
 #main>*{position:relative;z-index:1}
 body.has-wall #topbar{background:color-mix(in srgb, var(--bg) 55%, transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}

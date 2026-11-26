@@ -181,7 +181,11 @@ function applyLook() {
   if (settings.wallpaper === 'custom') { const d = localStorage.getItem('pocketai.wallpaper'); if (d) wall = `url("${d}")`; }
   else if (WALLS[settings.wallpaper]) wall = WALLS[settings.wallpaper].css;
   document.body.classList.toggle('has-wall', !!wall);
-  if (wall) root.setProperty('--wall', wall); else root.removeProperty('--wall');
+  const main = $('#main');
+  if (wall) {
+    main.style.background = settings.wallpaper === 'custom' ? `${wall} center / cover no-repeat` : wall;
+    main.style.backgroundAttachment = 'local';
+  } else main.style.background = '';
   root.setProperty('--wall-dim', String(settings.wallDim ?? 0.45));
   document.body.classList.toggle('chat-wide', settings.chatWidth === 'wide');
   const name = asstName();
@@ -464,7 +468,7 @@ function renderChat() {
   empty.hidden = !!(current && current.messages.length);
   if (!empty.hidden) renderHome(); else stopClock();
   if (current) current.messages.forEach((m, i) => box.appendChild(messageEl(m, i)));
-  scrollBottom(true);
+  if (empty.hidden) scrollBottom(true); else box.scrollTop = 0;
   document.title = current && current.messages.length ? `${current.title} · Pocket AI` : 'Pocket AI';
 }
 function updatePersonaChip() {
