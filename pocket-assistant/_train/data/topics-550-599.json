@@ -1,0 +1,802 @@
+[
+  {
+    "title": "Job interviews",
+    "desc": "A job interview is a conversation to see if you and the role are a good fit. Read the job post, prepare a few examples of work or school you have done, and be ready to ask one or two questions about the job. Arrive a little early, listen carefully, and send a short thank-you message afterward.",
+    "prompts": [
+      "how do i prepare for a job interview",
+      "what should i say in an interview",
+      "interview tips for a first job",
+      "what questions will they ask",
+      "should I send a thank you after an interview",
+      "explain job interviews",
+      "how to get ready for an interview",
+      "what to wear to a job interview"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Tipping",
+    "desc": "Tipping is an extra payment for service, common in U.S. restaurants, hair salons and for delivery. Many people tip about 15 to 20 percent of the pre-tax bill for table service when the service was fine. Check the receipt; some places already add a service charge. Rules differ by country, so look it up when you travel.",
+    "prompts": [
+      "how much should i tip",
+      "what is a normal tip at a restaurant",
+      "is 20 percent a good tip",
+      "do i tip if a service charge is already added",
+      "explain tipping",
+      "tipping in the united states",
+      "how to tip for delivery",
+      "do i tip on the tax or the food"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Opening a bank account",
+    "desc": "To open a checking or savings account, a bank or credit union usually asks for photo ID, your Social Security number or ITIN if you have one, and a small opening deposit. Compare fees, overdraft rules and whether you need a parent or guardian as a joint owner if you are under 18. Read the account agreement before you sign.",
+    "prompts": [
+      "how do i open a bank account",
+      "what do i need to open a checking account",
+      "can a teenager open a bank account",
+      "bank account id and social security number",
+      "explain opening a bank account",
+      "opening a savings account",
+      "bank fees to look for",
+      "do i need a parent to open an account"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Gross versus net pay",
+    "desc": "Gross pay is what you earn before deductions. Net pay, or take-home pay, is what you actually receive after taxes and other deductions such as health insurance. Compare job offers by looking at both the pay rate and what is taken out, not only the headline wage.",
+    "prompts": [
+      "what is gross pay",
+      "what is net pay",
+      "why is my paycheck smaller than my wage",
+      "take home pay versus gross",
+      "explain gross versus net pay",
+      "what are paycheck deductions",
+      "gross vs net on a pay stub",
+      "why didn't I get the full hourly amount"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Kitchen knife basics",
+    "desc": "Keep fingers curled under on the hand that holds the food, and cut with a claw grip so fingertips stay back from the blade. Use a stable board, don't try to catch a falling knife, and wash knives carefully by hand or as the maker directs. A sharp knife is easier to control than a dull one.",
+    "prompts": [
+      "how should i hold a kitchen knife",
+      "what is a claw grip when cutting",
+      "kitchen knife safety",
+      "don't catch a falling knife",
+      "explain kitchen knife basics",
+      "how to cut vegetables safely",
+      "should i use a sharp or dull knife",
+      "fingers away from the blade"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Boiling versus simmering",
+    "desc": "Boiling means the liquid is at 212°F (100°C) at sea level, with large, rolling bubbles. Simmering is gentler, with small bubbles that rise slowly, usually just below a boil. Use a boil for pasta or reducing a liquid quickly, and a simmer for soups, sauces and tougher cuts of food that need steady, gentle heat.",
+    "prompts": [
+      "what's the difference between boiling and simmering",
+      "what does simmer mean",
+      "rolling boil versus small bubbles",
+      "when should I simmer instead of boil",
+      "explain boiling versus simmering",
+      "how hot is a simmer",
+      "boil water for pasta",
+      "simmer a soup"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sautéing",
+    "desc": "Sautéing is cooking food quickly in a little oil or butter over medium-high heat, usually in a wide pan. Heat the pan first, don't crowd the food so it browns instead of steaming, and stir or toss as it cooks. Cut pieces to a similar size so they finish at the same time.",
+    "prompts": [
+      "what does saute mean",
+      "how do i saute vegetables",
+      "why shouldn't I crowd the pan",
+      "heat the pan before the food",
+      "explain sauteing",
+      "cook quickly in a little oil",
+      "medium high heat in a skillet",
+      "sauté versus steaming"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Baking versus roasting",
+    "desc": "Baking and roasting both use dry oven heat. People usually say baking for breads, cakes and other batters, and roasting for meats and vegetables, often at a higher temperature so the outside browns. Follow the recipe temperature and use the rack position it calls for.",
+    "prompts": [
+      "what's the difference between baking and roasting",
+      "is roasting the same as baking",
+      "when do i roast vegetables",
+      "baking cakes versus roasting meat",
+      "explain baking versus roasting",
+      "dry heat in the oven",
+      "higher temperature for roasting",
+      "oven baking basics"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Scrambling eggs",
+    "desc": "Beat the eggs with a pinch of salt. Warm a little butter or oil in a nonstick pan over medium-low heat, pour in the eggs, and stir gently as they set. Take them off the heat while they still look slightly moist; they keep cooking in the pan.",
+    "prompts": [
+      "how do i scramble eggs",
+      "how to make scrambled eggs",
+      "eggs sticking to the pan",
+      "should scrambled eggs be wet",
+      "explain scrambling eggs",
+      "medium low heat for eggs",
+      "beat eggs before cooking",
+      "scrambled eggs with butter"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Boiling eggs",
+    "desc": "Place eggs in a saucepan and cover them with an inch of cold water. Bring to a boil, then turn off the heat, cover, and let sit: about 6 to 8 minutes for a jammy yolk, or 10 to 12 minutes for a firm hard-boiled yolk. Move the eggs to cold water so they stop cooking and are easier to peel.",
+    "prompts": [
+      "how do i boil eggs",
+      "how long to hard boil an egg",
+      "jammy versus hard boiled eggs",
+      "why put boiled eggs in cold water",
+      "explain boiling eggs",
+      "easy peel hard boiled eggs",
+      "how to make soft boiled eggs",
+      "cover eggs with water and boil"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Food safety temperatures",
+    "desc": "Cook poultry to 165°F (74°C) and ground beef to 160°F (71°C). Steaks and chops are often considered safe at 145°F (63°C) with a short rest, and leftovers should be reheated to 165°F. Use a food thermometer in the thickest part, not just color, and keep cold food at or below 40°F (4°C).",
+    "prompts": [
+      "what temperature should chicken be cooked to",
+      "food thermometer temperatures",
+      "is pink ground beef safe",
+      "how hot should leftovers be reheated",
+      "explain food safety temperatures",
+      "160 for ground beef",
+      "keep the fridge at 40",
+      "safe cooking temperature for meat"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Storing leftovers",
+    "desc": "Cool leftovers and refrigerate them within two hours, or within one hour if the food has been in a hot room. Use shallow containers so they cool faster, eat or freeze them within a few days, and reheat until steaming hot. When in doubt, throw it out rather than risk leftover food that smells or looks off.",
+    "prompts": [
+      "how long can leftovers stay in the fridge",
+      "when should I refrigerate leftovers",
+      "two hour rule for leftovers",
+      "how to store leftover food",
+      "explain storing leftovers",
+      "shallow containers for leftovers",
+      "reheat leftovers until hot",
+      "should I throw out old leftovers"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Defrosting food safely",
+    "desc": "The safest ways to thaw food are in the refrigerator, under cold running water, or in the microwave if you will cook it right away. Do not thaw meat or poultry on the counter at room temperature, where the outside can sit in the danger zone while the inside is still frozen. Cook food thawed in the microwave immediately.",
+    "prompts": [
+      "how do i defrost meat safely",
+      "can I thaw chicken on the counter",
+      "thaw in the refrigerator",
+      "is it safe to defrost in the microwave",
+      "explain defrosting food safely",
+      "cold water thawing",
+      "don't leave meat out to thaw",
+      "safe way to unfreeze food"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Preventing cross-contamination",
+    "desc": "Cross-contamination is when germs from raw meat, poultry or seafood get onto ready-to-eat food. Use separate cutting boards or wash the board, knife and hands with hot soapy water after cutting raw meat. Keep raw meat on a plate on the bottom fridge shelf so juices cannot drip onto other food.",
+    "prompts": [
+      "what is cross contamination",
+      "should I use a separate cutting board for meat",
+      "raw chicken on the same board as salad",
+      "how to avoid spreading germs in the kitchen",
+      "explain preventing cross-contamination",
+      "wash hands after raw meat",
+      "raw meat on the bottom shelf",
+      "keeping ready to eat food safe"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Best-by and use-by dates",
+    "desc": "A use-by or expiration date is about safety for some foods, especially infant formula, and you should follow it. A best-by or best-before date is usually about quality, not an automatic deadline; many foods are still fine if they were stored well and show no spoilage. When a food looks, smells or feels wrong, do not eat it even if the date has not passed.",
+    "prompts": [
+      "what's the difference between best by and use by",
+      "is it safe to eat food after the best by date",
+      "what does expiration date mean",
+      "use by versus best before",
+      "explain best-by and use-by dates",
+      "does best by mean it is spoiled",
+      "infant formula expiration date",
+      "food looks fine but date passed"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Making oatmeal",
+    "desc": "For stovetop oats, use about 2 cups of water or milk per 1 cup of rolled oats, a pinch of salt, and simmer, stirring, until thick and creamy, often 5 minutes. Quick oats cook faster; steel-cut oats take longer and need more liquid. Sweeten or add fruit after cooking if you want.",
+    "prompts": [
+      "how do i make oatmeal",
+      "rolled oats water ratio",
+      "how long do oats take to cook",
+      "steel cut versus rolled oats",
+      "explain making oatmeal",
+      "stovetop oatmeal",
+      "microwave oatmeal",
+      "oatmeal with milk or water"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Making pancakes",
+    "desc": "Mix the dry ingredients, then the wet, and stir just until combined; a few lumps are fine and help keep pancakes tender. Cook on a greased medium pan until bubbles form and the edges look set, then flip once and cook the other side. Keep the heat moderate so the inside cooks before the outside burns.",
+    "prompts": [
+      "how do i make pancakes",
+      "when do I flip a pancake",
+      "why are my pancakes tough",
+      "lumps in pancake batter",
+      "explain making pancakes",
+      "bubbles on a pancake",
+      "medium heat for pancakes",
+      "homemade pancake batter"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Making a grilled cheese",
+    "desc": "Butter the outside of two bread slices, add cheese between them, and cook in a skillet over medium-low heat until the bread is golden and the cheese has melted, flipping once. Covering the pan for a minute can help the cheese melt without burning the bread.",
+    "prompts": [
+      "how do i make a grilled cheese",
+      "butter the outside of the bread",
+      "cheese not melting before bread burns",
+      "grilled cheese in a skillet",
+      "explain making a grilled cheese",
+      "medium low heat grilled cheese",
+      "flip a grilled cheese once",
+      "classic grilled cheese sandwich"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Making a quesadilla",
+    "desc": "Scatter cheese and any fillings on one half of a tortilla, fold it over, and cook in a lightly oiled skillet over medium heat until both sides are golden and the cheese melts. Let it sit a minute before cutting so the filling doesn't slide out.",
+    "prompts": [
+      "how do i make a quesadilla",
+      "cheese and tortilla in a pan",
+      "when is a quesadilla done",
+      "fold the tortilla in half",
+      "explain making a quesadilla",
+      "quesadilla fillings",
+      "lightly oil the skillet",
+      "cut a quesadilla after it rests"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Salting pasta water",
+    "desc": "Salt the water after it is boiling, just before you add the pasta. The pasta absorbs some of that seasoning as it cooks, so the finished dish tastes better than if you only salt the sauce. A common starting point is about 1 tablespoon of kosher salt per 4 quarts of water, then adjust to your taste and any doctor's advice on sodium.",
+    "prompts": [
+      "should i salt pasta water",
+      "when do I add salt to pasta water",
+      "why salt the water for pasta",
+      "how much salt in pasta water",
+      "explain salting pasta water",
+      "salt after the water boils",
+      "does pasta absorb salt",
+      "pasta tastes bland"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Microwave safety",
+    "desc": "Use microwave-safe glass or labeled plastic, not metal or foil, which can spark. Watch out for steam when you uncover a hot container, and stir food so it heats evenly. Superheated water can erupt, so use a microwave-safe container and care when heating plain water. If a dish says do not microwave, follow that.",
+    "prompts": [
+      "is it safe to put metal in the microwave",
+      "what containers are microwave safe",
+      "steam burn from a microwave lid",
+      "why stir microwaved food",
+      "explain microwave safety",
+      "can foil go in the microwave",
+      "superheated water in a microwave",
+      "microwave safe glass versus plastic"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Grease fires",
+    "desc": "If oil in a pan catches fire, turn off the heat if you can do it safely and slide a metal lid over the pan to smother the flames. Never pour water on a grease fire; it can explode the fire outward. Baking soda can help on a small pan fire. If the fire is spreading, leave, close the door, and call 911.",
+    "prompts": [
+      "what do i do if a grease fire starts",
+      "never put water on a grease fire",
+      "cover a grease fire with a lid",
+      "can I use baking soda on a pan fire",
+      "explain grease fires",
+      "oil on fire in a pan",
+      "when to call 911 for a kitchen fire",
+      "smother a grease fire"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "American football downs",
+    "desc": "A down is one play. The offense has four downs to gain 10 yards. If they succeed, they get a new set of downs. If they don't, the other team usually takes over. Teams often punt or try a field goal on fourth down instead of risking a turnover on downs.",
+    "prompts": [
+      "what is a down in football",
+      "what does first and ten mean",
+      "four downs to get ten yards",
+      "why do teams punt on fourth down",
+      "explain american football downs",
+      "new set of downs",
+      "turnover on downs",
+      "how do downs work"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Touchdowns and field goals",
+    "desc": "A touchdown is worth 6 points when the ball is carried or caught in the opponent's end zone. The team can then try an extra point kick (1) or a two-point conversion. A field goal is normally 3 points, kicked through the goalposts, often on fourth down or at the end of a half.",
+    "prompts": [
+      "how many points is a touchdown",
+      "what is a field goal worth",
+      "extra point versus two point conversion",
+      "how do you score in football",
+      "explain touchdowns and field goals",
+      "ball in the end zone",
+      "field goal through the posts",
+      "6 points plus the extra point"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Baseball strikes and innings",
+    "desc": "A strike is a pitch in the strike zone that the batter does not hit fairly, or a swing and a miss, or a foul (except a foul cannot be strike three unless it is a bunt). Three strikes make an out. An inning is a turn for both teams to bat; a regulation game is usually nine innings.",
+    "prompts": [
+      "what is a strike in baseball",
+      "how many strikes is an out",
+      "what is an inning",
+      "foul ball and strike three",
+      "explain baseball strikes and innings",
+      "how long is a baseball game",
+      "three strikes and you're out",
+      "nine innings in baseball"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Golf scoring",
+    "desc": "In stroke play, the person with the fewest total shots wins. Par is the expected number of strokes for a hole. A birdie is one under par, an eagle is two under, and a bogey is one over par. Lower totals are better.",
+    "prompts": [
+      "how does golf scoring work",
+      "what is par in golf",
+      "what is a birdie",
+      "what is a bogey",
+      "explain golf scoring",
+      "eagle in golf",
+      "fewest strokes wins",
+      "stroke play versus match play"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Freestyle swimming",
+    "desc": "Freestyle usually means the front crawl: alternate arm strokes, a flutter kick, and breathing to the side. Keep your body fairly long and level, and turn your head to breathe rather than lifting it straight up. In a freestyle event you may use any stroke, but crawl is the fastest for most people.",
+    "prompts": [
+      "how do i swim freestyle",
+      "what is the front crawl",
+      "how to breathe in freestyle",
+      "flutter kick in swimming",
+      "explain freestyle swimming",
+      "side breathing in the pool",
+      "keep your body level in the water",
+      "freestyle versus breaststroke"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Basketball layups",
+    "desc": "A layup is a close-range shot off the backboard while moving toward the hoop. Dribble in, pick up the ball, and jump off the opposite foot from the shooting hand: right-hand layup, jump off the left foot. Use the backboard square as a target, and protect the ball with your body.",
+    "prompts": [
+      "how do i do a layup",
+      "right hand layup off the left foot",
+      "use the backboard on a layup",
+      "close range basketball shot",
+      "explain basketball layups",
+      "drive to the hoop and lay it in",
+      "layup footwork",
+      "shooting a layup off the glass"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Chess check and checkmate",
+    "desc": "Check means your king is under attack and you must get out of it by moving the king, blocking the attack, or capturing the attacking piece. Checkmate means the king is in check and there is no legal way out, so the game is over and that player loses. You cannot make a move that leaves your own king in check.",
+    "prompts": [
+      "what is check in chess",
+      "what is checkmate",
+      "how do I get out of check",
+      "when is the chess game over",
+      "explain chess check and checkmate",
+      "block capture or move the king",
+      "you cannot stay in check",
+      "check versus checkmate"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Castling",
+    "desc": "Castling is a special king-and-rook move: the king moves two squares toward a rook, and that rook jumps to the square the king crossed. You can castle only if neither piece has moved, the squares between them are empty, and the king is not in check and does not pass through or land on an attacked square.",
+    "prompts": [
+      "what is castling in chess",
+      "how do i castle",
+      "when can I not castle",
+      "king moves two squares",
+      "explain castling",
+      "rook jumps over the king",
+      "castling out of check",
+      "kingside versus queenside castle"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sudoku",
+    "desc": "Sudoku is a puzzle on a 9-by-9 grid divided into 3-by-3 boxes. Fill every row, column and box with the digits 1 through 9, each used once. Start with cells that have the fewest possibilities, pencil in candidates, and never guess if a logical next number is available.",
+    "prompts": [
+      "how do i play sudoku",
+      "sudoku rules",
+      "1 to 9 in each row column and box",
+      "how to start a sudoku",
+      "explain sudoku",
+      "pencil in candidates",
+      "don't guess in sudoku",
+      "3 by 3 boxes in sudoku"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Uno",
+    "desc": "In Uno, you take turns playing a card that matches the color or number (or symbol) of the card on the pile, or you play a wild. Draw if you cannot play. Action cards can skip, reverse, or make the next player draw. Say “Uno” when you have one card left, or you may have to draw if someone catches you.",
+    "prompts": [
+      "how do i play uno",
+      "what happens if I don't say uno",
+      "wild and draw four cards",
+      "match color or number",
+      "explain uno",
+      "skip reverse and draw two",
+      "uno with one card left",
+      "uno rules for kids"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "In-game purchases",
+    "desc": "In-game purchases are optional items, currency or passes you buy with real money inside a game. Set a password, use purchase approvals, and check platform spending limits so a game cannot charge you by accident. Treat leftover currency as money already spent, and don't feel you have to buy an advantage to play.",
+    "prompts": [
+      "what are in-game purchases",
+      "how do i stop accidental game charges",
+      "spending limits on a playstation or iphone",
+      "should I buy in-game currency",
+      "explain in-game purchases",
+      "password for app purchases",
+      "battle pass and microtransactions",
+      "kids buying things in a game"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Checking tire pressure",
+    "desc": "Look up the recommended PSI on the driver's door sticker, not only the tire sidewall, which shows the maximum. Check when the tires are cold, unscrew the valve cap, press a gauge on the valve, and add or release air until you hit the number. Recheck all four tires, and the spare if you have one.",
+    "prompts": [
+      "how do i check tire pressure",
+      "what psi should my tires be",
+      "door sticker versus sidewall psi",
+      "check tires when they are cold",
+      "explain checking tire pressure",
+      "use a tire gauge",
+      "add air to a car tire",
+      "don't use only the max on the tire"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Pumping gas",
+    "desc": "Park at the pump, turn the car off, and open the fuel door. Choose the grade your owner's manual recommends, usually regular unless the car requires premium. Insert the nozzle fully, pump, then wait a moment, hang the nozzle up, and tighten the cap until it clicks if it is a click cap. Don't smoke or use your phone in a way that distracts you at the pump.",
+    "prompts": [
+      "how do i pump gas",
+      "do I need premium gas",
+      "turn the car off at the pump",
+      "how to use a gas pump",
+      "explain pumping gas",
+      "regular versus premium fuel",
+      "tighten the gas cap until it clicks",
+      "which side is my fuel door"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Checking engine oil",
+    "desc": "Park on level ground, turn the engine off, and wait a few minutes. Pull out the dipstick, wipe it, put it back in fully, then pull it out again and read the level between the min and max marks. If it is low, add the oil type in your owner's manual a little at a time and recheck. A warning light or a very low level means you should not keep driving.",
+    "prompts": [
+      "how do i check my oil",
+      "how to read a dipstick",
+      "what oil does my car take",
+      "engine oil is low",
+      "explain checking engine oil",
+      "wipe the dipstick and check again",
+      "min and max on the oil stick",
+      "oil warning light"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Jump-starting a car",
+    "desc": "Only jump-start if both batteries are the same voltage, usually 12 volts, and you know the correct terminals. Connect the red clamp to the dead battery's positive terminal, then to the good battery's positive. Connect the black clamp to the good battery's negative, then to an unpainted metal ground on the dead car, not the dead negative terminal if the manual says not to. Start the good car, then the dead one, and remove the cables in reverse order. If you are unsure, call for roadside help.",
+    "prompts": [
+      "how do i jump start a car",
+      "jumper cable order",
+      "red to positive black to ground",
+      "can I jump a 12 volt battery",
+      "explain jump-starting a car",
+      "do not clamp to the dead negative",
+      "unsafe to jump start if i'm unsure",
+      "roadside help instead of jumping"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Changing a spare tire",
+    "desc": "Pull well off the road, turn on hazard lights, and set the parking brake. Loosen the lug nuts slightly before jacking, jack at the lift point in the owner's manual, remove the nuts, swap the wheel, snug the nuts, lower the car, then tighten the nuts in a star pattern. A donut spare is usually for short, slower trips to a shop, not highway speeds for long distances.",
+    "prompts": [
+      "how do i change a flat tire",
+      "where do I put the jack",
+      "loosen lug nuts before jacking",
+      "star pattern on lug nuts",
+      "explain changing a spare tire",
+      "donut spare speed limit",
+      "hazard lights and parking brake",
+      "I have a flat tire on the side of the road"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Dashboard warning lights",
+    "desc": "A red oil, brake or temperature warning usually means you should stop safely as soon as you can and check the manual or get help. An amber check-engine or tire light often means something needs service soon, but not always an instant stop. Look up the exact symbol in your owner's manual instead of ignoring a light.",
+    "prompts": [
+      "what does the check engine light mean",
+      "red oil can on the dashboard",
+      "should I stop for a warning light",
+      "tire pressure light came on",
+      "explain dashboard warning lights",
+      "brake warning light",
+      "temperature warning on the dash",
+      "amber versus red car lights"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Seat belts",
+    "desc": "A seat belt should sit across the hips and mid-chest, not the stomach or neck, and it should be snug. Everyone in the car should buckle up, including the back seat. A belt works with the airbag; sitting too close or leaving the belt off can make a crash much more dangerous.",
+    "prompts": [
+      "how should a seat belt fit",
+      "does the back seat need seat belts",
+      "seat belt across the hips and chest",
+      "why wear a seat belt",
+      "explain seat belts",
+      "seat belt and airbag",
+      "belt is on my neck",
+      "buckle up in the car"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Car insurance basics",
+    "desc": "Car insurance helps pay for damage or injury after a crash, theft or other covered events, according to your policy. Liability coverage pays others if you are at fault; collision and comprehensive cover damage to your own car in different situations. State laws set minimums, and a deductible is what you pay first before the insurer pays the rest.",
+    "prompts": [
+      "what is car insurance",
+      "what is liability coverage",
+      "what is a deductible",
+      "collision versus comprehensive",
+      "explain car insurance basics",
+      "minimum insurance required",
+      "who pays if I cause a crash",
+      "how does auto insurance work"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Getting a learner's permit",
+    "desc": "A learner's permit lets you practice driving with restrictions before a full license. Rules vary by state, but you usually have to be a minimum age, pass a written knowledge test and an eye test, and complete an application with ID and, if you are a minor, a parent or guardian's consent. Drive only with the passengers and hours your state allows.",
+    "prompts": [
+      "how do i get a learner's permit",
+      "what is a driving permit",
+      "written test for a permit",
+      "age for a learner permit",
+      "explain getting a learner's permit",
+      "parent consent for a permit",
+      "permit restrictions at night",
+      "driver's permit versus license"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Parallel parking",
+    "desc": "Line up with the car in front of the space, about two to three feet away. Reverse and turn toward the curb to enter the space, then straighten and turn the other way to tuck the bumper in. You should end up a reasonable distance from the curb, usually within about 12 inches in many tests, without hitting the cars around you. Practice in an empty lot first.",
+    "prompts": [
+      "how do i parallel park",
+      "steps for parallel parking",
+      "how close to the curb should I be",
+      "turn toward the curb then straighten",
+      "explain parallel parking",
+      "practice parallel parking",
+      "reverse into a parking space",
+      "driver's test parallel park"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Pedestrian safety",
+    "desc": "Cross at a corner or marked crosswalk when you can, look left, right, then left again, and make sure drivers have stopped before you step out. On a two-way street, watch for turning cars. At night, wear something visible, and stay off your phone while crossing. Drivers should yield, but do not assume they have seen you.",
+    "prompts": [
+      "how can I cross the street safely",
+      "look left right left",
+      "should I cross at a crosswalk",
+      "pedestrian safety at night",
+      "explain pedestrian safety",
+      "make eye contact with drivers",
+      "don't use a phone in a crosswalk",
+      "turning cars at an intersection"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Locking a bicycle",
+    "desc": "Lock the frame and if you can a wheel to a solid rack, using a sturdy U-lock or a quality heavy chain, not only a thin cable. Don't leave the lock near the ground where it is easier to attack, and take lights and loose bags with you. Register the bike and photograph the serial number in case it is stolen.",
+    "prompts": [
+      "how should i lock my bike",
+      "u-lock the frame to a rack",
+      "don't only lock the wheel",
+      "best way to lock a bicycle",
+      "explain locking a bicycle",
+      "thin cable lock is not enough",
+      "photograph the serial number",
+      "lock a bike at school or a store"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Tying a necktie",
+    "desc": "For a common four-in-hand knot, drape the tie around your neck with the wide end hanging lower. Wrap the wide end across the narrow end, around the back, and across the front again, then up through the neck loop and down through the front knot. Slide the knot up and dimple the center if you want a neater look.",
+    "prompts": [
+      "how do i tie a necktie",
+      "how to tie a four in hand knot",
+      "wide end over the narrow end",
+      "explain tying a necktie",
+      "simple tie knot",
+      "tie a tie for school or a wedding",
+      "make a dimple in a tie",
+      "step by step necktie"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sewing on a button",
+    "desc": "Thread a needle and knot the end. From the back of the fabric, sew through each pair of buttonholes several times, leaving a tiny shank of thread under the button if the fabric is thick, then wrap the thread around that shank and knot it on the back. Match the thread color and don't pull so tight that the fabric puckers.",
+    "prompts": [
+      "how do i sew on a button",
+      "button fell off my shirt",
+      "thread a needle and sew a button",
+      "what is a thread shank",
+      "explain sewing on a button",
+      "sew through the buttonholes",
+      "knot the thread on the back",
+      "fix a loose button"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Using a fire extinguisher",
+    "desc": "Use a fire extinguisher only if the fire is small, you have a clear exit, and you know what is burning. Remember PASS: pull the pin, aim at the base of the fire, squeeze the handle, and sweep from side to side. If the fire grows or the room fills with smoke, leave and call 911.",
+    "prompts": [
+      "how do i use a fire extinguisher",
+      "what does pass mean",
+      "pull aim squeeze sweep",
+      "when should I not fight a fire",
+      "explain using a fire extinguisher",
+      "aim at the base of the fire",
+      "leave if the fire grows",
+      "call 911 and get out"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Smoke alarms",
+    "desc": "Smoke alarms should be on every level of a home, inside bedrooms, and outside sleeping areas. Test them monthly, replace batteries when the unit chirps or as the maker directs, and replace the whole alarm when it reaches the date on the back, often after about 10 years. Never take the battery out just to stop a nuisance chirp without fixing the cause.",
+    "prompts": [
+      "where should smoke alarms be",
+      "how often should I test a smoke alarm",
+      "smoke alarm is chirping",
+      "when to replace a smoke detector",
+      "explain smoke alarms",
+      "smoke alarm in the bedroom",
+      "replace alarm after 10 years",
+      "don't disable a smoke alarm"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Airport security basics",
+    "desc": "At U.S. airport security, have your ID and boarding pass ready, and follow the bin rules for shoes, laptops and liquids. Liquids in carry-on bags generally must be in containers of 3.4 ounces (100 ml) or less, in one quart-size bag, with exceptions such as medically necessary items you should declare. Put metal items in a bin, and wait for the officer's instructions.",
+    "prompts": [
+      "what can I take through airport security",
+      "3-1-1 liquids rule",
+      "do I take out my laptop",
+      "shoes and belts at tsa",
+      "explain airport security basics",
+      "how to go through airport security",
+      "quart bag for liquids",
+      "id and boarding pass at the checkpoint"
+    ],
+    "code": "",
+    "answer": ""
+  }
+]

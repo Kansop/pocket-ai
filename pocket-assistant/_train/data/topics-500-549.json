@@ -1,0 +1,802 @@
+[
+  {
+    "title": "VPNs",
+    "desc": "A VPN, or virtual private network, sends your internet traffic through an encrypted tunnel to a server, which can hide it from a local Wi-Fi network. It does not make you fully anonymous, and a poorly chosen VPN can see or mishandle your traffic. A VPN also will not fix a device that already has malware.",
+    "prompts": [
+      "what is a vpn",
+      "what does vpn stand for",
+      "how does a vpn work",
+      "does a vpn make me anonymous",
+      "should i use a vpn on public wifi",
+      "explain vpns",
+      "encrypted internet tunnel",
+      "is a free vpn safe"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Software updates",
+    "desc": "Software updates fix bugs and close security holes, and they sometimes add features. Install updates from the official Settings app or app store, not from a random pop-up or text. Keep your phone plugged in or well charged, and back it up first if the update is a large system version.",
+    "prompts": [
+      "why should i update my phone",
+      "what do software updates do",
+      "is it safe to update ios",
+      "should i ignore update popups from texts",
+      "how do software updates work",
+      "explain software updates",
+      "security patches on a phone",
+      "when should i install a system update"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Public Wi-Fi safety",
+    "desc": "Public Wi-Fi in cafes, airports and hotels is convenient but easier for others on the network to snoop if a site is not secure. Avoid logging into banking or entering passwords on unknown networks when you can use your phone's cellular data or a trusted VPN instead. Confirm you joined the official network, not a similarly named fake one.",
+    "prompts": [
+      "is public wifi safe",
+      "should i bank on coffee shop wifi",
+      "how can i use public wifi more safely",
+      "fake wifi network",
+      "explain public wifi safety",
+      "why is public wifi risky",
+      "use cellular data instead of public wifi",
+      "airport wifi safety"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Cloud storage",
+    "desc": "Cloud storage keeps files on a company's servers so you can open them from other devices, such as iCloud, Google Drive or OneDrive. Your files are only as safe as your account, so use a strong unique password and two-factor authentication. Check whether a file is stored only in the cloud, only on the device, or both.",
+    "prompts": [
+      "what is cloud storage",
+      "how does google drive work",
+      "are my files only on my phone or in the cloud",
+      "is cloud storage safe",
+      "icloud google drive onedrive",
+      "explain cloud storage",
+      "why do i need a password for cloud files",
+      "saving files in the cloud"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Email attachments",
+    "desc": "Open attachments only when you expect the file and trust the sender. Check the real email address and the file type; unexpected .exe, .zip or unusual documents can carry malware. If a message looks odd, contact the person through a number or account you already have instead of opening the file.",
+    "prompts": [
+      "is it safe to open an email attachment",
+      "what attachments should i not open",
+      "unexpected zip file in email",
+      "how can an attachment have malware",
+      "explain email attachments",
+      "should i open a file from someone i don't know",
+      "check the sender before opening an attachment",
+      "safe email attachment tips"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Digital footprints",
+    "desc": "A digital footprint is the trail of information you leave online, including posts, photos, comments, accounts and data collected about you. Even deleted posts can be saved or shared by others. Search your name occasionally, tighten privacy settings, and think twice before posting something you would not want a school or employer to see.",
+    "prompts": [
+      "what is a digital footprint",
+      "can deleted posts still be seen",
+      "what information do i leave online",
+      "why should i be careful what i post",
+      "explain digital footprints",
+      "can colleges see my social media",
+      "how to reduce my digital footprint",
+      "photos and comments online"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Social app privacy",
+    "desc": "In a social app's privacy settings, choose who can see your posts, story and location, and who can message or tag you. Turn off location sharing when you do not need it, and review tagged photos. A public account can be seen by anyone, including people you do not know.",
+    "prompts": [
+      "how do i make my social media private",
+      "who can see my instagram or tiktok",
+      "should i share my location on social apps",
+      "privacy settings on social media",
+      "explain social app privacy",
+      "who can message or tag me",
+      "public versus private account",
+      "turn off location sharing"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Blocking a number",
+    "desc": "Blocking a number stops calls and texts from that number from ringing through on most phones. On iPhone, open the call or thread, tap the info button, and choose Block this Caller. Blocked messages may still be stored in a filtered list, and a person can try a different number, so also report harassment if it continues.",
+    "prompts": [
+      "how do i block a phone number",
+      "how to block a caller on iphone",
+      "will a blocked number know i blocked them",
+      "stop texts from a number",
+      "explain blocking a number",
+      "block this caller",
+      "can someone text me from a new number",
+      "where do blocked messages go"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Backing up a phone",
+    "desc": "A backup is a copy of your apps, photos, settings and data that you can use if the phone is lost, broken or reset. On iPhone you can back up with iCloud or a computer. Back up before a major update or trade-in, and check that recent photos actually appear in the backup or photo library.",
+    "prompts": [
+      "how do i back up my iphone",
+      "why should i back up my phone",
+      "icloud backup versus computer backup",
+      "what is a phone backup",
+      "explain backing up a phone",
+      "back up before resetting a phone",
+      "will a backup save my photos",
+      "how to restore from a backup"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "App permissions",
+    "desc": "App permissions are the kinds of access an app asks for, such as the camera, microphone, photos, location or contacts. Grant only what the app needs for a feature you actually use. You can change permissions later in Settings, and you can often choose While Using the App instead of Always for location.",
+    "prompts": [
+      "what are app permissions",
+      "why does an app want my location",
+      "should i allow camera access",
+      "how do i change app permissions",
+      "explain app permissions",
+      "microphone and photo access",
+      "while using the app versus always",
+      "turn off an app's location access"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Clearing a browser cache",
+    "desc": "A browser cache stores pieces of websites so pages can load faster next time. Clearing the cache can fix a page that looks stuck or outdated, but you may need to log in again and pages may load more slowly at first. In Safari on iPhone, you can clear history and website data in Settings.",
+    "prompts": [
+      "what is a browser cache",
+      "how do i clear my cache on iphone",
+      "why should i clear website data",
+      "a website looks stuck or outdated",
+      "explain clearing a browser cache",
+      "clear safari history and website data",
+      "does clearing cache log me out",
+      "cache versus cookies"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Pairing a Bluetooth device",
+    "desc": "To pair headphones or a speaker, put the device in pairing mode, open Bluetooth in Settings, and tap the device's name. Stay close during setup, and type a PIN if asked, often 0000 or 1234 if a manual does not give another code. Forget the device in Settings if it will not reconnect, then pair it again.",
+    "prompts": [
+      "how do i pair bluetooth headphones",
+      "bluetooth device won't connect",
+      "what is pairing mode",
+      "bluetooth pin 0000",
+      "explain pairing a bluetooth device",
+      "how to connect a speaker to my phone",
+      "forget this device and pair again",
+      "iphone bluetooth pairing"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "If a phone gets wet",
+    "desc": "If a phone gets wet, take it out of the water, power it off if it is on, and do not charge it or plug anything in. Dry the outside with a cloth and let it dry in a warm, dry place. Skip a bag of rice, which can leave dust and does not dry the inside well. If it was in dirty or salt water, or it will not turn on later, get professional help.",
+    "prompts": [
+      "what do i do if my phone gets wet",
+      "my phone fell in water",
+      "should i put a wet phone in rice",
+      "can i charge a wet phone",
+      "explain if a phone gets wet",
+      "how to dry a phone",
+      "iphone dropped in the toilet or pool",
+      "salt water on a phone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Dark mode",
+    "desc": "Dark mode uses a darker background that some people find easier on the eyes in low light and that can save a little battery on phones with OLED screens. It does not automatically make every app easier to read. You can schedule it in Settings or switch it in Control Center.",
+    "prompts": [
+      "what is dark mode",
+      "does dark mode save battery",
+      "is dark mode better for your eyes",
+      "how do i turn on dark mode",
+      "explain dark mode",
+      "schedule dark mode at night",
+      "oled and dark mode",
+      "light mode versus dark mode"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Muting a group chat",
+    "desc": "Muting a group chat keeps the conversation but stops most notifications, so your phone is not buzzing all day. On iPhone, open the thread, tap the group name or info button, and turn on Hide Alerts. You can still open the chat when you want to catch up.",
+    "prompts": [
+      "how do i mute a group chat",
+      "hide alerts on imessage",
+      "stop notifications from a group text",
+      "mute versus leaving a group",
+      "explain muting a group chat",
+      "too many group chat notifications",
+      "how to silence a group message",
+      "turn off alerts for one conversation"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Washing your hands",
+    "desc": "Wash your hands with soap and water for about 20 seconds, including the backs, between the fingers and under the nails, then rinse and dry. Do this before eating, after using the bathroom, and after coughing or handling shared surfaces. Use hand sanitizer with at least 60 percent alcohol when soap and water are not available, but wash with soap if hands are visibly dirty.",
+    "prompts": [
+      "how should i wash my hands",
+      "how long should i wash my hands",
+      "when should i wash my hands",
+      "is hand sanitizer enough",
+      "explain washing your hands",
+      "20 seconds with soap",
+      "wash hands before eating",
+      "hand sanitizer versus soap"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Getting enough sleep",
+    "desc": "Most teenagers need about 8 to 10 hours of sleep, and most adults need about 7 or more. A regular bedtime, a darker quieter room, and putting screens away before bed can help. If you often cannot sleep, snore loudly, or feel exhausted every day, talk with a parent, school nurse or doctor.",
+    "prompts": [
+      "how much sleep do teenagers need",
+      "how can i sleep better",
+      "why is sleep important",
+      "should i use my phone in bed",
+      "explain getting enough sleep",
+      "how many hours of sleep do i need",
+      "tips for falling asleep",
+      "what if i can't sleep at night"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Drinking enough water",
+    "desc": "Your body needs water throughout the day, and thirst is a useful signal. A rough guide is pale yellow urine; very dark urine can mean you need more fluids. You usually need more water in heat or during exercise. If a doctor has given you fluid limits, follow that advice instead of general tips.",
+    "prompts": [
+      "how much water should i drink",
+      "how do i know if i'm hydrated",
+      "does dark urine mean i need water",
+      "should i drink more water when it's hot",
+      "explain drinking enough water",
+      "signs I need more water",
+      "hydration during exercise",
+      "is there such a thing as too much water"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Stretching",
+    "desc": "Stretching can help you move more comfortably, especially after a short warm-up when muscles are less cold. Move into a stretch gently, breathe, and hold it without bouncing or pushing into sharp pain. If you have an injury, follow a coach or clinician's advice instead of forcing a stretch.",
+    "prompts": [
+      "how should i stretch",
+      "when is the best time to stretch",
+      "should i bounce while stretching",
+      "does stretching help tightness",
+      "explain stretching",
+      "warm up before stretching",
+      "how long should I hold a stretch",
+      "stretching without pain"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sunscreen",
+    "desc": "Sunscreen helps protect skin from the sun's ultraviolet rays, which can cause sunburn and raise long-term skin cancer risk. Use a broad-spectrum sunscreen of at least SPF 30, apply it before you go out, and reapply after swimming, sweating or a couple of hours outdoors. Sunscreen is one part of sun safety, along with shade, clothing and sunglasses.",
+    "prompts": [
+      "how do i use sunscreen",
+      "what spf should i use",
+      "do i need sunscreen on cloudy days",
+      "what is broad spectrum sunscreen",
+      "explain sunscreen",
+      "when should i reapply sunscreen",
+      "why wear sunscreen",
+      "sunscreen and swimming"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Cleaning a small cut",
+    "desc": "For a small cut, wash your hands, then rinse the wound with clean water and gently clean around it. Use light pressure with a clean cloth if it is bleeding, then add a bandage. Skip harsh cleaners in the wound unless a clinician tells you to use them. Get medical care if bleeding will not stop, the cut is deep or dirty, or you have not had needed tetanus shots.",
+    "prompts": [
+      "how do i clean a small cut",
+      "what should i do if i get a cut",
+      "should i put hydrogen peroxide on a cut",
+      "when do i need stitches",
+      "explain cleaning a small cut",
+      "how to stop a small cut from bleeding",
+      "bandage a minor cut",
+      "cut is deep or won't stop bleeding"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Treating a minor burn",
+    "desc": "For a small heat burn, cool the area under cool running water for about 10 to 20 minutes. Do not use ice, butter or toothpaste. You can cover it loosely with a clean bandage after cooling. Get medical care for burns that are large, deep, blistered over a wide area, on the face, hands, feet or joints, or if you are not sure it is minor.",
+    "prompts": [
+      "how do i treat a minor burn",
+      "should i put ice on a burn",
+      "can i put butter on a burn",
+      "cool a burn under water",
+      "explain treating a minor burn",
+      "when should a burn see a doctor",
+      "burned my hand on the stove",
+      "blisters after a burn"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Choking first aid",
+    "desc": "If someone is choking and cannot cough, speak or breathe, call emergency services right away and ask someone to get help. For a conscious adult or older child, trained first aid uses back blows and abdominal thrusts to try to clear the airway. This is not a substitute for a first-aid class, and the steps differ for infants and for someone who becomes unresponsive.",
+    "prompts": [
+      "what should i do if someone is choking",
+      "how does the heimlich maneuver work",
+      "when do i call 911 for choking",
+      "person can't cough or speak",
+      "explain choking first aid",
+      "abdominal thrusts for choking",
+      "first aid if food is stuck in the throat",
+      "choking adult versus infant"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "When to call 911",
+    "desc": "Call 911 in the United States for a medical, fire or safety emergency that needs help right away, such as trouble breathing, chest pain, a serious injury, a seizure that will not stop, a fire, or a crime in progress. Stay as calm as you can, give the location, and follow the dispatcher's instructions. If you are not sure it is an emergency, it is still reasonable to call.",
+    "prompts": [
+      "when should i call 911",
+      "what counts as an emergency",
+      "should i call 911 for chest pain",
+      "how do i talk to a 911 dispatcher",
+      "explain when to call 911",
+      "is it okay to call 911 if i'm not sure",
+      "medical emergency versus waiting",
+      "give your location to 911"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "RICE for a sprain",
+    "desc": "RICE stands for rest, ice, compression and elevation, a common first step for a mild sprain. Rest the joint, apply a cold pack wrapped in a cloth for short periods, use a wrap if you have been shown how, and keep the area raised. See a doctor or athletic trainer if you cannot bear weight, the joint looks deformed, or pain and swelling are severe or not improving.",
+    "prompts": [
+      "what does rice mean for a sprain",
+      "how do i treat a sprained ankle",
+      "rest ice compression elevation",
+      "should i put ice on a sprain",
+      "explain rice for a sprain",
+      "when should a sprain see a doctor",
+      "i twisted my ankle",
+      "compression wrap for a sprain"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Screen eye strain",
+    "desc": "Long screen time can make eyes feel dry, tired or sore. Try the 20-20-20 idea: about every 20 minutes, look at something about 20 feet away for 20 seconds, blink often, and raise the brightness so you are not squinting. If headaches or vision changes keep happening, get your eyes checked.",
+    "prompts": [
+      "why do my eyes hurt after screens",
+      "what is the 20 20 20 rule",
+      "how can i reduce eye strain",
+      "screens making my eyes dry",
+      "explain screen eye strain",
+      "should I blink more at a computer",
+      "phone giving me a headache",
+      "tips for tired eyes from screens"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Good posture",
+    "desc": "Good posture means sitting or standing so your ears, shoulders and hips line up reasonably well, with your back supported and both feet on the floor when you sit. Keep screens at about eye level so you are not craning your neck down. Change positions and stand up sometimes; no single pose is meant to be held all day.",
+    "prompts": [
+      "what is good posture",
+      "how should i sit at a desk",
+      "my neck hurts from looking at my phone",
+      "how to sit up straight",
+      "explain good posture",
+      "screen at eye level",
+      "slouching and back pain",
+      "posture while standing"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Warming up before exercise",
+    "desc": "A warm-up raises your heart rate gently and moves the muscles you are about to use, such as a few minutes of brisk walking or light versions of the activity. It can make exercise feel easier and may lower injury risk compared with starting at full speed while cold. Save long, deep stretches for after the body is already warm, unless a coach has given you a different plan.",
+    "prompts": [
+      "how should i warm up before exercise",
+      "why do i need a warmup",
+      "what is a good warmup",
+      "should i stretch before or after a warmup",
+      "explain warming up before exercise",
+      "light jog before a game",
+      "warming up versus cooling down",
+      "start exercise slowly"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Reading a nutrition label",
+    "desc": "A Nutrition Facts label shows serving size first, then calories and nutrients in one serving. If you eat two servings, double the numbers. The percent daily value is a rough guide based on a typical 2,000-calorie diet, not a personal target for every person. Use the ingredients list if you need to avoid a specific allergen.",
+    "prompts": [
+      "how do i read a nutrition label",
+      "what is a serving size",
+      "what does percent daily value mean",
+      "calories on a food label",
+      "explain reading a nutrition label",
+      "ingredients list for allergies",
+      "if i eat two servings",
+      "nutrition facts panel"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Food allergies",
+    "desc": "A food allergy is an immune system reaction that can be mild or life-threatening. Common allergens include peanuts, tree nuts, milk, eggs, soy, wheat, fish and sesame, but any food can be a problem for someone. An intolerance is usually uncomfortable but is not the same as an allergy. Take a diagnosed allergy seriously, read labels, and follow a doctor's emergency plan, including epinephrine if it was prescribed.",
+    "prompts": [
+      "what is a food allergy",
+      "what's the difference between an allergy and an intolerance",
+      "what are common food allergens",
+      "why do labels say may contain peanuts",
+      "explain food allergies",
+      "is lactose intolerance a food allergy",
+      "what should I do if someone has an allergic reaction",
+      "food allergy emergency plan"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Caffeine",
+    "desc": "Caffeine is a stimulant in coffee, tea, many sodas and energy drinks. It can help you feel more alert, but too much can cause jitters, a fast heartbeat or trouble sleeping, especially later in the day. Energy drinks can be very high in caffeine. If caffeine makes you unwell or you have a heart condition, ask a doctor what is safe for you.",
+    "prompts": [
+      "what does caffeine do",
+      "why can't i sleep after soda or coffee",
+      "are energy drinks safe",
+      "how does caffeine work",
+      "explain caffeine",
+      "too much caffeine symptoms",
+      "caffeine in tea and soda",
+      "should teenagers drink energy drinks"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Talking about stress",
+    "desc": "Stress is your body's response to pressure, and it helps to talk with a parent, counselor, coach or another trusted adult instead of keeping it all in. Short-term tools include sleep, movement, taking a break, and slow breathing. If stress or sadness lasts, or you have thoughts of hurting yourself, tell an adult right away or call or text 988 in the United States for the Suicide & Crisis Lifeline.",
+    "prompts": [
+      "how can i deal with stress",
+      "who can i talk to about stress",
+      "i feel overwhelmed",
+      "what should i do if i feel really down",
+      "explain talking about stress",
+      "trusted adult or counselor",
+      "breathing when i feel anxious",
+      "988 suicide and crisis lifeline"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Brushing and flossing",
+    "desc": "Brush your teeth twice a day with fluoride toothpaste and clean between your teeth once a day with floss or another interdental cleaner. Brush gently along the gumline rather than scrubbing hard. Regular dental checkups help catch problems early, and a dentist can show you a technique that fits your teeth.",
+    "prompts": [
+      "how should i brush my teeth",
+      "how often should i floss",
+      "does fluoride toothpaste help",
+      "why do i need to floss",
+      "explain brushing and flossing",
+      "brush twice a day",
+      "how to brush along the gumline",
+      "dental care basics"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Concussion warning signs",
+    "desc": "A concussion is a brain injury from a blow or jolt to the head or body. Warning signs include headache, confusion, nausea, dizziness, balance problems, unusual sleepiness, or acting different from usual. Stop playing and see a medical professional. Returning to sports the same day is unsafe, even if you feel better quickly.",
+    "prompts": [
+      "what is a concussion",
+      "what are concussion symptoms",
+      "should i keep playing after I hit my head",
+      "headache after a sports hit",
+      "explain concussion warning signs",
+      "signs of a head injury",
+      "when to see a doctor after hitting my head",
+      "why not return to the game after a concussion"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Cooling down after exercise",
+    "desc": "A cool-down is a few minutes of easier movement after a hard workout, such as a slow jog or walk, so your heart rate can come down gradually. It is a good time for gentle stretching while muscles are still warm. Stop and get help if you feel chest pain, faint, or severely short of breath.",
+    "prompts": [
+      "how should i cool down after exercise",
+      "why do i need a cooldown",
+      "stretch after a workout",
+      "walk after a run",
+      "explain cooling down after exercise",
+      "cooldown versus warmup",
+      "heart rate after exercise",
+      "gentle movement after a game"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Making a budget",
+    "desc": "A budget is a plan for your money. List your income, then list needed expenses such as food, transportation and bills, then savings, then wants. If spending is higher than income, cut wants first or look for more income. Checking it weekly helps you catch problems early.",
+    "prompts": [
+      "how do i make a budget",
+      "how should i plan my money",
+      "income versus expenses",
+      "budget for a teenager",
+      "explain making a budget",
+      "needs savings and wants",
+      "why is a budget useful",
+      "simple monthly budget"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Saving money",
+    "desc": "Saving means setting money aside for later instead of spending all of it now. Paying yourself first, even a small amount from each paycheck or allowance, adds up. Keep savings in a separate account if you can, and pick a goal, such as an emergency fund or a purchase, so the money has a purpose.",
+    "prompts": [
+      "how can i start saving money",
+      "how do i save from a paycheck",
+      "pay yourself first",
+      "why should i save money",
+      "explain saving money",
+      "saving for a goal",
+      "keep savings in a separate account",
+      "small amounts of savings add up"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Checking and savings accounts",
+    "desc": "A checking account is meant for everyday spending with a debit card or transfers. A savings account is meant to hold money you do not plan to spend right away and may pay a little interest. Some banks limit certain savings transfers, and both accounts can have fees, so read the account terms.",
+    "prompts": [
+      "what's the difference between checking and savings",
+      "what is a checking account",
+      "what is a savings account",
+      "which account do i use for everyday spending",
+      "explain checking and savings accounts",
+      "does a savings account pay interest",
+      "debit card and checking",
+      "fees on bank accounts"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Interest",
+    "desc": "Interest is the cost of borrowing money or the money you earn for keeping money in some accounts. If you borrow, you usually pay back the amount plus interest. If a savings account pays interest, the bank pays you a percentage. A higher rate helps you more when you save and costs you more when you borrow.",
+    "prompts": [
+      "what is interest in banking",
+      "how does interest on a loan work",
+      "why does a savings account earn interest",
+      "interest rate meaning",
+      "explain interest",
+      "do i pay interest on borrowed money",
+      "apr and interest",
+      "how interest costs or earns money"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Debit versus credit cards",
+    "desc": "A debit card spends money that is already in your checking account. A credit card borrows money you have to pay back, often with interest if you do not pay the full bill on time. A credit card can help build a credit history if used carefully, but carrying a balance can get expensive. Treat both as real money.",
+    "prompts": [
+      "what's the difference between debit and credit cards",
+      "does a debit card use my bank money",
+      "does a credit card borrow money",
+      "credit card interest if i don't pay in full",
+      "explain debit versus credit cards",
+      "which card should I use",
+      "can a credit card build credit",
+      "debit card versus credit card"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Credit scores",
+    "desc": "A credit score is a number lenders use to estimate how reliably you have repaid borrowed money. Paying bills on time and keeping credit card balances low usually helps. You generally need a credit account in your name, such as a card or loan, before a score is created. Checking your own score does not hurt it.",
+    "prompts": [
+      "what is a credit score",
+      "how can i build credit",
+      "does checking my credit score hurt it",
+      "why do lenders look at credit scores",
+      "explain credit scores",
+      "pay bills on time for credit",
+      "how do credit scores work",
+      "what helps or hurts a credit score"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Pay stubs",
+    "desc": "A pay stub is the record that comes with a paycheck. It shows gross pay, then deductions such as taxes and benefits, and the net pay you actually receive. Check the hours, pay rate and deductions so you can catch mistakes. Keep stubs for your records, especially at tax time.",
+    "prompts": [
+      "what is a pay stub",
+      "how do i read a paycheck stub",
+      "gross pay versus net pay on a stub",
+      "what are payroll deductions",
+      "explain pay stubs",
+      "why are taxes taken out of my paycheck",
+      "hours and pay rate on a stub",
+      "keep pay stubs for taxes"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Sales tax",
+    "desc": "Sales tax is a tax added to many purchases, set by the state or local government. The register total can be higher than the shelf price because tax is added at checkout. Rates and which items are taxed vary by place, so the same product can cost a little more in one city than another.",
+    "prompts": [
+      "what is sales tax",
+      "why is the total higher than the price tag",
+      "how does sales tax work",
+      "do all states have the same sales tax",
+      "explain sales tax",
+      "is tax included in the shelf price",
+      "state and local sales tax",
+      "why did my total go up at the register"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Compound interest",
+    "desc": "Compound interest is interest earned on both the original amount and the interest already added. In savings, that can help money grow faster over time. On a credit card or loan, it can make a balance grow if you pay only a little and interest keeps being added. Time and the interest rate both matter a lot.",
+    "prompts": [
+      "what is compound interest",
+      "how does compound interest work",
+      "interest on interest",
+      "why does saving early help",
+      "explain compound interest",
+      "compound interest on a credit card",
+      "simple versus compound interest",
+      "why a balance can grow if i only pay a little"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Needs versus wants",
+    "desc": "Needs are things you must have or that would cause real harm to go without, such as food, housing, medicine and essential transportation. Wants make life nicer but can wait, such as upgrades, snacks or extra subscriptions. When money is tight, cover needs and a little savings first, then decide which wants are worth it.",
+    "prompts": [
+      "what is the difference between needs and wants",
+      "is a new phone a need or a want",
+      "how do i prioritize spending",
+      "needs versus wants in a budget",
+      "explain needs versus wants",
+      "what counts as a need",
+      "cutting wants when money is tight",
+      "essential expenses versus extras"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Emergency funds",
+    "desc": "An emergency fund is money set aside for unexpected costs, such as a broken phone, a car repair or a lost shift, so you do not have to borrow right away. Start small if needed and keep it in a savings account you can reach without a penalty. Use it for true surprises, then build it back up.",
+    "prompts": [
+      "what is an emergency fund",
+      "how much should I save for emergencies",
+      "why do i need emergency savings",
+      "unexpected car repair or lost shift",
+      "explain emergency funds",
+      "where should I keep an emergency fund",
+      "start a small emergency fund",
+      "savings for unexpected costs"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Avoiding money scams",
+    "desc": "A money scam tries to get you to send cash, gift cards, crypto or account codes, often by pretending to be a company, a crush, a prize or someone in trouble. Pause if someone rushes you or asks you to keep it secret. Do not send money or codes to someone you have not verified, and check a company's real number or website yourself.",
+    "prompts": [
+      "how can i avoid money scams",
+      "someone asked me to buy gift cards",
+      "is this prize text a scam",
+      "explain avoiding money scams",
+      "crypto or wire transfer request",
+      "someone pretending to be a company",
+      "what are common money scams",
+      "never share a banking code"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Direct deposit",
+    "desc": "Direct deposit sends your paycheck electronically into your bank account instead of giving you a paper check. Your employer needs your routing number and account number, which are on a check or in your banking app. Check the first deposit to confirm the amount and the account are correct, and tell your employer if you change banks.",
+    "prompts": [
+      "what is direct deposit",
+      "how do i set up direct deposit",
+      "what is a routing number",
+      "paycheck goes straight to my bank",
+      "explain direct deposit",
+      "direct deposit versus a paper check",
+      "where do i find my account number",
+      "employer needs my bank info"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Hourly pay versus salary",
+    "desc": "Hourly pay is a set amount for each hour you work, and overtime rules may apply if you work extra hours. A salary is a fixed amount for a pay period, often quoted as a yearly figure, even if some weeks are longer than others. Compare offers by estimating total pay, benefits and expected hours, not only the headline number.",
+    "prompts": [
+      "what's the difference between hourly and salary",
+      "how does hourly pay work",
+      "what does a yearly salary mean",
+      "do salaried jobs pay overtime",
+      "explain hourly pay versus salary",
+      "which is better hourly or salary",
+      "overtime on an hourly job",
+      "compare two job offers"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Writing a resume",
+    "desc": "A resume is a short summary of your work, school, skills and activities for a job or program. Put your name and contact info at the top, then education, experience and skills, using short bullet points that start with strong verbs and show what you did. Keep it to one page if you are early in your career, and tailor it to the role.",
+    "prompts": [
+      "how do i write a resume",
+      "what should i put on a resume",
+      "resume for a first job",
+      "how long should a resume be",
+      "explain writing a resume",
+      "bullet points on a resume",
+      "education and experience on a resume",
+      "how to describe a job on a resume"
+    ],
+    "code": "",
+    "answer": ""
+  }
+]
