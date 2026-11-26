@@ -37,6 +37,9 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin === self.location.origin) {
+    // Python Trail is a separate app under this Pages site. Do not intercept
+    // it, and never fall back to Pocket AI's index.html for that path.
+    if (url.pathname.indexOf('/python-trail/') !== -1) return;
     e.respondWith((async () => {
       try {
         const res = await fetch(req, { cache: 'no-cache' });
