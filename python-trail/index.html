@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#132c29" />
     <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./trail-icon-192.png" />
     <title>Python Trail · Learn Python</title>
     <style>*{box-sizing:border-box}body{margin:0;background:#f6f7f2;color:#1c302b;font:16px/1.5 "DM Sans",Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid #227d67;outline-offset:3px}aside{position:fixed;inset:0 auto 0 0;width:214px;background:#142d29;color:#d4e1d9;padding:29px 15px;display:flex;flex-direction:column}.brand{display:flex;gap:11px;align-items:center;padding:0 8px;color:white;font-size:22px;font-weight:750;letter-spacing:-1px}.logo{font:bold 20px/36px monospace;text-align:center;background:#c0ea98;color:#203c2c;width:36px;border-radius:10px}.navlabel,.eyebrow{font:700 12px/1.5 ui-monospace,monospace;letter-spacing:1.3px}.navlabel{color:#a4bab0;margin:56px 13px 12px}nav a,.group,.row,.btn,.eyebrow,.tile,.cardtop{display:flex;align-items:center}nav a{gap:13px;padding:12px;border-radius:9px;font-weight:550;font-size:15px;margin:4px 0}nav a.active{background:#304c40;color:#d2f4b7}nav a:hover{background:#29463c}.ico{width:20px;height:20px;flex-shrink:0;vertical-align:middle}.asidefoot{margin-top:auto;display:flex;align-items:center;gap:10px;border-top:1px solid #395148;padding:20px 5px 0;font-size:14px;font-weight:600}.avatar{background:#476456;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;color:#deeddd;font:600 14px monospace}small{display:block;color:#5c6b61;font-size:13px}.asidefoot small{color:#b0c0b6;font-size:12px}main{margin-left:214px}header{height:68px;background:#fdfdf9;border-bottom:1px solid #dce1d7;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,3.5vw,58px);font-size:14px;color:#546459}#crumb{display:flex;align-items:center;gap:10px}.group,.btn{gap:8px}.group{font-weight:600;color:#344b3e}#app{max-width:1460px;margin:auto;padding:31px clamp(20px,3.5vw,58px) 60px}h1,h2,h3,p{margin:0}h1{font-size:clamp(32px,3.3vw,53px);line-height:1.1;letter-spacing:-2px}h2{font-size:24px;letter-spacing:-1px;line-height:1.2}h3{font-size:18px;letter-spacing:-.4px}.hero{position:relative;isolation:isolate;overflow:hidden;min-height:257px;border-radius:17px;background:#102b34;color:#f4f8e9;padding:33px 35px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.hero:before{content:'';position:absolute;z-index:-2;inset:0 0 0 28%;background:url(data:image/png;base64,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) center right/cover no-repeat;image-rendering:pixelated}.hero:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#102b34 28%,#102b34e0 39%,transparent 66%)}.eyebrow{gap:8px;color:#658064;margin-bottom:12px}.hero .eyebrow{color:#bfdfaa}.hero p{margin:10px 0 20px;color:#e2eadd}.btn{border:1px solid #d1d9ca;background:white;border-radius:8px;padding:9px 14px;font-weight:650;font-size:14px;color:#223e2b;width:fit-content}.btn.primary{background:#c4ee9d;border-color:#c4ee9d}.btn:hover,.tile:hover,.unit:hover{filter:brightness(.97)}.columns{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(250px,1fr);gap:24px;margin-top:30px}.sectionhead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:15px;gap:6px}.meta{font:13px ui-monospace,monospace;color:#627063}.panel,.unit{background:#fffefa;border:1px solid #dbe0d5;border-radius:13px}.unit{display:flex;align-items:center;gap:15px;padding:18px;margin:0 0 10px}.iconbox{width:47px;height:47px;border-radius:11px;display:grid;place-items:center;flex-shrink:0}.iconbox .ico{width:23px;height:23px}.mint{background:#dff0d3;color:#416948}.peach{background:#ffe4cf;color:#965e36}.lilac{background:#e8e2f5;color:#71618b}.blue{background:#dcebf1;color:#476c7e}.unit small,.unit .meta{font-size:12px}.unit .meta{letter-spacing:.8px;text-transform:uppercase}.unit h3{margin:3px 0}.unit .end{margin-left:auto;color:#627063}.panel{padding:20px;margin-bottom:16px}.cardtop{gap:10px}.cardtop .ico{color:#62825a}.progress{height:8px;background:#e8ece2;border-radius:8px;overflow:hidden;margin:10px 0}.progress i{display:block;background:#719e5a;height:100%}.big{font-size:32px;font-weight:720;letter-spacing:-1px}.tile{gap:11px;padding:12px 0;border-top:1px solid #e6e9df;font-size:15px;font-weight:600}.tile:first-of-type{margin-top:12px}.tile .end{margin-left:auto}.tile>.ico{color:#687d64}.title{margin:0 0 22px}.title p,.muted{color:#59695e;margin-top:6px}.editor{width:100%;display:block;min-height:200px;background:#142c29;color:#e2f3d7;border:0;padding:17px;font:15px/1.65 ui-monospace,monospace;resize:vertical;tab-size:4}.editorbar{background:#213c36;color:#c7deca;padding:9px 16px;font:13px monospace}.editorwrap{border-radius:10px;overflow:hidden;margin:16px 0}.actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.btn:disabled{opacity:.55}.panel p{margin:10px 0}.panel pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0;background:#eff3eb;padding:13px;border-radius:7px;font:14px/1.6 ui-monospace,monospace}.lesson{max-width:850px}.lesson h2{margin-bottom:12px}.lesson details{margin-top:12px}.lesson summary{cursor:pointer;font-weight:600}.resourcegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.resourcegrid>.panel{margin:0}.sectionlabel{margin:25px 0 14px}.back{display:inline-block;font-size:14px;color:#486443;margin-bottom:14px}.ok{color:#39733c;font-weight:650}button:disabled{cursor:wait}.status{font-size:14px}.sub{color:#617060;font-size:14px}.code{font-family:ui-monospace,monospace}a.unit:hover,h3 a:hover{text-decoration:underline;text-underline-offset:3px} @media(max-width:980px){aside{width:175px}.brand{font-size:19px;padding:0;gap:7px}main{margin-left:175px}.columns{gap:14px;grid-template-columns:minmax(0,1.4fr) minmax(215px,1fr)}.hero{padding:28px}.unit{padding:14px;gap:10px}} @media(max-width:760px){aside{position:static;width:100%;padding:12px 16px 5px}.brand{font-size:19px}.logo{width:29px;line-height:29px;font-size:16px}.navlabel,.asidefoot{display:none}nav{display:flex;gap:3px;overflow:auto}nav a{white-space:nowrap;font-size:13px;padding:7px 9px;gap:5px}nav .ico{width:15px}main{margin:0}header{height:43px;font-size:13px}#app{padding-top:18px}.hero{min-height:245px;padding:22px}.hero:before{inset:0;background-position:70% center}.hero:after{background:linear-gradient(90deg,#102b34f5,#102b34c7 40%,#102b3420)}.columns,.resourcegrid{grid-template-columns:1fr}.hero p{max-width:225px}.columns{margin-top:22px}.sectionhead{margin-bottom:12px}.panel{padding:16px}.sectionhead h2{font-size:22px}.unit{padding:15px}.group .ico{width:16px}} [hidden]{display:none!important}.hero h1{max-width:470px}.lesson details pre{margin-bottom:14px} .authform{display:grid;gap:12px;margin-top:12px} .authform label{display:grid;gap:6px;font-weight:600;font-size:14px} .authform input,.chatform input{border:1px solid #d1d9ca;border-radius:8px;padding:9px 12px;background:#fffefa;color:#1c302b} .inlineform{grid-template-columns:1fr auto;align-items:center} .friendrow{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid #e6e9df} .friendrow:first-of-type{border-top:0} .friendmeta{min-width:0;flex:1} .friendmeta small{color:#59695e} .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;background:#9aa894;box-shadow:0 0 0 3px #e8ece2} .dot.on{background:#3f8f3e;box-shadow:0 0 0 3px #dff0d3} .chatwrap{max-width:760px} .chatlog{display:flex;flex-direction:column;gap:10px;min-height:240px;max-height:50vh;overflow:auto;padding:12px;background:#eff3eb;border-radius:12px;margin:16px 0} .bubble{max-width:80%;padding:8px 12px;border-radius:12px;background:white;border:1px solid #dbe0d5} .bubble.mine{margin-left:auto;background:#c4ee9d;border-color:#c4ee9d} .bubblewho{font-size:12px;font-weight:700;color:#546459;margin-bottom:2px} .bubbletext{white-space:pre-wrap;overflow-wrap:anywhere} .chatform{display:flex;gap:8px} .chatform input{flex:1} .asidefoot{cursor:default} .chatwrap .title p{display:flex;align-items:center;gap:8px} @media (max-width:760px){ .inlineform{grid-template-columns:1fr} .friendrow{flex-wrap:wrap} }</style>
     <style>
@@ -121,6 +123,7 @@ const TRAIL_API = "https://python-trail-server.tabletop-luca.workers.dev";
 window.TrailOnline = (() => {
   const TOKEN = "token";
   const USER = "user";
+  const PUSH_ENDPOINT = "pushEndpoint";
   let poll = 0;
   let beat = 0;
   let started = false;
@@ -201,6 +204,7 @@ window.TrailOnline = (() => {
     const t = token();
     set(TOKEN, "");
     set(USER, null);
+    set(PUSH_ENDPOINT, "");
     if (server && t) {
       fetch(TRAIL_API + "/logout", {
         method: "POST",
@@ -497,6 +501,97 @@ window.TrailOnline = (() => {
     );
   }
 
+  async function bindPushControls() {
+    const enable = document.querySelector("#chatnotify");
+    const test = document.querySelector("#chattestpush");
+    const status = document.querySelector("#chatpushstatus");
+    if (!("serviceWorker" in navigator && "PushManager" in window && "Notification" in window)) {
+      enable.hidden = true;
+      status.textContent = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+        ? "On iPhone or iPad with iOS 16.4 or later, use Share → Add to Home Screen, then open Python Trail from its icon."
+        : "This browser does not support push notifications.";
+      return;
+    }
+
+    try {
+      const session = token();
+      const [registration, { publicKey }] = await Promise.all([
+        navigator.serviceWorker.register("./push-sw.js", { scope: "./" }),
+        api("/push/key"),
+      ]);
+      const active = await navigator.serviceWorker.ready;
+      if (active.scope !== registration.scope || !publicKey) throw new Error("Push notifications are unavailable.");
+      const key = Uint8Array.from(atob(publicKey.replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0));
+      let subscription = await active.pushManager.getSubscription();
+      let enabled = !!subscription && Notification.permission === "granted" &&
+        get(PUSH_ENDPOINT, "") === subscription.endpoint;
+
+      function paint() {
+        enable.textContent = enabled ? "Turn off notifications" : "Enable notifications";
+        test.hidden = !enabled;
+        enable.disabled = false;
+        test.disabled = false;
+      }
+      paint();
+
+      enable.onclick = async () => {
+        if (session !== token()) return;
+        enable.disabled = test.disabled = true;
+        status.textContent = "";
+        try {
+          if (enabled) {
+            await api("/push/subscription", { method: "DELETE", body: { endpoint: subscription.endpoint } });
+            set(PUSH_ENDPOINT, "");
+            enabled = false;
+            await subscription.unsubscribe();
+            subscription = null;
+            status.textContent = "Notifications are off on this device.";
+          } else {
+            if (Notification.permission === "denied") {
+              throw new Error("Allow Python Trail notifications in your device or browser settings.");
+            }
+            // Safari requires the subscription call to start from the button gesture.
+            subscription ||= await active.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
+            if (session !== token()) return;
+            await api("/push/subscription", { method: "POST", body: subscription.toJSON() });
+            if (session !== token()) return;
+            set(PUSH_ENDPOINT, subscription.endpoint);
+            enabled = true;
+            status.textContent = "Notifications are on for incoming chats on this device.";
+          }
+        } catch (err) {
+          status.textContent = Notification.permission === "denied"
+            ? "Allow Python Trail notifications in your device or browser settings."
+            : err.message || "Could not update notifications.";
+        } finally {
+          paint();
+        }
+      };
+
+      test.onclick = async () => {
+        if (session !== token()) return;
+        enable.disabled = test.disabled = true;
+        try {
+          await api("/push/test", { method: "POST", body: { endpoint: subscription.endpoint } });
+          status.textContent = "Test sent. Check your notifications.";
+        } catch (err) {
+          if (err.status === 404 || err.status === 410) {
+            set(PUSH_ENDPOINT, "");
+            enabled = false;
+            await subscription.unsubscribe().catch(() => {});
+            subscription = null;
+          }
+          status.textContent = err.message || "Could not send a test notification.";
+        } finally {
+          paint();
+        }
+      };
+    } catch (err) {
+      status.textContent = err.message || "Could not set up notifications.";
+    }
+  }
+
   async function renderChat(name) {
     if (!signedIn()) {
       location.hash = "#friends";
@@ -506,15 +601,12 @@ window.TrailOnline = (() => {
     app.innerHTML =
       '<div class="lesson chatwrap"><a class="back" href="#friends">‹ Friends</a>' +
       title("Chat", "Loading…") +
-      '<div id="chatmeta"><button class="btn" id="chatnotify" type="button">Enable notifications</button></div><div id="chatlog" class="chatlog" aria-live="polite"></div><form id="chatform" class="chatform"><input id="chattext" maxlength="1000" autocomplete="off" placeholder="Write a message"><button class="btn primary" type="submit">Send</button></form><p class="muted" id="chatstatus"></p></div>';
+      '<div id="chatmeta"><button class="btn" id="chatnotify" type="button" disabled>Enable notifications</button> <button class="btn" id="chattestpush" type="button" hidden>Send test notification</button><p class="muted" id="chatpushstatus" role="status"></p></div><div id="chatlog" class="chatlog" aria-live="polite"></div><form id="chatform" class="chatform"><input id="chattext" maxlength="1000" autocomplete="off" placeholder="Write a message"><button class="btn primary" type="submit">Send</button></form><p class="muted" id="chatstatus"></p></div>';
     const log = document.querySelector("#chatlog");
     const status = document.querySelector("#chatstatus");
     let after = 0, loaded = false, sending = false;
     const seen = new Set();
-    const notify = document.querySelector("#chatnotify");
-    notify.onclick = async () => {
-      try { if (!("Notification" in window)) throw Error(); const p = await Notification.requestPermission(); notify.textContent = p === "granted" ? "Notifications enabled" : "Notifications unavailable"; } catch { notify.textContent = "In-app alerts enabled"; }
-    };
+    bindPushControls();
     const append = (m, alert) => {
       if (seen.has(m.id)) return;
       seen.add(m.id);
@@ -522,7 +614,6 @@ window.TrailOnline = (() => {
       log.scrollTop = log.scrollHeight;
       if (alert && me() && m.from !== me().username) {
         status.textContent = "New message from " + m.from;
-        try { if (document.hidden && "Notification" in window && Notification.permission === "granted") new Notification("Python Trail", {body:"New message from " + m.from}); } catch {}
       }
     };
     const paintFriend = (friend) => {
