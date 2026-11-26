@@ -106,6 +106,7 @@ let loadedId = null;
 let loadingPromise = null;
 let generating = false;
 let stopRequested = false;
+let activeGen = null;
 let webForce = false;        // 🌐 button: force search for the next message
 let clockTimer = null;
 
@@ -643,6 +644,18 @@ async function generate() {
   setGenerating(true);
   stopRequested = false;
   const t0 = performance.now();
+  let finished = false;
+  const finish = async () => {
+    if (finished) return; finished = true;
+    if (activeGen && activeGen.finish === finish) activeGen = null;
+    setGenerating(false);
+    if (c === current) { fillAssistant(row, reply, idx, false); scrollBottom(); }
+    // refresh previous assistant actions (remove retry from older)
+    if (c === current) { const prev = $$('.msg-row.assistant', msgBox()); prev.slice(0, -1).forEach(r => { const i = +r.dataset.idx; const mm = c.messages[i]; if (mm) fillAssistant(r, mm, i); }); }
+    current = c;
+    await saveCurrent();
+  };
+  activeGen = { finish, reply, model: m };
   try {
     if (!gpu.ok) throw new Error('WebGPU is not available in this browser, so the AI can\'t run here. See the note at the top for how to fix it.');
     const lastUser = [...c.messages].reverse().find(x => x.role === 'user');
@@ -674,6 +687,7 @@ async function generate() {
     });
     let pending = false, usage = null;
     for await (const chunk of stream) {
+      if (finished) break;
       const d = chunk.choices && chunk.choices[0] && chunk.choices[0].delta && chunk.choices[0].delta.content;
       if (d) reply.content += d;
       if (chunk.usage) usage = chunk.usage;
@@ -693,17 +707,23 @@ async function generate() {
       if (/lost|mapAsync|Instance reference|GPUBuffer|memory/i.test(String(e && e.message || e))) resetEngine();
     }
   } finally {
-    setGenerating(false);
-    if (c === current) { fillAssistant(row, reply, idx, false); scrollBottom(); }
-    // refresh previous assistant actions (remove retry from older)
-    if (c === current) { const prev = $$('.msg-row.assistant', msgBox()); prev.slice(0, -1).forEach(r => { const i = +r.dataset.idx; const mm = c.messages[i]; if (mm) fillAssistant(r, mm, i); }); }
-    current = c;
-    await saveCurrent();
+    await finish();
   }
 }
 async function stop() {
   stopRequested = true;
-  try { if (engine && generating) await engine.interruptGenerate(); } catch {}
+  const g = activeGen;
+  try { if (engine && generating) engine.interruptGenerate(); } catch {}
+  // If the GPU is busy (e.g. a long prompt on a slow device) the interrupt can lag.
+  // After a short grace period, finish the reply in the UI and restart the engine.
+  setTimeout(() => {
+    if (g && activeGen === g) {
+      g.reply.content = g.reply.content || '_(stopped)_';
+      g.reply.stats = `${g.model.name} · stopped`;
+      if (loadingPromise || engine) resetEngine();
+      g.finish();
+    }
+  }, 2500);
 }
 async function regenerate() {
   if (generating || !current) return;
