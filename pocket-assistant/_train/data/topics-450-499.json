@@ -1,0 +1,802 @@
+[
+  {
+    "title": "The American Revolution",
+    "desc": "The American Revolution was the war in which the 13 colonies broke away from Britain and became the United States. Fighting began in 1775 and ended with the Treaty of Paris in 1783, which recognized American independence.",
+    "prompts": [
+      "what was the american revolution",
+      "when was the revolutionary war",
+      "why did the colonies fight britain",
+      "what war created the united states",
+      "when did the american revolution end",
+      "treaty of paris 1783",
+      "thirteen colonies independence",
+      "explain the american revolution"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Declaration of Independence",
+    "desc": "The Declaration of Independence, adopted on July 4, 1776, announced that the 13 colonies were separating from Britain. It says that people have rights such as life, liberty and the pursuit of happiness, and it lists complaints against the British king. Thomas Jefferson was its main author.",
+    "prompts": [
+      "what is the declaration of independence",
+      "when was the declaration of independence signed",
+      "who wrote the declaration of independence",
+      "what does july 4 celebrate",
+      "life liberty and the pursuit of happiness",
+      "why was the declaration of independence written",
+      "thomas jefferson declaration",
+      "explain the declaration of independence"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The U.S. Constitution",
+    "desc": "The U.S. Constitution is the supreme law of the United States. Written in 1787, it sets up the national government, divides power among branches and states, and describes the rights of the people, including later amendments.",
+    "prompts": [
+      "what is the us constitution",
+      "what does the constitution do",
+      "when was the constitution written",
+      "supreme law of the united states",
+      "how does the constitution work",
+      "explain the us constitution",
+      "what is in the constitution",
+      "1787 constitution"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The three branches of government",
+    "desc": "The U.S. federal government has three branches. Congress, the legislative branch, makes laws. The president and the executive branch carry out laws. The courts, the judicial branch, interpret laws and the Constitution.",
+    "prompts": [
+      "what are the three branches of government",
+      "legislative executive judicial",
+      "who makes the laws in the united states",
+      "what does the president do in government",
+      "what does the judicial branch do",
+      "what does congress do",
+      "explain the three branches",
+      "separation of powers"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "How a bill becomes a law",
+    "desc": "A bill is introduced in the House or Senate, studied in committee, and must pass both chambers in the same form. The president can sign it into law or veto it. Congress can override a veto with a two-thirds vote in both the House and the Senate.",
+    "prompts": [
+      "how does a bill become a law",
+      "what is a presidential veto",
+      "how can congress override a veto",
+      "what happens after a bill passes both houses",
+      "steps for a bill to become law",
+      "who signs a bill into law",
+      "explain how laws are made",
+      "committee and then the full house"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Bill of Rights",
+    "desc": "The Bill of Rights is the first ten amendments to the U.S. Constitution, ratified in 1791. It protects freedoms such as speech, religion, the press, assembly and petition, and it also covers rights such as a jury trial and protection from unreasonable searches.",
+    "prompts": [
+      "what is the bill of rights",
+      "what are the first ten amendments",
+      "freedom of speech and religion",
+      "when was the bill of rights ratified",
+      "what rights are in the bill of rights",
+      "explain the bill of rights",
+      "does the bill of rights include a jury trial",
+      "first amendment rights"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Voting in the United States",
+    "desc": "In the United States, citizens who are 18 or older can vote once they meet their state's registration rules. People vote in local, state and federal elections. Rules about registration, ID and early or mail voting vary by state, so check your state or local election office.",
+    "prompts": [
+      "how does voting work in the united states",
+      "who can vote in the us",
+      "how old do you have to be to vote",
+      "how do i register to vote",
+      "local state and federal elections",
+      "explain voting in america",
+      "do voting rules differ by state",
+      "when can us citizens vote"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Electoral College",
+    "desc": "The Electoral College is the system used to elect the U.S. president. There are 538 electors, and a candidate needs at least 270 electoral votes to win. Each state's electors usually equal its members of Congress. In most states, the candidate who wins the statewide popular vote gets all of that state's electors.",
+    "prompts": [
+      "what is the electoral college",
+      "how is the president elected",
+      "how many electoral votes do you need to win",
+      "what are 538 electors",
+      "why isn't the president chosen only by popular vote",
+      "how do electoral votes work",
+      "explain the electoral college",
+      "270 electoral votes"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Civil War",
+    "desc": "The American Civil War was fought from 1861 to 1865 between the Union and the Confederate states that had seceded. Slavery and its expansion were at the center of the conflict. The Union won, and the 13th Amendment abolished slavery in the United States.",
+    "prompts": [
+      "what was the civil war",
+      "when was the american civil war",
+      "who fought in the civil war",
+      "why was the civil war fought",
+      "what did the 13th amendment do",
+      "union versus confederacy",
+      "explain the civil war",
+      "when did the civil war end"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The civil rights movement",
+    "desc": "The civil rights movement of the 1950s and 1960s was a struggle to end legal racial segregation and protect equal rights for Black Americans. It included court cases, boycotts, sit-ins, marches and new laws such as the Civil Rights Act of 1964 and the Voting Rights Act of 1965.",
+    "prompts": [
+      "what was the civil rights movement",
+      "what did the civil rights act do",
+      "what was the voting rights act",
+      "why were there sit-ins and marches",
+      "explain the civil rights movement",
+      "ending legal segregation",
+      "civil rights movement 1960s",
+      "what did the civil rights movement achieve"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "World War I",
+    "desc": "World War I lasted from 1914 to 1918 and was fought mainly in Europe between the Allied Powers and the Central Powers. The United States entered in 1917 on the Allied side. An armistice on November 11, 1918, ended the fighting.",
+    "prompts": [
+      "what was world war 1",
+      "when was world war i",
+      "who fought in world war one",
+      "when did the us enter world war 1",
+      "what is armistice day",
+      "explain world war i",
+      "allied powers versus central powers",
+      "when did world war 1 end"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "World War II",
+    "desc": "World War II lasted from 1939 to 1945 and was fought between the Allies and the Axis powers, including Nazi Germany, Italy and Japan. The United States entered after Japan attacked Pearl Harbor on December 7, 1941. The war in Europe ended in May 1945, and Japan surrendered in September 1945.",
+    "prompts": [
+      "what was world war 2",
+      "when was world war ii",
+      "why did the us enter world war 2",
+      "what was pearl harbor",
+      "who were the allied and axis powers",
+      "when did world war 2 end",
+      "explain world war ii",
+      "pearl harbor december 7 1941"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Industrial Revolution",
+    "desc": "The Industrial Revolution was a period when many goods began to be made by machines in factories instead of by hand. It began in Britain in the 1700s and spread to other countries. Steam power, new machines and later electricity changed work, cities and transportation.",
+    "prompts": [
+      "what was the industrial revolution",
+      "when did the industrial revolution start",
+      "how did factories change work",
+      "steam power and machines",
+      "why is the industrial revolution important",
+      "explain the industrial revolution",
+      "goods made by machines instead of by hand",
+      "industrial revolution in britain"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Ancient Egypt",
+    "desc": "Ancient Egypt was a civilization along the Nile River in northeast Africa. It is known for pharaohs, pyramids, hieroglyphic writing and a religion that included many gods and a strong focus on the afterlife. The Nile's yearly flooding helped farming in a desert region.",
+    "prompts": [
+      "what is ancient egypt known for",
+      "why was the nile important to egypt",
+      "what is a pharaoh",
+      "what are hieroglyphs",
+      "why were pyramids built",
+      "explain ancient egypt",
+      "where was ancient egypt",
+      "ancient egyptian civilization"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Ancient Rome",
+    "desc": "Ancient Rome began as a city in Italy, became a republic, and later an empire that controlled much of Europe, North Africa and the Middle East. Roman law, roads, Latin and republican ideas influenced later governments. The Western Roman Empire fell in 476 CE.",
+    "prompts": [
+      "what was ancient rome",
+      "what is the roman empire",
+      "when did the western roman empire fall",
+      "rome as a republic then an empire",
+      "why is roman law important",
+      "explain ancient rome",
+      "what language did the romans speak",
+      "roman roads and government"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Ancient Greece",
+    "desc": "Ancient Greece was made up of city-states such as Athens and Sparta, rather than one single country. Athens is known for an early form of democracy, and Greek thinkers, writers and athletes influenced later science, government, theater and the Olympic Games.",
+    "prompts": [
+      "what was ancient greece",
+      "what is a city-state",
+      "athens and democracy",
+      "athens versus sparta",
+      "where did the olympic games begin",
+      "explain ancient greece",
+      "greek philosophy and theater",
+      "why is ancient greece important"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Silk Road",
+    "desc": "The Silk Road was a network of trade routes that linked East Asia with Central Asia, the Middle East and the Mediterranean for many centuries. Merchants traded goods such as silk, spices and metals, and the routes also spread ideas, technologies and religions.",
+    "prompts": [
+      "what was the silk road",
+      "where was the silk road",
+      "what was traded on the silk road",
+      "did the silk road spread ideas",
+      "explain the silk road",
+      "trade routes from china to the mediterranean",
+      "why is it called the silk road",
+      "how did the silk road work"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Supreme Court",
+    "desc": "The Supreme Court is the highest court in the United States. It has nine justices who are nominated by the president and confirmed by the Senate, and they can serve for life. The Court interprets the Constitution and can strike down laws that conflict with it.",
+    "prompts": [
+      "what is the supreme court",
+      "how many justices are on the supreme court",
+      "who appoints supreme court justices",
+      "what does the supreme court do",
+      "can the supreme court strike down a law",
+      "explain the supreme court",
+      "highest court in the united states",
+      "judicial review"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Constitutional amendments",
+    "desc": "A constitutional amendment is a formal change to the U.S. Constitution. There are 27 amendments so far. The usual process is a two-thirds vote in both houses of Congress, then approval by three-fourths of the states.",
+    "prompts": [
+      "how is the constitution amended",
+      "how many amendments are there",
+      "what is a constitutional amendment",
+      "two thirds of congress and three fourths of the states",
+      "how do you change the constitution",
+      "explain constitutional amendments",
+      "process for an amendment",
+      "27 amendments"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Checks and balances",
+    "desc": "Checks and balances are ways each branch of the U.S. government can limit the others so that one branch does not become too powerful. Examples include the president's veto, Congress overriding a veto, the Senate confirming appointments, and the courts reviewing laws.",
+    "prompts": [
+      "what are checks and balances",
+      "how do the branches limit each other",
+      "examples of checks and balances",
+      "veto and override as a check",
+      "why do we have checks and balances",
+      "explain checks and balances",
+      "senate confirmation as a check",
+      "judicial review as a check"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The Great Depression",
+    "desc": "The Great Depression was a severe worldwide economic downturn that began in the United States after the stock market crash of 1929. Many people lost jobs, homes and savings. In the U.S., President Franklin D. Roosevelt's New Deal created programs to provide relief and reform the financial system.",
+    "prompts": [
+      "what was the great depression",
+      "when did the great depression start",
+      "what caused the great depression",
+      "what was the new deal",
+      "stock market crash of 1929",
+      "explain the great depression",
+      "unemployment in the 1930s",
+      "franklin roosevelt and the depression"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "The moon landing",
+    "desc": "On July 20, 1969, NASA's Apollo 11 mission landed the first humans on the Moon. Neil Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins stayed in orbit in the command module. Armstrong's first words included, \"That's one small step for a man, one giant leap for mankind.\"",
+    "prompts": [
+      "when was the moon landing",
+      "who was the first person on the moon",
+      "what was apollo 11",
+      "neil armstrong and buzz aldrin",
+      "when did people first walk on the moon",
+      "explain the moon landing",
+      "july 20 1969",
+      "one small step for a man"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Metaphor and simile",
+    "desc": "A simile compares two things using like or as, such as \"the cloud was like a cotton ball.\" A metaphor says one thing is another to make a comparison, such as \"the cloud was a cotton ball.\" Both are figures of speech, but only a simile uses like or as.",
+    "prompts": [
+      "what's the difference between a metaphor and a simile",
+      "what is a simile",
+      "what is a metaphor",
+      "compares using like or as",
+      "the cloud was a cotton ball",
+      "how do metaphors work",
+      "examples of simile and metaphor",
+      "figure of speech comparison"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Plot",
+    "desc": "Plot is the sequence of events in a story. Many stories move from exposition, where the setup is introduced, through rising action and a climax, then falling action and a resolution. The conflict, the main problem the characters face, drives the plot forward.",
+    "prompts": [
+      "what is plot in a story",
+      "what are the parts of a plot",
+      "what is the climax of a story",
+      "what is exposition in literature",
+      "rising action and resolution",
+      "how does plot work",
+      "what is conflict in a story",
+      "explain plot structure"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Irony",
+    "desc": "Irony is when the result or meaning is the opposite of what was expected or said. Verbal irony is saying one thing and meaning another. Situational irony is when events turn out the opposite of what you would expect. Dramatic irony is when the audience knows something a character does not.",
+    "prompts": [
+      "what is irony",
+      "what is dramatic irony",
+      "what is situational irony",
+      "what is verbal irony",
+      "when the audience knows something the character doesn't",
+      "explain irony",
+      "irony versus a coincidence",
+      "examples of irony"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "MLA citations",
+    "desc": "MLA style is often used in English and the humanities. A typical in-text citation is the author's last name and a page number in parentheses, such as (Lopez 12). At the end, a Works Cited list gives full details so a reader can find each source.",
+    "prompts": [
+      "what is mla format",
+      "how do i cite a source in mla",
+      "what is a works cited page",
+      "mla in-text citation",
+      "author page number in parentheses",
+      "how does mla citation work",
+      "explain mla citations",
+      "citing a book in mla"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "APA citations",
+    "desc": "APA style is often used in the social sciences. A typical in-text citation is the author's last name and the year, such as (Lopez, 2023). At the end, a References list gives full details for each source. Page numbers are added when you quote a specific passage.",
+    "prompts": [
+      "what is apa format",
+      "how do i cite a source in apa",
+      "what is a references list in apa",
+      "apa in-text citation",
+      "author and year in parentheses",
+      "how does apa citation work",
+      "explain apa citations",
+      "difference between mla and apa"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Test-taking strategies",
+    "desc": "Read the directions and skim the test so you can budget your time. Answer the questions you know first, then return to harder ones. For multiple choice, try to think of the answer before looking at the options, and cross out choices you know are wrong. Check your work if time remains.",
+    "prompts": [
+      "how should i take a test",
+      "tips for multiple choice tests",
+      "how do i manage time on a test",
+      "should i skip hard questions and come back",
+      "test taking strategies",
+      "how can i do better on exams",
+      "what to do if i get stuck on a question",
+      "how to review answers before turning in"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Making a study schedule",
+    "desc": "List upcoming due dates and exams, then break each subject into short study sessions across several days instead of one long cram. Put the hardest or earliest work first, include breaks, and leave a little buffer for things that take longer than expected.",
+    "prompts": [
+      "how do i make a study schedule",
+      "how should i plan for exams",
+      "how do i avoid cramming",
+      "space out study sessions",
+      "study calendar for school",
+      "how to plan study time",
+      "what should I study first",
+      "making a homework and test schedule"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Annotating a text",
+    "desc": "Annotating means marking a text as you read to help you understand it. Underline key claims, circle words to look up, and write short notes or questions in the margin. Mark only the most useful parts so the page stays readable.",
+    "prompts": [
+      "what does annotating a text mean",
+      "how do i annotate a reading",
+      "what should i write in the margins",
+      "how to mark up an article",
+      "underline key points while reading",
+      "explain annotating",
+      "active reading notes",
+      "tips for annotating a book"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Writing an essay outline",
+    "desc": "An outline is a plan for your essay. Start with your thesis, then list each body paragraph's main point and the evidence you will use. Add a note for the introduction and conclusion. A clear outline makes the draft faster and helps you stay on topic.",
+    "prompts": [
+      "how do i write an essay outline",
+      "how should i plan an essay",
+      "outline before drafting",
+      "thesis and body paragraph points",
+      "how to organize an essay",
+      "what goes in an outline",
+      "explain essay outlines",
+      "planning topic sentences"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Introductions and conclusions",
+    "desc": "An introduction should present the topic and end with your thesis, the main claim the essay will support. A conclusion should not just copy the introduction. It should tie the points together and leave the reader with the significance of your argument, without adding a major new claim.",
+    "prompts": [
+      "how do i write an introduction",
+      "how do i write a conclusion",
+      "what is a thesis in an introduction",
+      "should a conclusion repeat the intro",
+      "how to start an essay",
+      "how to end an essay",
+      "explain introductions and conclusions",
+      "hook and thesis"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Avoiding plagiarism",
+    "desc": "Plagiarism is presenting someone else's words or ideas as your own. Put borrowed wording in quotation marks, cite the source, and paraphrase in your own words instead of only swapping a few terms. When you are unsure, cite. Your school's policy explains the rules and consequences.",
+    "prompts": [
+      "what is plagiarism",
+      "how do i avoid plagiarism",
+      "do i have to cite a paraphrase",
+      "is changing a few words enough",
+      "when should i use quotation marks",
+      "explain plagiarism",
+      "citing someone else's ideas",
+      "how to paraphrase without plagiarizing"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Do Not Disturb",
+    "desc": "Do Not Disturb, or Focus modes on iPhone, can silence calls, alerts and notifications so you can sleep or work. You can usually allow repeated calls or notifications from chosen people. Check that it turns off when you want, or set a schedule so it does not stay on by accident.",
+    "prompts": [
+      "what is do not disturb",
+      "how do i silence notifications",
+      "what is focus mode on iphone",
+      "why am i not getting calls",
+      "how do i turn off do not disturb",
+      "scheduled do not disturb",
+      "explain do not disturb",
+      "silence alerts at night"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "AirDrop",
+    "desc": "AirDrop is Apple's way to send photos, files and links between nearby Apple devices over Wi-Fi and Bluetooth, without using a cable. Set AirDrop to receive from Everyone for a few minutes or only from Contacts, then turn it back if you do not want requests from strangers.",
+    "prompts": [
+      "what is airdrop",
+      "how do i send a photo with airdrop",
+      "why isn't airdrop working",
+      "airdrop everyone versus contacts only",
+      "how does airdrop work",
+      "send files between iphones",
+      "explain airdrop",
+      "airdrop not showing up"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "iCloud",
+    "desc": "iCloud is Apple's cloud service for backing up an iPhone and syncing photos, files and settings across your Apple devices. A backup can help you restore a new or reset phone. Photos and files in iCloud count toward your storage plan, so check Settings if you run out of space.",
+    "prompts": [
+      "what is icloud",
+      "how does icloud backup work",
+      "why is my icloud storage full",
+      "does icloud sync photos",
+      "how do i back up my iphone to icloud",
+      "explain icloud",
+      "icloud versus on my iphone storage",
+      "restore a phone from icloud"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Low Power Mode",
+    "desc": "Low Power Mode on iPhone reduces background activity and some visual effects to make the remaining battery last longer. Your phone may fetch mail less often and dim features until you charge it or turn the mode off. It is useful when you cannot charge soon, not as an everyday setting for everyone.",
+    "prompts": [
+      "what is low power mode",
+      "how do i save battery on my iphone",
+      "does low power mode slow down my phone",
+      "when should i use low power mode",
+      "yellow battery icon",
+      "explain low power mode",
+      "how to turn on low power mode",
+      "why does my iphone go into low power mode"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Find My",
+    "desc": "Find My can help you locate a missing iPhone, iPad, Mac or AirTag on a map, play a sound, or mark the device as lost. It works best when the device is powered on and connected, and when Find My was already turned on. A lost mode can lock the device and show a message with a contact number.",
+    "prompts": [
+      "what is find my",
+      "how do i find a lost iphone",
+      "how does find my iphone work",
+      "what is lost mode",
+      "can i find my phone if it's dead",
+      "explain find my",
+      "play a sound on a missing phone",
+      "airtag and find my"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Offloading apps",
+    "desc": "Offloading an app removes the app from your phone but keeps its documents and data. You get the storage back that the app itself used, and you can reinstall it later without starting all over. Deleting an app can also remove its data, so offload if you think you will need that data again.",
+    "prompts": [
+      "what does offload app mean",
+      "offload versus delete an app",
+      "how do i free space without losing app data",
+      "remove an app but keep its documents",
+      "explain offloading apps",
+      "should i offload unused apps",
+      "iphone offload unused apps setting",
+      "does offloading delete my progress"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Screen Time",
+    "desc": "Screen Time on iPhone shows how long you use apps and can set limits, downtime or a passcode so a younger user cannot just change the rules. Use it to see where time goes and to set limits you actually want, and keep the passcode different from your device passcode if you are setting limits for yourself.",
+    "prompts": [
+      "what is screen time on iphone",
+      "how do i set app limits",
+      "how can i see how much i use my phone",
+      "screen time passcode",
+      "how does screen time work",
+      "explain screen time",
+      "downtime on iphone",
+      "parental app limits"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Restarting a frozen phone",
+    "desc": "If an iPhone is frozen, first try a regular restart: press and hold a volume button and the side button, then slide to power off, wait, and turn it back on. If the screen will not respond, use a force restart: quickly press volume up, then volume down, then hold the side button until the Apple logo appears.",
+    "prompts": [
+      "how do i restart a frozen iphone",
+      "my phone screen is frozen",
+      "how do i force restart an iphone",
+      "volume up volume down hold side button",
+      "iphone not responding",
+      "how to reboot a stuck phone",
+      "force restart versus regular restart",
+      "apple logo after force restart"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Freeing phone storage",
+    "desc": "On iPhone, open Settings, then General, then iPhone Storage to see what is using space. Large videos, downloaded files and unused apps are common. Offload unused apps, delete videos you already backed up, and clear downloads in Safari or Files. Restart after large deletions if the free space has not updated yet.",
+    "prompts": [
+      "how do i free up storage on my iphone",
+      "why is my iphone storage full",
+      "what is using space on my phone",
+      "delete videos to free storage",
+      "iphone storage almost full",
+      "how to make space on my phone",
+      "where is iphone storage in settings",
+      "clear downloads and unused apps"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Mobile hotspots",
+    "desc": "A mobile hotspot lets other devices use your phone's cellular data as Wi-Fi. It can use up data quickly and drain the battery, and some plans charge extra or cap hotspot data. Use a password, turn the hotspot off when you are done, and avoid it if you are low on data.",
+    "prompts": [
+      "what is a mobile hotspot",
+      "how do i share my phone's internet",
+      "personal hotspot on iphone",
+      "does a hotspot use my data",
+      "how to turn on a hotspot",
+      "explain mobile hotspots",
+      "why is my hotspot using so much data",
+      "password for a personal hotspot"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Screen mirroring",
+    "desc": "Screen mirroring shows your phone or computer display on a TV or monitor. AirPlay works with Apple devices and many compatible TVs, and some TVs or apps also support Chromecast or an HDMI cable. Both devices usually need to be on the same Wi-Fi network, except when you use a cable.",
+    "prompts": [
+      "what is screen mirroring",
+      "how do i put my phone on the tv",
+      "how does airplay work",
+      "mirror iphone to a tv",
+      "chromecast versus airplay",
+      "explain screen mirroring",
+      "same wifi for screen mirroring",
+      "hdmi instead of wireless mirroring"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "USB-C and Lightning",
+    "desc": "Lightning is Apple's older small charging connector used on many earlier iPhones. USB-C is a wider, reversible connector now used on newer iPhones, many Android phones, laptops and chargers. A cable has to match the ports on both ends, and charging speed also depends on the charger, not only the plug shape.",
+    "prompts": [
+      "what's the difference between usb-c and lightning",
+      "what is a lightning cable",
+      "what is usb-c",
+      "why doesn't this charger fit my phone",
+      "new iphone charger port",
+      "explain usb-c and lightning",
+      "reversible charging cable",
+      "does the cable affect charging speed"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Strong passwords",
+    "desc": "A strong password is long, unique to that account, and hard to guess. A passphrase of several unrelated words is easier to remember than a short mix of characters. Use a different password for email and banking, and a password manager can store them so you do not reuse the same one everywhere.",
+    "prompts": [
+      "how do i make a strong password",
+      "what makes a password strong",
+      "should i reuse passwords",
+      "what is a passphrase",
+      "how can i remember different passwords",
+      "explain strong passwords",
+      "is a short password with symbols enough",
+      "password manager basics"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Two-factor authentication",
+    "desc": "Two-factor authentication, or 2FA, asks for a second check after your password, such as a code from a text message or an authenticator app. It makes it much harder for someone who only has your password to get in. Keep backup codes in a safe place in case you lose your phone.",
+    "prompts": [
+      "what is two-factor authentication",
+      "what is 2fa",
+      "how does two factor authentication work",
+      "why do i get a login code",
+      "authenticator app versus text code",
+      "explain 2fa",
+      "backup codes for two-factor",
+      "is 2fa safer than a password alone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Phishing messages",
+    "desc": "A phishing message tries to trick you into sharing a password, code or payment, often by posing as a bank, school, store or delivery service. Check the real address, not just the display name, and do not tap unexpected links or share a login code. If you are unsure, open the official app or website yourself.",
+    "prompts": [
+      "what is phishing",
+      "how can i tell if an email is a scam",
+      "someone asked for my login code",
+      "fake bank or delivery text",
+      "explain phishing messages",
+      "do not click a suspicious link",
+      "phishing versus a real email",
+      "what should i do if i get a phishing text"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Private browsing",
+    "desc": "Private or Incognito browsing does not save your history, cookies or form entries on that device after you close the window. It does not make you invisible. Your school, workplace, internet provider or the sites you visit can still see activity, and downloads you save stay on the device.",
+    "prompts": [
+      "what is private browsing",
+      "what is incognito mode",
+      "does incognito hide my activity",
+      "does private browsing save history",
+      "is incognito completely private",
+      "explain private browsing",
+      "who can still see incognito browsing",
+      "private tab on iphone"
+    ],
+    "code": "",
+    "answer": ""
+  },
+  {
+    "title": "Browser cookies",
+    "desc": "Cookies are small files a site stores in your browser to remember things such as a login, language or items in a cart. Some cookies also track visits across sites for advertising. You can usually block or clear cookies in browser settings, but you may have to log in again afterward.",
+    "prompts": [
+      "what are browser cookies",
+      "what do cookies do in a browser",
+      "why do sites ask me to accept cookies",
+      "do cookies track me",
+      "should i clear cookies",
+      "explain browser cookies",
+      "why did clearing cookies log me out",
+      "third party cookies"
+    ],
+    "code": "",
+    "answer": ""
+  }
+]
