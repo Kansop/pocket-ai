@@ -1,0 +1,2102 @@
+[
+  {
+    "title": "Buying a new phone",
+    "desc": "For a new phone, start with your budget and whether you want to stay in the same app and account system you already use. Look at storage, battery life, camera needs, size in your hand, and how many years of software updates the model is expected to get. I won't invent prices; tell me your budget and I can help you think through the features.",
+    "prompts": [
+      "what should i look for in a new phone",
+      "buying a new phone",
+      "buying a new iphone",
+      "new phone versus a used one",
+      "how much storage on a phone",
+      "phone battery and updates",
+      "help me choose a new phone",
+      "new phone on a budget"
+    ]
+  },
+  {
+    "title": "Buying a bike",
+    "desc": "A regular bike should fit your budget, your height and how you'll ride: around town, to school or on trails. Look at frame size, brake type, tire width and a shop that will help with a test ride and fit. Include a helmet and a lock in your plan. I won't guess current prices.",
+    "prompts": [
+      "what should i look for in a bike",
+      "buying a bicycle",
+      "bike for getting around town",
+      "bike frame size when buying",
+      "test ride a bike",
+      "city bike versus a trail bike",
+      "help me choose a bike",
+      "bike on a budget"
+    ]
+  },
+  {
+    "title": "Buying a skateboard",
+    "desc": "For a first skateboard, decide your budget and whether you want a complete board so the parts are already matched. Look at deck length for your shoe size, sturdy trucks and wheels that match street or park riding, and a helmet plus pads. A shop can help with setup. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a skateboard",
+      "buying a first skateboard",
+      "complete skateboard versus parts",
+      "skateboard deck size",
+      "skateboard wheels and trucks",
+      "help me pick a skateboard",
+      "skateboard on a budget",
+      "what safety gear with a skateboard"
+    ]
+  },
+  {
+    "title": "Buying speakers",
+    "desc": "Choose speakers based on your budget, where they'll sit and whether you need Bluetooth, a plug-in aux or a computer USB connection. Listen in person if you can, and check volume needs so you don't buy something that distorts when turned up. I won't quote prices that may be out of date.",
+    "prompts": [
+      "what should i look for in speakers",
+      "buying speakers",
+      "bluetooth speakers versus wired",
+      "speakers for a desk",
+      "speakers for a room",
+      "help me choose speakers",
+      "speakers on a budget",
+      "don't buy speakers that distort"
+    ]
+  },
+  {
+    "title": "Buying a webcam",
+    "desc": "A webcam should match your budget and how you'll use it: class, calls or recording. Look at a clear image in your actual lighting, a reliable mount, and whether your laptop already has a decent built-in camera. A good mic can matter as much as the picture. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a webcam",
+      "buying a webcam",
+      "is my laptop camera enough",
+      "webcam for class",
+      "webcam lighting and mount",
+      "help me pick a webcam",
+      "webcam on a budget",
+      "webcam with a microphone"
+    ]
+  },
+  {
+    "title": "Buying a microphone",
+    "desc": "Tell me your budget and whether the mic is for calls, recording or streaming. Look at USB versus other connections, a simple stand, and how it sounds on your actual computer. A quiet room often helps more than a pricey mic. I won't guess current prices.",
+    "prompts": [
+      "what should i look for in a microphone",
+      "buying a mic",
+      "usb microphone",
+      "mic for calls or recording",
+      "is a headset mic enough",
+      "help me choose a microphone",
+      "microphone on a budget",
+      "mic stand and a quiet room"
+    ]
+  },
+  {
+    "title": "Buying a gaming chair",
+    "desc": "A gaming chair should fit your body and budget the same way an office chair does: lower-back support, adjustable height and a seat you can sit in for a while. Try it if you can, and don't assume a racing-style design is more comfortable. I won't invent prices; tell me your budget and how long you sit.",
+    "prompts": [
+      "what should i look for in a gaming chair",
+      "buying a gaming chair",
+      "gaming chair versus office chair",
+      "is a gaming chair worth it",
+      "gaming chair support and height",
+      "help me pick a gaming chair",
+      "gaming chair on a budget",
+      "comfortable chair for gaming"
+    ]
+  },
+  {
+    "title": "Buying a smartwatch",
+    "desc": "A smartwatch only helps if you'll actually wear it. Start with your budget, your phone type, battery life and the features you'll use, like timers or activity tracking. You don't need every sensor. I won't invent prices; tell me your budget and phone and I can help you think about what matters.",
+    "prompts": [
+      "what should i look for in a smartwatch",
+      "buying a smartwatch",
+      "does a smartwatch work with my phone",
+      "smartwatch battery life",
+      "do I need a smartwatch",
+      "help me choose a smartwatch",
+      "smartwatch on a budget",
+      "watch for fitness tracking"
+    ]
+  },
+  {
+    "title": "Choosing a phone plan",
+    "desc": "A phone plan should fit your budget and how much data you actually use, not the biggest advertised number. Compare monthly cost, hotspot or family-plan rules, coverage where you live, and contract versus prepaid. Read the fine print on fees. I won't invent plan prices.",
+    "prompts": [
+      "how do i choose a phone plan",
+      "what phone plan should I get",
+      "how much data do I need",
+      "prepaid versus a contract plan",
+      "family phone plan",
+      "phone plan coverage",
+      "help me pick a phone plan",
+      "phone plan on a budget"
+    ]
+  },
+  {
+    "title": "Buying a phone case",
+    "desc": "Pick a case for your exact phone model, your budget and how rough you are on a phone. Look at drop protection, whether you can reach the buttons and ports, and a fit that doesn't block the camera or charging. I won't guess prices.",
+    "prompts": [
+      "what should i look for in a phone case",
+      "buying a phone case",
+      "case for my exact phone model",
+      "protective phone case",
+      "case that doesn't block the camera",
+      "help me pick a phone case",
+      "phone case on a budget",
+      "thick case versus a slim one"
+    ]
+  },
+  {
+    "title": "Buying a screen protector",
+    "desc": "A screen protector should be made for your exact phone model. Look at a clean install, a cutout that matches the speaker and camera, and whether you want glass or a thinner film. Dust under the protector is the usual problem, so follow the cleaning steps. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a screen protector",
+      "buying a screen protector",
+      "tempered glass for my phone",
+      "screen protector for my model",
+      "dust under a screen protector",
+      "help me choose a screen protector",
+      "how to put on a screen protector",
+      "screen protector on a budget"
+    ]
+  },
+  {
+    "title": "Buying a bike helmet",
+    "desc": "A helmet should meet a safety standard, fit level and snug, and sit straight on your head, not tipped back. Look for adjustable straps that form a V under each ear, and replace a helmet after a serious hit. Choose one you'll actually wear. I won't invent prices; tell me your budget if you want help thinking about features.",
+    "prompts": [
+      "what should i look for in a bike helmet",
+      "buying a bike helmet",
+      "how should a bike helmet fit",
+      "helmet after a crash",
+      "bike helmet straps",
+      "help me pick a helmet",
+      "bike helmet on a budget",
+      "do I need a bike helmet"
+    ]
+  },
+  {
+    "title": "Buying a printer",
+    "desc": "Start with your budget and what you'll print: homework now and then, or lots of color pages. Look at ink or toner costs over time, paper handling, and whether you need wireless printing from a phone. The cheap printer can be expensive if the ink is not. I won't invent prices.",
+    "prompts": [
+      "what should i look for in a printer",
+      "buying a printer",
+      "ink cost versus printer price",
+      "wireless printer for a phone",
+      "printer for school work",
+      "help me choose a printer",
+      "printer on a budget",
+      "color versus black and white printer"
+    ]
+  },
+  {
+    "title": "Buying an external drive",
+    "desc": "An external drive is for extra files or backups. Choose a budget, then look at capacity, USB type, and whether you want a rugged drive if it will travel. For backups, pick something you will actually plug in on a schedule. I won't guess street prices.",
+    "prompts": [
+      "what should i look for in an external drive",
+      "buying an external hard drive",
+      "SSD versus hard drive backup",
+      "usb-c external drive",
+      "how big an external drive do I need",
+      "help me pick an external drive",
+      "external drive on a budget",
+      "drive for backing up files"
+    ]
+  },
+  {
+    "title": "Buying a used bike",
+    "desc": "On a used bike, set a budget and check frame size, rust, bent wheels, brake function and that the gears shift cleanly. Take a test ride, and have a shop inspect it if you're unsure. Ask whether it was stolen. I won't invent resale prices.",
+    "prompts": [
+      "what should i look for in a used bike",
+      "buying a used bicycle",
+      "used bike inspection",
+      "is this used bike stolen",
+      "test ride a used bike",
+      "help me buy a secondhand bike",
+      "used bike on a budget",
+      "used bike rust and brakes"
+    ]
+  },
+  {
+    "title": "Reading product reviews",
+    "desc": "When you read reviews, look for recent comments from people who used the product the way you will, and be skeptical of a pile of five-star reviews that all sound the same. Photos, verified-purchase tags and a mix of ratings are more useful than a single rave or rant.",
+    "prompts": [
+      "how do i read product reviews",
+      "are online reviews fake",
+      "what to look for in reviews",
+      "verified purchase reviews",
+      "recent reviews matter",
+      "don't trust only five stars",
+      "helpful versus unhelpful reviews",
+      "reading reviews before I buy"
+    ]
+  },
+  {
+    "title": "Return policies",
+    "desc": "A return policy says whether you can bring an item back, how many days you have, and whether you need a receipt or the original packaging. Read it before you buy, keep the receipt, and check whether opened items or sale items are excluded. The store's written policy is what counts, not a guess.",
+    "prompts": [
+      "what is a return policy",
+      "how do returns work",
+      "do I need a receipt to return something",
+      "how many days to return an item",
+      "sale items and returns",
+      "return policy before I buy",
+      "can I return an opened item",
+      "help with returning a purchase"
+    ]
+  },
+  {
+    "title": "Warranties",
+    "desc": "A warranty is a promise to repair or replace a product if it fails in a stated way, for a stated time. Read what it actually covers, how long it lasts, and what voids it. An extended warranty is optional; compare the cost with what the free manufacturer warranty already includes. I won't invent prices.",
+    "prompts": [
+      "what is a warranty",
+      "does this come with a warranty",
+      "what does a warranty cover",
+      "extended warranty is it worth it",
+      "how long is the warranty",
+      "warranty versus a return",
+      "voiding a warranty",
+      "manufacturer warranty basics"
+    ]
+  },
+  {
+    "title": "Buying school supplies",
+    "desc": "Make a list from the school or teacher's supply list, then buy only what you still need so you don't double up. Look for sturdy basics first: paper, pens, a binder and a bag that already works. Wait on extras until you know the class uses them. I won't invent prices; a budget helps if you tell me one.",
+    "prompts": [
+      "what school supplies do i need",
+      "buying school supplies",
+      "don't overbuy supplies",
+      "school supply list",
+      "sturdy binder and pens",
+      "school supplies on a budget",
+      "help me shop for school supplies",
+      "what to buy before school starts"
+    ]
+  },
+  {
+    "title": "Force quitting a Mac app",
+    "desc": "If a Mac app freezes, press Option-Command-Escape, select the app, and click Force Quit. You can also Option-click the app's icon in the Dock and choose Force Quit. You'll lose unsaved work in that app, so use this when it won't respond any other way.",
+    "prompts": [
+      "how do i force quit a mac app",
+      "mac app is frozen",
+      "option command escape",
+      "force quit on a mac",
+      "app not responding on mac",
+      "force quit from the dock",
+      "mac spinny wheel",
+      "how to close a stuck mac program"
+    ]
+  },
+  {
+    "title": "Finder basics",
+    "desc": "Finder is how you browse files on a Mac. Open it from the smiling face icon in the Dock, then use the sidebar to reach Desktop, Documents, Downloads and drives. List, icon or column view changes how folders look, and Command-F searches.",
+    "prompts": [
+      "what is finder on a mac",
+      "how do i open finder",
+      "where are my downloads on mac",
+      "finder sidebar",
+      "how to search in finder",
+      "finder list view",
+      "documents folder on a mac",
+      "browse files on a mac"
+    ]
+  },
+  {
+    "title": "Spotlight on a Mac",
+    "desc": "Spotlight finds apps, documents and settings on a Mac. Press Command-Space, type a few letters, and press Return to open the top result. You can also do quick calculations in the same window. It's often faster than hunting through folders.",
+    "prompts": [
+      "how do i use spotlight on a mac",
+      "command space on mac",
+      "search for an app on mac",
+      "spotlight search mac",
+      "spotlight calculator",
+      "find a file with spotlight",
+      "mac search bar",
+      "open apps with spotlight"
+    ]
+  },
+  {
+    "title": "Installing a Mac app",
+    "desc": "The safer way to install a Mac app is from the App Store, or from the developer's site as a .dmg or .pkg you trust. Open the installer, drag the app to Applications if that's the method, then eject the disk image. Don't install software from a random pop-up or email link.",
+    "prompts": [
+      "how do i install an app on a mac",
+      "install from the mac app store",
+      "what is a dmg file",
+      "drag app to applications",
+      "installing software on mac",
+      "is this mac installer safe",
+      "eject a dmg after installing",
+      "how to add a program on mac"
+    ]
+  },
+  {
+    "title": "Uninstalling a Mac app",
+    "desc": "To remove a Mac app, open Finder, go to Applications, and drag the app to the Trash, then empty the Trash when you're sure. Some apps have their own uninstaller. Deleting the icon from the Dock only removes the shortcut, not the app.",
+    "prompts": [
+      "how do i uninstall a mac app",
+      "delete an app on mac",
+      "drag app to trash",
+      "removing a program from a mac",
+      "uninstall versus removing the dock icon",
+      "mac app uninstaller",
+      "get rid of an application on mac",
+      "how to delete a mac program"
+    ]
+  },
+  {
+    "title": "Mac keyboard shortcuts",
+    "desc": "On a Mac, Command is the main shortcut key: Command-C copies, Command-V pastes, Command-Z undoes, Command-S saves and Command-Q quits. Command-Tab switches apps, and Command-W closes a window. A few shortcuts can save a lot of menu hunting.",
+    "prompts": [
+      "what are mac keyboard shortcuts",
+      "command c and command v",
+      "how to undo on a mac",
+      "command tab to switch apps",
+      "command q versus command w",
+      "copy paste save on mac",
+      "mac shortcut list for beginners",
+      "keyboard shortcuts on a mac"
+    ]
+  },
+  {
+    "title": "Time Machine backups",
+    "desc": "Time Machine is Apple's built-in Mac backup. Connect a dedicated external drive, choose it in System Settings under Time Machine, and let it run on a schedule. Test that you can restore a file once, and don't use that drive as your only everyday storage.",
+    "prompts": [
+      "what is time machine on a mac",
+      "how do i back up a mac",
+      "time machine external drive",
+      "restore a file from time machine",
+      "mac backup schedule",
+      "set up time machine",
+      "is time machine enough",
+      "backing up a mac automatically"
+    ]
+  },
+  {
+    "title": "Connecting a laptop to a monitor",
+    "desc": "To use an external monitor, match the cable to the ports on the laptop and the display, such as HDMI or USB-C, and use an adapter if they don't match. Then choose extend or mirror in the computer's display settings and set the correct resolution. A loose cable is the usual reason nothing appears.",
+    "prompts": [
+      "how do i connect a laptop to a monitor",
+      "hdmi laptop to a monitor",
+      "usb-c to a display",
+      "extend versus mirror screen",
+      "laptop not detecting the monitor",
+      "display settings for a second screen",
+      "adapter for laptop to monitor",
+      "hook up an external monitor"
+    ]
+  },
+  {
+    "title": "The Windows Start menu",
+    "desc": "The Start menu is where you find apps, power options and settings on Windows. Click the Windows icon or press the Windows key, then type the name of an app to open it. You can pin apps you use often and use the power button in the menu to shut down or restart.",
+    "prompts": [
+      "how do i use the start menu",
+      "windows key to open start",
+      "search for an app in start",
+      "pin an app to start",
+      "shut down from the start menu",
+      "where is the windows start button",
+      "start menu basics",
+      "finding programs on windows"
+    ]
+  },
+  {
+    "title": "Task Manager",
+    "desc": "Task Manager shows running programs on Windows and lets you close one that is frozen. Press Ctrl-Shift-Esc, or Ctrl-Alt-Delete and choose Task Manager, then select the app and End task. Use it when a window says not responding, and avoid ending processes you don't recognize.",
+    "prompts": [
+      "how do i open task manager",
+      "ctrl shift esc",
+      "end task on windows",
+      "windows app is frozen",
+      "ctrl alt delete task manager",
+      "close a program that won't close",
+      "what is task manager",
+      "windows not responding"
+    ]
+  },
+  {
+    "title": "File Explorer",
+    "desc": "File Explorer is how you browse files on Windows. Open it from the taskbar folder icon, then use the left sidebar for This PC, Documents and Downloads. You can change the view, search in a folder, and go up one level with the back or up button.",
+    "prompts": [
+      "what is file explorer",
+      "how do i open file explorer",
+      "where are my downloads on windows",
+      "this pc in file explorer",
+      "search for a file in windows",
+      "windows folder window",
+      "documents folder on windows",
+      "browse files on windows"
+    ]
+  },
+  {
+    "title": "Installing a Windows program",
+    "desc": "Install Windows software from the Microsoft Store or the official site of a program you trust. Open the installer, follow the steps, and decline extra bundled offers you don't want. Don't run an installer that arrived in a surprise email or pop-up.",
+    "prompts": [
+      "how do i install a program on windows",
+      "install from the microsoft store",
+      "windows setup exe",
+      "is this installer safe",
+      "decline extra software in an installer",
+      "installing an app on windows",
+      "download and install a windows program",
+      "official site versus a random download"
+    ]
+  },
+  {
+    "title": "Uninstalling a Windows program",
+    "desc": "To remove a Windows program, open Settings, then Apps, find it in the list and choose Uninstall. You can also use the older Programs and Features panel. Restart if the installer asks, and don't delete program folders by hand unless you know that's required.",
+    "prompts": [
+      "how do i uninstall a program on windows",
+      "remove an app in windows settings",
+      "apps and uninstall",
+      "programs and features",
+      "get rid of a windows program",
+      "uninstall versus deleting a folder",
+      "windows add or remove programs",
+      "how to delete software on windows"
+    ]
+  },
+  {
+    "title": "Alt+Tab",
+    "desc": "Alt+Tab switches between open windows on Windows. Hold Alt and press Tab to move through the list, then release on the window you want. On a Mac, Command-Tab does a similar job for apps. It's faster than hunting on the taskbar.",
+    "prompts": [
+      "how do i use alt tab",
+      "switch windows on windows",
+      "alt tab not working",
+      "cycle through open windows",
+      "command tab on a mac",
+      "keyboard shortcut to change windows",
+      "alt tab versus the taskbar",
+      "switch programs quickly"
+    ]
+  },
+  {
+    "title": "Snipping a screenshot on Windows",
+    "desc": "On Windows, press Windows+Shift+S to open the snipping bar and drag to capture part of the screen. The shot goes to the clipboard so you can paste it, and a preview often lets you save it. The older Print Screen key can also copy the whole screen, depending on settings.",
+    "prompts": [
+      "how do i screenshot on windows",
+      "windows shift s",
+      "snipping tool",
+      "capture part of the screen on windows",
+      "print screen key",
+      "save a snip",
+      "windows screenshot shortcut",
+      "how to snip on a pc"
+    ]
+  },
+  {
+    "title": "Updating Windows",
+    "desc": "Windows updates fix bugs and close security holes. Open Settings, then Windows Update, and choose Check for updates. Use a power connection for a big update, save your work, and let the PC restart when it asks. Don't download Windows from a random site.",
+    "prompts": [
+      "how do i update windows",
+      "windows update settings",
+      "check for updates on windows",
+      "windows needs a restart",
+      "is a windows update safe",
+      "optional versus required updates",
+      "updating a windows pc",
+      "windows update stuck"
+    ]
+  },
+  {
+    "title": "Updating a Mac",
+    "desc": "On a Mac, open System Settings, then General, then Software Update, and install updates from Apple. Back up first if it's a major macOS version, plug in the power adapter, and don't close the lid mid-install. Avoid macOS installers from unofficial sites.",
+    "prompts": [
+      "how do i update a mac",
+      "software update on mac",
+      "system settings general software update",
+      "updating macos",
+      "backup before a mac update",
+      "mac update needs power",
+      "is a mac update safe",
+      "check for updates on a mac"
+    ]
+  },
+  {
+    "title": "Emptying Trash or Recycle Bin",
+    "desc": "Deleted files usually go to Trash on a Mac or the Recycle Bin on Windows, so you can restore them until you empty it. Emptying frees space and makes those files much harder to get back. Check once before you empty, especially for photos or school work.",
+    "prompts": [
+      "how do i empty the recycle bin",
+      "empty the trash on a mac",
+      "deleted files still taking space",
+      "restore from recycle bin",
+      "empty trash to free space",
+      "where did my deleted file go",
+      "recycle bin versus trash",
+      "should I empty the trash"
+    ]
+  },
+  {
+    "title": "Safely ejecting a USB drive",
+    "desc": "Before you unplug a USB drive, eject it first so the computer can finish writing files. On a Mac, click the eject icon next to the drive in Finder. On Windows, use Eject from the taskbar or File Explorer, wait for the all-clear, then unplug. Pulling it out mid-copy can corrupt files.",
+    "prompts": [
+      "how do i eject a usb drive",
+      "safely remove a flash drive",
+      "eject on a mac",
+      "eject on windows",
+      "can I just unplug a usb",
+      "usb drive corrupted",
+      "eject before unplugging",
+      "remove hardware safely"
+    ]
+  },
+  {
+    "title": "Printing from a computer",
+    "desc": "To print, open the document, choose Print, pick the correct printer, and check preview, page range and color versus black and white. Make sure the printer is on, has paper, and is connected to the same Wi-Fi or cable. A wrong printer in the list is a common miss.",
+    "prompts": [
+      "how do i print from my computer",
+      "print a document",
+      "choose the right printer",
+      "print preview and page range",
+      "printer not showing up",
+      "print in black and white",
+      "printing from a laptop",
+      "why won't my computer print"
+    ]
+  },
+  {
+    "title": "Split-screen windows",
+    "desc": "Split-screen lets two windows share the display. On Windows, drag a window to the left or right edge, or hold the Windows key and an arrow key. On a Mac, use the green window button and Tile, or drag if your macOS version supports it. It's handy for notes and a video at once.",
+    "prompts": [
+      "how do i split screen on windows",
+      "snap windows side by side",
+      "windows key and arrow",
+      "tile windows on a mac",
+      "two windows at once",
+      "split screen for homework",
+      "side by side apps",
+      "how to tile a window"
+    ]
+  },
+  {
+    "title": "Closing a frozen Windows app",
+    "desc": "If a Windows app is frozen, wait a few seconds, then use the X or Alt+F4. If that fails, open Task Manager with Ctrl-Shift-Esc, select the app, and choose End task. You'll lose unsaved work in that app, so try a regular close first.",
+    "prompts": [
+      "a windows program froze and will not close",
+      "how to close a stuck windows program",
+      "alt f4",
+      "end task a frozen app",
+      "program not responding on windows",
+      "close a window that won't close",
+      "frozen chrome or word on windows",
+      "windows app locked up"
+    ]
+  },
+  {
+    "title": "Texting versus calling",
+    "desc": "Text when a short message is enough, like a time, a link or a quick yes or no. Call when the topic is long, emotional, confusing, or you need a decision right away. If you're not sure the person can talk, a text that says 'can I call?' is polite.",
+    "prompts": [
+      "should i text or call",
+      "when to call instead of text",
+      "text versus a phone call",
+      "is this better as a call",
+      "when a text is enough",
+      "can I call you first",
+      "long talk should be a call",
+      "text or call a friend"
+    ]
+  },
+  {
+    "title": "Double texting",
+    "desc": "A second text is fine when the first one was easy to miss, or when you have a real new detail. Stacking a bunch of messages when someone hasn't replied can feel like pressure. Wait a reasonable time, and keep a follow-up short and kind.",
+    "prompts": [
+      "is it ok to double text",
+      "should I text again",
+      "they didn't reply to my text",
+      "double texting is awkward",
+      "follow up text",
+      "how long to wait to text again",
+      "don't spam someone who hasn't replied",
+      "sending a second message"
+    ]
+  },
+  {
+    "title": "Tone in text messages",
+    "desc": "Tone is easy to misread in a text because there's no voice. Short replies can look cold, and sarcasm often falls flat. If a message could be taken two ways, add a few words or ask in person. Read it once before you send, especially if you're upset.",
+    "prompts": [
+      "why does my text sound rude",
+      "tone in text messages",
+      "short texts seem cold",
+      "sarcasm in a text",
+      "how to not sound mad over text",
+      "misread a text",
+      "write a clearer text tone",
+      "text that won't be taken the wrong way"
+    ]
+  },
+  {
+    "title": "Group chat etiquette",
+    "desc": "In a group chat, stay on the shared topic, don't call someone out in front of everyone, and take a private issue to a private thread. Mute notifications if the chat is noisy, and don't add a person without checking. A quick reply beats a long monologue.",
+    "prompts": [
+      "group chat etiquette",
+      "how to act in a group chat",
+      "don't call someone out in the group",
+      "mute a noisy group chat",
+      "adding someone to a group chat",
+      "private issue shouldn't be in the group",
+      "group chat manners",
+      "too many messages in a group"
+    ]
+  },
+  {
+    "title": "Asking someone to hang out by text",
+    "desc": "A hangout text works better when it is specific: a plan, a time and an easy out if they can't. 'Want to get food after school Thursday?' is clearer than 'we should hang out sometime.' If they say no, keep it light and don't push.",
+    "prompts": [
+      "how do i ask someone to hang out over text",
+      "text to make plans",
+      "ask a friend to hang out",
+      "make a specific plan in a text",
+      "want to hang out sometime is vague",
+      "they said no to hanging out",
+      "invite someone over text",
+      "how to text plans without being awkward"
+    ]
+  },
+  {
+    "title": "How long to wait before replying",
+    "desc": "You don't owe anyone an instant reply. Answer when you can give a real response, and if you'll be slow, a short 'I'll get back to you' is enough. Repeatedly ignoring someone on purpose is different from being busy.",
+    "prompts": [
+      "how long should I wait to reply",
+      "do I have to text back right away",
+      "slow to reply",
+      "I'll get back to you text",
+      "is it rude to reply later",
+      "they expect an instant text",
+      "reply when I can",
+      "don't leave someone hanging on purpose"
+    ]
+  },
+  {
+    "title": "Not screenshotting private chats",
+    "desc": "A private chat was meant for the people in it. Screenshotting and sharing it can break trust and can spread something someone never agreed to share. If you're worried about safety, tell a trusted adult instead of posting the chat. Don't forward private messages for drama.",
+    "prompts": [
+      "is it ok to screenshot a chat",
+      "don't share a private conversation",
+      "someone screenshotted my texts",
+      "posting someone else's messages",
+      "private chat should stay private",
+      "sharing a group chat screenshot",
+      "when a screenshot is a trust issue",
+      "don't expose a private text"
+    ]
+  },
+  {
+    "title": "When not to post",
+    "desc": "Pause before you post if you're angry, if it involves someone else's private life, or if you wouldn't be okay with a parent, teacher or future you seeing it. A story that vanishes still can be saved. When in doubt, don't post it.",
+    "prompts": [
+      "when should I not post",
+      "don't post when I'm mad",
+      "is this ok to post",
+      "something I might regret posting",
+      "posting about someone else",
+      "future me and a post",
+      "should I share this",
+      "think before I post"
+    ]
+  },
+  {
+    "title": "Muting or unfollowing quietly",
+    "desc": "Muting, unfollowing or hiding a person's posts can be a calm way to take a break without a fight. You don't have to announce it. If the problem is bigger than a feed, a direct, kind conversation or some space may still be needed.",
+    "prompts": [
+      "is it ok to mute someone",
+      "unfollow without telling them",
+      "mute versus unfollow",
+      "I need a break from their posts",
+      "quietly unfollowing",
+      "hide posts without drama",
+      "unfriend versus mute",
+      "taking a break on social media"
+    ]
+  },
+  {
+    "title": "A friend request from a stranger",
+    "desc": "You don't have to accept a friend or follow request from someone you don't know. Check whether you have friends in common, ignore anything that feels like a scam or a compliment that's too much, and never send codes, money or private photos. It's fine to decline or ignore.",
+    "prompts": [
+      "friend request from a stranger",
+      "should I accept a request from someone I don't know",
+      "unknown follow request",
+      "is this a fake account",
+      "stranger added me",
+      "don't accept a random request",
+      "scam friend request",
+      "ignore a request from a stranger"
+    ]
+  },
+  {
+    "title": "Responding to a mean comment",
+    "desc": "You don't have to reply to a mean comment. If you do, a short calm line or hiding the comment is often better than a long argument. If it keeps going or feels threatening, block, report it, and tell a trusted adult. Don't pile on in return.",
+    "prompts": [
+      "someone left a mean comment",
+      "how to handle a rude comment",
+      "should I reply to a hater",
+      "don't argue in the comments",
+      "block and report a mean comment",
+      "mean comment on my post",
+      "responding to online meanness",
+      "ignore a rude comment"
+    ]
+  },
+  {
+    "title": "Not oversharing in a story",
+    "desc": "A story still can be screenshotted. Skip live locations, your house, when you're home alone, private family business, and anything you wouldn't say in a hallway. Share the fun part without handing a stranger your schedule.",
+    "prompts": [
+      "am I oversharing in my story",
+      "don't post my location live",
+      "what not to put in a story",
+      "home alone and social media",
+      "story can still be saved",
+      "oversharing online",
+      "keep private stuff out of a story",
+      "too much personal info in a story"
+    ]
+  },
+  {
+    "title": "Emoji and tone",
+    "desc": "An emoji can soften a short text, but it can't fix a message that's actually unkind, and a pile of them can look messy in a serious note. Use them when they match how you talk, and skip them in something formal like an email to a teacher.",
+    "prompts": [
+      "do emojis help tone",
+      "too many emojis",
+      "emoji in a serious text",
+      "should I use emojis with a teacher",
+      "emoji can be misread",
+      "using emojis in a text",
+      "when not to use emojis",
+      "emoji and a short message"
+    ]
+  },
+  {
+    "title": "Leaving a chat politely",
+    "desc": "If you need to go mid-conversation, a short 'gotta go, talk later' is enough. You don't have to explain your whole evening. In a group, you can mute and catch up later instead of vanishing mid-plan. If you made a plan, confirm it before you drop off.",
+    "prompts": [
+      "how do i leave a chat politely",
+      "gotta go text",
+      "ending a text conversation",
+      "I have to go mid chat",
+      "bye in a group chat",
+      "don't vanish mid-plan",
+      "talk later text",
+      "politely sign off a chat"
+    ]
+  },
+  {
+    "title": "Starting a new hobby",
+    "desc": "To start a hobby, pick something you actually want to try, start small, and give it a few honest sessions before you buy a lot of gear. Borrow or use what you have at first, and look for one simple beginner project. It's okay if you're bad at it at the start.",
+    "prompts": [
+      "how do i start a new hobby",
+      "I want a hobby",
+      "starting a hobby on a budget",
+      "don't buy a lot of gear first",
+      "beginner hobby ideas",
+      "try a hobby before spending",
+      "how to begin a hobby",
+      "pick a hobby I'll actually do"
+    ]
+  },
+  {
+    "title": "Learning guitar",
+    "desc": "Start with a guitar that you can hold comfortably, a tuner, and a few minutes most days rather than one long cram. Learn to tune, a couple of open chords, and a simple song you like. Buzzing strings and sore fingertips are normal at first. I can help with a practice plan; I won't invent prices for a guitar.",
+    "prompts": [
+      "how do i start learning guitar",
+      "beginner guitar",
+      "first chords on guitar",
+      "how to tune a guitar",
+      "sore fingers from guitar",
+      "practice guitar a little each day",
+      "guitar for beginners",
+      "I want to learn guitar"
+    ]
+  },
+  {
+    "title": "Starting journaling",
+    "desc": "Journaling can be a few sentences about your day, a list, or one thing that's on your mind. You don't need a special notebook or a long entry every night. Keep it private, skip a day if you need to, and don't worry about writing well.",
+    "prompts": [
+      "how do i start journaling",
+      "what do I write in a journal",
+      "journaling for beginners",
+      "I don't know what to journal",
+      "short daily journal",
+      "do I have to journal every day",
+      "journal about my day",
+      "starting a journal habit"
+    ]
+  },
+  {
+    "title": "Starting to run",
+    "desc": "If you're new to running, mix walking and short jogs, wear shoes that already feel okay, and start easier than you think. A little progress each week is safer than going hard on day one. Stop for sharp pain, and check with a parent or doctor if you have a health question.",
+    "prompts": [
+      "how do i start running",
+      "beginner running",
+      "walk and jog to start",
+      "couch to running",
+      "starting to run slowly",
+      "run without going too hard",
+      "I want to start jogging",
+      "first week of running"
+    ]
+  },
+  {
+    "title": "Learning a language",
+    "desc": "A language sticks when you practice a little often: words you actually need, short listening, and speaking out loud even if you feel silly. One app can help, but talking and reading real sentences matters too. Pick one language and a small daily habit over five at once.",
+    "prompts": [
+      "how do i start learning a language",
+      "best way to learn a language as a beginner",
+      "language practice every day",
+      "do language apps work",
+      "learn words I'll actually use",
+      "speaking practice for a language",
+      "I want to learn a new language",
+      "starting a second language"
+    ]
+  },
+  {
+    "title": "Learning to bake",
+    "desc": "Start with a simple recipe, measure carefully, and read the whole recipe once before you preheat the oven. Use oven mitts, keep a timer, and don't open the oven every minute. If something burns or falls, that's a normal first bake, not a sign you should quit.",
+    "prompts": [
+      "how do i start baking",
+      "beginner baking",
+      "simple thing to bake first",
+      "measure when I bake",
+      "baking safely in the oven",
+      "first baking project",
+      "I want to learn to bake",
+      "don't open the oven too much"
+    ]
+  },
+  {
+    "title": "Starting gardening",
+    "desc": "Start small: one pot or a short row, a plant that fits your light, and a watering habit you can keep. Overwatering is a common first mistake. A seed packet or a starter plant from a local shop is enough; you don't need a huge yard. I won't invent prices for gear.",
+    "prompts": [
+      "how do i start gardening",
+      "gardening for beginners",
+      "start with one pot",
+      "overwatering plants",
+      "what plant is easy to start with",
+      "gardening without a big yard",
+      "I want to grow something",
+      "beginner garden at home"
+    ]
+  },
+  {
+    "title": "A reading habit",
+    "desc": "A reading habit can start with ten quiet minutes and a book or article you actually want to finish, not only assigned ones. Keep the book where you'll see it, and it's okay to drop a book that isn't working and try another. Pages add up in small sessions.",
+    "prompts": [
+      "how do i start reading more",
+      "build a reading habit",
+      "I never finish books",
+      "read a little each day",
+      "pick a book I'll actually read",
+      "it's ok to stop a book",
+      "reading for fun again",
+      "how to read more as a student"
+    ]
+  },
+  {
+    "title": "Learning to skateboard",
+    "desc": "Start on a flat, open place with a helmet, and practice standing, pushing and stopping before tricks. Fall practice and pads help. Keep sessions short at first, and don't ride in traffic or down a steep hill until you can start and stop with control.",
+    "prompts": [
+      "how do i start skateboarding",
+      "beginner skateboard",
+      "first things to learn on a skateboard",
+      "pushing and stopping on a board",
+      "skateboard with a helmet",
+      "learning to skate safely",
+      "I want to learn skateboarding",
+      "practice skateboarding on flat ground"
+    ]
+  },
+  {
+    "title": "Starting weightlifting",
+    "desc": "If you're new to weights, learn a few basic movements with light load or even no weight, and ask someone who knows the form, like a coach. Rest days matter. Sharp pain is a stop sign. Check with a parent or doctor if you have a health question, and don't chase heavy numbers in week one.",
+    "prompts": [
+      "how do i start lifting weights",
+      "weightlifting for beginners",
+      "form before heavy weight",
+      "is lifting safe for a teen",
+      "beginner strength training",
+      "don't go heavy on day one",
+      "starting the weight room",
+      "learn the movement first"
+    ]
+  },
+  {
+    "title": "Starting yoga",
+    "desc": "Yoga can start with a short beginner video or class, a clear floor space, and shoes off. Move in a range that you can breathe through, and skip anything that hurts. You don't need fancy clothes. If you have an injury, ask a parent or doctor first.",
+    "prompts": [
+      "how do i start yoga",
+      "yoga for beginners",
+      "beginner yoga at home",
+      "do I need a yoga mat",
+      "yoga that doesn't hurt",
+      "short yoga practice",
+      "I want to try yoga",
+      "easy yoga to start with"
+    ]
+  },
+  {
+    "title": "Getting into board games",
+    "desc": "Start with a game that has a short rulebook and a number of players you can actually gather. Learn one game well before buying a shelf of them. A library, a friend or a game cafe is a low-cost way to try something first. I won't invent game prices.",
+    "prompts": [
+      "how do i get into board games",
+      "beginner board games",
+      "learn one board game first",
+      "board game for a few friends",
+      "trying a game before I buy it",
+      "I want to play more board games",
+      "simple board games to start",
+      "board game night ideas"
+    ]
+  },
+  {
+    "title": "Rest days",
+    "desc": "Rest days are part of training, not skipping. Muscles and joints need time to recover, especially if you're new or you just increased how hard you work. An easy walk can be fine; a rest day isn't a license to stay still all week, and it isn't a failure.",
+    "prompts": [
+      "do I need rest days",
+      "what is a rest day",
+      "should I work out every day",
+      "rest day versus being lazy",
+      "recovery after a workout",
+      "how many rest days",
+      "is a walk ok on a rest day",
+      "why rest days matter"
+    ]
+  },
+  {
+    "title": "Bodyweight exercises",
+    "desc": "Bodyweight moves use your own weight: squats, push-ups from the knees or toes, planks, and lunges, done with control. Start with a number you can repeat with decent form, and rest between sets. You don't need a gym. Stop if something hurts sharply.",
+    "prompts": [
+      "what are bodyweight exercises",
+      "workout with no equipment",
+      "push-ups squats and planks at home",
+      "bodyweight workout for beginners",
+      "exercises I can do in my room",
+      "no gym workout",
+      "home exercises with my body weight",
+      "simple bodyweight routine"
+    ]
+  },
+  {
+    "title": "How to do a push-up",
+    "desc": "A solid push-up starts in a straight line from head to heels, hands under the shoulders, and a controlled lower and press. Knees-down or an incline on a sturdy surface is a fair way to build up. Don't let your hips sag or pike, and stop if your wrists or shoulders complain sharply.",
+    "prompts": [
+      "how do i do a push-up",
+      "push-up form",
+      "knee push-ups",
+      "push-ups for beginners",
+      "my hips sag in a push-up",
+      "incline push-up",
+      "how to get better at push-ups",
+      "proper push-up"
+    ]
+  },
+  {
+    "title": "How to do a squat",
+    "desc": "In a squat, sit your hips back, keep your heels down, and keep your chest from collapsing, then stand up with control. A chair squat is a good starting point. Go only as low as you can with balance. Knee discomfort that is sharp is a stop, not something to push through.",
+    "prompts": [
+      "how do i do a squat",
+      "squat form",
+      "chair squats for beginners",
+      "heels lifting in a squat",
+      "bodyweight squat",
+      "how low should I squat",
+      "proper squat",
+      "learn to squat"
+    ]
+  },
+  {
+    "title": "Starting to jog",
+    "desc": "A first jog can be a walk with short jogging intervals, on a route you know, in shoes that already feel comfortable. Breathe steadily, and slow to a walk when you need to. Build up over weeks, not in one afternoon. Check in with a parent or doctor if you have a health concern.",
+    "prompts": [
+      "how do i start jogging",
+      "first time jogging",
+      "walk jog intervals",
+      "jogging for beginners",
+      "I get out of breath jogging",
+      "slow jog to start",
+      "start jogging without burning out",
+      "easy jogging plan"
+    ]
+  },
+  {
+    "title": "Soreness after a workout",
+    "desc": "Soreness a day later can happen when you did something new, and light movement, sleep and water often help more than doing nothing all day. Sharp, sudden or joint pain is different, and swelling or pain that doesn't ease is a reason to tell a parent and, if needed, a doctor. Don't add a harder workout on top of bad pain.",
+    "prompts": [
+      "why am I sore after a workout",
+      "soreness the next day",
+      "is sore muscles normal",
+      "doms after exercise",
+      "sore versus injured",
+      "what to do when I'm sore",
+      "too sore to work out",
+      "muscle soreness after starting to exercise"
+    ]
+  },
+  {
+    "title": "Gym basics for beginners",
+    "desc": "At a gym, start with a short plan, wipe equipment when you're done, and don't be afraid to ask staff how a machine works. You belong there as a beginner. Skip the heaviest weights until the movement feels familiar, and give people space. A parent or guardian may need to go with you, depending on the gym.",
+    "prompts": [
+      "gym tips for beginners",
+      "I feel awkward at the gym",
+      "gym etiquette",
+      "how to start at a gym",
+      "wipe down gym equipment",
+      "ask how a machine works",
+      "first time at the gym",
+      "beginner in the weight room"
+    ]
+  },
+  {
+    "title": "When to stop a workout",
+    "desc": "Stop a workout for sharp pain, dizziness, chest pain, trouble breathing that feels wrong, or if you feel like you might faint. Tired is different from hurt. Tell a parent or get medical help for scary symptoms. It's smart, not weak, to stop.",
+    "prompts": [
+      "when should I stop a workout",
+      "pain during exercise",
+      "dizzy during a workout",
+      "sharp pain versus being tired",
+      "chest pain while working out",
+      "is it ok to stop early",
+      "don't push through bad pain",
+      "warning signs during exercise"
+    ]
+  },
+  {
+    "title": "Jump rope basics",
+    "desc": "A jump rope should reach about mid-chest when you stand on the middle. Jump low, keep elbows close, and start with a few jumps at a time on a forgiving surface, not concrete all day. Wear shoes, and stop if your calves or shins complain sharply.",
+    "prompts": [
+      "how do i start jump rope",
+      "jump rope for beginners",
+      "how long should a jump rope be",
+      "jump rope form",
+      "jump rope on what surface",
+      "learning to jump rope",
+      "basic jump rope",
+      "I want to try jumping rope"
+    ]
+  },
+  {
+    "title": "A simple home workout",
+    "desc": "A simple home workout can be a short warm-up, a few bodyweight moves, and a cool-down stretch, done in a clear space. You don't need a long session. Pick a number of rounds you can finish with decent form, and rest between moves. Stop if something hurts sharply.",
+    "prompts": [
+      "simple workout I can do at home",
+      "short home workout",
+      "workout with no gym",
+      "home routine for beginners",
+      "quick bodyweight workout at home",
+      "workout in my room",
+      "easy at-home exercise plan",
+      "I need a simple workout"
+    ]
+  },
+  {
+    "title": "Breathing during exercise",
+    "desc": "During exercise, try to breathe steadily instead of holding your breath, especially on strength moves: often out on the effort, in on the easier part. If you can't talk at all during an easy walk, slow down. Practice, not panic, is the goal.",
+    "prompts": [
+      "how should I breathe when I exercise",
+      "holding my breath while lifting",
+      "breathing during a workout",
+      "out of breath too fast",
+      "breathing on a squat or push-up",
+      "I forget to breathe when I work out",
+      "steady breathing while running",
+      "exercise breathing tips"
+    ]
+  },
+  {
+    "title": "Tracking workouts",
+    "desc": "A simple log of what you did, how it felt, and maybe how long it took is enough. You don't need a fancy app. Tracking helps you see progress and avoid jumping too far too soon. Don't let the numbers become the only reason you move.",
+    "prompts": [
+      "how should I track workouts",
+      "workout log",
+      "do I need an app to track exercise",
+      "write down my workouts",
+      "tracking progress at the gym",
+      "simple way to log exercise",
+      "should I count every workout",
+      "fitness tracking without overthinking"
+    ]
+  },
+  {
+    "title": "Making toast",
+    "desc": "Toast is bread in a toaster or in a toaster oven until it's the color you like. Use a dry counter, don't use metal in a toaster, and unplug a stuck toaster before you fish anything out. Let it cool a second before you add butter so it doesn't shred the bread.",
+    "prompts": [
+      "how do i make toast",
+      "using a toaster",
+      "toast in a toaster oven",
+      "stuck toast in the toaster",
+      "butter on toast",
+      "how long to toast bread",
+      "simple toast breakfast",
+      "making toast without burning it"
+    ]
+  },
+  {
+    "title": "Boxed mac and cheese",
+    "desc": "Boxed mac usually means boiling the pasta in a pot, draining it, then stirring in the included sauce, milk or butter as the box says. Use a timer so the pasta doesn't go mushy, and keep pot handles turned in. Read the actual box; brands differ a little.",
+    "prompts": [
+      "how do i make boxed mac and cheese",
+      "boxed macaroni and cheese",
+      "kraft mac how to",
+      "boil pasta for boxed mac",
+      "mac and cheese from a box",
+      "don't make boxed mac mushy",
+      "easy boxed mac",
+      "making packet mac and cheese"
+    ]
+  },
+  {
+    "title": "Cooking a frozen pizza",
+    "desc": "For a frozen pizza, heat the oven to the temperature on the box, put the pizza on the rack or pan it lists, and use the time range as a start, not a guess. Use oven mitts, and check that the cheese is melted and the crust isn't pale or burned. Don't put a cardboard box in the oven.",
+    "prompts": [
+      "how do i cook a frozen pizza",
+      "oven temperature for frozen pizza",
+      "frozen pizza on the rack",
+      "how long to bake a frozen pizza",
+      "don't leave the box in the oven",
+      "frozen pizza not cooked in the middle",
+      "easy frozen pizza",
+      "baking a store pizza"
+    ]
+  },
+  {
+    "title": "Upgrading instant ramen",
+    "desc": "Instant ramen is better with the noodles cooked, then extras you already have: an egg, frozen vegetables, leftover chicken, or a little less of the seasoning packet if it's too salty. Boil safely, and don't eat dry seasoning straight from the packet as a meal.",
+    "prompts": [
+      "how do i make instant ramen better",
+      "upgrade ramen",
+      "ramen with an egg",
+      "add vegetables to ramen",
+      "instant noodles less salty",
+      "easy ramen at home",
+      "better packet ramen",
+      "what to add to ramen"
+    ]
+  },
+  {
+    "title": "A simple green salad",
+    "desc": "A simple salad is washed greens, a few toppings you like, and a light dressing tossed just before you eat so it doesn't wilt. Dry the leaves so the dressing sticks. Leftover cooked chicken or beans can make it more of a meal.",
+    "prompts": [
+      "how do i make a simple salad",
+      "green salad for beginners",
+      "salad that isn't boring",
+      "wash and dry salad greens",
+      "easy salad dressing amount",
+      "salad as a side",
+      "simple salad at home",
+      "what to put in a green salad"
+    ]
+  },
+  {
+    "title": "Pasta with jarred sauce",
+    "desc": "Boil pasta in salted water, start heating jarred sauce in a pan, then combine them so the sauce coats the noodles. Save a splash of pasta water if the sauce is thick. Keep pot handles in, and use a timer so the pasta isn't mushy.",
+    "prompts": [
+      "how do i make pasta with jar sauce",
+      "spaghetti with jarred sauce",
+      "heating pasta sauce from a jar",
+      "pasta water in the sauce",
+      "easy pasta dinner",
+      "jar sauce and noodles",
+      "simple spaghetti night",
+      "pasta with store sauce"
+    ]
+  },
+  {
+    "title": "A basic smoothie",
+    "desc": "A basic smoothie is frozen or fresh fruit, a liquid like milk or yogurt, and a blender, blended until smooth. Don't overfill, and put the lid on. A handful of greens or nut butter is optional. Drink it soon, and wash the blender so it doesn't get sticky.",
+    "prompts": [
+      "how do i make a smoothie",
+      "basic fruit smoothie",
+      "smoothie in a blender",
+      "what to put in a smoothie",
+      "smoothie with yogurt",
+      "beginner smoothie",
+      "simple smoothie recipe",
+      "don't overfill the blender"
+    ]
+  },
+  {
+    "title": "Canned soup",
+    "desc": "Canned soup is heated in a pot on the stove or in a microwave-safe bowl, following the can for whether to add water. Stir so it heats evenly, and don't boil a cream soup on high until it scorches. Use a pot holder or a sleeve on a hot bowl.",
+    "prompts": [
+      "how do i heat canned soup",
+      "canned soup on the stove",
+      "microwave canned soup",
+      "do I add water to canned soup",
+      "easy soup from a can",
+      "heating soup safely",
+      "simple canned soup lunch",
+      "don't scorch cream soup"
+    ]
+  },
+  {
+    "title": "A baked potato",
+    "desc": "A baked potato can go in a hot oven, pierced with a fork first so steam can escape, until a knife slides in easily. Microwave is faster if you still pierce it. Use oven mitts, and add toppings after it cools a moment. Don't wrap it in foil in a microwave.",
+    "prompts": [
+      "how do i bake a potato",
+      "baked potato in the oven",
+      "microwave a baked potato",
+      "pierce a potato before baking",
+      "when is a baked potato done",
+      "easy baked potato",
+      "potato in foil in the oven",
+      "simple baked potato dinner"
+    ]
+  },
+  {
+    "title": "Fried eggs",
+    "desc": "For a fried egg, warm a little oil or butter in a pan on medium, crack the egg in, and cook until the white is set. Cover briefly if you want the top firmer. Slide it out with a spatula, and wash your hands after handling raw egg.",
+    "prompts": [
+      "how do i fry an egg",
+      "fried egg in a pan",
+      "sunny side up egg",
+      "fried egg with a lid",
+      "don't burn a fried egg",
+      "easy fried eggs",
+      "cooking eggs in a skillet",
+      "fried egg for breakfast"
+    ]
+  },
+  {
+    "title": "Simple tacos",
+    "desc": "Simple tacos can be warmed tortillas, a cooked filling like beans, leftover meat or scrambled eggs, and toppings such as cheese, salsa or lettuce. Warm the tortillas so they don't crack, and keep raw meat fully cooked before it goes in. Let everyone build their own.",
+    "prompts": [
+      "how do i make simple tacos",
+      "easy taco night",
+      "tacos with beans",
+      "what to put in a taco",
+      "warming tortillas",
+      "tacos with leftover chicken",
+      "beginner tacos",
+      "quick tacos at home"
+    ]
+  },
+  {
+    "title": "Leftover fried rice",
+    "desc": "Fried rice works best with leftover cold rice, a hot pan, a little oil, and mix-ins like egg, frozen vegetables or leftover cooked meat. Stir so it doesn't stick, and heat leftovers until they're hot all the way through. Freshly made sticky rice can turn gummy.",
+    "prompts": [
+      "how do i make fried rice from leftovers",
+      "leftover rice stir fry",
+      "fried rice with egg",
+      "use leftover rice",
+      "easy fried rice at home",
+      "fried rice with frozen vegetables",
+      "don't use fresh sticky rice",
+      "quick leftover fried rice"
+    ]
+  },
+  {
+    "title": "Why leaves change color",
+    "desc": "Leaves look green in summer because of chlorophyll. In fall, many trees stop making as much of it, and yellow and orange colors that were already there can show, while reds often form in cooler, bright days. A brown leaf is usually done and ready to drop. Weather and the tree type both matter.",
+    "prompts": [
+      "why do leaves change color",
+      "why are leaves green then orange",
+      "fall leaf colors",
+      "chlorophyll and fall leaves",
+      "why some leaves turn red",
+      "why leaves fall off",
+      "autumn trees",
+      "what makes leaves yellow"
+    ]
+  },
+  {
+    "title": "Thunderstorm safety",
+    "desc": "If thunder is close, get inside a sturdy building or a hard-topped car, not under a lone tree. Stay off open fields, water and tall metal. Wait about 30 minutes after the last thunder before you go back out. A phone is safe to use indoors; a corded device and plumbing are not the first choice in a storm.",
+    "prompts": [
+      "what should I do in a thunderstorm",
+      "thunderstorm safety",
+      "is it safe to be outside in thunder",
+      "don't stand under a tree in lightning",
+      "30 minutes after thunder",
+      "car in a thunderstorm",
+      "can I use my phone in a storm",
+      "lightning safety basics"
+    ]
+  },
+  {
+    "title": "Dressing for cold weather",
+    "desc": "In cold weather, layers trap heat better than one thick piece: a base layer, something warm in the middle, and a wind- or water-resistant shell if it's wet or windy. Cover head, hands and feet, and change out of wet clothes. If you feel numb, clumsy or unusually sleepy, get inside and tell an adult.",
+    "prompts": [
+      "how should I dress for cold weather",
+      "layers in the winter",
+      "hat gloves and warm socks",
+      "windproof jacket when it's cold",
+      "wet clothes in the cold",
+      "what to wear when it's freezing",
+      "dressing for a cold day",
+      "stay warm outside in winter"
+    ]
+  },
+  {
+    "title": "Staying cool in a heat wave",
+    "desc": "In a heat wave, drink water, stay in the shade or a cool indoor place during the hottest part of the day, and wear light, loose clothes. Slow down hard exercise outdoors. Dizziness, confusion or someone who stops sweating in extreme heat is an emergency: get help and get them cool.",
+    "prompts": [
+      "how do I stay cool in a heat wave",
+      "hot weather safety",
+      "drink water when it's hot",
+      "don't work out hard in extreme heat",
+      "signs of heat trouble",
+      "shade and a cool room",
+      "what to wear in a heat wave",
+      "heat wave tips"
+    ]
+  },
+  {
+    "title": "Icy sidewalks",
+    "desc": "On ice, take short steps, keep your hands out of your pockets, and use shoes with some grip. Give yourself more time, use a railing, and test a step before you commit. Salt or sand helps where you're allowed to put it. A hard fall, especially on the head, is a reason to tell an adult.",
+    "prompts": [
+      "how do I walk on icy sidewalks",
+      "sidewalk is icy",
+      "don't slip on ice",
+      "shoes for ice",
+      "short steps on ice",
+      "salt on the sidewalk",
+      "walking carefully in winter",
+      "ice on the way to school"
+    ]
+  },
+  {
+    "title": "Tornado watch versus warning",
+    "desc": "A tornado watch means conditions could produce a tornado, so stay aware and know where you'd go. A warning means a tornado is happening or is about to, and you should get to a safe place right away: a basement or an interior room on the lowest floor, away from windows. Follow official local alerts, not a rumor.",
+    "prompts": [
+      "what's the difference between a tornado watch and a warning",
+      "tornado watch versus warning",
+      "what to do in a tornado warning",
+      "where to go in a tornado",
+      "tornado watch means be ready",
+      "tornado warning take shelter",
+      "basement or interior room",
+      "tornado safety basics"
+    ]
+  },
+  {
+    "title": "Daylight saving time",
+    "desc": "Daylight saving time is when many places move clocks forward in spring and back in fall so evenings have more daylight in the warmer months. Not every place uses it, and the exact dates are set by law. The Sunday of a change can feel like a lost or gained hour of sleep, so plan extra time that morning.",
+    "prompts": [
+      "what is daylight saving time",
+      "spring forward fall back",
+      "why do we change the clocks",
+      "do all places use daylight saving",
+      "when do clocks change",
+      "lost hour of sleep",
+      "daylight savings explained",
+      "why is it darker in the evening now"
+    ]
+  },
+  {
+    "title": "Solstices and equinoxes",
+    "desc": "A solstice is when the year's longest or shortest stretch of daylight happens, around June and December in the US. An equinox, around March and September, is when day and night are close to equal. They come from Earth's tilt as it orbits the Sun, not from the planet getting nearer or farther in a simple way.",
+    "prompts": [
+      "what is a solstice",
+      "what is an equinox",
+      "longest day of the year",
+      "shortest day of the year",
+      "what makes summer days longer",
+      "earth's tilt and seasons",
+      "june and december solstice",
+      "march and september equinox"
+    ]
+  },
+  {
+    "title": "Thanksgiving",
+    "desc": "Thanksgiving in the United States is a late-November holiday when many people share a meal, name things they're grateful for, and spend time with family or friends. Plans and traditions differ, and not every table looks the same. If you're a guest, ask what to bring, and a simple thanks goes a long way.",
+    "prompts": [
+      "what is Thanksgiving",
+      "when is Thanksgiving",
+      "Thanksgiving in the United States",
+      "Thanksgiving dinner",
+      "what do people do on Thanksgiving",
+      "why do we celebrate Thanksgiving",
+      "Thanksgiving with family",
+      "help me understand Thanksgiving"
+    ]
+  },
+  {
+    "title": "Thanksgiving leftovers",
+    "desc": "Leftovers should go into the fridge within about two hours of the meal, in shallow containers so they cool. Reheat until they're hot all the way through, and when in doubt, throw food that's been out too long away. A leftover sandwich or a simple plate is a classic next-day meal.",
+    "prompts": [
+      "what do I do with Thanksgiving leftovers",
+      "how to store leftover turkey",
+      "how long can leftovers sit out",
+      "reheating Thanksgiving food",
+      "leftover turkey sandwich",
+      "fridge leftovers after dinner",
+      "food safety for holiday leftovers",
+      "using Thanksgiving leftovers"
+    ]
+  },
+  {
+    "title": "Helping with Thanksgiving dinner",
+    "desc": "Help in the kitchen by asking what is actually needed: setting the table, washing bowls as they pile up, stirring something on a timer, or staying out of the way during a careful step. Wash your hands, use oven mitts, and don't taste from a shared spoon and put it back. Offers that are specific are more useful than standing in the doorway.",
+    "prompts": [
+      "how can I help with Thanksgiving dinner",
+      "help in the Thanksgiving kitchen",
+      "what can I do to help cook",
+      "setting the table for Thanksgiving",
+      "don't get in the way in the kitchen",
+      "wash dishes as we go",
+      "helping with a holiday meal",
+      "I want to help make dinner"
+    ]
+  },
+  {
+    "title": "Christmas basics",
+    "desc": "Christmas is a December holiday that many Christians celebrate as the birth of Jesus, and many other people also mark with gifts, lights, meals and time off. Traditions vary by family and culture. If you're visiting, ask about their customs, and a kind greeting is enough if you don't celebrate it yourself.",
+    "prompts": [
+      "what is Christmas",
+      "when is Christmas",
+      "why do people celebrate Christmas",
+      "Christmas traditions",
+      "Christmas dinner and gifts",
+      "do I have to celebrate Christmas",
+      "Christmas with family",
+      "help me understand Christmas"
+    ]
+  },
+  {
+    "title": "Christmas gifts on a budget",
+    "desc": "A good gift can be small, handmade, useful or just thoughtful; it doesn't have to be expensive. Set a budget first, make a short list, and skip panic buying. A card with a real note still counts. I won't invent store prices; tell me a budget and who it's for and I can help you think of ideas.",
+    "prompts": [
+      "christmas gifts on a budget",
+      "inexpensive gift ideas",
+      "thoughtful gift that isn't expensive",
+      "handmade Christmas present",
+      "set a gift budget",
+      "I don't have much money for gifts",
+      "simple Christmas gift",
+      "gift ideas that don't cost a lot"
+    ]
+  },
+  {
+    "title": "Decorating for Christmas",
+    "desc": "Decorations can be as simple as lights, paper, or a few ornaments, as long as they're used safely: indoor lights indoors, cords not pinched, and no candles left burning alone. Ask before you rearrange someone else's house. You don't need a huge display for it to feel festive.",
+    "prompts": [
+      "how do I decorate for Christmas",
+      "simple Christmas decorations",
+      "hanging Christmas lights safely",
+      "decorating on a budget",
+      "christmas ornaments and a tree",
+      "indoor versus outdoor lights",
+      "easy holiday decorating",
+      "decorating the house for Christmas"
+    ]
+  },
+  {
+    "title": "Holiday gatherings",
+    "desc": "At a holiday gathering, greet people, offer to help, put your phone away at the table if that's the house rule, and have a polite exit if you get overwhelmed. You don't have to debate every topic. A short thanks to the host when you leave is enough.",
+    "prompts": [
+      "how to act at a holiday gathering",
+      "family gathering tips",
+      "holiday dinner manners",
+      "I'm nervous at a holiday party",
+      "phone at the holiday table",
+      "leaving a gathering politely",
+      "holiday with relatives",
+      "what to do at a family holiday"
+    ]
+  },
+  {
+    "title": "Secret Santa",
+    "desc": "Secret Santa is a gift exchange where each person is assigned someone else to buy for, often with a spending limit. Keep the name quiet, stay in the budget, and pick something you'd be okay receiving. If you don't know the person well, a simple, useful gift or a gift card in the limit is fine.",
+    "prompts": [
+      "what is Secret Santa",
+      "how does a Secret Santa work",
+      "Secret Santa gift ideas",
+      "stay in the Secret Santa budget",
+      "I got someone I don't know well",
+      "don't tell the Secret Santa name",
+      "Secret Santa rules",
+      "white elephant versus Secret Santa"
+    ]
+  },
+  {
+    "title": "Mitosis and meiosis",
+    "desc": "Mitosis is ordinary cell division that makes two cells with the same number of chromosomes, used for growth and repair. Meiosis makes the sex cells, with half the usual chromosome number, so that a later joining can restore the full set. A class diagram of the stages helps more than memorizing names alone.",
+    "prompts": [
+      "what is mitosis",
+      "what is meiosis",
+      "mitosis versus meiosis",
+      "why do cells divide",
+      "chromosome number in meiosis",
+      "mitosis for growth and repair",
+      "difference between mitosis and meiosis",
+      "help me with mitosis and meiosis"
+    ]
+  },
+  {
+    "title": "Punnett squares",
+    "desc": "A Punnett square is a grid that shows possible allele combinations from two parents for a trait. Capital letters often mean a dominant allele, lowercase a recessive one, and each box is one possible offspring type. It shows chances, not a promise of what an actual child or plant will be.",
+    "prompts": [
+      "what is a Punnett square",
+      "how do I fill in a Punnett square",
+      "dominant and recessive alleles",
+      "punnett square for a trait",
+      "genotype chances",
+      "help with a monohybrid cross",
+      "how to read a Punnett square",
+      "punnett square homework"
+    ]
+  },
+  {
+    "title": "The rock cycle",
+    "desc": "The rock cycle describes how igneous, sedimentary and metamorphic rocks can change over time through melting, cooling, weathering, pressure and heat. A rock type is about how it formed, not a permanent label. A simple diagram of those paths is the usual class version.",
+    "prompts": [
+      "what is the rock cycle",
+      "igneous sedimentary metamorphic",
+      "how rocks change over time",
+      "weathering and the rock cycle",
+      "heat and pressure make metamorphic rock",
+      "melting and igneous rock",
+      "rock cycle diagram",
+      "help me understand the rock cycle"
+    ]
+  },
+  {
+    "title": "Climate versus weather",
+    "desc": "Weather is what's happening outside today: rain, wind, temperature. Climate is the longer pattern of weather in a place over many years. A cold week in a warm climate is still weather; a desert climate can still have a storm.",
+    "prompts": [
+      "what's the difference between climate and weather",
+      "climate versus weather",
+      "weather is today climate is longer",
+      "is this weather or climate",
+      "why a cold day doesn't change the climate",
+      "climate of a place",
+      "help me compare weather and climate",
+      "weather and climate in science class"
+    ]
+  },
+  {
+    "title": "Biomes",
+    "desc": "A biome is a large region with a characteristic climate and living things, such as a desert, tundra, rainforest, grassland or temperate forest. Plants and animals there have traits that fit that climate. A biome is bigger than one backyard ecosystem.",
+    "prompts": [
+      "what is a biome",
+      "types of biomes",
+      "desert tundra rainforest",
+      "biome versus an ecosystem",
+      "plants and animals in a biome",
+      "temperate forest biome",
+      "help me with biomes",
+      "what biome is this"
+    ]
+  },
+  {
+    "title": "The Cold War",
+    "desc": "The Cold War was a long period after World War II when the United States and the Soviet Union were rivals without fighting a direct full war against each other. It included an arms race, a space race, and proxy conflicts, and it eased as the Soviet Union ended in 1991. Details go deeper in class, but that's the basic frame.",
+    "prompts": [
+      "what was the Cold War",
+      "why was it called the Cold War",
+      "US and the Soviet Union",
+      "arms race and space race",
+      "when did the Cold War end",
+      "Cold War basics",
+      "help me understand the Cold War",
+      "Cold War for class"
+    ]
+  },
+  {
+    "title": "The Renaissance",
+    "desc": "The Renaissance was a period in Europe, starting in the later Middle Ages and flourishing in the 1400s and 1500s, known for renewed interest in art, science, learning and classical ideas. It didn't happen everywhere at once, and everyday life for many people still stayed hard. Artists and inventors from that time show up often in class.",
+    "prompts": [
+      "what was the Renaissance",
+      "when was the Renaissance",
+      "Renaissance art and learning",
+      "why is the Renaissance important",
+      "Renaissance in Europe",
+      "help me understand the Renaissance",
+      "Renaissance for history class",
+      "what came after the Middle Ages"
+    ]
+  },
+  {
+    "title": "Supply and demand",
+    "desc": "Supply is how much of something sellers are willing to offer; demand is how much buyers want at a given price. When demand rises and supply stays tight, prices tend to go up; when there's more than people want, prices often fall. Real markets have other factors too, but that's the core idea.",
+    "prompts": [
+      "what is supply and demand",
+      "how do prices go up or down",
+      "too much supply",
+      "high demand and a high price",
+      "supply and demand basics",
+      "economics supply and demand",
+      "help me understand supply and demand",
+      "why does a price change"
+    ]
+  },
+  {
+    "title": "Opportunity cost",
+    "desc": "Opportunity cost is the next-best thing you give up when you choose something else, not only the price you pay. If you spend an afternoon at a job, the cost includes the time you didn't spend on homework or a friend. Thinking about it can make a choice clearer.",
+    "prompts": [
+      "what is opportunity cost",
+      "what do I give up when I choose",
+      "opportunity cost example",
+      "next best alternative",
+      "opportunity cost in economics",
+      "help me with opportunity cost",
+      "is opportunity cost only money",
+      "choosing one thing over another"
+    ]
+  },
+  {
+    "title": "Personification",
+    "desc": "Personification is a figure of speech that gives human qualities to something that isn't human, like a storm that 'rages' or a clock that 'watches.' Writers use it to make a scene feel alive. If a human is actually doing the action, it isn't personification.",
+    "prompts": [
+      "what is personification",
+      "personification example",
+      "giving human traits to an object",
+      "the wind whispered",
+      "personification in a poem",
+      "help me find personification",
+      "is this personification",
+      "figure of speech personification"
+    ]
+  },
+  {
+    "title": "Alliteration",
+    "desc": "Alliteration is when nearby words start with the same sound, like 'wild wind' or 'big blue balloon.' Writers and advertisers use it because it's catchy. It is about the sound, not always the same letter, and one shared letter in a long sentence isn't automatically a strong example.",
+    "prompts": [
+      "what is alliteration",
+      "alliteration example",
+      "words that start with the same sound",
+      "alliteration in a poem",
+      "help me write alliteration",
+      "is this alliteration",
+      "same starting sound",
+      "alliteration for English class"
+    ]
+  },
+  {
+    "title": "The main idea",
+    "desc": "The main idea is the central point a passage is making, not every detail and not always the first sentence. Look at what most of the examples support, and try saying it in one sentence of your own. A title can hint, but the text itself is the evidence.",
+    "prompts": [
+      "what is the main idea",
+      "how do I find the main idea",
+      "main idea versus details",
+      "main idea of a paragraph",
+      "the first sentence isn't always the main idea",
+      "help me with main idea questions",
+      "central idea of a passage",
+      "what's this passage mostly about"
+    ]
+  },
+  {
+    "title": "Surface area",
+    "desc": "Surface area is the total area of the outside of a 3-D shape, like wrapping it. You add the areas of all the faces, using the right formula for each, and include units squared. A net of the shape can make the faces easier to see.",
+    "prompts": [
+      "what is surface area",
+      "how do I find surface area",
+      "surface area of a rectangular prism",
+      "surface area versus volume",
+      "add up the faces",
+      "surface area formula",
+      "help me with surface area",
+      "net of a 3-D shape"
+    ]
+  },
+  {
+    "title": "Multiplying binomials",
+    "desc": "To multiply two binomials, such as (x + 2)(x + 5), you multiply each term in the first by each term in the second, then combine like terms. Some classes teach this as FOIL: first, outside, inside, last. The order of the four products doesn't matter as long as you don't skip one.",
+    "prompts": [
+      "how do I multiply binomials",
+      "what is FOIL",
+      "(x+2)(x+5)",
+      "multiply two binomials",
+      "first outside inside last",
+      "help with multiplying binomials",
+      "expanding a pair of binomials",
+      "binomial multiplication in algebra"
+    ]
+  },
+  {
+    "title": "Allowance",
+    "desc": "An allowance is money a family may give on a regular schedule. If you get one, a simple plan helps: some to spend, some to save, and sometimes some to give. Families handle this differently, and not getting an allowance doesn't mean you can't practice a budget with gift money or a job.",
+    "prompts": [
+      "how should I use my allowance",
+      "saving part of my allowance",
+      "allowance and a budget",
+      "spend and save allowance",
+      "I get an allowance",
+      "what to do with allowance money",
+      "allowance for teens",
+      "splitting an allowance"
+    ]
+  },
+  {
+    "title": "A first paycheck",
+    "desc": "A first paycheck can look smaller than your hourly rate times hours because taxes and other deductions may come out first. Check your hours, the pay date, and how you'll be paid. Keep the stub, and ask a parent or the employer if a number looks wrong. I won't invent tax amounts.",
+    "prompts": [
+      "why is my first paycheck smaller",
+      "reading a first paycheck",
+      "paycheck less than I expected",
+      "hours and deductions",
+      "when do I get paid",
+      "first job paycheck",
+      "help me understand my paycheck",
+      "is this paycheck right"
+    ]
+  },
+  {
+    "title": "W-4 and a first job",
+    "desc": "A W-4 is a US form you fill out when you start a job so your employer can withhold federal income tax from your pay. Read it carefully, and ask a parent or the employer if a line is confusing. Filling it out honestly matters; I'm not a tax professional, so a tricky situation is worth adult help.",
+    "prompts": [
+      "what is a W-4",
+      "W-4 for a first job",
+      "tax form when I start work",
+      "how to fill out a W-4",
+      "withholding on a new job",
+      "W-4 help for a teen",
+      "I have to fill out tax papers at work",
+      "W-4 versus a W-2"
+    ]
+  },
+  {
+    "title": "Peer-to-peer payment apps",
+    "desc": "Apps that send money to friends are convenient, but they're not a game: only send to people you know, check the name twice, and treat the money as gone once it sends. Don't accept a payment you weren't expecting and then send it back to a stranger. Use a PIN or biometrics, and tell a parent if something looks like a scam.",
+    "prompts": [
+      "are cash apps safe",
+      "sending money to a friend on an app",
+      "peer to peer payments",
+      "don't send money to the wrong person",
+      "payment app scam",
+      "venmo or cash app safety",
+      "check the name before I send",
+      "unexpected payment on an app"
+    ]
+  },
+  {
+    "title": "Impulse buying",
+    "desc": "Impulse buying is grabbing something you didn't plan to buy because it looked good in the moment. A short pause, a list, and a budget help. If it will still be there tomorrow, waiting a day is fair. You don't have to buy something just because it's on sale.",
+    "prompts": [
+      "what is impulse buying",
+      "I buy things I don't need",
+      "how to stop impulse spending",
+      "wait a day before I buy",
+      "sale doesn't mean I need it",
+      "impulse buy on my phone",
+      "help with spending on impulse",
+      "don't grab it just because I want it now"
+    ]
+  },
+  {
+    "title": "Saving for a specific goal",
+    "desc": "Pick a goal, a target amount, and a realistic date, then divide so you know how much to set aside regularly. Keep that money separate if you can, and track small deposits so it feels real. If the date is tight, adjust the goal or the timeline instead of giving up. I won't invent prices; tell me the goal and I can help you plan.",
+    "prompts": [
+      "how do I save for something I want",
+      "saving for a specific goal",
+      "how much to set aside each week",
+      "saving for a trip or a bike",
+      "separate savings for a goal",
+      "realistic savings timeline",
+      "I want to save up for something",
+      "breaking a savings goal into steps"
+    ]
+  },
+  {
+    "title": "Buy now, pay later",
+    "desc": "Buy now, pay later splits a purchase into later payments, often with fees or a hard time if you miss one. If you couldn't pay for it soon anyway, it's a risky way to buy more than you can afford. Read the terms, and a regular purchase you can pay for now is usually simpler. I'm not a financial advisor, just a plain explanation.",
+    "prompts": [
+      "what is buy now pay later",
+      "is buy now pay later a good idea",
+      "split payments later",
+      "fees if I miss a payment",
+      "bnpl for teens",
+      "don't use pay later to overspend",
+      "buy now pay later risks",
+      "paying in four later"
+    ]
+  },
+  {
+    "title": "Splitting costs with friends",
+    "desc": "When you split a cost, agree up front who is paying, how you'll divide it, and how you'll settle, including tax and tip if it's a meal. Screenshots of the receipt help. If you can't afford your share, say so before the plan is locked, not after.",
+    "prompts": [
+      "how do we split the bill",
+      "splitting costs with friends",
+      "who pays for what",
+      "split fairly including tip",
+      "I can't afford my share",
+      "settling up after a meal",
+      "dividing a group cost",
+      "paying my part"
+    ]
+  },
+  {
+    "title": "A teen bank account",
+    "desc": "Many teen accounts need a parent or guardian as a joint or co-owner, and they can come with debit cards and limits. Compare fees, how you'll deposit money, and how you'll watch the balance. Ask the bank or credit union what they offer for your age; I won't invent their rules.",
+    "prompts": [
+      "how does a teen bank account work",
+      "bank account with a parent",
+      "teen checking account",
+      "debit card for a teen",
+      "fees on a teen account",
+      "opening an account as a teen",
+      "bank account before I'm 18",
+      "teen account rules"
+    ]
+  },
+  {
+    "title": "Lending money to a friend",
+    "desc": "Only lend money you can afford not to get back, and be clear about whether it's a gift or a loan and when you'd like it back. A small amount is less likely to wreck a friendship than a large one. It's okay to say no. Don't borrow to lend.",
+    "prompts": [
+      "should I lend money to a friend",
+      "lending money and friendship",
+      "only lend what I can lose",
+      "how to say no when a friend asks for money",
+      "they didn't pay me back",
+      "loan versus a gift to a friend",
+      "don't borrow to lend",
+      "lending a friend money"
+    ]
+  },
+  {
+    "title": "Turn signals",
+    "desc": "Use a turn signal before you turn or change lanes, early enough that other people can see it, and turn it off after. Signaling is how you tell others your plan, not optional decoration. Practice so it becomes automatic, even in a parking lot.",
+    "prompts": [
+      "when do I use a turn signal",
+      "how to signal a turn",
+      "signal before I change lanes",
+      "forgot to use my blinker",
+      "turn signal timing",
+      "why turn signals matter",
+      "signaling in a parking lot",
+      "left and right blinker"
+    ]
+  },
+  {
+    "title": "Blind spots",
+    "desc": "A blind spot is an area beside or behind a car that your mirrors don't fully show. Quick shoulder checks, plus correctly aimed mirrors, help you catch a car or bike there before you change lanes. If you can't see past a large vehicle, give it more space and don't hang in that zone.",
+    "prompts": [
+      "what is a blind spot",
+      "shoulder check before I change lanes",
+      "car in my blind spot",
+      "mirrors and blind spots",
+      "don't hang in a truck's blind spot",
+      "how to check a blind spot",
+      "blind spot when driving",
+      "looking over my shoulder"
+    ]
+  },
+  {
+    "title": "Following distance",
+    "desc": "A common beginner rule is to leave about three seconds behind the vehicle in front: pick a marker, and you should reach it a few seconds after they do. Leave more space in rain, at night, or behind a large vehicle. Tailgating doesn't get you there sooner in a way that's worth the risk.",
+    "prompts": [
+      "how far should I follow another car",
+      "three second rule",
+      "following distance",
+      "don't tailgate",
+      "more space in the rain",
+      "how many seconds behind a car",
+      "safe distance when driving",
+      "too close to the car in front"
+    ]
+  },
+  {
+    "title": "Four-way stops",
+    "desc": "At a four-way stop, come to a full stop, then the first vehicle that stopped usually goes first. If two arrive together, the one on the right often has the right of way, and a person going straight may be yielded to by someone turning. Make eye contact when you can, and don't wave someone into a mess.",
+    "prompts": [
+      "how does a four-way stop work",
+      "who goes first at a four way stop",
+      "stop sign on all four sides",
+      "right of way at a four-way",
+      "two cars arrive at the same time",
+      "four-way intersection",
+      "full stop at a four way",
+      "four-way stop rules"
+    ]
+  },
+  {
+    "title": "Driving in the rain",
+    "desc": "In rain, slow down, leave more space, use headlights so others can see you, and avoid sudden steering or hard braking. If your car starts to hydroplane, ease off the gas and steer gently. Don't cruise through standing water when you can't judge the depth. Pull over safely if you can't see.",
+    "prompts": [
+      "how should I drive in the rain",
+      "rain driving tips",
+      "hydroplaning",
+      "headlights in the rain",
+      "slow down when it's wet",
+      "standing water on the road",
+      "can't see in heavy rain",
+      "wet road following distance"
+    ]
+  },
+  {
+    "title": "Merging onto a highway",
+    "desc": "To merge, use the ramp to get close to highway speed, signal, look for a gap, and blend in rather than stopping at the end of the ramp unless traffic forces it. People already on the highway should also leave space when they can. Don't cut across several lanes the moment you're on.",
+    "prompts": [
+      "how do I merge onto a highway",
+      "on-ramp merging",
+      "get up to speed on the ramp",
+      "find a gap to merge",
+      "merging traffic",
+      "don't stop at the end of the ramp",
+      "highway entrance tip",
+      "how to merge in a car"
+    ]
+  },
+  {
+    "title": "Night driving",
+    "desc": "At night, use headlights, slow down a little, and look to the right edge of the lane if an oncoming light is bright, not straight into it. Keep the windshield clean, and stay extra aware of pedestrians and animals. If you're tired, don't drive; sleepiness at night is a real risk.",
+    "prompts": [
+      "tips for driving at night",
+      "night driving",
+      "oncoming headlights",
+      "use headlights at night",
+      "windshield glare at night",
+      "don't drive drowsy at night",
+      "seeing the road in the dark",
+      "driving after dark"
+    ]
+  },
+  {
+    "title": "Getting pulled over",
+    "desc": "If a police car signals you to stop, pull over safely when you can, stay in the car unless you're told to get out, keep your hands visible, and wait to reach for your license or registration until you're asked. Be polite and don't argue on the roadside. A parent or guardian should hear about it afterward, and I'm not a lawyer.",
+    "prompts": [
+      "what do I do if I get pulled over",
+      "police lights behind me",
+      "pull over safely",
+      "hands on the wheel when stopped",
+      "license and registration when asked",
+      "getting pulled over as a teen driver",
+      "be polite if I'm stopped",
+      "traffic stop basics"
+    ]
+  },
+  {
+    "title": "Changing lanes",
+    "desc": "To change lanes, signal, check mirrors and a blind-spot shoulder glance, then move over smoothly when there's space. Don't wander across a solid line just because you're in a hurry, and don't cut in tight. Cancel the signal after you're in the new lane.",
+    "prompts": [
+      "how do I change lanes",
+      "signal then check then move",
+      "lane change steps",
+      "shoulder check to change lanes",
+      "don't cut someone off",
+      "changing lanes on a road",
+      "mirror then blind spot",
+      "smooth lane change"
+    ]
+  },
+  {
+    "title": "Choosing a pet",
+    "desc": "Choosing a pet should start with your time, budget, housing rules and how long that animal lives, not only how cute it is. Research the species, and talk with your family before you bring one home. A shelter can help you match a pet to your life. I won't invent costs; tell me your situation and I can help you think it through.",
+    "prompts": [
+      "what pet should I get",
+      "choosing a pet",
+      "are we ready for a pet",
+      "pet that fits my schedule",
+      "talk to my family before a pet",
+      "shelter pet versus a store",
+      "help me choose a pet",
+      "what to think about before getting a pet"
+    ]
+  },
+  {
+    "title": "Feeding a pet",
+    "desc": "Feed a pet the food and amount that fit its species, age and what a vet recommends, with fresh water available. Don't share a lot of human food, and keep chocolate, grapes, xylitol and other known dangers away from dogs. A sudden change in appetite is a reason to call the vet, not to guess online.",
+    "prompts": [
+      "how should I feed my pet",
+      "how much to feed a dog or cat",
+      "pet food and fresh water",
+      "don't give a dog chocolate",
+      "human food that's bad for pets",
+      "feeding schedule for a pet",
+      "appetite change in a pet",
+      "what can my pet eat"
+    ]
+  },
+  {
+    "title": "Taking a pet to the vet",
+    "desc": "A vet visit is for checkups, shots and when something seems wrong. Bring a carrier or a secure leash, a list of what you've noticed, and, if you have it, the pet's records. Stay calm in the lobby if you can; your pet takes cues from you. The vet is the one who should diagnose, not a guess from a search.",
+    "prompts": [
+      "when should I take my pet to the vet",
+      "first vet visit",
+      "what to bring to the vet",
+      "pet checkup",
+      "vet for shots",
+      "my pet seems off",
+      "going to the veterinarian",
+      "help with a vet appointment"
+    ]
+  },
+  {
+    "title": "Signs a pet may be sick",
+    "desc": "Signs a pet may need a vet include not eating, vomiting more than once, trouble breathing, collapsing, a seizure, or being unusually hidden, weak or in pain. I'm not a vet and I won't diagnose from a chat. If you're worried, call the clinic or an emergency vet and tell a parent.",
+    "prompts": [
+      "signs my pet might be sick",
+      "when is a pet an emergency",
+      "dog not eating",
+      "cat hiding and acting off",
+      "pet vomiting",
+      "trouble breathing in a pet",
+      "should I call the vet",
+      "I think my animal is sick"
+    ]
+  },
+  {
+    "title": "Adopting from a shelter",
+    "desc": "A shelter or rescue can tell you about an animal's known history, temperament and needs, and often includes some starter vet care. Visit, ask questions, and be honest about your home and schedule. Adoption fees support the animals; I won't invent the amounts. Go with your family if a pet will live with all of you.",
+    "prompts": [
+      "how do I adopt a pet from a shelter",
+      "adopting a dog or cat",
+      "shelter adoption process",
+      "questions to ask a shelter",
+      "adoption fee",
+      "meet a shelter animal",
+      "rescue versus a pet store",
+      "adopting a pet with my family"
+    ]
+  },
+  {
+    "title": "Cat litter basics",
+    "desc": "A litter box should be scooped often, placed where the cat can reach it quietly, and kept in a number that matches how many cats you have, often one per cat plus one. A sudden change in bathroom habits can be a health issue, so call a vet instead of only scolding the cat. Wash your hands after cleaning.",
+    "prompts": [
+      "how do I take care of a litter box",
+      "scooping cat litter",
+      "where to put a litter box",
+      "how many litter boxes",
+      "cat peeing outside the box",
+      "litter box basics",
+      "cleaning a litter box",
+      "cat litter for a new cat"
+    ]
+  },
+  {
+    "title": "A new puppy",
+    "desc": "A new puppy needs a safe space, a feeding routine, potty breaks often, short training sessions, and sleep. Puppies chew, so keep dangerous items up. A vet visit, shots and a plan for crate or house training help early. It's work, and the cute stage is also a lot of supervision.",
+    "prompts": [
+      "what does a new puppy need",
+      "first days with a puppy",
+      "puppy potty training",
+      "puppy chewing",
+      "crate training a puppy",
+      "new puppy routine",
+      "bringing a puppy home",
+      "help with a new puppy"
+    ]
+  },
+  {
+    "title": "Pet-proofing a room",
+    "desc": "Pet-proofing means moving chewable wires, small objects, toxic plants, medicines, and certain foods out of reach, and closing doors or using gates when you can't watch. Think from the animal's height. A little setup is easier than an emergency vet visit later.",
+    "prompts": [
+      "how do I pet proof a room",
+      "puppy proofing",
+      "keep wires away from a pet",
+      "toxic plants and pets",
+      "medicines up high",
+      "gate off a room for a pet",
+      "pet proofing a house",
+      "what can a pet get into"
+    ]
+  },
+  {
+    "title": "Fireworks and pets",
+    "desc": "Fireworks can scare pets. Ahead of a holiday, give them a quiet interior room, keep IDs on, don't take them to a show if they're fearful, and don't leave them in a yard unattended. If fear is extreme, ask a vet for a plan rather than guessing at medicine. Stay calm; it helps.",
+    "prompts": [
+      "how do I help a pet during fireworks",
+      "dog scared of fireworks",
+      "fourth of July and pets",
+      "keep a pet inside during fireworks",
+      "pet with an ID tag",
+      "vet help for firework fear",
+      "don't take a scared dog to a show",
+      "comforting a pet during loud noises"
+    ]
+  },
+  {
+    "title": "The real cost of a pet",
+    "desc": "The cost of a pet is more than the first day: food, litter or waste bags, regular vet care, shots, a carrier or crate, and unexpected illness. Start with a family budget and an honest look at time. I won't invent prices; a shelter or vet can give local ranges, and I can help you list the categories.",
+    "prompts": [
+      "how much does a pet cost",
+      "hidden costs of a pet",
+      "vet bills and food",
+      "can we afford a pet",
+      "pet costs besides the adoption fee",
+      "budgeting for a dog or cat",
+      "I won't invent pet prices",
+      "what bills come with a pet"
+    ]
+  }
+]
