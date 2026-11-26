@@ -155,7 +155,15 @@ function showGpuBanner() {
   const howTo = isIOS
     ? `<ol><li>Update your iPhone: <b style="display:inline">Settings → General → Software Update</b> (iOS 26+ has WebGPU built in).</li><li>On iOS 18 or older: Settings → Apps → Safari → Advanced → Feature Flags → turn on <b style="display:inline">WebGPU</b>, then reopen this page.</li></ol>`
     : `<ol><li>Use the latest <b style="display:inline">Google Chrome</b> or <b style="display:inline">Edge</b> (version 113+) on Mac or Windows, or Safari 26+.</li><li>In Chrome, make sure hardware acceleration is on: Settings → System → "Use graphics acceleration".</li></ol>`;
-  b.innerHTML = `<b>⚠️ This browser can't run the AI (needs WebGPU)</b>Pocket AI runs the model on your device's graphics chip using WebGPU, which isn't available here${gpu.reason === 'noadapter' ? ' (no compatible GPU adapter found)' : ''}. You can still read your saved chats.${howTo}`;
+  const compact = sessionStorage.getItem('pocketai.gpuBannerCompact') === '1';
+  b.classList.toggle('compact', compact);
+  b.innerHTML = compact
+    ? `<b>⚠️ AI can't run in this browser (needs WebGPU). Tap for help.</b>`
+    : `<button class="banner-x" aria-label="Collapse">✕</button><b>⚠️ This browser can't run the AI (needs WebGPU)</b>Pocket AI runs the model on your device's graphics chip using WebGPU, which isn't available here${gpu.reason === 'noadapter' ? ' (no compatible GPU adapter found)' : ''}. You can still read your saved chats.${howTo}`;
+  b.onclick = (e) => {
+    if (compact) { sessionStorage.removeItem('pocketai.gpuBannerCompact'); showGpuBanner(); }
+    else if (e.target.closest('.banner-x')) { sessionStorage.setItem('pocketai.gpuBannerCompact', '1'); showGpuBanner(); }
+  };
   b.hidden = false;
 }
 const modelIdFor = (m) => (gpu && gpu.ok && !gpu.f16) ? m.f32 : m.f16;
