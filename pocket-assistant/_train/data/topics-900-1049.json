@@ -1,0 +1,2102 @@
+[
+  {
+    "title": "Riddles",
+    "desc": "A riddle is a short puzzle in words, often with a pun or a hidden meaning. Listen to every word, try one guess, and it's fine to ask for a hint. When you tell one, pause for the other person to think, and don't drag out the answer if they're stuck.",
+    "prompts": [
+      "tell me a riddle",
+      "what is a riddle",
+      "can I have a riddle",
+      "how do riddles work",
+      "I want to guess a riddle",
+      "give me a word riddle",
+      "riddle with a hint",
+      "help me understand riddles"
+    ]
+  },
+  {
+    "title": "Making up a riddle",
+    "desc": "To make a riddle, pick an ordinary object or idea, list things that are true about it, and describe it without naming it, often with a twist or a pun. Keep it short, test it on a friend, and have a clear answer ready. It's okay if the first one is a little corny.",
+    "prompts": [
+      "how do I make up a riddle",
+      "write a riddle",
+      "invent a riddle",
+      "tips for writing riddles",
+      "make a riddle about an everyday thing",
+      "my riddle is too easy",
+      "how to write a pun riddle",
+      "help me create a riddle"
+    ]
+  },
+  {
+    "title": "Would you rather",
+    "desc": "Would you rather is a choice between two options, usually both a little tricky or funny. Pick one, say why in a sentence, and you can bounce the question back. There isn't a scoring system unless you agree on one, and it's fine to pass on a question that feels unkind.",
+    "prompts": [
+      "let's play would you rather",
+      "what is would you rather",
+      "give me a would you rather",
+      "would you rather questions",
+      "help me choose in would you rather",
+      "fun would you rather for friends",
+      "how to play would you rather",
+      "ask me a would you rather"
+    ]
+  },
+  {
+    "title": "This or that",
+    "desc": "This or that is a quick choice between two things, like cocoa or tea, or a movie night or a walk. Answer honestly, ask one back, and keep it light. It's a simple way to learn what someone likes without a long interview.",
+    "prompts": [
+      "let's play this or that",
+      "this or that questions",
+      "what is this or that",
+      "give me a this or that",
+      "this or that for friends",
+      "quick this or that",
+      "ask me this or that",
+      "how to play this or that"
+    ]
+  },
+  {
+    "title": "Sharing a fun fact",
+    "desc": "A fun fact lands better when it's short, true as far as you know, and easy to picture. Say where you heard it if you can, and if you're not sure it's accurate, say so. One good fact is better than a pile of shaky ones.",
+    "prompts": [
+      "how do I share a fun fact",
+      "tell a fun fact",
+      "what makes a good fun fact",
+      "I want to share a random fact",
+      "fun fact in a conversation",
+      "don't oversell a fact I'm unsure about",
+      "a short fun fact for friends",
+      "help me tell a fun fact"
+    ]
+  },
+  {
+    "title": "Checking a fun fact",
+    "desc": "Before you repeat a fact, check a reliable source, not only a screenshot or a post that sounds sure of itself. Look for a name, a date, and whether more than one decent source agrees. It's okay to say you looked it up and the first version wasn't quite right.",
+    "prompts": [
+      "how do I check a fun fact",
+      "is this fun fact true",
+      "don't believe a fact from a screenshot only",
+      "verify a random fact",
+      "fact check something I heard",
+      "looking up a fun fact",
+      "this fact sounds made up",
+      "help me check if a fact is real"
+    ]
+  },
+  {
+    "title": "Brain teasers",
+    "desc": "A brain teaser is a short puzzle that asks you to think sideways, not only do a calculation. Read it twice, try a simple example, and say your reasoning out loud. Hints are fair, and so is putting it down and coming back.",
+    "prompts": [
+      "give me a brain teaser",
+      "what is a brain teaser",
+      "I want a short puzzle",
+      "brain teaser for fun",
+      "help me solve a brain teaser",
+      "brain teaser with a hint",
+      "logic puzzle to think about",
+      "how do brain teasers work"
+    ]
+  },
+  {
+    "title": "Tongue twisters",
+    "desc": "A tongue twister is a phrase that's hard to say quickly because the sounds are similar. Start slowly, then speed up, and it's fine to laugh when you trip. You can use them just for fun or as a warm-up if you're about to speak in front of people.",
+    "prompts": [
+      "give me a tongue twister",
+      "what is a tongue twister",
+      "hard sentence to say fast",
+      "practice a tongue twister",
+      "tongue twisters for fun",
+      "how do tongue twisters work",
+      "say this tongue twister slowly first",
+      "help me with a tongue twister"
+    ]
+  },
+  {
+    "title": "A pep talk",
+    "desc": "A pep talk is a short, honest push when you need one: name the next small step, remind yourself you've handled hard things before, and skip the pressure to feel amazing. You don't have to fake a big mood. A calm 'start with two minutes' often works better than a lecture.",
+    "prompts": [
+      "I need a pep talk",
+      "give me a short pep talk",
+      "motivate me without being fake",
+      "pep talk before I start",
+      "I need a push to get going",
+      "honest pep talk",
+      "cheer me on in a normal way",
+      "help me with a pep talk"
+    ]
+  },
+  {
+    "title": "Celebrating a small win",
+    "desc": "A small win still counts: finishing a page, showing up, or fixing one mistake. Notice it on purpose so your brain gets the message that effort led somewhere. You don't need a party, just a pause, a check mark, or telling someone who will be glad for you.",
+    "prompts": [
+      "how do I celebrate a small win",
+      "do small wins matter",
+      "I finished a little thing",
+      "notice a small victory",
+      "celebrate progress not only big goals",
+      "I did one thing today",
+      "mark a small win",
+      "help me be glad about a small win"
+    ]
+  },
+  {
+    "title": "Motivation to start",
+    "desc": "When you can't find motivation, shrink the start: two minutes, one sentence, or opening the file. Motivation often follows action, not the other way around. Set a short timer, put the first object in your hand, and give yourself credit for beginning.",
+    "prompts": [
+      "I can't get motivated to start",
+      "how do I start when I don't feel like it",
+      "motivation to begin",
+      "shrink the first step",
+      "motivation comes after I start",
+      "two-minute start",
+      "I don't feel motivated",
+      "help me just get started"
+    ]
+  },
+  {
+    "title": "Trying again after a mistake",
+    "desc": "After a mistake, take a breath, name what actually went wrong, and try one change, not a total redo in a panic. Most skills improve because people try again, not because they never mess up. If you hurt someone, apologize, then adjust.",
+    "prompts": [
+      "how do I try again after a mistake",
+      "I messed up and I want to retry",
+      "failed and trying again",
+      "don't quit after one mistake",
+      "learn from a mistake and go again",
+      "I feel dumb for messing up",
+      "trying a second time",
+      "help me start over after a mistake"
+    ]
+  },
+  {
+    "title": "When you feel stuck",
+    "desc": "Feeling stuck often means the next step is unclear, too big, or you're tired. Write down what you already know, pick the smallest next action, or take a short break and come back. Asking a person or checking one example can unstick you faster than staring.",
+    "prompts": [
+      "I feel stuck",
+      "what to do when I'm stuck",
+      "stuck on a problem",
+      "I don't know the next step",
+      "how to get unstuck",
+      "stuck and frustrated",
+      "help me when I feel stuck",
+      "I'm stuck and spinning"
+    ]
+  },
+  {
+    "title": "Chatting after school",
+    "desc": "After-school small talk can be one thing about the day, a plan for later, or a simple 'how was your day?' You don't need a long recap. If it was a rough day, a short honest line is enough, and you can change the subject if you don't want to get into it.",
+    "prompts": [
+      "how do I chat after school",
+      "what to say after school",
+      "talking after the last bell",
+      "how was your day after school",
+      "after-school small talk",
+      "I don't want a long recap after school",
+      "help me chat after school",
+      "casual talk when the day ends"
+    ]
+  },
+  {
+    "title": "Favorite-things questions",
+    "desc": "Asking about favorites—food, a game, a subject, a season—is an easy way to keep a conversation going. Ask one, listen to the answer, and share one of yours. Follow up on why they like it, not only a long list of new questions.",
+    "prompts": [
+      "ask about someone's favorites",
+      "favorite things questions",
+      "what's your favorite questions",
+      "conversation about favorites",
+      "share a favorite thing",
+      "follow up on a favorite",
+      "easy questions about what I like",
+      "help me ask favorite-things questions"
+    ]
+  },
+  {
+    "title": "What-if questions",
+    "desc": "What-if questions are imaginary choices, like what if you could visit any place, or what if you had an extra hour today. They're for fun, not a test. Keep them kind, and if a question gets weird or uncomfortable, switch topics.",
+    "prompts": [
+      "let's do what-if questions",
+      "what if questions for fun",
+      "imaginary what-if",
+      "ask me a what-if",
+      "what-if conversation",
+      "fun hypothetical questions",
+      "how to play what if",
+      "help me with what-if questions"
+    ]
+  },
+  {
+    "title": "Sharing something from your day",
+    "desc": "You can share your day in one or two concrete bits: something that happened, something that was funny, or something you're glad is done. You don't have to recap every hour. If you want the other person to share too, end with a question.",
+    "prompts": [
+      "how do I share my day",
+      "tell someone about my day",
+      "what should I say about today",
+      "recap my day in a short way",
+      "I don't know what to share from today",
+      "one thing from my day",
+      "talking about how today went",
+      "help me tell a bit of my day"
+    ]
+  },
+  {
+    "title": "Encouraging a friend",
+    "desc": "Encouragement lands when it's specific: name what they did or what is hard, and offer a next step or just that you're in their corner. Avoid fake 'it's easy' talk if it isn't. A short message can be enough; you don't have to fix everything.",
+    "prompts": [
+      "how do I encourage a friend",
+      "what to say to cheer someone up",
+      "encourage a friend who's stressed",
+      "supportive text to a friend",
+      "don't say it's easy when it isn't",
+      "kind words for a friend",
+      "I want to be encouraging",
+      "help me encourage someone"
+    ]
+  },
+  {
+    "title": "Minecraft mining",
+    "desc": "In Minecraft, mining is how you gather stone, ores and other blocks, usually with a pickaxe that matches the block. Bring torches, watch your light, and don't dig straight down. A simple rule is to explore carefully, keep a way back, and store valuables often. Game versions can differ a little, so check what your world uses.",
+    "prompts": [
+      "how do I mine in Minecraft",
+      "Minecraft mining tips",
+      "what pickaxe do I need in Minecraft",
+      "don't dig straight down in Minecraft",
+      "torches when I mine",
+      "Minecraft mining basics",
+      "finding ore while mining",
+      "help me with Minecraft mining"
+    ]
+  },
+  {
+    "title": "Minecraft building",
+    "desc": "Minecraft building is easier if you pick a simple shape first, gather a few block types, and build from the ground up. Corners, a roof, lighting, and a door already make a shelter feel finished. You can copy ideas you like, then change them so the build feels like yours.",
+    "prompts": [
+      "how do I build in Minecraft",
+      "Minecraft building tips",
+      "first Minecraft house",
+      "Minecraft building for beginners",
+      "what blocks to start building with",
+      "make a simple Minecraft build",
+      "Minecraft house basics",
+      "help me build in Minecraft"
+    ]
+  },
+  {
+    "title": "Minecraft servers and safety",
+    "desc": "A Minecraft server is a shared world. Use servers you and a parent trust, don't share your account, real name, or passwords, and be careful with downloads and 'free' item links, which can be scams. If chat turns unkind or someone asks to move the conversation off the game in a way that feels off, leave and tell a trusted adult.",
+    "prompts": [
+      "are Minecraft servers safe",
+      "how do Minecraft servers work",
+      "joining a Minecraft server",
+      "Minecraft multiplayer safety",
+      "don't share my Minecraft account",
+      "Minecraft server chat safety",
+      "is this Minecraft download a scam",
+      "help me join a server safely"
+    ]
+  },
+  {
+    "title": "Fortnite basics",
+    "desc": "Fortnite is an online game many people play in battle-royale style: you land, gather items, and try to be among the last standing, often with building or other limited modes depending on the playlist. Drop in with friends if you can, learn the controls in an easier mode, and mute anything that's just noise. Details change with updates, so treat this as the basic idea, not a patch guide.",
+    "prompts": [
+      "what is Fortnite",
+      "Fortnite basics",
+      "how do I start Fortnite",
+      "Fortnite for beginners",
+      "what do you do in Fortnite",
+      "learn Fortnite controls",
+      "help me understand Fortnite",
+      "first time playing Fortnite"
+    ]
+  },
+  {
+    "title": "Fortnite landing and looting",
+    "desc": "In Fortnite, a first landing is easier if you pick a quieter spot, grab a basic weapon and healing items, then move with a plan instead of running straight into a busy fight. Listen, use cover, and don't spend the whole match racing every chest if you're still learning. Landing with a teammate helps.",
+    "prompts": [
+      "where should I land in Fortnite",
+      "Fortnite landing tips",
+      "Fortnite looting for beginners",
+      "quiet drop in Fortnite",
+      "what to grab first in Fortnite",
+      "Fortnite landing with a teammate",
+      "don't hot drop every time",
+      "help me land and loot in Fortnite"
+    ]
+  },
+  {
+    "title": "Fortnite with friends",
+    "desc": "Playing Fortnite with friends is more fun when you land near each other, share a simple plan, and keep talk useful, not blame-heavy if a match goes badly. Use a party or in-game squad invite you trust, and take a break if people are only getting mad. It's a game, not a job.",
+    "prompts": [
+      "how do I play Fortnite with friends",
+      "Fortnite squad with friends",
+      "invite friends in Fortnite",
+      "Fortnite duo tips",
+      "don't blame teammates in Fortnite",
+      "landing together in Fortnite",
+      "Fortnite with my friends",
+      "help me squad up in Fortnite"
+    ]
+  },
+  {
+    "title": "Roblox basics",
+    "desc": "Roblox is a platform with many different experiences made by different people, not one single game. You pick an experience, use an avatar, and play by that experience's rules. Stick to experiences that fit your age, and adjust privacy in the settings with a parent if you need to. Features change over time, so check the current app if something looks new.",
+    "prompts": [
+      "what is Roblox",
+      "Roblox basics",
+      "how does Roblox work",
+      "Roblox for beginners",
+      "is Roblox one game or many",
+      "starting Roblox",
+      "help me understand Roblox",
+      "first time on Roblox"
+    ]
+  },
+  {
+    "title": "Staying safe on Roblox",
+    "desc": "On Roblox, keep your real name, school, address and passwords private, use privacy settings, and don't go off-platform with someone you only met there. Report and block harassment, and tell a trusted adult if someone makes you uncomfortable or asks for photos, codes or money. A parent can help set restrictions.",
+    "prompts": [
+      "how do I stay safe on Roblox",
+      "Roblox safety tips",
+      "Roblox privacy settings",
+      "don't share personal info on Roblox",
+      "someone on Roblox is being weird",
+      "block and report on Roblox",
+      "Roblox chat safety",
+      "help me with Roblox safety"
+    ]
+  },
+  {
+    "title": "Spending Robux carefully",
+    "desc": "Robux is Roblox's paid currency. Treat it like real money: set a limit with a parent, don't buy things just because a friend or a pop-up said to, and never give your password or a login code for 'free Robux,' which is a scam. I won't invent prices; check the official app for current costs.",
+    "prompts": [
+      "should I spend Robux",
+      "Robux spending tips",
+      "free Robux is a scam",
+      "don't give my password for Robux",
+      "Robux with a parent",
+      "is this Robux offer real",
+      "careful with Robux",
+      "help me think before I spend Robux"
+    ]
+  },
+  {
+    "title": "Finding a Roblox experience",
+    "desc": "To find a Roblox experience, start from official search or popular lists, check the name, rating and description, and ask a friend what they actually play. If a link or ad promises huge rewards for logging in somewhere else, skip it. Try a short session before you spend anything.",
+    "prompts": [
+      "how do I find a Roblox game",
+      "finding a Roblox experience",
+      "what should I play on Roblox",
+      "search for a Roblox experience",
+      "is this Roblox game legit",
+      "Roblox recommendations from a friend",
+      "picking a Roblox experience",
+      "help me find something to play on Roblox"
+    ]
+  },
+  {
+    "title": "Voice chat safety in games",
+    "desc": "Voice chat can be fun with people you know and a problem with strangers. You can mute, deafen, or turn it off. Don't share your real name, school or where you live, and leave if talk turns cruel or creepy. A headset with a mute button helps. Tell a trusted adult if someone crosses a line.",
+    "prompts": [
+      "is voice chat safe in games",
+      "game voice chat tips",
+      "mute voice chat",
+      "don't say my real name in voice chat",
+      "strangers in game voice chat",
+      "turn off voice chat",
+      "voice chat with friends only",
+      "help me stay safe in voice chat"
+    ]
+  },
+  {
+    "title": "When a game feels too hard",
+    "desc": "If a game feels too hard, lower the difficulty, practice one skill, try a different mode, or watch how one moment is done, then try it yourself. Taking a break can help more than slamming the same fight. It's okay to play for fun, not only to get perfect on day one.",
+    "prompts": [
+      "this game is too hard",
+      "what to do when a game feels too hard",
+      "lower the difficulty",
+      "practice one skill in a hard game",
+      "I keep losing and it's frustrating",
+      "hard game for a beginner",
+      "make a game more manageable",
+      "help me with a game that's too hard"
+    ]
+  },
+  {
+    "title": "Don't use cheats or hacks",
+    "desc": "Cheats, hacks and unofficial 'aim' or 'free currency' tools can get an account banned, steal a login, or ruin the game for other people. If someone sent a download that promises an unfair edge, don't run it. Play by the game's rules, and tell a parent if a pop-up is pushing a shady tool.",
+    "prompts": [
+      "are game cheats safe",
+      "should I use a hack in a game",
+      "cheats can get me banned",
+      "free skin tool is probably a scam",
+      "don't download a game hack",
+      "is an aim tool a bad idea",
+      "why not to cheat in online games",
+      "help me avoid game cheats"
+    ]
+  },
+  {
+    "title": "Joining a friend's game",
+    "desc": "To join a friend's game, use that game's official invite, party or friend-code flow, and make sure you're both on a mode that allows it. A platform friends list isn't always the same as an in-game friends list. Don't share your account to 'get around' an invite, and if an invite link looks odd, don't sign in through it.",
+    "prompts": [
+      "how do I join a friend's game",
+      "invite a friend to a game",
+      "party or friend code",
+      "in-game friends list versus a console list",
+      "joining a friend's party",
+      "help me join my friend's game",
+      "don't share an account just to play together",
+      "friend invite in a game"
+    ]
+  },
+  {
+    "title": "Game chat etiquette",
+    "desc": "In game chat, keep callouts short and useful, skip insults, and don't spam the chat or ping wheel. If you're having a bad match, mute and breathe before you type. A 'nice one' when a teammate does well goes further than a lecture. You can always leave a toxic lobby.",
+    "prompts": [
+      "game chat etiquette",
+      "how to talk in game chat",
+      "don't be toxic in chat",
+      "short callouts in a game",
+      "muted after a bad match",
+      "being decent in game chat",
+      "game chat manners",
+      "help me with in-game chat"
+    ]
+  },
+  {
+    "title": "How YouTube works",
+    "desc": "YouTube is a site and app where people watch and upload videos. The home feed and suggested videos are based on what you and many others watch, not a person picking each one for you. You can search, subscribe, save, and use controls to limit what you see. Features change, so use the current app menus if something has moved.",
+    "prompts": [
+      "how does YouTube work",
+      "what is YouTube",
+      "YouTube basics",
+      "why is this on my YouTube home",
+      "YouTube subscriptions and search",
+      "how YouTube suggests videos",
+      "help me understand YouTube",
+      "YouTube for beginners"
+    ]
+  },
+  {
+    "title": "Finding videos worth watching",
+    "desc": "To find a decent video, search for the topic in plain words, check the channel name, the date, and whether it actually matches the title. Long or flashy isn't always better. If you're learning something, prefer a clear explanation over a rushed one, and skip a video that feels like a trick to keep you clicking.",
+    "prompts": [
+      "how do I find good YouTube videos",
+      "finding videos worth watching",
+      "what should I watch on YouTube",
+      "search YouTube better",
+      "is this video worth my time",
+      "don't get stuck clicking previews",
+      "YouTube videos for learning something",
+      "help me find a video to watch"
+    ]
+  },
+  {
+    "title": "Starting a YouTube channel",
+    "desc": "Starting a channel is mostly: pick a clear topic you can actually keep making, use an account a parent is okay with if you're under the site's age rules, and record a few simple videos before you buy a lot of gear. Read YouTube's current rules, and don't copy someone else's whole video. I won't invent subscriber tricks; steady, honest videos matter more than a gimmick.",
+    "prompts": [
+      "how do I start a YouTube channel",
+      "starting YouTube as a beginner",
+      "do I need fancy gear to start YouTube",
+      "YouTube channel ideas I can keep up",
+      "YouTube age and a parent",
+      "don't copy someone else's video",
+      "first YouTube channel steps",
+      "help me start a YouTube channel"
+    ]
+  },
+  {
+    "title": "Planning a video",
+    "desc": "A simple video plan is a hook in the first seconds, the points you'll cover, and a clear ending. Write a short outline, not a huge script you can't finish. Decide the length before you record so you don't ramble, and gather what you need so you're not hunting mid-take.",
+    "prompts": [
+      "how do I plan a video",
+      "outline for a YouTube video",
+      "what should be in a video plan",
+      "video hook and ending",
+      "don't ramble in a video",
+      "planning before I record",
+      "simple video outline",
+      "help me plan a video"
+    ]
+  },
+  {
+    "title": "Recording a video on a phone",
+    "desc": "A phone can record a solid video if you clean the lens, find decent light in front of you, hold the phone sideways unless your format needs upright, and keep the mic close enough to hear you. Turn off noisy notifications, do a short test clip, and record more than one take if you can.",
+    "prompts": [
+      "how do I record a video on my phone",
+      "phone video tips",
+      "lighting for a phone video",
+      "record horizontal or vertical",
+      "phone microphone for a video",
+      "test clip before I record",
+      "clean the camera lens",
+      "help me film a video with my phone"
+    ]
+  },
+  {
+    "title": "Honest titles and thumbnails",
+    "desc": "A title and thumbnail should match what is actually in the video so people aren't tricked. Say what the video is, use a clear picture, and skip fake arrows, fake reactions, or claims you can't back up. Curiosity is fine; baiting people with something that isn't there wears out trust.",
+    "prompts": [
+      "how do I make a video title",
+      "honest YouTube thumbnail",
+      "don't use clickbait",
+      "title that matches the video",
+      "thumbnail tips that aren't fake",
+      "what makes a good video title",
+      "skip fake reaction thumbnails",
+      "help me title and thumbnail a video"
+    ]
+  },
+  {
+    "title": "Uploading a YouTube video",
+    "desc": "To upload, sign in, choose the file, add a title, description and whether it's public, unlisted or private, then let it finish processing before you judge the quality. Use a stable connection, and double-check you're on the right account. Follow YouTube's current upload steps if the buttons have moved.",
+    "prompts": [
+      "how do I upload a YouTube video",
+      "uploading a video to YouTube",
+      "public versus unlisted versus private",
+      "YouTube still processing",
+      "upload on the right account",
+      "YouTube description when I upload",
+      "help me upload to YouTube",
+      "steps to post a YouTube video"
+    ]
+  },
+  {
+    "title": "Music and copyright in videos",
+    "desc": "You usually can't put someone else's song or long video clip in your upload just because you like it. Use music the tools say you're allowed to use, make your own, or get permission. A strike or mute can follow a copyright claim. If you're unsure, leave the track out or check the official rules. I'm not a lawyer; this is the basic idea.",
+    "prompts": [
+      "can I use a song in my YouTube video",
+      "music copyright in videos",
+      "copyrighted music in a video",
+      "YouTube copyright basics",
+      "can I use a movie clip",
+      "music I'm allowed to use",
+      "will I get a copyright strike",
+      "help me with music in a video"
+    ]
+  },
+  {
+    "title": "Reading comments on your video",
+    "desc": "Read comments if you want, reply when a question is real, and don't let one mean line set the tone for your day. You can hide, report or delete comments that break the rules, and you can turn comments off if you need a break. You don't owe a debate to every stranger.",
+    "prompts": [
+      "how do I handle YouTube comments",
+      "mean comment on my video",
+      "should I reply to comments",
+      "hiding a comment on my video",
+      "don't let comments ruin my day",
+      "YouTube comment basics",
+      "turning comments off",
+      "help me with comments on my video"
+    ]
+  },
+  {
+    "title": "Posting without burning out",
+    "desc": "A schedule you can keep beats a huge plan you abandon in two weeks. Batch a little work, leave room for rest, and it's okay to post less often than a huge channel. If making videos starts to feel only like pressure, pause and shrink the plan instead of quitting in a crash.",
+    "prompts": [
+      "I don't want to burn out posting videos",
+      "YouTube posting schedule I can keep",
+      "posting less often is ok",
+      "batch videos so I don't get exhausted",
+      "content creation burnout",
+      "keep making videos without crashing",
+      "a realistic upload schedule",
+      "help me post without burning out"
+    ]
+  },
+  {
+    "title": "What is Python",
+    "desc": "Python is a programming language people use to write programs in plain-looking text, from small practice scripts to larger apps. You write code in a file or an editor, and a Python program on your computer runs it. It's known for being readable, which is why many beginners start there.",
+    "prompts": [
+      "what is Python",
+      "what is the Python language",
+      "Python for beginners",
+      "why do people learn Python",
+      "is Python a programming language",
+      "Python basics explained",
+      "help me understand Python",
+      "what is Python used for"
+    ]
+  },
+  {
+    "title": "Running a Python file",
+    "desc": "To run a Python file, you need Python installed, then you run the file from an editor or a terminal with a command like python and the filename, depending on your system. Save the file first, watch the error message if it fails, and make sure you're in the folder that actually holds the file.",
+    "prompts": [
+      "how do I run a Python file",
+      "run a .py file",
+      "python command to run a script",
+      "running Python on my computer",
+      "my Python file won't run",
+      "save before I run Python",
+      "run Python in the terminal",
+      "help me run a Python program"
+    ]
+  },
+  {
+    "title": "Comments in code",
+    "desc": "A comment is a note in your code that the program ignores when it runs. In Python, a short comment starts with #. Use comments to explain why something is there, not to repeat what the line already says, and keep them up to date if you change the code.",
+    "prompts": [
+      "what is a comment in code",
+      "Python comments",
+      "how do I write a comment in Python",
+      "# in Python",
+      "why use comments in code",
+      "comments the program ignores",
+      "help with comments in Python",
+      "commenting my Python code"
+    ]
+  },
+  {
+    "title": "Booleans",
+    "desc": "A Boolean is a value that is only True or False. Programs use Booleans in conditions, like whether a password matches or a loop should keep going. In Python, True and False start with a capital letter, and comparisons such as == and < produce Boolean results.",
+    "prompts": [
+      "what is a Boolean",
+      "True and False in Python",
+      "Boolean values",
+      "Python True or False",
+      "what does a Boolean do",
+      "Boolean in a condition",
+      "help me with Booleans",
+      "Python Boolean basics"
+    ]
+  },
+  {
+    "title": "Elif and else",
+    "desc": "After an if, elif means 'else if' and tests another condition when the first one wasn't true. else runs when none of the conditions above it were true. Only one branch in that chain runs. Keep the conditions in a sensible order so a later check isn't hidden by an earlier one.",
+    "prompts": [
+      "what is elif in Python",
+      "if elif else",
+      "how does else work in Python",
+      "Python else if",
+      "elif versus else",
+      "only one branch runs",
+      "help with elif and else",
+      "Python if else chain"
+    ]
+  },
+  {
+    "title": "Tuples",
+    "desc": "A tuple in Python is an ordered collection written in parentheses, like (1, 2, 3). It's like a list in that you can index it, but you don't change its items after you make it. Tuples are handy for a fixed pair or a function that returns more than one value.",
+    "prompts": [
+      "what is a tuple in Python",
+      "Python tuples",
+      "tuple versus a list",
+      "tuple in parentheses",
+      "can I change a tuple",
+      "when to use a tuple",
+      "help me with tuples",
+      "Python tuple basics"
+    ]
+  },
+  {
+    "title": "Sets in Python",
+    "desc": "A set in Python is a collection of unique items, written with curly braces, and it doesn't keep a fixed order you should rely on like a list does. Sets are useful when you care about membership or removing duplicates. You can do unions and intersections once you're comfortable with the basics.",
+    "prompts": [
+      "what is a set in Python",
+      "Python sets",
+      "unique items in a set",
+      "set versus a list",
+      "removing duplicates with a set",
+      "Python set basics",
+      "help me with sets in Python",
+      "when to use a set"
+    ]
+  },
+  {
+    "title": "F-strings",
+    "desc": "An f-string is a Python way to put values inside a string. You put f before the quotes and write variables in curly braces, like f\"Hi, {name}\". It's often clearer than stitching strings together with plus signs. The code inside the braces is evaluated when that line runs.",
+    "prompts": [
+      "what is an f-string",
+      "Python f-strings",
+      "f before a string",
+      "put a variable in a string in Python",
+      "f-string curly braces",
+      "f-string versus adding strings",
+      "help me with f-strings",
+      "how to write an f-string"
+    ]
+  },
+  {
+    "title": "String slicing",
+    "desc": "Slicing lets you take part of a string (or a list) with square brackets, like text[0:3], which starts at index 0 and stops before 3. Leaving a side blank means 'from the start' or 'to the end,' and a negative index counts from the end. Practice with a short word so the numbers make sense.",
+    "prompts": [
+      "what is string slicing",
+      "Python string slice",
+      "text[0:3]",
+      "slice part of a string",
+      "negative index in a slice",
+      "slicing a string in Python",
+      "help me with string slicing",
+      "how does slicing work in Python"
+    ]
+  },
+  {
+    "title": "Using len",
+    "desc": "len() tells you how many items are in a string, list, or other sized collection. len(\"hi\") is 2, and len([]) is 0. It's useful in loops and checks, and it counts items, not the last index, so the last index of a list of five items is 4.",
+    "prompts": [
+      "what does len do in Python",
+      "Python len()",
+      "length of a string or list",
+      "len versus the last index",
+      "how to get the length in Python",
+      "len of an empty list",
+      "help me with len",
+      "using len in Python"
+    ]
+  },
+  {
+    "title": "Syntax errors",
+    "desc": "A syntax error means Python couldn't even parse the file: a missing colon, a typo, an unclosed quote, or a wrong indent. The message usually points to a line near the problem. Fix the first syntax error, then run again; later messages may be leftovers from the first typo.",
+    "prompts": [
+      "what is a syntax error",
+      "Python syntax error",
+      "missing colon in Python",
+      "unclosed string in Python",
+      "syntax error near this line",
+      "how to fix a syntax error",
+      "help with a Python syntax error",
+      "Python won't parse my file"
+    ]
+  },
+  {
+    "title": "Type errors",
+    "desc": "A TypeError in Python means you used a value in a way that type doesn't support, like adding a number to a string without converting, or calling something that isn't a function. Read the message for the types it names, then convert or change the operation. Print the value and its type if you're stuck.",
+    "prompts": [
+      "what is a TypeError",
+      "Python TypeError",
+      "can't add a string and a number",
+      "TypeError in my code",
+      "how to fix a TypeError",
+      "wrong type in Python",
+      "help with a TypeError",
+      "Python type mistake"
+    ]
+  },
+  {
+    "title": "Importing a module",
+    "desc": "import brings in a module of ready-made tools, like import math or import random, so you don't have to write those functions yourself. Import at the top, then use the module name, such as math.sqrt. If the import fails, check the spelling and that the package is actually installed when it's not part of the built-in library.",
+    "prompts": [
+      "how do I import a module in Python",
+      "import math in Python",
+      "what does import do",
+      "Python import basics",
+      "import random as an example",
+      "module not found in Python",
+      "help me import a module",
+      "using a Python module"
+    ]
+  },
+  {
+    "title": "The random module",
+    "desc": "Python's random module can pick a random integer, shuffle a list, or choose an item, after you import random. It's fine for games and practice, but not for serious security or passwords. If you need the same results while testing, look up random.seed once you know the basics.",
+    "prompts": [
+      "how do I use random in Python",
+      "Python random module",
+      "random integer in Python",
+      "random.choice in Python",
+      "import random",
+      "random for a simple game",
+      "help me with the random module",
+      "pick a random item in Python"
+    ]
+  },
+  {
+    "title": "Try and except",
+    "desc": "try and except let you handle an error that might happen, such as bad input, without crashing the whole program. Put the risky lines in try, and in except decide what to do, like print a clear message and try again. Don't hide every error with a bare except; that makes real bugs harder to see.",
+    "prompts": [
+      "what is try and except",
+      "Python try except",
+      "handle an error in Python",
+      "don't crash on bad input",
+      "except a TypeError or ValueError",
+      "bare except is a bad idea",
+      "help with try and except",
+      "Python error handling basics"
+    ]
+  },
+  {
+    "title": "Parameters and arguments",
+    "desc": "Parameters are the names you list in a function definition; arguments are the values you pass when you call it. Inside the function, you use the parameter names. Keep the order straight, and start with a small function that takes one or two inputs so it's easier to test.",
+    "prompts": [
+      "what is a function parameter",
+      "parameters versus arguments",
+      "Python function parameters",
+      "passing an argument to a function",
+      "how do parameters work",
+      "def with parameters",
+      "help me with function parameters",
+      "arguments in a Python function"
+    ]
+  },
+  {
+    "title": "A first Python program",
+    "desc": "A first Python program can be as small as printing a message, asking for a name, or doing one calculation. Write it, save it, run it, then change one thing and run it again. That's the loop that teaches you, not a huge idea on day one. If an error appears, read it before you rewrite everything.",
+    "prompts": [
+      "how do I write a first Python program",
+      "my first Python program",
+      "beginner Python project that's small",
+      "hello world in Python",
+      "start with a tiny Python script",
+      "first program to practice Python",
+      "help me write a simple Python program",
+      "what should my first Python program be"
+    ]
+  },
+  {
+    "title": "Installing a package with pip",
+    "desc": "pip is the usual tool for installing extra Python packages. Use a command like pip install and the package name in a terminal, ideally in a setup a parent or teacher helped you with if this is a school computer. Install only packages you trust, and read the official docs if an error appears. I can help you think through a message; I'm not going to invent a package's current version.",
+    "prompts": [
+      "how do I install a Python package",
+      "what is pip",
+      "pip install",
+      "installing a package with pip",
+      "pip on my computer",
+      "trusted Python packages only",
+      "help me use pip",
+      "Python pip basics"
+    ]
+  },
+  {
+    "title": "Finding new music",
+    "desc": "To find new music, start from an artist or song you already like, then try a radio or related-artists feature, a friend's recommendation, or a genre station. Give a song a fair listen, skip what you don't like, and save the ones you do. You don't have to chase only what's trending.",
+    "prompts": [
+      "how do I find new music",
+      "discover new songs",
+      "finding artists I'll like",
+      "music like a song I already like",
+      "friend recommended a song",
+      "help me find new music",
+      "I want new music to listen to",
+      "discovering music without only chasing trends"
+    ]
+  },
+  {
+    "title": "Music genres",
+    "desc": "A genre is a loose label for how music sounds or the tradition it comes from, like pop, hip-hop, rock, classical or jazz. Labels overlap, and a lot of songs sit between them. Use genres as a starting map, not a box you have to stay in. If you tell me what you already like, I can suggest kinds of music to try, not a fake 'best song' list.",
+    "prompts": [
+      "what is a music genre",
+      "types of music genres",
+      "pop rock hip-hop classical",
+      "music that sits between genres",
+      "help me understand genres",
+      "what genre is this",
+      "genre as a starting point",
+      "music styles explained"
+    ]
+  },
+  {
+    "title": "Learning piano basics",
+    "desc": "Start with sitting at a comfortable height, finding middle C, and short daily practice on a few notes or a simple pattern, rather than a huge piece on day one. A keyboard with full-size keys is easier to learn on if you have the choice. I can help with a practice plan; I won't invent prices for a keyboard.",
+    "prompts": [
+      "how do I start learning piano",
+      "piano for beginners",
+      "where is middle C",
+      "first piano practice",
+      "learning piano basics",
+      "keyboard for a beginner",
+      "help me start piano",
+      "simple piano exercises"
+    ]
+  },
+  {
+    "title": "Learning a song",
+    "desc": "To learn a song, listen for the structure, slow it down, and learn a small section at a time, then chain the sections. Hum or play along quietly before you try full speed. Lyrics and chords you use should be ones you're allowed to use; don't post a full copyrighted lyric sheet as if you wrote it.",
+    "prompts": [
+      "how do I learn a song",
+      "learn a song on an instrument",
+      "learn a song slowly",
+      "break a song into sections",
+      "learning lyrics or chords",
+      "practice a song in parts",
+      "help me learn a song",
+      "getting a song up to speed"
+    ]
+  },
+  {
+    "title": "Concert etiquette",
+    "desc": "At a concert, give people space, don't block someone's view with a phone the whole time if you can help it, and follow the venue's rules about bags, photos and leaving mid-set. Cheer at a break, not over a quiet song if the room is listening. If you're unsure, watch what the crowd and staff are doing.",
+    "prompts": [
+      "how should I act at a concert",
+      "concert etiquette",
+      "phone at a concert",
+      "don't block the view",
+      "venue rules at a show",
+      "when to cheer at a concert",
+      "help me with concert manners",
+      "first concert tips"
+    ]
+  },
+  {
+    "title": "Listening volume and hearing",
+    "desc": "Loud music for a long time can damage hearing, including with earbuds. If you can't hear someone talking next to you, or your ears ring after, turn it down and take a break. You can still enjoy music at a level that leaves you able to hear the next day. If hearing changes worry you, tell a parent and a doctor.",
+    "prompts": [
+      "is my music too loud",
+      "earbud volume and hearing",
+      "ears ringing after music",
+      "how loud should I listen",
+      "protect my hearing",
+      "turn the volume down",
+      "help with listening volume",
+      "music volume safety"
+    ]
+  },
+  {
+    "title": "Parts of a song",
+    "desc": "Many songs have a verse, a chorus that repeats, sometimes a pre-chorus or a bridge, and an intro or ending. The chorus is often the part you remember first. Not every song uses this shape, but it's a useful map when you're learning or talking about a track.",
+    "prompts": [
+      "what are the parts of a song",
+      "verse and chorus",
+      "what is a bridge in a song",
+      "song structure basics",
+      "intro and chorus",
+      "help me understand song parts",
+      "how is a song structured",
+      "verse versus chorus"
+    ]
+  },
+  {
+    "title": "Practicing an instrument",
+    "desc": "Instrument practice works better in short, regular sessions than one long cram. Warm up, pick one small goal, go slowly, then play something you enjoy so you want to come back. A timer and a quiet corner help. Sore joints or sharp pain are a stop, not a badge.",
+    "prompts": [
+      "how should I practice an instrument",
+      "daily instrument practice",
+      "short practice sessions",
+      "practice slowly",
+      "instrument practice plan",
+      "I don't want practice to be only a grind",
+      "help me practice my instrument",
+      "warm up then practice one goal"
+    ]
+  },
+  {
+    "title": "Talking about music you like",
+    "desc": "You can talk about music by naming a song or artist, what you like about it—a beat, a voice, a mood—and asking what the other person listens to. You don't have to justify your taste, and you don't have to put down theirs. A short 'want to hear one I like?' is enough if they're interested.",
+    "prompts": [
+      "how do I talk about music I like",
+      "describing a song I like",
+      "share music with a friend",
+      "I don't know how to explain my taste",
+      "ask what someone listens to",
+      "don't dunk on someone else's music",
+      "help me talk about music",
+      "conversation about songs"
+    ]
+  },
+  {
+    "title": "Live music versus recorded",
+    "desc": "Live music is happening in the room or at a show, with the energy and imperfections of a performance. A recording is a fixed version you can replay, often carefully mixed. Neither is 'the real only way'; they're different experiences. A live show may also sound different from the album you know.",
+    "prompts": [
+      "what's the difference between live and recorded music",
+      "live music versus a recording",
+      "why a concert sounds different from the album",
+      "is live music better",
+      "recorded music I can replay",
+      "help me compare live and recorded",
+      "live performance versus studio",
+      "album versus a concert"
+    ]
+  },
+  {
+    "title": "Picking a movie",
+    "desc": "To pick a movie, start with time, who's watching, a mood or genre, and the age rating. Read a short description, skip heavy spoilers, and have a backup if the first pick isn't available. I can help you think about genres and questions to ask the group; I won't pretend I know what's on a service tonight.",
+    "prompts": [
+      "how do I pick a movie",
+      "help me choose a movie",
+      "what movie should we watch",
+      "picking a movie for a group",
+      "movie for a certain mood",
+      "movie night decision",
+      "don't spoiler the plot while choosing",
+      "help me pick something to watch"
+    ]
+  },
+  {
+    "title": "Movie and show genres",
+    "desc": "Genres like comedy, drama, action, horror, documentary or animation are starting labels, and a lot of titles mix more than one. Use a genre to narrow the pile, then check the rating and a short, spoiler-light description. Tell me the mood and who you're watching with, and I can suggest kinds of stories, not a made-up 'must watch' list.",
+    "prompts": [
+      "what are movie genres",
+      "types of shows and movies",
+      "comedy versus drama",
+      "horror or action tonight",
+      "genre to narrow what we watch",
+      "help me with movie genres",
+      "show genres explained",
+      "mixed-genre movies"
+    ]
+  },
+  {
+    "title": "Age ratings for movies and shows",
+    "desc": "Age ratings, like the MPAA or TV ratings in the US, are a guide to content such as language, violence or scary scenes, not a score for quality. A parent or guardian should help decide what's okay in your house. Ratings differ by country, so check the system that applies where you are.",
+    "prompts": [
+      "what do movie ratings mean",
+      "age ratings for shows",
+      "is this movie okay for my age",
+      "PG versus PG-13",
+      "TV ratings explained",
+      "help me understand age ratings",
+      "movie rating with a parent",
+      "what does this rating mean"
+    ]
+  },
+  {
+    "title": "Spoiler etiquette",
+    "desc": "A spoiler is a detail that gives away a plot turn someone wanted to discover themselves. Before you talk about a new movie or show, ask if they're caught up, and keep big twists out of titles, thumbnails and group chats. If you need to discuss a scene, give a clear warning first.",
+    "prompts": [
+      "what is spoiler etiquette",
+      "don't spoil the ending",
+      "how to warn before a spoiler",
+      "ask if someone's caught up",
+      "spoilers in a group chat",
+      "spoiler warning",
+      "help me avoid spoiling a show",
+      "talking about a movie without spoilers"
+    ]
+  },
+  {
+    "title": "A movie night at home",
+    "desc": "A movie night at home works better with a picked title, enough time, snacks that won't wreck the keyboard, and phones down once it starts if that's the house rule. Let people vote, and have a backup. Subtitles can help. Pause for a real break, not every two minutes.",
+    "prompts": [
+      "how do I host a movie night at home",
+      "movie night tips",
+      "snacks and a movie at home",
+      "phones down during the movie",
+      "picking a movie with a vote",
+      "home movie night plan",
+      "help me plan a movie night",
+      "movie night with family or friends"
+    ]
+  },
+  {
+    "title": "Finding something to watch",
+    "desc": "If nothing looks good, shorten the list: a time limit, a genre, a comfort rewatch, or 'we'll try the first ten minutes.' Endless scrolling often feels worse than an okay start. I can help you narrow a mood; I won't invent a service's current catalog.",
+    "prompts": [
+      "I can't find anything to watch",
+      "nothing looks good to watch",
+      "how to stop scrolling for a show",
+      "pick something and start",
+      "comfort rewatch idea",
+      "first ten minutes rule",
+      "help me find something to watch",
+      "I'm stuck choosing a show"
+    ]
+  },
+  {
+    "title": "Watching with family",
+    "desc": "When you watch with family, pick something that fits the youngest or most cautious person, or agree on two short options. Be willing to compromise, keep spoilers to yourself if some people haven't seen it, and pause if someone needs a break. A kind 'want to watch this together?' works better than grabbing the remote and starting.",
+    "prompts": [
+      "what should we watch as a family",
+      "watching a movie with family",
+      "family-friendly pick",
+      "compromise on a show",
+      "watching with parents or siblings",
+      "help me pick something for family movie night",
+      "don't start without asking",
+      "family watch tips"
+    ]
+  },
+  {
+    "title": "Catching up on a series",
+    "desc": "To catch up on a series, start at the beginning of the season you need, don't jump to the finale first, and it's okay to use a short, spoiler-light recap if you missed an episode. Watch at a pace you can actually follow. If friends are ahead, ask them not to spoil it.",
+    "prompts": [
+      "how do I catch up on a series",
+      "I missed a few episodes",
+      "catching up on a show",
+      "don't skip to the finale",
+      "spoiler-light recap",
+      "watch a series in order",
+      "help me catch up on a show",
+      "friends are ahead on a series"
+    ]
+  },
+  {
+    "title": "A bedtime routine",
+    "desc": "A bedtime routine is a short, repeatable wind-down: dimmer lights, the same few steps, and a regular time when you can manage it. Put the charger away from the pillow if the phone keeps you up. A routine works because your brain starts to expect sleep, not because one night was perfect.",
+    "prompts": [
+      "how do I make a bedtime routine",
+      "bedtime routine for better sleep",
+      "wind down before bed",
+      "same steps each night",
+      "charger away from the bed",
+      "help me with a bedtime routine",
+      "night routine so I can sleep",
+      "what should be in a bedtime routine"
+    ]
+  },
+  {
+    "title": "Trouble falling asleep",
+    "desc": "If you can't fall asleep, get up after a while and do something calm in dim light, then try again, instead of staring at the clock. Cut late caffeine, and keep the room as dark and cool as you reasonably can. If this happens a lot or you feel unwell, tell a parent and a doctor; I'm not a medical provider.",
+    "prompts": [
+      "I can't fall asleep",
+      "trouble falling asleep",
+      "what to do when I'm lying awake",
+      "staring at the clock in bed",
+      "can't sleep at night",
+      "calm down so I can sleep",
+      "help me fall asleep",
+      "I'm awake and frustrated in bed"
+    ]
+  },
+  {
+    "title": "Naps",
+    "desc": "A short nap, often around twenty minutes earlier in the day, can help if you're short on sleep. A long late nap can make nighttime sleep harder. Set an alarm, and give yourself a minute to wake up. If you feel worse after every nap, talk with a parent about your sleep overall.",
+    "prompts": [
+      "are naps a good idea",
+      "how long should a nap be",
+      "short nap versus a long nap",
+      "napping too late",
+      "nap with an alarm",
+      "will a nap ruin my night sleep",
+      "help me with naps",
+      "a twenty minute nap"
+    ]
+  },
+  {
+    "title": "Phones at bedtime",
+    "desc": "A phone at bedtime can keep your brain busy and the room bright. Try setting it down a little before you want to sleep, using Do Not Disturb, or charging it across the room. Night modes can help with light, but scrolling is still scrolling. You don't have to be perfect; a slightly earlier cutoff still helps.",
+    "prompts": [
+      "is the phone keeping me up at bedtime",
+      "phones at bedtime",
+      "phone keeping me awake",
+      "charge the phone away from the bed",
+      "Do Not Disturb at night",
+      "scrolling when I should sleep",
+      "help me put the phone down at night",
+      "phone and falling asleep"
+    ]
+  },
+  {
+    "title": "Cramming versus spreading out",
+    "desc": "Cramming is piling a lot of study into one late block. Spreading the same work over shorter sessions on different days usually helps you remember more and sleep better the night before. If a test is tomorrow and you waited, pick the most important ideas, then sleep; an all-nighter often backfires.",
+    "prompts": [
+      "is cramming a bad idea",
+      "cramming versus spreading out",
+      "study a little over several days",
+      "don't stay up all night before a test",
+      "spaced practice versus a late cram",
+      "I waited until the last night",
+      "help me stop only cramming",
+      "spread out my studying"
+    ]
+  },
+  {
+    "title": "A quiet study space",
+    "desc": "A study space works better if it's as quiet as you can get, with the stuff you need in reach and distractions off your desk. A library, a kitchen table, or headphones with calm sound can all work. You don't need a perfect room; you need a repeatable spot that means 'this is work time.'",
+    "prompts": [
+      "how do I set up a study space",
+      "quiet place to study",
+      "study at the library or at home",
+      "clear my desk to focus",
+      "where should I study",
+      "headphones for a noisy house",
+      "help me make a study space",
+      "a repeatable study spot"
+    ]
+  },
+  {
+    "title": "Short study sprints",
+    "desc": "A study sprint is a short timed block, like 15 or 25 minutes of one task, then a brief break. It's useful when a long session feels impossible. Pick one assignment, start the timer, and stand up when it rings. A few sprints beat a vague 'I'll study later.'",
+    "prompts": [
+      "what is a study sprint",
+      "short timed study session",
+      "15 or 25 minutes of studying",
+      "study timer and a break",
+      "pomodoro style studying",
+      "I can't sit for hours",
+      "help me study in short sprints",
+      "one task for one short block"
+    ]
+  },
+  {
+    "title": "Study breaks",
+    "desc": "A study break is a real pause: stand up, get water, look away from the screen, then come back. A break that turns into an hour of a new video isn't a break anymore. Plan the next start time before you step away so it's easier to return.",
+    "prompts": [
+      "how should I take a study break",
+      "what to do on a study break",
+      "don't let a break become an hour",
+      "stand up between study sessions",
+      "short break then back to work",
+      "study break ideas that aren't a rabbit hole",
+      "help me take better study breaks",
+      "when to take a break from studying"
+    ]
+  },
+  {
+    "title": "Reviewing notes the same day",
+    "desc": "A short review the same day you took notes helps the ideas stick: close the page, recall the main points, then check what you missed. You don't have to rewrite everything. Five or ten minutes after class is often enough to make later studying easier.",
+    "prompts": [
+      "should I review notes the same day",
+      "review notes after class",
+      "same-day note review",
+      "recall then check my notes",
+      "quick review so I remember",
+      "don't wait a week to look at notes",
+      "help me review notes the same day",
+      "five minutes to review notes"
+    ]
+  },
+  {
+    "title": "Too tired to study",
+    "desc": "If you're too tired to study, a short rest, water, or moving the session to after a real sleep can beat staring at a page you won't remember. Do one tiny task if you must hand something in, then sleep. Ongoing exhaustion is a reason to talk with a parent, not only to push harder.",
+    "prompts": [
+      "I'm too tired to study",
+      "too sleepy to focus on homework",
+      "should I sleep instead of studying",
+      "exhausted and I have homework",
+      "study when I'm wiped out",
+      "one small task then sleep",
+      "help me when I'm too tired to study",
+      "can't focus because I'm tired"
+    ]
+  },
+  {
+    "title": "Meeting someone from the internet",
+    "desc": "Someone you only know online is still a stranger. Don't go alone to meet them, don't keep a meetup secret from a parent, and don't share your address early. If anyone pressures you, asks for photos, money or to switch apps, stop and tell a trusted adult. A lot of people are kind; the rules still matter.",
+    "prompts": [
+      "is it safe to meet someone from the internet",
+      "meeting an online friend in person",
+      "don't meet a stranger alone",
+      "someone from a game wants to meet",
+      "tell a parent before a meetup",
+      "online friend asking for my address",
+      "help me think about meeting someone I met online",
+      "meetup from the internet safety"
+    ]
+  },
+  {
+    "title": "Sharing photos of other people",
+    "desc": "Ask before you post or send a photo of someone else, especially if it's unflattering, at their house, or of a younger sibling. A group photo at an event can still be something a person didn't want public. If they ask you to take it down, do it. Your post can travel farther than you meant.",
+    "prompts": [
+      "should I post a photo of someone else",
+      "ask before I share someone else's picture",
+      "posting a group photo",
+      "they want me to take a picture down",
+      "don't send someone's photo around",
+      "photo of a friend on my story",
+      "help me with sharing photos of other people",
+      "is it ok to post this picture of them"
+    ]
+  },
+  {
+    "title": "Short links and surprise downloads",
+    "desc": "A shortened link or a surprise 'download this' button can hide where you're really going. Don't tap links in unexpected DMs or pop-ups, and don't install a file you weren't looking for. Go to a site by typing the real address or using an official app. If a message feels urgent and odd, pause and ask someone you trust.",
+    "prompts": [
+      "are short links safe",
+      "don't tap a random download",
+      "surprise download button",
+      "shortened link in a DM",
+      "is this link safe to open",
+      "pop-up says download now",
+      "help me with suspicious links",
+      "unexpected file download"
+    ]
+  },
+  {
+    "title": "Gaming account security",
+    "desc": "A game account is worth protecting: a unique password, two-factor authentication if it's offered, and never share a login or a one-time code, even with a 'friend' or a person who says they're support. Recover the email on the account too. If you think it was stolen, change the password and tell a parent.",
+    "prompts": [
+      "how do I keep my game account safe",
+      "gaming account security",
+      "two-factor on a game account",
+      "don't share my game login",
+      "someone asked for my auth code",
+      "stolen game account",
+      "unique password for a game",
+      "help me secure a gaming account"
+    ]
+  },
+  {
+    "title": "Don't share a password",
+    "desc": "A password is for you, not for a friend, a classmate, or someone who 'just needs to check something.' If you already shared one, change it. A password manager or a written list stored safely at home beats reusing the same password. Even a close friend doesn't need your login.",
+    "prompts": [
+      "should I share my password with a friend",
+      "don't share a password",
+      "friend wants my login",
+      "I already shared a password",
+      "change a password I shared",
+      "password is only for me",
+      "help me stop sharing passwords",
+      "classmate asked for my password"
+    ]
+  },
+  {
+    "title": "Fake profiles",
+    "desc": "A fake profile may use stolen photos, a brand-new account, too-good compliments, or a story that rushes you off the app. If you're unsure, don't send money, photos or codes, and you can ignore or block. Reverse-searching a photo or asking a mutual friend can help, but you still don't owe a stranger a reply.",
+    "prompts": [
+      "is this a fake profile",
+      "catfish or a fake account",
+      "stolen photos on a profile",
+      "fake account complimenting me",
+      "new account that wants to move chats",
+      "help me spot a fake profile",
+      "they want money from a suspicious account",
+      "don't trust a rushed fake profile"
+    ]
+  },
+  {
+    "title": "Blocking and reporting",
+    "desc": "Block and report are tools, not overreactions, when someone is harassing you, scamming, or making you unsafe. You usually don't have to reply first. Use the app's report flow, then tell a trusted adult if it feels serious. Blocking can also just be how you get peace.",
+    "prompts": [
+      "how do I block someone",
+      "when should I report an account",
+      "block and report",
+      "is it ok to just block",
+      "reporting harassment",
+      "don't have to reply before I block",
+      "help me block or report",
+      "using block to get peace"
+    ]
+  },
+  {
+    "title": "A safe username",
+    "desc": "A safer username skips your full real name, birth year, school, street and a password hint. You can still sound like yourself with a nickname or a hobby word. If a username already gives too much away, many apps let you change it. Don't reuse a username plus the same password everywhere.",
+    "prompts": [
+      "what makes a safe username",
+      "don't put my real name in a username",
+      "username without my birthday or school",
+      "changing a username that's too personal",
+      "safer gamertag",
+      "help me pick a safe username",
+      "username privacy",
+      "what not to put in a username"
+    ]
+  },
+  {
+    "title": "If a password was leaked",
+    "desc": "If a site or app had a data breach, or a service says your password appeared in a leak, change that password and any other account where you reused it. Turn on two-factor authentication if you can. Use the official site, not a link from a random email. Tell a parent if a money or school account is involved.",
+    "prompts": [
+      "what if my password was leaked",
+      "data breach and my password",
+      "change a leaked password",
+      "I reused a password that leaked",
+      "password appeared in a breach",
+      "help after a data breach",
+      "don't click a random breach email",
+      "if a site leaked accounts"
+    ]
+  },
+  {
+    "title": "DMs from accounts you don't know",
+    "desc": "A DM from an account you don't know can be ignored. You don't have to be polite to a scam, a creep, or a stranger selling something. Don't click their link, don't send a code or a photo, and block if it continues. Friends can message from a known account; a random compliment plus a link is a pattern to skip.",
+    "prompts": [
+      "DM from someone I don't know",
+      "unknown account messaged me",
+      "should I reply to a stranger DM",
+      "stranger DM with a link",
+      "ignore a random direct message",
+      "help me with DMs from strangers",
+      "don't send a code in a DM",
+      "unexpected message from an unknown account"
+    ]
+  },
+  {
+    "title": "What is AI",
+    "desc": "AI, short for artificial intelligence, is a name for computer systems that can do tasks that used to need human judgment, like recognizing speech or drafting text. Today's chat tools often predict likely next words from lots of examples; they don't actually live a life or know you unless you tell them something. They can be useful and still be wrong.",
+    "prompts": [
+      "what is AI",
+      "what is artificial intelligence",
+      "AI in plain words",
+      "how does AI work at a basic level",
+      "is AI actually thinking",
+      "AI basics for a beginner",
+      "help me understand AI",
+      "what people mean by AI"
+    ]
+  },
+  {
+    "title": "What is a chatbot",
+    "desc": "A chatbot is a program you talk to in text or voice that replies with more text or voice. Some are simple menus; others, like this kind of assistant, use a language model to draft a reply. It can sound confident even when it's guessing, so check anything important. It isn't a person on the other side.",
+    "prompts": [
+      "what is a chatbot",
+      "how does a chatbot work",
+      "chatbot versus a person",
+      "is a chatbot a real human",
+      "talking to a chatbot",
+      "help me understand chatbots",
+      "what a chatbot can and can't do",
+      "chatbot basics"
+    ]
+  },
+  {
+    "title": "How this assistant works",
+    "desc": "This Pocket Assistant can answer from built-in topics right away, and when your browser supports WebGPU it can also run an on-device language model (Qwen2.5, 3B by default or 1.5B as a faster option) so replies are generated on your device. Optional web search and photo tools may add context. If the model can't load, you still get the written topic answers. Settings let you change your name, reply style and the model.",
+    "prompts": [
+      "how does this assistant work",
+      "how does Pocket Assistant work",
+      "what is this winter assistant",
+      "how do you answer questions",
+      "on-device model in this assistant",
+      "Pocket Assistant topics and the AI",
+      "help me understand this assistant",
+      "how this app replies"
+    ]
+  },
+  {
+    "title": "On-device AI",
+    "desc": "On-device AI means the model runs on the phone or computer you're using, rather than sending every prompt to a company's server to be generated. That's why a model may need to download once and why it needs enough memory and WebGPU. It can still be wrong, and a download can be large, but the generation itself stays on the device.",
+    "prompts": [
+      "what is on-device AI",
+      "AI that runs on my phone",
+      "on-device versus a server",
+      "why does a model download to my device",
+      "does this run on my phone",
+      "on-device language model",
+      "help me understand on-device AI",
+      "AI without sending my prompt to a server"
+    ]
+  },
+  {
+    "title": "What WebGPU is",
+    "desc": "WebGPU is a browser feature that lets a website use the computer's graphics hardware for heavier work, including running some on-device AI models. iPhone Safari added support in newer iOS versions (16 is not enough; you want a recent iOS, such as 26+). If WebGPU isn't there, this assistant can still use its written topic answers.",
+    "prompts": [
+      "what is WebGPU",
+      "why does this assistant need WebGPU",
+      "WebGPU in Safari",
+      "does my iPhone have WebGPU",
+      "WebGPU for on-device AI",
+      "help me understand WebGPU",
+      "browser WebGPU support",
+      "WebGPU and this app"
+    ]
+  },
+  {
+    "title": "AI can be wrong",
+    "desc": "An AI reply can sound sure and still be mistaken, outdated, or mixed up. Check names, dates, homework answers and anything that would matter if it were wrong. Use it as a draft or an explanation to compare with a reliable source, not as a final authority. If two sources disagree, don't assume the chatbot is the right one.",
+    "prompts": [
+      "can AI be wrong",
+      "AI sounds sure but might be mistaken",
+      "don't trust an AI blindly",
+      "check an AI answer",
+      "AI can make up details",
+      "help me remember AI can be wrong",
+      "is a confident AI always right",
+      "verify what a chatbot said"
+    ]
+  },
+  {
+    "title": "Don't share secrets with a chatbot",
+    "desc": "Don't paste passwords, full ID numbers, bank details, or private photos into a chatbot, and be careful with other people's private information too. Even when a tool runs on your device, a habit of pasting secrets is risky if you later use a different app. Share only what you'd be okay typing on a shared screen.",
+    "prompts": [
+      "should I tell a chatbot my password",
+      "don't share secrets with a chatbot",
+      "is it safe to paste private info",
+      "don't put bank details in a chat",
+      "private information and AI",
+      "help me know what not to tell a chatbot",
+      "secrets I shouldn't type here",
+      "don't paste a password into an assistant"
+    ]
+  },
+  {
+    "title": "AI versus a search engine",
+    "desc": "A search engine points you to pages you can open and check. A chatbot drafts an answer in one voice, which may or may not match those pages. For a current fact, a price, or a source you can cite, search or official sites are often better. This assistant can also look things up when web search is on, then you can still open the sources.",
+    "prompts": [
+      "what's the difference between AI and a search engine",
+      "chatbot versus Google",
+      "when to search instead of asking a chatbot",
+      "search engine shows sources",
+      "AI draft versus a web search",
+      "help me compare AI and search",
+      "should I search or ask the assistant",
+      "search for a current fact"
+    ]
+  },
+  {
+    "title": "When not to trust an AI answer",
+    "desc": "Don't rely on an AI alone for medical, legal or emergency decisions, or for a homework answer you're supposed to figure out yourself. Be extra careful with names, numbers, quotes and 'what happened today.' If the stakes are real, check a reliable source or ask a person who's responsible for that area.",
+    "prompts": [
+      "when should I not trust an AI answer",
+      "don't use AI for an emergency only",
+      "AI and homework I should do myself",
+      "medical or legal questions and AI",
+      "don't trust made-up quotes or numbers",
+      "when to check a person instead",
+      "help me know when AI isn't enough",
+      "stakes are high, check a real source"
+    ]
+  },
+  {
+    "title": "Why a model has to download",
+    "desc": "An on-device model has to download because the app needs the model's files on your device before it can generate a reply offline or without a server. The file can be large, so it may take time and storage, and it often stays cached after the first time. If a download fails, a smaller model or the written answers can still help.",
+    "prompts": [
+      "why does the AI model have to download",
+      "why is the model so large",
+      "model download on my phone",
+      "first-time AI download",
+      "model cached after it downloads",
+      "download failed for the model",
+      "help me understand the model download",
+      "why does Pocket Assistant download a model"
+    ]
+  },
+  {
+    "title": "Michigan basics",
+    "desc": "Michigan is a US state in the Midwest, shaped a bit like a mitten, with a Lower Peninsula and an Upper Peninsula, and it touches four of the five Great Lakes. People live in cities like Detroit, Grand Rapids and Lansing, the capital, and in lots of smaller towns. Winters can be cold and snowy, especially near the lakes.",
+    "prompts": [
+      "tell me about Michigan",
+      "Michigan basics",
+      "where is Michigan",
+      "Michigan is a mitten",
+      "Michigan's two peninsulas",
+      "capital of Michigan",
+      "help me with Michigan facts",
+      "what is Michigan known for"
+    ]
+  },
+  {
+    "title": "The Great Lakes",
+    "desc": "The Great Lakes are Superior, Michigan, Huron, Erie and Ontario, a huge connected freshwater system between the US and Canada. Michigan touches all of them except Ontario. They're used for weather, shipping, drinking water and recreation, and they can be rough, so shoreline safety still matters in nice weather.",
+    "prompts": [
+      "what are the Great Lakes",
+      "names of the Great Lakes",
+      "Michigan and the Great Lakes",
+      "which Great Lakes touch Michigan",
+      "Great Lakes freshwater",
+      "help me with the Great Lakes",
+      "Superior Michigan Huron Erie Ontario",
+      "the five Great Lakes"
+    ]
+  },
+  {
+    "title": "Lake-effect snow",
+    "desc": "Lake-effect snow happens when cold air moves across still-unfrozen lake water, picks up moisture, and drops heavy snow downwind, often in narrow bands. That's why some Michigan towns get much more snow than a city a short drive away. Forecasts can change quickly when a band sets up.",
+    "prompts": [
+      "what is lake-effect snow",
+      "why does it snow so much by the lake",
+      "lake-effect snow in Michigan",
+      "snow bands off a Great Lake",
+      "cold air over a warm lake",
+      "help me understand lake-effect snow",
+      "why two towns get different snow",
+      "Michigan lake-effect"
+    ]
+  },
+  {
+    "title": "Michigan winter weather",
+    "desc": "A Michigan winter can mean cold, wind, ice and snow that varies a lot by region, with lake-effect adding extra snow in some belts. Dress in layers, give travel more time, and check a local forecast instead of assuming the whole state looks like one picture. A thaw and a refreeze can make ice worse.",
+    "prompts": [
+      "what's winter like in Michigan",
+      "Michigan winter weather",
+      "cold and snow in Michigan",
+      "Michigan winter varies by area",
+      "ice after a thaw in Michigan",
+      "help me with Michigan winters",
+      "what to expect in a Michigan winter",
+      "winter weather in MI"
+    ]
+  },
+  {
+    "title": "Shoveling snow",
+    "desc": "Shovel in smaller loads, keep a slight bend in the knees, and push when you can instead of twisting and heaving a huge pile. Stretch a little, take breaks, and come inside if you feel chest pain, dizziness or unusual shortness of breath and tell an adult—that's a stop, not a push-through. Sand or salt on a path can help footing.",
+    "prompts": [
+      "how should I shovel snow",
+      "shoveling snow safely",
+      "don't lift huge shovelfuls",
+      "push snow instead of twisting",
+      "shoveling and I feel unwell",
+      "help me shovel the driveway",
+      "snow shovel tips",
+      "breaks while I shovel"
+    ]
+  },
+  {
+    "title": "A snow day",
+    "desc": "A snow day is when school or plans are canceled because travel is unsafe. Confirm with the official school or work notice, stay off roads if that's the guidance, and use the time to rest, help at home, or do a little work if you want, without treating the weather as a dare. Dress for going outside if you do go out.",
+    "prompts": [
+      "what is a snow day",
+      "school canceled for snow",
+      "snow day in Michigan",
+      "how do I know if it's a snow day",
+      "what to do on a snow day",
+      "help me with a snow day",
+      "stay off unsafe roads on a snow day",
+      "official snow day notice"
+    ]
+  },
+  {
+    "title": "Sledding safely",
+    "desc": "Sled where you can see the whole run, away from streets, parking lots and thin ice, and walk back up the side, not the middle of the lane. Sit in a way you can steer, and don't pile a sled toward trees or a drop you can't judge. A helmet is a smart idea on a steep or busy hill. Come in if you get too cold or hurt.",
+    "prompts": [
+      "how do I sled safely",
+      "sledding safety",
+      "don't sled toward a street",
+      "walk up the side of the hill",
+      "sledding away from thin ice",
+      "helmet for sledding",
+      "help me sled without getting hurt",
+      "safe sledding hill tips"
+    ]
+  },
+  {
+    "title": "Salt on winter roads",
+    "desc": "Road salt and similar treatments lower the freezing point of water so ice is less likely to stick, but they don't make a road dry or safe at any speed. Slow down anyway, and rinse salt off boots and, when you can, a car, because salt can be rough on metal and on floors. It's a tool, not a guarantee.",
+    "prompts": [
+      "why do they salt the roads",
+      "road salt in winter",
+      "does salt melt ice",
+      "salt doesn't make driving automatically safe",
+      "salt on boots and a car",
+      "help me understand road salt",
+      "winter road treatment",
+      "why roads are salty in Michigan"
+    ]
+  },
+  {
+    "title": "What to keep in a car in winter",
+    "desc": "A winter car kit is about getting stuck, not looking fancy: a charged phone, a scraper, a blanket, a small shovel, and something visible like a bright cloth, plus whatever a parent wants in the vehicle. Keep the tank from running near empty in a storm. I won't invent a shopping list of brands; tell me your budget if you're packing one.",
+    "prompts": [
+      "what should I keep in a car in winter",
+      "winter car kit",
+      "ice scraper and a blanket in the car",
+      "don't let the tank get empty in a storm",
+      "stuck in winter weather in a car",
+      "help me pack a winter car kit",
+      "emergency stuff in a car in the cold",
+      "winter items for a Michigan car"
+    ]
+  },
+  {
+    "title": "Upper and Lower Peninsula",
+    "desc": "Michigan has two big land parts: the Lower Peninsula, the mitten, and the Upper Peninsula, or U.P., connected by the Mackinac Bridge. They share a state and can feel different in weather, distance and local culture. The U.P. is more sparsely populated and can get serious winter weather. Either side still counts as Michigan.",
+    "prompts": [
+      "what is the Upper Peninsula",
+      "Lower Peninsula versus the U.P.",
+      "Michigan's two peninsulas explained",
+      "Mackinac Bridge connects the peninsulas",
+      "what is the U.P.",
+      "help me with the Upper and Lower Peninsula",
+      "mitten and the Upper Peninsula",
+      "are both peninsulas Michigan"
+    ]
+  },
+  {
+    "title": "Getting ready for a snowstorm",
+    "desc": "Before a snowstorm, check a local forecast, charge devices, pick up needed medicine or food if an adult is already planning a store run, and clear a path for vents and doors after it snows. Stay off the road if officials say to. A storm can be inconvenient without being a movie disaster; prepare anyway.",
+    "prompts": [
+      "how do I get ready for a snowstorm",
+      "preparing for a Michigan snowstorm",
+      "charge phones before a storm",
+      "what to do before heavy snow",
+      "stay off the road in a storm",
+      "help me prepare for a snowstorm",
+      "snowstorm plan at home",
+      "check the forecast before a storm"
+    ]
+  },
+  {
+    "title": "Coming in from the cold",
+    "desc": "When you come in from the cold, take off wet layers, warm up gradually, and drink something warm if you like. Numb, hard-white, or painful fingers, toes, ears or a nose need to be taken seriously—tell an adult. Don't put numb skin against a blasting heater. Wet socks should come off.",
+    "prompts": [
+      "what should I do when I come in from the cold",
+      "warming up after being outside",
+      "wet clothes off in the house",
+      "cold fingers and toes when I come in",
+      "help me warm up from the cold",
+      "don't heat numb skin on high",
+      "coming inside after snow",
+      "warm up gradually after winter weather"
+    ]
+  },
+  {
+    "title": "Packing a suitcase",
+    "desc": "Pack a suitcase by listing the days, the weather, and the activities, then putting in outfits you can mix, plus medicines, chargers and one layer more than you think for a cold snap. Roll or stack so the bag zips without sitting on it. Keep ID, tickets and a charger where you can reach them, not buried.",
+    "prompts": [
+      "how do I pack a suitcase",
+      "packing a suitcase for a trip",
+      "what to put in a suitcase",
+      "packing for the weather",
+      "don't overpack a suitcase",
+      "suitcase packing tips",
+      "help me pack a suitcase",
+      "clothes and chargers in a suitcase"
+    ]
+  },
+  {
+    "title": "Airplane travel basics",
+    "desc": "An airplane trip is easier if you know your airport, arrive with the time the airline recommends, keep your ID and boarding pass handy, and follow the seatbelt and device rules once you're on the plane. A small bag under the seat helps on a short flight. Ask a flight attendant if you're unsure; they're used to first-time flyers.",
+    "prompts": [
+      "how does airplane travel work",
+      "first time on a plane",
+      "airplane travel basics",
+      "what to expect on a flight",
+      "seatbelt and phones on a plane",
+      "help me with flying",
+      "arrive early for a flight",
+      "boarding a plane for the first time"
+    ]
+  },
+  {
+    "title": "Finding your gate",
+    "desc": "Your gate is on the boarding pass and the airport screens, and it can change, so check both. Follow the terminal letters and numbers, and leave extra time if you have to change terminals. If you're lost, an airport worker or a clearly marked information desk is better than wandering until boarding time.",
+    "prompts": [
+      "how do I find my gate",
+      "gate number on my boarding pass",
+      "airport gate changed",
+      "where is my departure gate",
+      "help me find my airport gate",
+      "screens and the gate number",
+      "lost in the airport looking for a gate",
+      "terminal and gate numbers"
+    ]
+  },
+  {
+    "title": "A road trip",
+    "desc": "A road trip goes better with a planned route, extra time, snacks, chargers, and agreed rest stops, plus a licensed driver who isn't exhausted. Share the playlist and the chores if you can. Check weather and the car's basics before a long stretch. I can help you think about a packing and stop plan; I won't invent current gas prices.",
+    "prompts": [
+      "how do I plan a road trip",
+      "road trip tips",
+      "road trip with friends or family",
+      "rest stops on a long drive",
+      "what to bring on a road trip",
+      "help me plan a road trip",
+      "don't drive exhausted on a road trip",
+      "road trip playlist and snacks"
+    ]
+  },
+  {
+    "title": "Staying in a hotel",
+    "desc": "At a hotel, check in with the adult who booked, keep your room key safe, use the latch, and don't open the door for an unexpected knock without checking. Know the exit stairs, not only the elevator. House rules and quiet hours are real. If something in the room is wrong, go to the front desk.",
+    "prompts": [
+      "what should I know about staying in a hotel",
+      "hotel tips for a trip",
+      "hotel room key and the latch",
+      "don't open a hotel door without checking",
+      "hotel fire stairs",
+      "help me with a hotel stay",
+      "first time in a hotel",
+      "quiet hours at a hotel"
+    ]
+  },
+  {
+    "title": "Travel ID and documents",
+    "desc": "For travel, you usually need a current photo ID that matches the ticket, plus whatever the airline or destination requires, such as a passport for many trips out of the country. Keep copies or a photo in a safe place, and don't post a picture of your full ID or passport online. An adult should help check current rules, because they change.",
+    "prompts": [
+      "what ID do I need to travel",
+      "passport versus a regular ID",
+      "travel documents for a flight",
+      "don't post a photo of my passport",
+      "ID that matches the ticket",
+      "help me with travel ID",
+      "what documents for a trip",
+      "keep travel ID safe"
+    ]
+  },
+  {
+    "title": "A travel budget",
+    "desc": "A travel budget is a plan for transport, a place to stay, food, and a little extra for surprises, not only the ticket price. Decide a limit with your family first, then see what fits. Track what you spend so a trip doesn't become a shock later. I won't invent current prices; tell me your budget and I can help you list categories.",
+    "prompts": [
+      "how do I make a travel budget",
+      "budget for a trip",
+      "travel costs besides the ticket",
+      "trip spending plan",
+      "help me budget a trip",
+      "don't forget food and extras in a travel budget",
+      "saving for a trip budget",
+      "travel budget with my family"
+    ]
+  },
+  {
+    "title": "Carry-on versus a checked bag",
+    "desc": "A carry-on stays with you in the cabin, with size limits the airline sets. A checked bag goes in the hold, which helps with bigger items and can come with a fee. Keep medicines, a charger and a change of clothes in the bag you carry if you can. Check the airline's current rules so you don't get surprised at the counter.",
+    "prompts": [
+      "what's the difference between carry-on and checked",
+      "carry-on versus a checked bag",
+      "what should go in my carry-on",
+      "checked bag fee",
+      "size limits for a carry-on",
+      "help me choose carry-on or checked",
+      "medicines in the bag I keep with me",
+      "carry-on or check it"
+    ]
+  },
+  {
+    "title": "Motion sickness",
+    "desc": "Motion sickness is feeling queasy from a car, bus, plane or boat. Looking at the horizon, sitting where the ride is smoother, cool air, and a settled stomach can help some people. Tell the driver or an adult if you need a stop. If you use medicine, that's a parent-and-pharmacist question; I won't guess a dose.",
+    "prompts": [
+      "what helps motion sickness",
+      "carsick on a trip",
+      "queasy in a car or plane",
+      "looking at the horizon for motion sickness",
+      "where to sit if I get carsick",
+      "help with motion sickness",
+      "tell an adult I feel sick in the car",
+      "motion sickness on a boat or bus"
+    ]
+  },
+  {
+    "title": "Being a good trip companion",
+    "desc": "A good trip companion shares the plan, says if they need a break, keeps their stuff together, and doesn't make every decision a fight. Offer to navigate, carry a bag, or pick the next song. If you're tired or hungry, say so before you get snappy. A thank-you to the person who planned or drove goes a long way.",
+    "prompts": [
+      "how to be a good trip companion",
+      "travel manners with family or friends",
+      "don't start fights on a trip",
+      "offer to help on a trip",
+      "say when I need a break while traveling",
+      "help me be easier to travel with",
+      "thank the person who planned the trip",
+      "being considerate on a trip"
+    ]
+  },
+  {
+    "title": "Should I buy a tablet or a laptop",
+    "desc": "A tablet is handy for watching, reading and light tasks; a laptop is usually better if you need a real keyboard, more files and heavier school or creative work. Start from what you'll do most days and your budget, not the ads. I won't invent prices; tell me your budget and the work you need to do.",
+    "prompts": [
+      "should I buy a tablet or a laptop",
+      "tablet versus a laptop",
+      "do I need a laptop instead of a tablet",
+      "tablet or laptop for school",
+      "help me choose tablet or laptop",
+      "laptop for typing and files",
+      "I can't decide between a tablet and a laptop",
+      "tablet vs laptop advice"
+    ]
+  },
+  {
+    "title": "Should I buy a Chromebook",
+    "desc": "A Chromebook is usually a simpler, often cheaper laptop that leans on the internet and browser apps. It can be enough for school work in a browser, and it may not run every program a Windows or Mac laptop will. Check what your school requires and your budget. I won't invent current prices.",
+    "prompts": [
+      "should I buy a Chromebook",
+      "what is a Chromebook",
+      "Chromebook versus a regular laptop",
+      "is a Chromebook enough for school",
+      "Chromebook on a budget",
+      "help me decide on a Chromebook",
+      "does a Chromebook run the programs I need",
+      "buying a Chromebook"
+    ]
+  },
+  {
+    "title": "Headphones versus earbuds",
+    "desc": "Headphones sit over or on the ears; earbuds sit in them. Comfort, how long you'll wear them, how much you need to hear the room, and your budget all matter more than the shape alone. Try them if you can, and keep the volume in a range that won't leave your ears ringing. I won't invent prices; tell me your budget and how you'll use them.",
+    "prompts": [
+      "should I buy headphones or earbuds",
+      "headphones versus earbuds",
+      "over-ear versus in-ear",
+      "which is more comfortable, headphones or earbuds",
+      "help me choose headphones or earbuds",
+      "earbuds versus headphones for school",
+      "I can't decide headphones or earbuds",
+      "headphones or earbuds advice"
+    ]
+  },
+  {
+    "title": "Buying a refurbished product",
+    "desc": "A refurbished item was returned or opened, then checked and sold again, often cheaper. Look for a seller you trust, what's actually guaranteed, battery health if it's a phone or laptop, and the return window. 'Refurbished' isn't all the same quality. I won't invent prices; tell me the item and your budget.",
+    "prompts": [
+      "should I buy refurbished",
+      "what is a refurbished product",
+      "is refurbished safe to buy",
+      "refurbished phone or laptop",
+      "refurbished warranty and returns",
+      "help me decide on refurbished",
+      "buying refurbished on a budget",
+      "what to check on a refurbished item"
+    ]
+  },
+  {
+    "title": "Should I buy the newer model",
+    "desc": "A newer model is worth it if it fixes something you actually need, like a worn battery, missing software support, or a feature you'll use, not only because the ad looks new. Compare what you already have, your budget, and how long the older one will still be updated. I won't invent prices or release dates.",
+    "prompts": [
+      "should I buy the newer model",
+      "do I need the latest version",
+      "is the new model worth it",
+      "upgrade or keep what I have",
+      "newer model versus my current one",
+      "help me decide if I should upgrade",
+      "don't upgrade only because it's new",
+      "buying a newer model"
+    ]
+  },
+  {
+    "title": "Buying a used textbook",
+    "desc": "A used textbook is fine when it's the correct edition your class asked for, readable, and cheaper than new in a way that's worth any missing access codes. Check the ISBN, and ask whether you need a code that only comes with a new copy. I won't invent prices; tell me your budget if you want help thinking it through.",
+    "prompts": [
+      "should I buy a used textbook",
+      "used textbook versus new",
+      "correct edition of a used book",
+      "ISBN for a used textbook",
+      "used book missing an access code",
+      "help me buy a used textbook",
+      "buying used books for class",
+      "is a used textbook okay"
+    ]
+  },
+  {
+    "title": "Buying concert tickets",
+    "desc": "Buy concert tickets from the official seller or a source you and a parent trust, stay in your budget, and be careful with resale prices and fake tickets. Check the date, seat or general-admission rules, and refund policy. I won't invent ticket prices; tell me your budget and I can help you think about fees and timing.",
+    "prompts": [
+      "how should I buy concert tickets",
+      "buying concert tickets safely",
+      "official tickets versus resale",
+      "fake concert tickets",
+      "concert tickets on a budget",
+      "help me buy tickets to a show",
+      "fees on concert tickets",
+      "is this ticket seller legit"
+    ]
+  },
+  {
+    "title": "Buying a camera",
+    "desc": "A camera makes sense if you'll actually use it more than the phone you already have, or you need a kind of photo or video your phone can't do well. Start with your budget, what you'll shoot, and whether a phone plus better light is enough. I won't invent prices; tell me your budget and what you want to capture.",
+    "prompts": [
+      "should I buy a camera",
+      "do I need a camera or is my phone enough",
+      "buying a camera for beginners",
+      "camera versus a phone camera",
+      "help me decide on a camera",
+      "camera on a budget",
+      "what to look for if I buy a camera",
+      "buying a camera for photos or video"
+    ]
+  },
+  {
+    "title": "Buying a drawing tablet",
+    "desc": "A drawing tablet is useful if you'll actually draw or take notes on it often. Decide whether you want a screen of its own or a pad that connects to a computer, then match it to your budget and the software you'll use. Try one in a store if you can. I won't invent prices.",
+    "prompts": [
+      "should I buy a drawing tablet",
+      "buying a drawing tablet",
+      "drawing tablet versus paper",
+      "screen tablet or a pad for a computer",
+      "help me choose a drawing tablet",
+      "drawing tablet on a budget",
+      "what to look for in a drawing tablet",
+      "buying a tablet for digital art"
+    ]
+  },
+  {
+    "title": "Buying a bike lock",
+    "desc": "A bike lock should match where you'll park and your budget: a sturdy lock, a secure part of the bike and a solid object, not only a thin cable through a wheel. No lock is perfect, so pick a visible, busy place too. I won't invent prices; tell me your budget and where you'll lock up.",
+    "prompts": [
+      "what kind of bike lock should I buy",
+      "buying a bike lock",
+      "sturdy bike lock",
+      "how to lock a bike",
+      "bike lock on a budget",
+      "help me choose a bike lock",
+      "lock the frame not only a wheel",
+      "buying a lock for my bike"
+    ]
+  },
+  {
+    "title": "Buying a USB-C hub",
+    "desc": "A USB-C hub adds ports, like HDMI or extra USB, when your laptop has few jacks. Match the plug to your computer, check what the hub actually supports, and stay in your budget. A cheap hub that doesn't fit your machine isn't a deal. I won't invent prices; tell me your laptop and what ports you need.",
+    "prompts": [
+      "should I buy a USB-C hub",
+      "what is a USB-C hub",
+      "hub for extra ports on a laptop",
+      "USB-C hub with HDMI",
+      "help me choose a USB-C hub",
+      "USB-C hub on a budget",
+      "does this hub work with my laptop",
+      "buying a USB-C adapter hub"
+    ]
+  },
+  {
+    "title": "Buying a laptop stand",
+    "desc": "A laptop stand can raise the screen so your neck isn't bent down, and it's worth it if you'll sit at a desk often. Check stability, height, and whether you still need a separate keyboard. I won't invent prices; tell me your budget and whether this is for home or a bag.",
+    "prompts": [
+      "should I buy a laptop stand",
+      "buying a laptop stand",
+      "laptop stand for my neck",
+      "raise the laptop screen",
+      "help me choose a laptop stand",
+      "laptop stand on a budget",
+      "do I need a keyboard with a stand",
+      "buying a stand for a laptop"
+    ]
+  },
+  {
+    "title": "Buying a tripod",
+    "desc": "A tripod is useful if you'll record or take photos in the same place, need a stable shot, or want fewer shaky videos. Match it to your phone or camera, your budget, and whether it has to travel. A window ledge isn't always a substitute, but you don't need a huge stand for a short indoor clip. I won't invent prices.",
+    "prompts": [
+      "should I buy a tripod",
+      "buying a tripod for a phone",
+      "tripod for less shaky video",
+      "help me choose a tripod",
+      "tripod on a budget",
+      "phone tripod versus a camera tripod",
+      "do I need a tripod",
+      "buying a stand for recording"
+    ]
+  },
+  {
+    "title": "Buying a water bottle",
+    "desc": "A water bottle is worth it if you'll actually carry and wash it. Look at size, a lid that doesn't leak in a bag, and whether it's easy to clean, then stay in your budget. I won't invent prices; tell me how you'll use it if you want help choosing features.",
+    "prompts": [
+      "what should I look for in a water bottle",
+      "buying a water bottle",
+      "water bottle that doesn't leak",
+      "size of a water bottle",
+      "help me choose a water bottle",
+      "water bottle on a budget",
+      "easy to clean water bottle",
+      "buying a reusable bottle"
+    ]
+  },
+  {
+    "title": "Buying a book",
+    "desc": "Buy a book when you want to own it or mark it up; borrow from a library when you just want to try it. Check the format, the edition if it's for class, and your budget. A used copy or a library hold can be enough. I won't invent prices; tell me whether it's for fun or school.",
+    "prompts": [
+      "should I buy a book or borrow it",
+      "buying a book",
+      "library versus buying a book",
+      "used book or new",
+      "help me decide if I should buy this book",
+      "buying a book on a budget",
+      "book for class versus for fun",
+      "is it worth buying this book"
+    ]
+  },
+  {
+    "title": "Buying a gift card",
+    "desc": "A gift card can be a simple gift if the person will actually use that store, and you should buy it from the official store or a source you trust, not a stranger's 'discount' code. Keep the receipt, and stay in your budget. I won't invent card amounts; tell me the budget and I can help you think it through.",
+    "prompts": [
+      "should I buy a gift card",
+      "buying a gift card safely",
+      "gift card from the official store",
+      "fake discounted gift cards",
+      "help me buy a gift card",
+      "gift card on a budget",
+      "is a gift card a good gift",
+      "buying a store gift card"
+    ]
+  },
+  {
+    "title": "Buying phone insurance",
+    "desc": "Phone insurance can help with a lost, stolen or badly damaged phone, but it usually has a cost and rules, so compare it with a case, a carefully kept phone, and what's already covered on a plan or card. I won't invent prices or policy details; read the real terms and tell me your situation if you want a way to think it through.",
+    "prompts": [
+      "should I buy phone insurance",
+      "is phone insurance worth it",
+      "phone insurance versus a case",
+      "what's covered on phone insurance",
+      "help me decide on phone insurance",
+      "phone insurance on a budget",
+      "lost or broken phone coverage",
+      "buying insurance for my phone"
+    ]
+  },
+  {
+    "title": "Should I wait for a sale",
+    "desc": "Waiting for a sale makes sense if you don't need the item now, you know a realistic price range, and you're not just telling yourself that so you can buy more later. A sale isn't automatically a good deal. I won't invent sale dates or prices; tell me the item and whether you need it soon.",
+    "prompts": [
+      "should I wait for a sale",
+      "is it smarter to wait for a discount",
+      "do I need this now or can I wait",
+      "sale versus buying today",
+      "help me decide if I should wait for a sale",
+      "don't buy extra just because it might go on sale",
+      "waiting for a better price",
+      "should I wait to buy it"
+    ]
+  },
+  {
+    "title": "Buying a charging cable",
+    "desc": "A charging cable should match your device's port, like USB-C or Lightning, and be from a seller you trust so it can handle regular use. Look at length for how you'll actually sit, and don't cheap out in a way that means a flaky charge. I won't invent prices; tell me your phone or laptop and your budget.",
+    "prompts": [
+      "what charging cable should I buy",
+      "buying a charging cable",
+      "USB-C or Lightning cable",
+      "cable length for how I sit",
+      "trusted charging cable",
+      "help me choose a charging cable",
+      "charging cable on a budget",
+      "cable that matches my phone"
+    ]
+  }
+]
